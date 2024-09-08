@@ -1,6 +1,6 @@
 ~ start
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue {{State.characters[0].name}}.
 Nathan: Here are some choices.
 - First one
 	Nathan: You picked the first one.
