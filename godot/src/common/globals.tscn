@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://rumvotveqal5"]
+
+[ext_resource type="Script" path="res://src/common/globals.gd" id="1_noqpm"]
+
+[node name="Globals" type="Node"]
+script = ExtResource("1_noqpm")
+
+[node name="game_music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
