@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=3 uid="uid://1gjc20l1fmj6"]
+
+[ext_resource type="Script" path="res://src/family_tree/family_tree.gd" id="1_jn56e"]
+[ext_resource type="PackedScene" uid="uid://yno5qxrsoqc5" path="res://src/family_tree/portrait/tree_portrait.tscn" id="2_e6l73"]
+[ext_resource type="Texture2D" uid="uid://cum38qgwpmjfa" path="res://assets/gfx/portraits/character_03.png" id="2_wb0d3"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="3_ashqi"]
+[ext_resource type="PackedScene" uid="uid://dxmvrcqgee7rj" path="res://src/family_tree/popups/choose_portrait_popup.tscn" id="5_lldmy"]
+
+[sub_resource type="Resource" id="Resource_bmm1y"]
+script = ExtResource("3_ashqi")
+name = "Darrell M. Meeks"
+portrait = ExtResource("2_wb0d3")
+
+[node name="FamilyTree" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jn56e")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D9" type="Line2D" parent="."]
+position = Vector2(0, 13)
+points = PackedVector2Array(630, 343, 630, 255)
+
+[node name="Line2D7" type="Line2D" parent="."]
+position = Vector2(0, 176)
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D8" type="Line2D" parent="."]
+position = Vector2(248, 176)
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(0, 13)
+points = PackedVector2Array(316, 342, 942, 342)
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(0, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(128, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D5" type="Line2D" parent="."]
+position = Vector2(377, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2(622, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -370.0
+offset_top = -157.0
+offset_right = 370.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Generation1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Grandpa" parent="VBoxContainer/Generation1" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+solution = SubResource("Resource_bmm1y")
+
+[node name="Grandma" parent="VBoxContainer/Generation1" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Generation2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Uncle" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Aunt" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Aunt2" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Uncle2" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Uncle3" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Aunt3" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="ChoosePortraitPopup" parent="." instance=ExtResource("5_lldmy")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

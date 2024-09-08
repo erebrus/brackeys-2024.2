@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://yno5qxrsoqc5"]
+
+[ext_resource type="Script" path="res://src/family_tree/portrait/tree_portrait.gd" id="1_xty7a"]
+[ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="2_1blpu"]
+
+[node name="TreePortrait" instance=ExtResource("2_1blpu")]
+script = ExtResource("1_xty7a")
+solution = null
+show_name = true

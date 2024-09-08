@@ -1,6 +1,7 @@
 extends Node
 
 const GAME_SCENE_PATH = "res://src/main.tscn"
+const CHARACTER_PATH = "res://src/characters/data"
 
 var master_volume:float = 100
 var music_volume:float = 100
@@ -28,6 +29,9 @@ var sound_on:=true:
 		AudioServer.set_bus_volume_db(sfx_index, 0 if sound_on else -100)
 	
 
+var characters: Array[Character]
+var unknown: Character
+
 @onready var menu_music: AudioStreamPlayer = $menu_music
 @onready var game_music: AudioStreamPlayer = $game_music
 
@@ -35,7 +39,7 @@ func _ready():
 	_init_logger()
 	Logger.info("Starting menu music")
 	fade_in_music(menu_music)
-	
+	load_characters()
 
 func start_game():
 	in_game=true
@@ -78,3 +82,19 @@ func fade_music(node:AudioStreamPlayer, duration := 1):
 	await tween.finished
 	node.stop()
 	
+
+func load_characters() -> void:
+	Logger.info("Loading characters")
+	var dir = DirAccess.open(CHARACTER_PATH)  
+	dir.list_dir_begin()  
+	var file_name = dir.get_next()  
+	while file_name != "":  
+		var file_path = CHARACTER_PATH + "/" + file_name  
+		var character: Character = ResourceLoader.load(file_path)
+		if character.name == "Unknown":
+			unknown = character
+		else:
+			characters.append(character)
+		
+		file_name = dir.get_next()  
+	Logger.info("Characters loaded")

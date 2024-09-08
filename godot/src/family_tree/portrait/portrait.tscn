@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccggktijkb35s"]
+
+[ext_resource type="Texture2D" uid="uid://c62mxb7glsd1x" path="res://assets/gfx/portraits/person_unknown.png" id="1_bwjkd"]
+[ext_resource type="Script" path="res://src/family_tree/portrait/portrait.gd" id="1_gvff8"]
+[ext_resource type="Texture2D" uid="uid://b525brlusbv0r" path="res://assets/gfx/ui/portrait_frame.png" id="2_yth4q"]
+
+[node name="Portrait" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource("1_gvff8")
+
+[node name="Portrait" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BG" type="ColorRect" parent="Portrait"]
+layout_mode = 2
+
+[node name="Photo" type="TextureRect" parent="Portrait"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_bwjkd")
+
+[node name="Frame" type="TextureRect" parent="Portrait"]
+layout_mode = 2
+texture = ExtResource("2_yth4q")
+
+[node name="NameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+text = "Unknown"
+horizontal_alignment = 1

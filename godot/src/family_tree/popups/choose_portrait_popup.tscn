@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxmvrcqgee7rj"]
+
+[ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup.gd" id="1_6u0b6"]
+[ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="1_gdy71"]
+
+[node name="ChoosePortraitPopup" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -77.5
+offset_right = 250.0
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6u0b6")
+PortraitScene = ExtResource("1_gdy71")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Who is this?"
+
+[node name="PortraitContainer" type="GridContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 4
+columns = 4
