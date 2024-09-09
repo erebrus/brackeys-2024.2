@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://1gjc20l1fmj6"]
+[gd_scene load_steps=8 format=3 uid="uid://1gjc20l1fmj6"]
 
 [ext_resource type="Script" path="res://src/family_tree/family_tree.gd" id="1_jn56e"]
-[ext_resource type="PackedScene" uid="uid://yno5qxrsoqc5" path="res://src/family_tree/portrait/tree_portrait.tscn" id="2_e6l73"]
+[ext_resource type="PackedScene" uid="uid://b33kel5e8nuw8" path="res://src/family_tree/portrait/tree_portrait.tscn" id="2_e6l73"]
 [ext_resource type="Texture2D" uid="uid://cum38qgwpmjfa" path="res://assets/gfx/portraits/character_03.png" id="2_wb0d3"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="3_ashqi"]
 [ext_resource type="PackedScene" uid="uid://dxmvrcqgee7rj" path="res://src/family_tree/popups/choose_portrait_popup.tscn" id="5_lldmy"]
+[ext_resource type="PackedScene" uid="uid://bu73x7jnatims" path="res://src/family_tree/popups/choose_name_popup.tscn" id="6_nxtea"]
 
 [sub_resource type="Resource" id="Resource_bmm1y"]
 script = ExtResource("3_ashqi")
@@ -77,12 +78,10 @@ theme_override_constants/separation = 30
 
 [node name="Grandpa" parent="VBoxContainer/Generation1" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 solution = SubResource("Resource_bmm1y")
 
 [node name="Grandma" parent="VBoxContainer/Generation1" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Generation2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -91,29 +90,28 @@ theme_override_constants/separation = 30
 
 [node name="Uncle" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Aunt" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Aunt2" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Uncle2" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Uncle3" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="Aunt3" parent="VBoxContainer/Generation2" instance=ExtResource("2_e6l73")]
 layout_mode = 2
-size_flags_horizontal = 1
 
 [node name="ChoosePortraitPopup" parent="." instance=ExtResource("5_lldmy")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="ChooseNamePopup" parent="." instance=ExtResource("6_nxtea")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1

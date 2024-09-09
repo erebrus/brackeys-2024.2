@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdr3iwyew1jjo"]
+
+[ext_resource type="Script" path="res://src/family_tree/name_label/name_label.gd" id="1_lf1ty"]
+
+[node name="NameLabel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_lf1ty")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4

@@ -4,33 +4,20 @@
 [ext_resource type="Script" path="res://src/family_tree/portrait/portrait.gd" id="1_gvff8"]
 [ext_resource type="Texture2D" uid="uid://b525brlusbv0r" path="res://assets/gfx/ui/portrait_frame.png" id="2_yth4q"]
 
-[node name="Portrait" type="VBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
-size_flags_horizontal = 3
+[node name="Portrait" type="MarginContainer"]
+offset_right = 96.0
+offset_bottom = 128.0
+size_flags_horizontal = 4
 script = ExtResource("1_gvff8")
 
-[node name="Portrait" type="MarginContainer" parent="."]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="BG" type="ColorRect" parent="Portrait"]
+[node name="BG" type="ColorRect" parent="."]
 layout_mode = 2
 
-[node name="Photo" type="TextureRect" parent="Portrait"]
+[node name="Photo" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("1_bwjkd")
 
-[node name="Frame" type="TextureRect" parent="Portrait"]
+[node name="Frame" type="TextureRect" parent="."]
 layout_mode = 2
 texture = ExtResource("2_yth4q")
-
-[node name="NameLabel" type="Label" parent="."]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 1
-text = "Unknown"
-horizontal_alignment = 1

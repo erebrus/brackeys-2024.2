@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://yno5qxrsoqc5"]
+[gd_scene load_steps=4 format=3 uid="uid://b33kel5e8nuw8"]
 
 [ext_resource type="Script" path="res://src/family_tree/portrait/tree_portrait.gd" id="1_xty7a"]
 [ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="2_1blpu"]
+[ext_resource type="PackedScene" uid="uid://cdr3iwyew1jjo" path="res://src/family_tree/name_label/name_label.tscn" id="3_qiec2"]
 
-[node name="TreePortrait" instance=ExtResource("2_1blpu")]
+[node name="TreePortrait" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_xty7a")
-solution = null
-show_name = true
+
+[node name="Portrait" parent="." instance=ExtResource("2_1blpu")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NameLabel" parent="." instance=ExtResource("3_qiec2")]
+unique_name_in_owner = true
+layout_mode = 2

@@ -2,29 +2,30 @@ extends PanelContainer
 
 signal selected(character: Character)
 
-@export var PortraitScene: PackedScene
+
+@export var NameScene: PackedScene
 
 
-@onready var container: Container = %PortraitContainer
+@onready var container: Container = %NameContainer
 
 
 func _ready() -> void:
-	assert(PortraitScene != null)
+	assert(NameScene != null)
 	
-	Events.character_portrait_set.connect(hide_character)
-	Events.character_portrait_unset.connect(show_character)
+	Events.character_name_set.connect(hide_character)
+	Events.character_name_unset.connect(show_character)
 	
-	_add_portrait(Globals.unknown)
+	_add_name(Globals.unknown)
 	for character in Globals.characters:
-		_add_portrait(character)
+		_add_name(character)
 	
 
-func _add_portrait(character: Character) -> void:
-	var portrait = PortraitScene.instantiate()
-	portrait.character = character
-	portrait.clicked.connect(_on_portrait_clicked.bind(character))
+func _add_name(character: Character) -> void:
+	var name_label = NameScene.instantiate()
+	name_label.character = character
+	name_label.clicked.connect(_on_name_clicked.bind(character))
 	
-	container.add_child(portrait)
+	container.add_child(name_label)
 	
 
 func show_character(character: Character) -> void:
@@ -45,6 +46,7 @@ func _input(event: InputEvent) -> void:
 		hide()
 	
 
-func _on_portrait_clicked(character: Character) -> void:
+func _on_name_clicked(character: Character) -> void:
 	selected.emit(character)
 	hide()
+	

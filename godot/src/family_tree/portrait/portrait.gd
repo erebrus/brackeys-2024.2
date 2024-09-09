@@ -1,38 +1,24 @@
-class_name Portrait extends VBoxContainer
+class_name Portrait extends MarginContainer
 
-signal portrait_clicked
-signal name_clicked
+signal clicked
 
 
-@export var person: Character:
+@export var character: Character:
 	set(value):
-		person = value
-		if person == null:
+		character = value
+		
+		if character == null:
 			return
 		
-		%Photo.texture = person.portrait
-		%NameLabel.text = person.name
-
-@export var show_name: bool:
-	set(value):
-		show_name = value
-		%NameLabel.visible = show_name
-
-@onready var portrait: Control = %Portrait
-@onready var name_label: Label = %NameLabel
+		%Photo.texture = character.portrait
+	
 
 
 func _ready() -> void:
-	portrait.gui_input.connect(_on_portrait_input)
-	name_label.gui_input.connect(_on_name_input)
+	gui_input.connect(_on_portrait_input)
 	
 
 func _on_portrait_input(event: InputEvent) -> void:
 	if event.is_action_released("left_click"):
-		portrait_clicked.emit()
-	
-
-func _on_name_input(event: InputEvent) -> void:
-	if event.is_action_released("left_click"):
-		name_clicked.emit()
+		clicked.emit()
 	

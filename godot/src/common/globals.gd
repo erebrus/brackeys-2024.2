@@ -30,7 +30,7 @@ var sound_on:=true:
 	
 
 var characters: Array[Character]
-var unknown: Character
+@export var unknown: Character
 
 @onready var menu_music: AudioStreamPlayer = $menu_music
 @onready var game_music: AudioStreamPlayer = $game_music
@@ -91,10 +91,7 @@ func load_characters() -> void:
 	while file_name != "":  
 		var file_path = CHARACTER_PATH + "/" + file_name  
 		var character: Character = ResourceLoader.load(file_path)
-		if character.name == "Unknown":
-			unknown = character
-		else:
-			characters.append(character)
+		characters.append(character)
 		
 		file_name = dir.get_next()  
 	Logger.info("Characters loaded")

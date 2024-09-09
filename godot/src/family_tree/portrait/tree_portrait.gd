@@ -1,26 +1,37 @@
-@tool
-class_name TreePortrait extends Portrait
+class_name TreePortrait extends VBoxContainer
+
+signal portrait_clicked
+signal name_label_clicked
 
 
 @export var solution: Character
 
 
-@onready var current_portrait: Character = Globals.unknown
-@onready var current_name: Character = Globals.unknown
+@onready var portrait: Portrait = %Portrait
+@onready var name_label: NameLabel = %NameLabel
 
+
+func _ready() -> void:
+	portrait.clicked.connect(portrait_clicked.emit)
+	name_label.clicked.connect(name_label_clicked.emit)
+	
 
 func set_portrait(character: Character) -> void:
-	if person != null:
-		person.portrait = character.portrait
+	if portrait.character != null and portrait.character != Globals.unknown:
+		Events.character_portrait_unset.emit(portrait.character)
+		
+	portrait.character = character
 	
-	current_portrait = character
-	%Photo.texture = character.portrait
+	if portrait.character != null and portrait.character != Globals.unknown:
+		Events.character_portrait_set.emit(portrait.character)
 	
 
 func set_name_label(character: Character) -> void:
-	if person != null:
-		person.name = character.name
+	if name_label.character != null and name_label.character != Globals.unknown:
+		Events.character_name_unset.emit(name_label.character)
+		
+	name_label.character = character
 	
-	current_name = character
-	%NameLabel.text = character.name
+	if name_label.character != null and name_label.character != Globals.unknown:
+		Events.character_name_set.emit(name_label.character)
 	
