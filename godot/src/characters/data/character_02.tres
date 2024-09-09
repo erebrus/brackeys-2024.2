@@ -5,5 +5,6 @@
 
 [resource]
 script = ExtResource("2_0jmjp")
+id = 2
 name = "Lily R. Rasmussen"
 portrait = ExtResource("1_05j3i")

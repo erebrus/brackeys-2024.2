@@ -5,7 +5,7 @@
 
 [node name="Globals" type="Node"]
 script = ExtResource("1_noqpm")
-unknown = ExtResource("2_kp614")
+unknown_character = ExtResource("2_kp614")
 
 [node name="game_music" type="AudioStreamPlayer" parent="."]
 process_mode = 3

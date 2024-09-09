@@ -1,6 +1,7 @@
 class_name Character extends Resource
 
 
+@export var id: Types.Characters
 @export var name: String = "Unknown"
 @export var portrait: Texture = preload("res://assets/gfx/portraits/person_unknown.png")
 

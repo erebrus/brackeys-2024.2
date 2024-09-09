@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bkwx8xoi4dd1g"]
+
+[ext_resource type="Texture2D" uid="uid://3tkxukr1fwdn" path="res://assets/gfx/portraits/character_06.png" id="1_wfrje"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_8hprv"]
+
+[resource]
+script = ExtResource("2_8hprv")
+id = 6
+name = "Beverly R. Hall"
+portrait = ExtResource("1_wfrje")

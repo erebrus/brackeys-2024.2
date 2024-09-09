@@ -15,8 +15,8 @@ func _ready() -> void:
 	Events.character_name_set.connect(hide_character)
 	Events.character_name_unset.connect(show_character)
 	
-	_add_name(Globals.unknown)
-	for character in Globals.characters:
+	_add_name(Globals.unknown_character)
+	for character in State.characters.values():
 		_add_name(character)
 	
 

@@ -1,14 +1,26 @@
 extends Node
 
+const CHARACTER_PATH = "res://src/characters/data"
+
 
 var character:String = "Test"
-var characters: Array[Character]
+var characters: Dictionary # [Types.Characters, Character]
+
 
 func _ready() -> void:
-	characters=[create_character("C1"), create_character("C2")]	
+	load_characters()
+	
 
-
-static func create_character(character_name:String)->Character:
-	var ret = Character.new()
-	ret.name = character_name
-	return ret
+func load_characters() -> void:
+	Logger.info("Loading characters")
+	var dir = DirAccess.open(CHARACTER_PATH)  
+	dir.list_dir_begin()  
+	var file_name = dir.get_next()  
+	while file_name != "":  
+		var file_path = CHARACTER_PATH + "/" + file_name  
+		var character: Character = ResourceLoader.load(file_path)
+		characters[character.id] = character
+		
+		file_name = dir.get_next()  
+	Logger.info("Characters loaded")
+	

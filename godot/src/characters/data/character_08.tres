@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bnq2vl3njk3rv"]
+
+[ext_resource type="Texture2D" uid="uid://bybwrj36brpi" path="res://assets/gfx/portraits/character_08.png" id="1_rnreq"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_v8yn3"]
+
+[resource]
+script = ExtResource("2_v8yn3")
+id = 8
+name = "Roberto M. Woodson"
+portrait = ExtResource("1_rnreq")

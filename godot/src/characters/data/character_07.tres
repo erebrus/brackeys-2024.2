@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://fcurp07tsu4p"]
+
+[ext_resource type="Texture2D" uid="uid://coejfv5sqgfs5" path="res://assets/gfx/portraits/character_07.png" id="1_g511c"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_n4231"]
+
+[resource]
+script = ExtResource("2_n4231")
+id = 7
+name = "Michael L. Foster"
+portrait = ExtResource("1_g511c")

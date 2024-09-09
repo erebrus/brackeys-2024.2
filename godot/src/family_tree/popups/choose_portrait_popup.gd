@@ -14,8 +14,8 @@ func _ready() -> void:
 	Events.character_portrait_set.connect(hide_character)
 	Events.character_portrait_unset.connect(show_character)
 	
-	_add_portrait(Globals.unknown)
-	for character in Globals.characters:
+	_add_portrait(Globals.unknown_character)
+	for character in State.characters.values():
 		_add_portrait(character)
 	
 
