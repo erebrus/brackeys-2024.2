@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://1gjc20l1fmj6"]
+[gd_scene load_steps=5 format=3 uid="uid://1gjc20l1fmj6"]
 
 [ext_resource type="Script" path="res://src/family_tree/family_tree.gd" id="1_jn56e"]
+[ext_resource type="PackedScene" uid="uid://cm3dpmhd4h6d6" path="res://src/family_tree/popups/clues_popup.tscn" id="4_7rarm"]
 [ext_resource type="PackedScene" uid="uid://dxmvrcqgee7rj" path="res://src/family_tree/popups/choose_portrait_popup.tscn" id="5_lldmy"]
 [ext_resource type="PackedScene" uid="uid://bu73x7jnatims" path="res://src/family_tree/popups/choose_name_popup.tscn" id="6_nxtea"]
 
@@ -22,3 +23,9 @@ layout_mode = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+
+[node name="CluesPopup" parent="." instance=ExtResource("4_7rarm")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = -119.0
+offset_top = -92.0

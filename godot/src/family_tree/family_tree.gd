@@ -5,6 +5,7 @@ var portraits: Array[TreePortrait]
 
 @onready var choose_portrait_popup: Control = %ChoosePortraitPopup
 @onready var choose_name_popup: Control = %ChooseNamePopup
+@onready var clues_popup: Control = %CluesPopup
 
 
 func _ready() -> void:
@@ -18,6 +19,9 @@ func _find_portraits(node: Node) -> void:
 			
 			child.portrait_clicked.connect(_on_portrait_clicked.bind(child))
 			child.name_label_clicked.connect(_on_name_clicked.bind(child))
+			child.mouse_entered.connect(_on_portrait_mouse_entered.bind(child))
+			child.mouse_exited.connect(_on_portrait_mouse_exited.bind(child))
+			
 		else:
 			_find_portraits(child)
 	
@@ -60,6 +64,10 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 		_check_portrait_is_correct(portrait)
 	
 
-func _on_changed(character: Character) -> void:
-	_check_fully_discovered()
+func _on_portrait_mouse_entered(portrait: TreePortrait) -> void:
+	clues_popup.open(portrait.clues)
+	
+
+func _on_portrait_mouse_exited(portrait: TreePortrait) -> void:
+	clues_popup.close()
 	

@@ -11,6 +11,9 @@ signal discovered
 @export var is_discovered:= false
 @export var is_dead:= false
 
+@export var portrait_clues: Array[String]
+@export var name_clues: Array[String]
+
 
 func discover() -> void:
 	if is_discovered:

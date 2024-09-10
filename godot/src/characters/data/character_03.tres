@@ -10,3 +10,5 @@ name = "Darrell M. Meeks"
 portrait = ExtResource("1_dl4dq")
 is_discovered = false
 is_dead = true
+portrait_clues = Array[String](["Some children call him Uncle D"])
+name_clues = Array[String](["Name clue for Darrell"])

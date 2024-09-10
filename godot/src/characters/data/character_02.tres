@@ -8,3 +8,7 @@ script = ExtResource("2_0jmjp")
 id = 2
 name = "Lily R. Rasmussen"
 portrait = ExtResource("1_05j3i")
+is_discovered = false
+is_dead = false
+portrait_clues = Array[String](["Has many children"])
+name_clues = Array[String](["Lily always wears shades of green"])

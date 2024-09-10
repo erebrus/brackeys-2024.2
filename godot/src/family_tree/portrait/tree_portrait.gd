@@ -21,6 +21,17 @@ var character: Character:
 		return State.characters[portrait.character_id]
 		
 
+var clues: Array[String]:
+	get:
+		var result: Array[String]
+		if portrait._character != null:
+			result.append_array(portrait._character.portrait_clues)
+		if name_label._character != null:
+			result.append_array(name_label._character.name_clues)
+		
+		return result
+	
+
 @onready var portrait: Portrait = %Portrait
 @onready var name_label: NameLabel = %NameLabel
 

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm3dpmhd4h6d6"]
+
+[ext_resource type="FontFile" uid="uid://dltiuxgv6gdwu" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_67bcm"]
+[ext_resource type="Script" path="res://src/family_tree/popups/clues_popup.gd" id="2_nxwka"]
+
+[sub_resource type="Theme" id="Theme_7ad4a"]
+default_font = ExtResource("1_67bcm")
+default_font_size = 20
+HeaderMedium/font_sizes/font_size = 32
+
+[node name="CluesPopup" type="MarginContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_7ad4a")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("2_nxwka")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Notes"
+
+[node name="CluesContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2

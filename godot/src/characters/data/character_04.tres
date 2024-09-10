@@ -8,3 +8,7 @@ script = ExtResource("2_05d3n")
 id = 4
 name = "Stefan S. Moore"
 portrait = ExtResource("1_j1fex")
+is_discovered = false
+is_dead = false
+portrait_clues = Array[String](["Portrait clue for the blong guy"])
+name_clues = Array[String](["Name clue for Stefan"])
