@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu73x7jnatims"]
+[gd_scene load_steps=4 format=3 uid="uid://bu73x7jnatims"]
 
-[ext_resource type="Script" path="res://src/family_tree/popups/choose_name_popup.gd" id="1_ka1hh"]
-[ext_resource type="PackedScene" uid="uid://cdr3iwyew1jjo" path="res://src/family_tree/name_label/name_label.tscn" id="2_2gd87"]
+[ext_resource type="Script" path="res://src/family_tree/popups/choose_name_popup/choose_name_popup.gd" id="1_ka1hh"]
+[ext_resource type="PackedScene" uid="uid://v38s6wfuls8h" path="res://src/family_tree/popups/choose_name_popup/name_select.tscn" id="2_5ucjo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hct7"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="ChooseNamePopup" type="PanelContainer"]
 anchors_preset = 8
@@ -15,8 +18,9 @@ offset_right = 250.0
 offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5hct7")
 script = ExtResource("1_ka1hh")
-NameScene = ExtResource("2_2gd87")
+NameScene = ExtResource("2_5ucjo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

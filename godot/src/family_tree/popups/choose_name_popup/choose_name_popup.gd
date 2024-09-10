@@ -21,7 +21,6 @@ func _ready() -> void:
 
 func _add_name(character: Character) -> void:
 	var name_label = NameScene.instantiate()
-	name_label.show_unknown = true
 	name_label.character_id = character.id
 	name_label.clicked.connect(_on_name_clicked.bind(character))
 	
