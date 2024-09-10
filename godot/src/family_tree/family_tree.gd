@@ -51,6 +51,11 @@ func _on_portrait_clicked(portrait: TreePortrait) -> void:
 	if character != null:
 		portrait.set_portrait(character)
 		_check_portrait_is_correct(portrait)
+		
+		# TODO: remove 
+		if not State.characters[Types.Characters.Character3].portrait_available:
+			State.characters[Types.Characters.Character3].find_portrait()
+		
 	
 
 func _on_name_clicked(portrait: TreePortrait) -> void:
@@ -62,6 +67,10 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 	if character != null:
 		portrait.set_name_label(character)
 		_check_portrait_is_correct(portrait)
+		
+		# TODO: remove 
+		if not State.characters[Types.Characters.Character4].name_available:
+			State.characters[Types.Characters.Character4].find_name()
 	
 
 func _on_portrait_mouse_entered(portrait: TreePortrait) -> void:

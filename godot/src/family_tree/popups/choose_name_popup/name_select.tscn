@@ -10,6 +10,7 @@ script = ExtResource("1_l2j2t")
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
+mouse_filter = 2
 show_unknown = true
 
 [node name="CluesContainer" type="VBoxContainer" parent="."]

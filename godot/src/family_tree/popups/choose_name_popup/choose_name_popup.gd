@@ -23,6 +23,10 @@ func _add_name(character: Character) -> void:
 	var name_label = NameScene.instantiate()
 	name_label.character_id = character.id
 	name_label.clicked.connect(_on_name_clicked.bind(character))
+	character.name_found.connect(show_character.bind(character))
+	
+	if not character.name_available:
+		name_label.visible = false
 	
 	container.add_child(name_label)
 	

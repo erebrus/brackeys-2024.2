@@ -23,6 +23,10 @@ func _add_portrait(character: Character) -> void:
 	var portrait = PortraitScene.instantiate()
 	portrait.character_id = character.id
 	portrait.clicked.connect(_on_portrait_clicked.bind(character))
+	character.portrait_found.connect(show_character.bind(character))
+	
+	if not character.portrait_available:
+		portrait.visible = false
 	
 	container.add_child(portrait)
 	

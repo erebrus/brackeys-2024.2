@@ -5,5 +5,12 @@
 
 [resource]
 script = ExtResource("2_b7vqx")
+id = 0
 name = "Unknown"
 portrait = ExtResource("1_bqy41")
+name_available = true
+portrait_available = true
+is_discovered = false
+is_dead = false
+portrait_clues = Array[String]([])
+name_clues = Array[String]([])
