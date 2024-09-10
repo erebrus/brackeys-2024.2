@@ -8,3 +8,4 @@ script = ExtResource("2_8bdft")
 id = 1
 name = "Michelle M. McDaniel"
 portrait = ExtResource("1_xt3xg")
+is_discovered = true

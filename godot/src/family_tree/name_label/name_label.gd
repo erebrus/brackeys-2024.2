@@ -10,7 +10,7 @@ signal clicked
 var _character: Character
 @export var character_id: Types.Characters:
 	set(value):
-		if _character != null:
+		if _character != null and  _character.discovered.is_connected(_on_character_discovered):
 			_character.discovered.disconnect(_on_character_discovered)
 		
 		character_id = value
@@ -25,7 +25,10 @@ var _character: Character
 		else:
 			%Label.text = _character.name
 		
-		_character.discovered.connect(_on_character_discovered)
+		if _character != null and _character.is_discovered:
+			%Label.label_settings = solved_font
+		else:
+			_character.discovered.connect(_on_character_discovered)
 		
 	
 

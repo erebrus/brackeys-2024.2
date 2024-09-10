@@ -17,8 +17,6 @@ func _find_portraits(node: Node) -> void:
 	for child in node.get_children():
 		if child is TreePortrait:
 			portraits.append(child)
-			child.set_portrait(Globals.unknown_character)
-			child.set_name_label(Globals.unknown_character)
 			
 			child.portrait_clicked.connect(_on_portrait_clicked.bind(child))
 			child.name_label_clicked.connect(_on_name_clicked.bind(child))

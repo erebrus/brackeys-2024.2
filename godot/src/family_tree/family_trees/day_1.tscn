@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cath4tuytbe3i"]
+
+[ext_resource type="PackedScene" uid="uid://1gjc20l1fmj6" path="res://src/family_tree/family_tree.tscn" id="1_2gmqh"]
+[ext_resource type="PackedScene" uid="uid://b33kel5e8nuw8" path="res://src/family_tree/portrait/tree_portrait.tscn" id="2_1hkqm"]
+
+[node name="FamilyTree" instance=ExtResource("1_2gmqh")]
+
+[node name="Line2D10" type="Line2D" parent="." index="0"]
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." index="1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -171.0
+offset_right = 375.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Generation1" type="HBoxContainer" parent="VBoxContainer2" index="0"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Grandpa" parent="VBoxContainer2/Generation1" index="0" instance=ExtResource("2_1hkqm")]
+layout_mode = 2
+solution = 1
+
+[node name="Grandma" parent="VBoxContainer2/Generation1" index="1" instance=ExtResource("2_1hkqm")]
+layout_mode = 2
+solution = 2

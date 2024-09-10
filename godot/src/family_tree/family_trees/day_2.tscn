@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx6d03p7tpayo"]
+
+[ext_resource type="PackedScene" uid="uid://1gjc20l1fmj6" path="res://src/family_tree/family_tree.tscn" id="1_kmbth"]
+[ext_resource type="PackedScene" uid="uid://b33kel5e8nuw8" path="res://src/family_tree/portrait/tree_portrait.tscn" id="2_jiwy8"]
+
+[node name="FamilyTree" instance=ExtResource("1_kmbth")]
+
+[node name="Line2D10" type="Line2D" parent="." index="0"]
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D11" type="Line2D" parent="." index="1"]
+position = Vector2(0, 13)
+points = PackedVector2Array(630, 343, 630, 255)
+
+[node name="Line2D12" type="Line2D" parent="." index="2"]
+position = Vector2(0, 176)
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D13" type="Line2D" parent="." index="3"]
+position = Vector2(248, 176)
+points = PackedVector2Array(571, 271, 693, 271)
+
+[node name="Line2D14" type="Line2D" parent="." index="4"]
+position = Vector2(0, 13)
+points = PackedVector2Array(316, 342, 942, 342)
+
+[node name="Line2D15" type="Line2D" parent="." index="5"]
+position = Vector2(0, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D16" type="Line2D" parent="." index="6"]
+position = Vector2(128, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D17" type="Line2D" parent="." index="7"]
+position = Vector2(377, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="Line2D18" type="Line2D" parent="." index="8"]
+position = Vector2(622, 13)
+points = PackedVector2Array(316, 337, 316, 382)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -171.0
+offset_right = 375.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Generation1" type="HBoxContainer" parent="VBoxContainer2" index="0"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Grandpa" parent="VBoxContainer2/Generation1" index="0" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 1
+
+[node name="Grandma" parent="VBoxContainer2/Generation1" index="1" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 2
+
+[node name="Generation2" type="HBoxContainer" parent="VBoxContainer2" index="1"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="Uncle" parent="VBoxContainer2/Generation2" index="0" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 3
+
+[node name="Aunt" parent="VBoxContainer2/Generation2" index="1" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 4
+
+[node name="Aunt2" parent="VBoxContainer2/Generation2" index="2" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 5
+
+[node name="Uncle2" parent="VBoxContainer2/Generation2" index="3" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 6
+
+[node name="Uncle3" parent="VBoxContainer2/Generation2" index="4" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 7
+
+[node name="Aunt3" parent="VBoxContainer2/Generation2" index="5" instance=ExtResource("2_jiwy8")]
+layout_mode = 2
+solution = 8

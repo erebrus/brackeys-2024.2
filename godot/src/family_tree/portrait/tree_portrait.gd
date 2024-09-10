@@ -29,6 +29,14 @@ func _ready() -> void:
 	portrait.clicked.connect(portrait_clicked.emit)
 	name_label.clicked.connect(name_label_clicked.emit)
 	
+	if solution != Types.Characters.Unknown:
+		var solution_character = State.characters[solution]
+		
+		if solution_character != null and solution_character.is_discovered:
+			set_portrait(solution_character)
+			set_name_label(solution_character)
+		
+	
 
 func set_portrait(character: Character) -> void:
 	if portrait.character_id != Types.Characters.Unknown:
