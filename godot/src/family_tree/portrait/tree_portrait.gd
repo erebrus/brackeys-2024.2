@@ -9,10 +9,16 @@ signal name_label_clicked
 
 var is_correct: bool:
 	get:
-		if portrait.character == null or name_label.character == null:
-			return false
-			
-		return portrait.character.id == solution and name_label.character.id == solution
+		return portrait.character_id == solution and name_label.character_id == solution
+		
+
+var character: Character:
+	get:
+		if portrait.character_id != name_label.character_id:
+			return null
+		if portrait.character_id == Types.Characters.Unknown:
+			return Globals.unknown_character
+		return State.characters[portrait.character_id]
 		
 
 @onready var portrait: Portrait = %Portrait
@@ -25,21 +31,21 @@ func _ready() -> void:
 	
 
 func set_portrait(character: Character) -> void:
-	if portrait.character != null and portrait.character != Globals.unknown_character:
-		Events.character_portrait_unset.emit(portrait.character)
+	if portrait.character_id != Types.Characters.Unknown:
+		Events.character_portrait_unset.emit(State.characters[portrait.character_id])
 		
-	portrait.character = character
+	portrait.character_id = character.id
 	
-	if portrait.character != null and portrait.character != Globals.unknown_character:
-		Events.character_portrait_set.emit(portrait.character)
+	if portrait.character_id != Types.Characters.Unknown:
+		Events.character_portrait_set.emit(State.characters[portrait.character_id])
 	
 
 func set_name_label(character: Character) -> void:
-	if name_label.character != null and name_label.character != Globals.unknown_character:
-		Events.character_name_unset.emit(name_label.character)
+	if name_label.character_id != Types.Characters.Unknown:
+		Events.character_name_unset.emit(State.characters[name_label.character_id])
 		
-	name_label.character = character
+	name_label.character_id = character.id
 	
-	if name_label.character != null and name_label.character != Globals.unknown_character:
-		Events.character_name_set.emit(name_label.character)
+	if name_label.character_id != Types.Characters.Unknown:
+		Events.character_name_set.emit(State.characters[name_label.character_id])
 	

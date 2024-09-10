@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://1cctb0wneea1"]
+
+[ext_resource type="FontFile" uid="uid://fb314mf4ueg" path="res://assets/fonts/GreatVibes-Regular.ttf" id="1_2ulf4"]
+
+[resource]
+font = ExtResource("1_2ulf4")
+font_size = 20

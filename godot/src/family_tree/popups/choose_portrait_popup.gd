@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _add_portrait(character: Character) -> void:
 	var portrait = PortraitScene.instantiate()
-	portrait.character = character
+	portrait.character_id = character.id
 	portrait.clicked.connect(_on_portrait_clicked.bind(character))
 	
 	container.add_child(portrait)
@@ -29,13 +29,13 @@ func _add_portrait(character: Character) -> void:
 
 func show_character(character: Character) -> void:
 	for child in container.get_children():
-		if child.character == character:
+		if child.character_id ==  character.id:
 			child.show()
 	
 
 func hide_character(character: Character) -> void:
 	for child in container.get_children():
-		if child.character == character:
+		if child.character_id ==  character.id:
 			child.hide()
 	
 

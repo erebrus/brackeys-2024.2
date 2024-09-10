@@ -5,7 +5,6 @@ signal selected(character: Character)
 
 @export var NameScene: PackedScene
 
-
 @onready var container: Container = %NameContainer
 
 
@@ -22,7 +21,8 @@ func _ready() -> void:
 
 func _add_name(character: Character) -> void:
 	var name_label = NameScene.instantiate()
-	name_label.character = character
+	name_label.show_unknown = true
+	name_label.character_id = character.id
 	name_label.clicked.connect(_on_name_clicked.bind(character))
 	
 	container.add_child(name_label)
@@ -30,13 +30,13 @@ func _add_name(character: Character) -> void:
 
 func show_character(character: Character) -> void:
 	for child in container.get_children():
-		if child.character == character:
+		if child.character_id == character.id:
 			child.show()
 	
 
 func hide_character(character: Character) -> void:
 	for child in container.get_children():
-		if child.character == character:
+		if child.character_id == character.id:
 			child.hide()
 	
 

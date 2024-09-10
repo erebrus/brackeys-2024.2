@@ -2,15 +2,17 @@ class_name Portrait extends MarginContainer
 
 signal clicked
 
-
-@export var character: Character:
+var _character: Character
+@export var character_id: Types.Characters:
 	set(value):
-		character = value
+		character_id = value
 		
-		if character == null:
-			return
-		
-		%Photo.texture = character.portrait
+		if character_id == Types.Characters.Unknown:
+			_character = Globals.unknown_character
+		else:
+			_character = State.characters[character_id]
+			
+		%Photo.texture = _character.portrait
 	
 
 

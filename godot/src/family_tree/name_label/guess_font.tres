@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bnob0d6pp54bx"]
+
+[ext_resource type="FontFile" uid="uid://dltiuxgv6gdwu" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_3obov"]
+
+[resource]
+font = ExtResource("1_3obov")
