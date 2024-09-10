@@ -8,3 +8,5 @@ script = ExtResource("2_cyt41")
 id = 3
 name = "Darrell M. Meeks"
 portrait = ExtResource("1_dl4dq")
+is_discovered = false
+is_dead = true

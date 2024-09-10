@@ -9,8 +9,6 @@ var portraits: Array[TreePortrait]
 
 func _ready() -> void:
 	_find_portraits(self)
-	#Events.character_name_set.connect(_on_changed)
-	#Events.character_portrait_set.connect(_on_changed)
 	
 
 func _find_portraits(node: Node) -> void:

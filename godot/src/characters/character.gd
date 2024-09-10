@@ -9,6 +9,7 @@ signal discovered
 @export var portrait: Texture = preload("res://assets/gfx/portraits/person_unknown.png")
 
 @export var is_discovered:= false
+@export var is_dead:= false
 
 
 func discover() -> void:

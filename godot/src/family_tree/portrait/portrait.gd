@@ -2,6 +2,9 @@ class_name Portrait extends MarginContainer
 
 signal clicked
 
+@export var deceased_material: ShaderMaterial
+
+
 var _character: Character
 @export var character_id: Types.Characters:
 	set(value):
@@ -13,7 +16,9 @@ var _character: Character
 			_character = State.characters[character_id]
 			
 		%Photo.texture = _character.portrait
-	
+		
+		if _character.is_dead:
+			%Photo.material = deceased_material
 
 
 func _ready() -> void:

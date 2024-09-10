@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bnf6ci4q01765"]
+
+[ext_resource type="Shader" path="res://src/family_tree/portrait/deceased.gdshader" id="1_x7ioe"]
+
+[resource]
+shader = ExtResource("1_x7ioe")
