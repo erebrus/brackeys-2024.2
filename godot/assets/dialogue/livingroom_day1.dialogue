@@ -29,24 +29,29 @@ You: Hey, I just -
 ???: Are you interested in making some money on the side? 
 You: W-what? 
 ???: Do you want to earn some easy money?
-#TODO: hint - the man is persistent about making easy money 
+#DONE: hint - the man is persistent about making easy money 
+do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
 You: It doesn't sound legal, to be fair.
 ???: Oh come on, who are you? The police?
 You: Actually, yeah.
 ???: ...
 ???: My bad.
-#TODO: hint - the money he makes is not legal
+#DONE: hint - the money he makes is not legal
+do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
 ???: I should go. => END
 
 ~ firstborn_start
 You: Hello, I'm Taylor.
 ???: Oh so it was you who Jessica was mumbling about while drawing. I saw her in her zone like an hour ago.
-#TODO: hint - there's a woman who draws, her name is Jessica
+#DONE: hint - there's a woman who draws, her name is Jessica
+do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_draws")
 ???: She's so weird, I cannot belive we're siblings...
 #TODO: hint - the woman is this man's sister
 You: Ah yea, we met before.
 Andrew: Anyway, I'm Andrew, pleasure to meet you. You came here with...?
-#TODO: hint - the man's name is Andrew
+#DONE: hint - the man's name is Andrew
+do State.characters[Types.Characters.FirstBornSon].find_name()
+set State.characters[Types.Characters.FirstBornSon].is_known = true
 You: Angela.
 Andrew: Who would have thought that she could have a stable relationship... hm.
 You: Everyone is shocked, to be fair. 

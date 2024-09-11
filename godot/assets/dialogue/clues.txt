@@ -6,3 +6,12 @@ samantha_henry_dead|Her husband is dead|
 samantha_mourning|Widow is stil mourning|
 samantha_mourning2|Samantha didn't move on yet|
 vanda_name|The woman's name is Vanda|
+olivia_50years|Angela's sister spent 50 years with her husband, her name is Olivia|
+stan_family|Stan doesn't associate himself with the family|
+jessica_unusual|This woman appears to be enamored by unusual things|
+jason_has_father|The teenage boy has a father|
+jason_aunt|Angela is this boy's aunt|
+jason_mom_grandma|The teenage boy has a mom and a grandma|
+frank_easy_money|the man is persistent about making easy money|
+frank_illegal_money|The money he makes is not legal|
+jessica_draws|There's a woman who draws, her name is Jessica|
