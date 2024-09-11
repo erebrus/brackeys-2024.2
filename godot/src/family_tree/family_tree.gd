@@ -14,13 +14,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_tree"):
-		if choose_name_popup.visible:
-			choose_name_popup.close()
-		if choose_portrait_popup.visible:
-			choose_portrait_popup.close()
-		if clues_popup.visible:
-			clues_popup.close()
-		
+		_close_popups()
 		visible = not visible
 	
 
@@ -54,19 +48,25 @@ func _check_fully_discovered() -> void:
 	Logger.info("Family tree discovered!")
 	
 
+func _close_popups() -> void:
+	if choose_name_popup.visible:
+		choose_name_popup.close()
+	if choose_portrait_popup.visible:
+		choose_portrait_popup.close()
+	if clues_popup.visible:
+		clues_popup.close()
+	
+
 func _on_portrait_clicked(portrait: TreePortrait) -> void:
 	if portrait.character != null and portrait.character.is_discovered:
 		return
 	
+	_close_popups()
 	choose_portrait_popup.show()
 	var character = await choose_portrait_popup.selected
 	if character != null:
 		portrait.set_portrait(character)
 		_check_portrait_is_correct(portrait)
-		
-		# TODO: remove 
-		if not State.characters[Types.Characters.FirstBornSon].portrait_available:
-			State.characters[Types.Characters.FirstBornSon].find_portrait()
 		
 	
 
@@ -74,15 +74,13 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 	if portrait.character != null and portrait.character.is_discovered:
 		return
 	
+	_close_popups()
 	choose_name_popup.show()
 	var character = await choose_name_popup.selected
 	if character != null:
 		portrait.set_name_label(character)
 		_check_portrait_is_correct(portrait)
 		
-		# TODO: remove 
-		if not State.characters[Types.Characters.Daughter].name_available:
-			State.characters[Types.Characters.Daughter].find_name()
 	
 
 func _on_portrait_mouse_entered(portrait: TreePortrait) -> void:

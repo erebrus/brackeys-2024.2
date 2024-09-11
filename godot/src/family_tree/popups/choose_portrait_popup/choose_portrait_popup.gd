@@ -19,6 +19,11 @@ func _ready() -> void:
 		_add_portrait(character)
 	
 
+func close() -> void:
+	selected.emit(null)
+	hide()
+	
+
 func _add_portrait(character: Character) -> void:
 	var portrait = PortraitScene.instantiate()
 	portrait.character_id = character.id
