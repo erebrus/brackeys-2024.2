@@ -14,6 +14,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jn56e")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.89, 0.85885, 0.801, 1)
+
 [node name="ChoosePortraitPopup" parent="." instance=ExtResource("5_lldmy")]
 unique_name_in_owner = true
 visible = false

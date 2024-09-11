@@ -1,6 +1,10 @@
-extends Control
+extends Node
+
+@onready var current_scene: GameScene = %StartScene
+@onready var family_tree: FamilyTree = %FamilyTree
 
 
+# TODO: remove
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_T:

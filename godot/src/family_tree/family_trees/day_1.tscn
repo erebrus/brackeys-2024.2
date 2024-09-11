@@ -5,10 +5,11 @@
 
 [node name="FamilyTree" instance=ExtResource("1_2gmqh")]
 
-[node name="Line2D10" type="Line2D" parent="." index="0"]
+[node name="Line2D10" type="Line2D" parent="." index="1"]
 points = PackedVector2Array(571, 271, 693, 271)
+default_color = Color(0.01, 0.01, 0.01, 1)
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="." index="1"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="." index="2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

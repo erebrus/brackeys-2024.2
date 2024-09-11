@@ -20,11 +20,13 @@ signal discovered
 
 
 func find_name() -> void:
+	Logger.info("Character name found: %s" % self)
 	name_available = true
 	name_found.emit()
 	
 
 func find_portrait() -> void:
+	Logger.info("Character portrait found: %s" % self)
 	portrait_available = true
 	portrait_found.emit()
 	
@@ -33,9 +35,10 @@ func discover() -> void:
 	if is_discovered:
 		return
 	
+	Logger.info("Character discovered: %s" % self)
 	is_discovered = true
 	discovered.emit()
 	
 
 func _to_string() -> String:
-	return name
+	return Types.Characters.keys()[id]
