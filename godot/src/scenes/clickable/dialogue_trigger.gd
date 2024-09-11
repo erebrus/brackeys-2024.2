@@ -1,18 +1,16 @@
-extends Area2D
+extends Clickable
 
 @export var dialogue: DialogueResource
 @export var dialogue_title: String = "start"
 
+
 func _ready() -> void:
+	super._ready()
+	
 	assert(dialogue != null)
-	input_event.connect(_on_input_event)
+	clicked.connect(start_dialogue)
 	
 
 func start_dialogue() -> void:
 	DialogueManager.show_dialogue_balloon(dialogue, dialogue_title)
-	
-
-func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event.is_action_released("left_click"):
-		start_dialogue()
 	

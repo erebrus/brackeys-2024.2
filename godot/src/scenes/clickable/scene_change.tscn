@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnmt80lx7jrts"]
+
+[ext_resource type="PackedScene" uid="uid://bvdbhrqvi4tce" path="res://src/scenes/clickable/clickable.tscn" id="1_gbi36"]
+[ext_resource type="Script" path="res://src/scenes/clickable/scene_change.gd" id="2_1php4"]
+
+[node name="SceneChange" instance=ExtResource("1_gbi36")]
+script = ExtResource("2_1php4")
+target_scene = null

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvdbhrqvi4tce"]
+
+[ext_resource type="Script" path="res://src/scenes/clickable/clickable.gd" id="1_rla5p"]
+
+[node name="Clickable" type="Area2D"]
+script = ExtResource("1_rla5p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
