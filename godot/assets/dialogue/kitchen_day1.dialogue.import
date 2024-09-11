@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://ioc5dhntf2t1"
+path="res://.godot/imported/kitchen_day1.dialogue-38394267140f36bfbe30b4d461762feb.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/kitchen_day1.dialogue"
+dest_files=["res://.godot/imported/kitchen_day1.dialogue-38394267140f36bfbe30b4d461762feb.tres"]
+
+[params]
+
+defaults=true

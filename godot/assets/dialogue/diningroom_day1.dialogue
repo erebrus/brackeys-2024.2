@@ -1,0 +1,25 @@
+
+~ partner_start
+You: Oh, there you are.
+Angela: Mhm, I found some good wine in Tom's storage.
+You: Are you sure he won't notice it? 
+Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man.
+#TODO: hint - Angela's sister spent 50 years with her husband, her name is Olivia
+Angela: Anyway, did you meet everyone?
+You: From what I know, not yet.  
+Angela: Well, you better get going then. => END
+
+~ son_from_first_marriage_start
+You: Hey, I'm Taylor, Angela's partner. 
+???: Angela? 
+???: Oh yea, her. 
+Stan: Well, I'm Stanley. Stan for short.
+#TODO: hint - the man's name is Stanley
+You: Nice to meet you, Stan.
+Stan: Have you met everyone from this weird family? 
+You: I... think so? 
+Stan: Good, good. Please don't associate me with themm, though.
+#TODO: hint - Stan doesn't associate himself with the family
+Stan: I'm not such a freak as they are. => END
+
+=> END

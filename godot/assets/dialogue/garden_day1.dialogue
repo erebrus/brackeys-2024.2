@@ -1,0 +1,68 @@
+
+~ family_head_start
+???: Ah there you are! Angela told us you'd come together!
+You: Hello sir, nice to meet you. 
+???: Where are my manners! Just call me Tom! And you must be Taylor, right? 
+#TODO: hint - head of the family is named Tom
+Tom: Angela says you have some dangerous job, huh?
+You: I mean, you could say that. I'm a police detective.
+Tom: Sounds quite dangerous to me! 
+You: Heh... Anyway, it was nice talking to you. I should go meet others.
+You: Angela will be upset if I don't introduce myself to everyone before dinner.
+Tom: Ah yea, she'll probably be upset anyway, that's how she is...
+Tom: Well, enjoy the stay at the mansion!
+You: Thanks, Tom. 
+do State.characters[Types.Characters.FamilyHead].set_dialogue("family_head_repeat")
+=> END
+
+~ family_head_repeat
+Tom: Have you meet all family yet?
+Tom: My grandson is hidden somewhere with his little machine. => END
+
+
+~ family_head_wife_start
+???: Hello, are you my sister's newest partner? She always changes them so quickly...
+#TODO: hint - Angela has a sister
+You: Nice to meet you too. I guess, yes. I'm Taylor. 
+???: Alright. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
+You: Understandable, sorry to bother you ma'am. 
+???: See you later, I guess. 
+You: Yeah, see you. 
+do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
+=> END
+
+~ family_head_wife_repeat
+???: Everything has to be perfect! => END!
+
+~ daughter_start
+???: Such captivating color... It'll go perfectly with... 
+???: Oh, hi.
+You: Hey, sorry if I disturb you, I just wanted to introduce myself, I'm Taylor.
+???: Oh, no, no, no! Don't worry! You have... unusual features.
+You: Umm... Should I be concerned? 
+???: It's a compliment! Your face's harmony is... fascinating.
+#TODO: hint - the woman appears to be enamored by unusual things
+You: Thank you?
+???: Yes, yes... Sorry I need to sketch that down... => END
+
+~ grandson_start
+???: Damn it...
+You: Hey, need some help with that?
+???: I can't beat this level, I've been trying all day. 
+You: Here, let me try.
+You: Oh yea, I can see the challenge...
+You: Just a little bit more and...
+You: Yeah, done. Here's your phone.
+???: What?! Damn, you're awesome. Better than my dad, he didn't even want to try to help me...
+#TODO hint - the teenage boy has a father
+You: Oh, sorry to hear that. 
+???: You're new, by the way. You're not some "another new uncle from a forgotten marriage", huh?
+#TODO: hint - there was someone who was married before and had children  
+You: Umm... no. I'm Angela's partner.
+???: Oh damn, auntie has a partner?! That's new. 
+#TODO: hint - Angela is this boy's aunt
+You: Yea, I've heard that a lot in the past few hours.
+???: Well, get used to it. This family is crazy. 
+???: I better get going help mom and grandma.
+#TODO: hint - the teenage boy has a mom and a grandma 
+You: Alright, see you later. => END

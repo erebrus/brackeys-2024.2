@@ -1,0 +1,19 @@
+
+~ wife_of_firstborn_start
+???: Ohhh hello there! Let me guess, are you with Samantha?
+#TODO: hint - there's a woman named Samantha
+You: Hi, nope, I'm with Angela. I'm Taylor, nice to meet you.
+???: Angela? That's so unusual. I hoped Samantha finally moved on.
+#TODO hint - Samantha didn't move on yet
+You: You're not the first one to be so surprised hearing about us.
+???: Haha! Yeah, Angela is... well, she's very independend. So her bringing someone home for such a significant event means a lot.
+???: You must be important to her.
+You: Well, I hope so, haha! 
+Vanda: Hahaha! Oh by the way, I'm Vanda, pleasure to meet you!
+#TODO: hint - the woman's name is Vanda
+You: Likewise. Do you know where everyone else is? 
+Vanda: It's a big house, easy to get lost. I'm sure you'll meet them all before the big dinner. You just have to look around.
+You: Thanks. Well I'll go then, try to find others. It was nice chatting to you!
+Vanda: I can say the same! If you see Jason, tell him to come help me, he's probably just on his phone as always...
+#TODO: hint - Vanda mentiones Jason
+You: Will do! => END

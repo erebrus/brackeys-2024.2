@@ -7,3 +7,4 @@
 script = ExtResource("1_ii3dx")
 dialogue = null
 dialogue_title = "start"
+character_id = 0

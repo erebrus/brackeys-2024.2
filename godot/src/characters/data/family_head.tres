@@ -14,3 +14,4 @@ is_discovered = false
 is_dead = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
+start_dialogue = "family_head_start"

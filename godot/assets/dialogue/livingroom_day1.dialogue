@@ -1,0 +1,48 @@
+
+~ widow_start
+???: Oh, hello. Didn't see you there. 
+You: I'm sorry to startle you, I just wanted to introduce myself.
+???: Who are you? You're not with Frank, are you?
+#TODO: hint - there's someone named Frank
+You: Oh, no, no. I'm Angela's partner.
+???: Phew, that's good. This man always has some shady company with him. You just have to be sure, you know?
+#TODO: hint - Frank is suspicious individual
+You: Understandable. 
+???: Oh, let me introduce myself - I'm Henry's wife.
+#TODO: hint - the woman has a husband named Henry
+You: I don't think I've met him yet.
+???: I don't think you will. He's... not here anymore.
+#TODO: hint - the husband is dead
+You: Oh, I'm sorry, I didn't know.
+???: It's alright, everyone forgets.
+#TODO: hint - widow is stil mourning 
+You: I um... I should be going. I'll see you at the dinner.
+???: Yea... See you later... => END
+
+~ friend_start
+You: Hey, I just -
+???: Are you interested in making some money on the side? 
+You: W-what? 
+???: Do you want to earn some easy money?
+#TODO: hint - the man is persistent about making easy money 
+You: It doesn't sound legal, to be fair.
+???: Oh come on, who are you? The police?
+You: Actually, yeah.
+???: ...
+???: My bad.
+#TODO: hint - the money he makes is not legal
+???: I should go. => END
+
+~ firstborn_start
+You: Hello, I'm Taylor.
+???: Oh so it was you who Jessica was mumbling about while drawing. I saw her in her zone like an hour ago.
+#TODO: hint - there's a woman who draws, her name is Jessica
+???: She's so weird, I cannot belive we're siblings...
+#TODO: hint - the woman is this man's sister
+You: Ah yea, we met before.
+Andrew: Anyway, I'm Andrew, pleasure to meet you. You came here with...?
+#TODO: hint - the man's name is Andrew
+You: Angela.
+Andrew: Who would have thought that she could have a stable relationship... hm.
+You: Everyone is shocked, to be fair. 
+Andrew: Well, we have our reasons. Anyway, welcome to the family Taylor. => END

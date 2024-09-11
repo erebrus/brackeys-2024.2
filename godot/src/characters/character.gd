@@ -3,6 +3,7 @@ class_name Character extends Resource
 signal portrait_found
 signal name_found
 signal discovered
+signal dialogue_changed
 
 
 @export var id: Types.Characters
@@ -17,6 +18,8 @@ signal discovered
 
 @export var portrait_clues: Array[String]
 @export var name_clues: Array[String]
+
+@export var start_dialogue: String
 
 
 func find_name() -> void:
@@ -38,6 +41,13 @@ func discover() -> void:
 	Logger.info("Character discovered: %s" % self)
 	is_discovered = true
 	discovered.emit()
+	
+
+func set_dialogue(dialogue: String) -> void:
+	if dialogue == start_dialogue:
+		return
+	start_dialogue = dialogue
+	dialogue_changed.emit()
 	
 
 func _to_string() -> String:
