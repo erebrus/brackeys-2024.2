@@ -1,0 +1,8 @@
+tom_name|Head of the family is named Tom|
+angela_has_sister|Angela has a sister|
+frank_suspicious|Frank is a suspicious individual|
+samantha_henry_husband|The woman has a husband named Henry|
+samantha_henry_dead|Her husband is dead|
+samantha_mourning|Widow is stil mourning|
+samantha_mourning2|Samantha didn't move on yet|
+vanda_name|The woman's name is Vanda|
