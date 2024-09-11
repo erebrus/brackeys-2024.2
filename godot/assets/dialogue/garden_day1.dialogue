@@ -22,7 +22,7 @@ Tom: My grandson is hidden somewhere with his little machine. => END
 
 ~ family_head_wife_start
 ???: Hello, are you my sister's newest partner? She always changes them so quickly...
-#TODO: hint - Angela has a sister
+do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("She has a sister.")
 You: Nice to meet you too. I guess, yes. I'm Taylor. 
 ???: Alright. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
 You: Understandable, sorry to bother you ma'am. 
