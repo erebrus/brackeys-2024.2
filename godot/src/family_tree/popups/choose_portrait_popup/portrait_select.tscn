@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctvm00qj8fk7f"]
+
+[ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="1_ccgwl"]
+[ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup/portrait_select.gd" id="1_d3d37"]
+
+[node name="PortraitSelect" type="HBoxContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_d3d37")
+
+[node name="Portrait" parent="." instance=ExtResource("1_ccgwl")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="CluesContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0

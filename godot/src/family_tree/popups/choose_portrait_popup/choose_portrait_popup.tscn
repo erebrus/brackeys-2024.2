@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxmvrcqgee7rj"]
+[gd_scene load_steps=4 format=3 uid="uid://dxmvrcqgee7rj"]
 
-[ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup.gd" id="1_6u0b6"]
-[ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="1_gdy71"]
+[ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup/choose_portrait_popup.gd" id="1_6u0b6"]
+[ext_resource type="PackedScene" uid="uid://ctvm00qj8fk7f" path="res://src/family_tree/popups/choose_portrait_popup/portrait_select.tscn" id="2_mw0xb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oecuh"]
+bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="ChoosePortraitPopup" type="PanelContainer"]
 anchors_preset = 8
@@ -15,8 +18,9 @@ offset_right = 250.0
 offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oecuh")
 script = ExtResource("1_6u0b6")
-PortraitScene = ExtResource("1_gdy71")
+PortraitScene = ExtResource("2_mw0xb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -31,4 +35,4 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-columns = 4
+columns = 2

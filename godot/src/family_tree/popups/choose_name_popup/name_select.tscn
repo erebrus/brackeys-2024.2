@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://v38s6wfuls8h"]
+
+[ext_resource type="Script" path="res://src/family_tree/popups/choose_name_popup/name_select.gd" id="1_l2j2t"]
+[ext_resource type="PackedScene" uid="uid://cdr3iwyew1jjo" path="res://src/family_tree/name_label/name_label.tscn" id="1_oakkh"]
+
+[node name="NameSelect" type="VBoxContainer"]
+script = ExtResource("1_l2j2t")
+
+[node name="NameLabel" parent="." instance=ExtResource("1_oakkh")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+show_unknown = true
+
+[node name="CluesContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2

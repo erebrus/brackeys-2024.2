@@ -12,3 +12,10 @@ enum Characters {
 	Character7,
 	Character8
 }
+
+enum Locations {
+	Garden,
+	LivingRoom,
+	DiningRoom,
+	Kitchen
+}

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b08q0ue4oo8jf"]
+
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_pp3qq"]
+[ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_0v2cy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxyy7"]
+size = Vector2(1268, 738)
+
+[node name="TestScene" instance=ExtResource("1_pp3qq")]
+
+[node name="SceneChange" parent="." index="1" instance=ExtResource("2_0v2cy")]
+target_location = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneChange" index="1"]
+position = Vector2(624, 359)
+shape = SubResource("RectangleShape2D_qxyy7")

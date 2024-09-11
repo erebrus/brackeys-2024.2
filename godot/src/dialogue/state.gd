@@ -6,6 +6,8 @@ const CHARACTER_PATH = "res://src/characters/data"
 var character:String = "Test"
 var characters: Dictionary # [Types.Characters, Character]
 
+var current_day:= 1
+var current_time:= 10
 
 func _ready() -> void:
 	load_characters()
@@ -23,4 +25,10 @@ func load_characters() -> void:
 		
 		file_name = dir.get_next()  
 	Logger.info("Characters loaded")
+	
+
+func change_time(day: int, time: int):
+	current_day = day
+	current_time = time
+	Events.time_changed.emit(current_day, current_time)
 	

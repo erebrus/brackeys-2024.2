@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://1gjc20l1fmj6"]
 
 [ext_resource type="Script" path="res://src/family_tree/family_tree.gd" id="1_jn56e"]
-[ext_resource type="PackedScene" uid="uid://cm3dpmhd4h6d6" path="res://src/family_tree/popups/clues_popup.tscn" id="4_7rarm"]
-[ext_resource type="PackedScene" uid="uid://dxmvrcqgee7rj" path="res://src/family_tree/popups/choose_portrait_popup.tscn" id="5_lldmy"]
-[ext_resource type="PackedScene" uid="uid://bu73x7jnatims" path="res://src/family_tree/popups/choose_name_popup.tscn" id="6_nxtea"]
+[ext_resource type="PackedScene" uid="uid://cm3dpmhd4h6d6" path="res://src/family_tree/popups/clues_popup/clues_popup.tscn" id="4_7rarm"]
+[ext_resource type="PackedScene" uid="uid://dxmvrcqgee7rj" path="res://src/family_tree/popups/choose_portrait_popup/choose_portrait_popup.tscn" id="5_lldmy"]
+[ext_resource type="PackedScene" uid="uid://bu73x7jnatims" path="res://src/family_tree/popups/choose_name_popup/choose_name_popup.tscn" id="6_nxtea"]
 
 [node name="FamilyTree" type="Control"]
 layout_mode = 3
@@ -13,6 +13,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jn56e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.89, 0.85885, 0.801, 1)
 
 [node name="ChoosePortraitPopup" parent="." instance=ExtResource("5_lldmy")]
 unique_name_in_owner = true
@@ -26,6 +35,7 @@ layout_mode = 1
 
 [node name="CluesPopup" parent="." instance=ExtResource("4_7rarm")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 offset_left = -119.0
 offset_top = -92.0

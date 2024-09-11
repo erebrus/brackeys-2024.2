@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cm3dpmhd4h6d6"]
 
 [ext_resource type="FontFile" uid="uid://dltiuxgv6gdwu" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_67bcm"]
-[ext_resource type="Script" path="res://src/family_tree/popups/clues_popup.gd" id="2_nxwka"]
+[ext_resource type="Script" path="res://src/family_tree/popups/clues_popup/clues_popup.gd" id="2_nxwka"]
 
 [sub_resource type="Theme" id="Theme_7ad4a"]
 default_font = ExtResource("1_67bcm")

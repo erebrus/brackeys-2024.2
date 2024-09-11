@@ -1,4 +1,4 @@
-extends Control
+class_name FamilyTree extends Control
 
 
 var portraits: Array[TreePortrait]
@@ -10,6 +10,18 @@ var portraits: Array[TreePortrait]
 
 func _ready() -> void:
 	_find_portraits(self)
+	
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_tree"):
+		if choose_name_popup.visible:
+			choose_name_popup.close()
+		if choose_portrait_popup.visible:
+			choose_portrait_popup.close()
+		if clues_popup.visible:
+			clues_popup.close()
+		
+		visible = not visible
 	
 
 func _find_portraits(node: Node) -> void:
@@ -51,6 +63,11 @@ func _on_portrait_clicked(portrait: TreePortrait) -> void:
 	if character != null:
 		portrait.set_portrait(character)
 		_check_portrait_is_correct(portrait)
+		
+		# TODO: remove 
+		if not State.characters[Types.Characters.Character3].portrait_available:
+			State.characters[Types.Characters.Character3].find_portrait()
+		
 	
 
 func _on_name_clicked(portrait: TreePortrait) -> void:
@@ -62,6 +79,10 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 	if character != null:
 		portrait.set_name_label(character)
 		_check_portrait_is_correct(portrait)
+		
+		# TODO: remove 
+		if not State.characters[Types.Characters.Character4].name_available:
+			State.characters[Types.Characters.Character4].find_name()
 	
 
 func _on_portrait_mouse_entered(portrait: TreePortrait) -> void:
