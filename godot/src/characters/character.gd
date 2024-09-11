@@ -17,6 +17,7 @@ signal name_clue_found
 
 @export var is_discovered:= false #set when position is verified on tree
 @export var is_dead:= false
+@export var is_known:= false # set when the dialogue should show the name instead of ???
 
 @export var portrait_clues: Array[String]
 @export var name_clues: Array[String]
