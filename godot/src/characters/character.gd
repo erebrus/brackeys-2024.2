@@ -4,6 +4,8 @@ signal portrait_found
 signal name_found
 signal discovered
 signal dialogue_changed
+signal portrait_clue_found
+signal name_clue_found
 
 
 @export var id: Types.Characters
@@ -33,6 +35,18 @@ func find_portrait() -> void:
 	Logger.info("Character portrait found: %s" % self)
 	portrait_available = true
 	portrait_found.emit()
+	
+
+func find_portrait_clue(clue: String) -> void:
+	if not portrait_clues.has(clue):
+		portrait_clues.append(clue)
+		portrait_clue_found.emit(clue)
+	
+
+func find_name_clue(clue: String) -> void:
+	if not name_clues.has(clue):
+		name_clues.append(clue)
+		name_clue_found.emit(clue)
 	
 
 func discover() -> void:

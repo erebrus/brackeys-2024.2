@@ -16,6 +16,7 @@ var _character: Character
 		else:
 			_character = State.characters[character_id]
 			
+		_character.name_clue_found.connect(_add_clue)
 		for clue in _character.name_clues:
 			_add_clue(clue)
 		

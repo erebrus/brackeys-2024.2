@@ -19,6 +19,11 @@ func _ready() -> void:
 		_add_name(character)
 	
 
+func close() -> void:
+	selected.emit(null)
+	hide()
+	
+
 func _add_name(character: Character) -> void:
 	var name_label = NameScene.instantiate()
 	name_label.character_id = character.id
