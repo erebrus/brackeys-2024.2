@@ -3,7 +3,10 @@
 ???: Ah there you are! Angela told us you'd come together!
 You: Hello sir, nice to meet you. 
 ???: Where are my manners! Just call me Tom! And you must be Taylor, right? 
+#DONE: hint - head of the family is named Tom
 do State.characters[Types.Characters.FamilyHead].find_name()
+do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_name")
+set State.characters[Types.Characters.FamilyHead].is_known = true
 Tom: Angela says you have some dangerous job, huh?
 You: I mean, you could say that. I'm a police detective.
 Tom: Sounds quite dangerous to me! 
@@ -22,7 +25,9 @@ Tom: My grandson is hidden somewhere with his little machine. => END
 
 ~ family_head_wife_start
 ???: Hello, are you my sister's newest partner? She always changes them so quickly...
-do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("She has a sister.")
+#DONE: hint - Angela has a sister
+do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_has_sister")
+#TODO or do we want the clue on her sister? or both
 You: Nice to meet you too. I guess, yes. I'm Taylor. 
 ???: Alright. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
 You: Understandable, sorry to bother you ma'am. 

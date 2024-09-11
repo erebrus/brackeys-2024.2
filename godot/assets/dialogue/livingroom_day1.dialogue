@@ -3,19 +3,24 @@
 ???: Oh, hello. Didn't see you there. 
 You: I'm sorry to startle you, I just wanted to introduce myself.
 ???: Who are you? You're not with Frank, are you?
-#TODO: hint - there's someone named Frank
+#DONE: hint - there's someone named Frank
+do State.characters[Types.Characters.FriendOfTheFamily].find_name()
 You: Oh, no, no. I'm Angela's partner.
 ???: Phew, that's good. This man always has some shady company with him. You just have to be sure, you know?
-#TODO: hint - Frank is suspicious individual
+#DONE: hint - Frank is suspicious individual
+do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
 ???: Oh, let me introduce myself - I'm Henry's wife.
-#TODO: hint - the woman has a husband named Henry
+do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_husband")
+#DONE: hint - the woman has a husband named Henry
 You: I don't think I've met him yet.
 ???: I don't think you will. He's... not here anymore.
-#TODO: hint - the husband is dead
+#DONE: hint - the husband is dead
+do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
 You: Oh, I'm sorry, I didn't know.
 ???: It's alright, everyone forgets.
-#TODO: hint - widow is stil mourning 
+#DONE: hint - widow is stil mourning 
+do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
 You: I um... I should be going. I'll see you at the dinner.
 ???: Yea... See you later... => END
 
