@@ -1,13 +1,16 @@
-~ start
+~ the_mansion
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue {{State.characters[Types.Characters.Character3].name}}.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+The mansion is getting closer as you drive. 
+Sunrays reflect in the tall windows, some birds fly over the red rooftop.
+It's the perfect setting for a few days at your partner's family house.
+Celebrating the 50th anniversary of their wedding. 
+You can just relax from work and enjoy the lavish mansion for a bit.
+
+~ the_garden
+Your parnter: So this is it. My family house. Everyone is here already, so feel free to get to know them.
+I'm tired after the trip, so I'll just go and relax for a bit with some nice vintage. 
+See you later, love.
+You: Alright, I'll go and introduce myself to everyone. 
+
 
 => END

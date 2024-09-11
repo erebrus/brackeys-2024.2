@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://1j027kgyrp3k"
+path="res://.godot/imported/ponytest.dialogue-7bfccc89c043f4388e0fbd2f0164f3fa.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/ponytest.dialogue"
+dest_files=["res://.godot/imported/ponytest.dialogue-7bfccc89c043f4388e0fbd2f0164f3fa.tres"]
+
+[params]
+
+defaults=true
