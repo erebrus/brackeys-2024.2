@@ -3,7 +3,7 @@
 ???: Ah there you are! Angela told us you'd come together!
 You: Hello sir, nice to meet you. 
 ???: Where are my manners! Just call me Tom! And you must be Taylor, right? 
-#TODO: hint - head of the family is named Tom
+do State.characters[Types.Characters.FamilyHead].find_name()
 Tom: Angela says you have some dangerous job, huh?
 You: I mean, you could say that. I'm a police detective.
 Tom: Sounds quite dangerous to me! 
