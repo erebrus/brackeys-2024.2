@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dww76bnuas6k5"]
 
-[ext_resource type="Texture2D" uid="uid://d4djnq2s5f31u" path="res://assets/gfx/portraits/character_02.png" id="1_05j3i"]
-[ext_resource type="Script" path="res://src/characters/character.gd" id="2_0jmjp"]
+[ext_resource type="Texture2D" uid="uid://d4djnq2s5f31u" path="res://assets/gfx/portraits/character_02.png" id="1_r17a5"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_xu0fe"]
 
 [resource]
-script = ExtResource("2_0jmjp")
+script = ExtResource("2_xu0fe")
 id = 2
 name = "Lily R. Rasmussen"
-portrait = ExtResource("1_05j3i")
+portrait = ExtResource("1_r17a5")
 name_available = true
 portrait_available = true
 is_discovered = false

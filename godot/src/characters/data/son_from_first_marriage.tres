@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b8d0tayihv6u5"]
+
+[ext_resource type="Texture2D" uid="uid://bvn27gg5q504o" path="res://assets/gfx/portraits/character_04.png" id="1_l04no"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_ujlhc"]
+
+[resource]
+script = ExtResource("2_ujlhc")
+id = 9
+name = "Stefan S. Moore"
+portrait = ExtResource("1_l04no")
+name_available = false
+portrait_available = false
+is_discovered = false
+is_dead = false
+portrait_clues = Array[String]([])
+name_clues = Array[String]([])

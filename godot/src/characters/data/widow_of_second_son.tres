@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bnq2vl3njk3rv"]
+
+[ext_resource type="Texture2D" uid="uid://bybwrj36brpi" path="res://assets/gfx/portraits/character_08.png" id="1_kt7tu"]
+[ext_resource type="Script" path="res://src/characters/character.gd" id="2_kirvc"]
+
+[resource]
+script = ExtResource("2_kirvc")
+id = 9
+name = "Roberto M. Woodson"
+portrait = ExtResource("1_kt7tu")
+name_available = false
+portrait_available = false
+is_discovered = false
+is_dead = false
+portrait_clues = Array[String]([])
+name_clues = Array[String]([])

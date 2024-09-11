@@ -65,8 +65,8 @@ func _on_portrait_clicked(portrait: TreePortrait) -> void:
 		_check_portrait_is_correct(portrait)
 		
 		# TODO: remove 
-		if not State.characters[Types.Characters.Character3].portrait_available:
-			State.characters[Types.Characters.Character3].find_portrait()
+		if not State.characters[Types.Characters.FirstBornSon].portrait_available:
+			State.characters[Types.Characters.FirstBornSon].find_portrait()
 		
 	
 
@@ -81,8 +81,8 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 		_check_portrait_is_correct(portrait)
 		
 		# TODO: remove 
-		if not State.characters[Types.Characters.Character4].name_available:
-			State.characters[Types.Characters.Character4].find_name()
+		if not State.characters[Types.Characters.Daughter].name_available:
+			State.characters[Types.Characters.Daughter].find_name()
 	
 
 func _on_portrait_mouse_entered(portrait: TreePortrait) -> void:
