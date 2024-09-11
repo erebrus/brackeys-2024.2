@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://be3u4hfjhsvqa"]
+[gd_scene load_steps=8 format=3 uid="uid://be3u4hfjhsvqa"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ur4nb"]
 [ext_resource type="Texture2D" uid="uid://q5x8dgy1r2yo" path="res://assets/gfx/day1GardenTest/layer4.png" id="2_0nkxn"]
 [ext_resource type="Texture2D" uid="uid://c1igxv4sggb80" path="res://assets/gfx/day1GardenTest/layer3.png" id="3_tm7iw"]
+[ext_resource type="Resource" uid="uid://ch3tffmekvifg" path="res://assets/dialogue/test.dialogue" id="4_cye3i"]
 [ext_resource type="Texture2D" uid="uid://bkkmpa1xgyd7f" path="res://assets/gfx/day1GardenTest/layer2.png" id="4_watnj"]
 [ext_resource type="Texture2D" uid="uid://dl6au6dlv02s1" path="res://assets/gfx/day1GardenTest/layer1.png" id="5_nwwoj"]
+[ext_resource type="PackedScene" uid="uid://ff6a7k0imr4x" path="res://src/scenes/clickable/dialogue_trigger.tscn" id="6_g316i"]
 
 [node name="GardenDay1" instance=ExtResource("1_ur4nb")]
 portraits_found_on_enter = Array[int]([1])
@@ -12,14 +14,17 @@ portraits_found_on_enter = Array[int]([1])
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_0nkxn")
 
-[node name="GrandpaTomato" type="TextureRect" parent="." index="1"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GrandpaTomato" parent="." index="1" instance=ExtResource("6_g316i")]
+position = Vector2(630, 360)
+dialogue = ExtResource("4_cye3i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandpaTomato" index="0"]
+visible = false
+polygon = PackedVector2Array(-245, 70, -265, 31, -240, -8, -227, -26, -171, 16, -157, -42, -133, -47, -127, -28, -110, 68, -129, 82, -152, 84, -163, 39, -175, 55, -176, 77)
+
+[node name="GrandpaTomato" type="Sprite2D" parent="GrandpaTomato" index="1"]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_tm7iw")
-expand_mode = 2
 
 [node name="Middleground" type="TextureRect" parent="." index="2"]
 anchors_preset = 15
