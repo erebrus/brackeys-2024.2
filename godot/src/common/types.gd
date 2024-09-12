@@ -12,7 +12,8 @@ enum Characters {
 	Grandson,
 	WidowAfterSecondSon,
 	SonFromFirstMariageOfHeadOfFamily,
-	FriendOfTheFamily
+	FriendOfTheFamily,
+	SecondSon,
 }
 
 enum Locations {
