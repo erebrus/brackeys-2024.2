@@ -55,7 +55,7 @@ toggle_tree={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://assets/dialogue/ponytest.dialogue", "res://assets/dialogue/test.dialogue", "res://assets/dialogue/garden_day1.dialogue", "res://assets/dialogue/livingroom_day1.dialogue", "res://assets/dialogue/diningroom_day1.dialogue", "res://assets/dialogue/intro.dialogue", "res://assets/dialogue/kitchen_day1.dialogue", "res://assets/dialogue/dayone.dialogue")
+locale/translations_pot_files=PackedStringArray("res://assets/dialogue/ponytest.dialogue", "res://assets/dialogue/test.dialogue", "res://assets/dialogue/garden_day1.dialogue", "res://assets/dialogue/livingroom_day1.dialogue", "res://assets/dialogue/diningroom_day1.dialogue", "res://assets/dialogue/intro.dialogue", "res://assets/dialogue/kitchen_day1.dialogue", "res://assets/dialogue/dayone.dialogue", "res://assets/dialogue/outro_day1.dialogue", "res://assets/dialogue/livingroom_interrogation_day2.dialogue", "res://assets/dialogue/intro_day2.dialogue", "res://assets/dialogue/diningroom_interrogation_day2.dialogue")
 
 [rendering]
 

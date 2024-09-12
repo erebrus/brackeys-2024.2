@@ -1,16 +1,21 @@
-~ the_mansion
+#This is a test file for me, please don't delete now!- Pony
 
-The mansion is getting closer as you drive. 
-Sunrays reflect in the tall windows, some birds fly over the red rooftop.
-It's the perfect setting for a few days at your partner's family house.
-Celebrating the 50th anniversary of their wedding. 
-You can just relax from work and enjoy the lavish mansion for a bit.
+~ FirstBornSon_start_day2
+You: Can we talk for a moment?
+Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 
-~ the_garden
-Your parnter: So this is it. My family house. Everyone is here already, so feel free to get to know them.
-I'm tired after the trip, so I'll just go and relax for a bit with some nice vintage. 
-See you later, love.
-You: Alright, I'll go and introduce myself to everyone. 
+~ FirstBornSon_interrogation1
+- What were you doing yesterday after the dinner?
+	Andrew: Just went to bed, same as he did. My wife can confirm that. => FirstBornSon_interrogation1
+	#TODO: hint - Andrew went to bed after the dinner. 
+- What was your relationship with your father?
+	Andrew: Good. He was helping me a lot recently. I lost my job.
+	#TODO: hint - Andrew lost his job recently.
+	You: How was he helping you?
+	Andrew: By giving me money, obviously. I needed it to maintain my lifestyle and for my investments. => FirstBornSon_interrogation1
+	#TODO: hint - Andrew needed money to maintain his investments.
+- Thank you for answering, if I have any other questions, I'll get back to you.
+	Andrew: No problem, Taylor. I hope I can help. => END
 
 
 => END

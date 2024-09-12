@@ -1,0 +1,70 @@
+~ FamilyHeadsWife_start_day2
+You: Olivia, I know it’s difficult for you, but I need to ask a few questions.
+Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
+
+~ FamilyHeadsWife_interrogation1
+- What were you doing yesterday after the dinner?
+	Olivia: I went to bed with Tom, I was sleeping the whole night… I think he woke up to grab some water, he does that sometimes… =>  FamilyHeadsWife_interrogation1
+	#TODO: hint - Olivia went to bed with Tom after dinner.
+- Did Tom have any enemies?
+	Olivia: N-no, I don’t think so…
+	Olivia: He was investing in all those businesses, but I don’t think he made any enemies on the way.
+	#TODO: hint - Tom was investing in some unknown businesses
+	You: What businesses? 
+	Olivia: I don’t even know! He was wasting money on them…  =>  FamilyHeadsWife_interrogation1
+	#TODO: hint - Olivia didn't support those businesses
+- I have to ask this question, did you guys argue recently?
+	Olivia: We… actually did.
+	Olivia: He told me that he invested a big sum to import some spices…
+	Olivia: I got very upset and we had a fight. But nothing happened!
+	#TODO: hint - Tom invested big money recently and Olivia got upset, they had a fight
+	Olivia: Even though he’s very… he was very irresponsible with money, I loved this man. =>  FamilyHeadsWife_interrogation1
+- Thank you for your cooperation.
+	Olivia: Yeah… Please find whoever did that. => END
+
+~ FirstBornSon_start_day2
+You: Can we talk for a moment?
+Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
+
+~ FirstBornSon_interrogation1
+- What were you doing yesterday after the dinner?
+	Andrew: Just went to bed, same as he did. My wife can confirm that. => FirstBornSon_interrogation1
+	#TODO: hint - Andrew went to bed after the dinner. 
+- What was your relationship with your father?
+	Andrew: Good. He was helping me a lot recently. I lost my job.
+	#TODO: hint - Andrew lost his job recently.
+	You: How was he helping you?
+	Andrew: By giving money, obviously. I needed it to maintain my lifestyle and for my investments. => FirstBornSon_interrogation1
+	You: What were you investing in? 
+	Andrew: The same stuff as my father did. We were both importing some spices. 
+	#TODO: hint - Andrew was investing in the same type of businesses as Tom.
+- Thank you for answering, if I have any other questions, I'll get back to you.
+	Andrew: No problem, Tylor. I hope I can help. => END
+
+~ Daughter_start_day2
+You: Hey Jessica, I'm sorry to interrupt, but I need to talk with you.
+Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... => Daughter_interrogation1
+
+~ Daughter_interrogation1
+- Where were you after dinner?
+	Jessica: I went to the garden. The night was beautiful and I was just admiring the night sky.
+	#TODO: hint - Jessica went to the garden after dinner.
+	You: Can someone confirm that?
+	Jessica: I think Samantha was in the kitchen when I was passing by. You can ask her. => Daughter_interrogation1
+	#TODO: Samantha was in the kitchen when Jessica was going to the garden.
+- Can you tell me about your relationship with your father?
+	Jessica: It was alright, I guess.
+	Jessica: He wasn't very supportive of my art career, though. He refused to help me a few days ago.
+	You: Help with what?
+	Jessica: I wanted to open my own art gallery, but of course this type of establishment needs lots of money to start running.
+	Jessica: I asked my dad to help, but he refused.
+	#TODO: hint - Jessica wanted some financial help from her dad, but he refused her. 
+	You: Did you argue? 
+	Jessica: A little bit. 
+	Jessica: I just got upset that he was helping Andrew, but not me.
+	Jessica: He gave 2% of his shares in the spice business to Andrew, but couldn't find some spare change for me. => Daughter_interrogation1
+	#TODO: hint - Andrew got 2% of shares in Tom's investments, but she got nothing.
+- Thank you for your time, I'll leave you now.
+	Jessica: Thank you, I hope you'll find out who did it. => END
+
+=> END

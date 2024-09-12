@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://1firsua3w8da"
+path="res://.godot/imported/diningroom_interrogation_day2.dialogue-1e7480473e8b02c8780fc57bc882c510.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/diningroom_interrogation_day2.dialogue"
+dest_files=["res://.godot/imported/diningroom_interrogation_day2.dialogue-1e7480473e8b02c8780fc57bc882c510.tres"]
+
+[params]
+
+defaults=true
