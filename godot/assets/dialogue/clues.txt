@@ -15,3 +15,24 @@ jason_mom_grandma|The teenage boy has a mom and a grandma|
 frank_easy_money|the man is persistent about making easy money|
 frank_illegal_money|The money he makes is not legal|
 jessica_draws|There's a woman who draws, her name is Jessica|
+olivia_day2_bed|Olivia went to bed with Tom after dinner.|
+tom_day2_investing_unknown|Tom was investing in some unknown businesses|
+olivia_day2_business|Olivia didn't support Tom's businesses|
+tom_day2_investing_fight|Tom invested big money recently and Olivia got upset, they had a fight
+do|
+andrew_day2_bed|Andrew went to bed after the dinner.|
+andrew_day2_job|Andrew lost his job recently.|
+andrew_day2_investing|Andrew was investing in the same type of businesses as Tom.|
+jessica_day2_garden|Jessica went to the garden after dinner.|
+jessica_day2_garden_samantha|Jessica claims Samantha was in the kitchen when she was going to the garden.|
+jessica_day2_refused_help|Jessica wanted some financial help from her dad, but he refused her.|
+jessica_day2_nothing|Andrew got 2% of shares in Tom's investments, but she got nothing.|
+andrew_day2_returns|Andrew got 2% of shares in Tom's investments.|
+angela_day2_alibi_stan|Angela and Stan were together at the fireplace.|
+angela_day2_alibi_stan2|Stan was left alone after Angela went to bed.|
+angela_day2_dislike_tom|Angela didn't like Tom.|
+angela_day2_investments|Angela claims Tom was spending Olivia's money on the investments.|
+angela_day2_lending|Tom borrowed lots of money from Angela and didn't give it back.|
+vanda_day2_alibi|Vanda claims she and Samantha were cleaning after the dinner in the kitchen.|
+vanda_day2_alibi_after|After cleaning, Vanda went to bed with her husband.|
+vanda_day2_investments|Andrew took all money for son's education to invest in businesses with his father.|

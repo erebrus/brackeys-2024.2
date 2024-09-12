@@ -225,6 +225,7 @@ func get_dir_contents(dir: DirAccess, scripts: Array[String], directory_queue: A
 		else:
 			if file_name.ends_with(".gd") or file_name.ends_with(".cs") \
 			or file_name.ends_with(".c") or file_name.ends_with(".cpp") or file_name.ends_with(".h") \
+			or file_name.ends_with(".dialogue") \
 			or ((file_name.ends_with(".tscn") and _dockUI.builtin_enabled)):
 				scripts.append(dir.get_current_dir().path_join(file_name))
 		file_name = dir.get_next()
