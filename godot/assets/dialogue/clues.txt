@@ -18,8 +18,7 @@ jessica_draws|There's a woman who draws, her name is Jessica|
 olivia_day2_bed|Olivia went to bed with Tom after dinner.|
 tom_day2_investing_unknown|Tom was investing in some unknown businesses|
 olivia_day2_business|Olivia didn't support Tom's businesses|
-tom_day2_investing_fight|Tom invested big money recently and Olivia got upset, they had a fight
-do|
+tom_day2_investing_fight|Tom invested big money recently and Olivia got upset, they had a fight.|
 andrew_day2_bed|Andrew went to bed after the dinner.|
 andrew_day2_job|Andrew lost his job recently.|
 andrew_day2_investing|Andrew was investing in the same type of businesses as Tom.|
