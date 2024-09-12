@@ -23,6 +23,8 @@ enum Locations {
 	Kitchen
 }
 
+enum GameMusic {CALM, DINING}
+
 const NAME_MAP:={
 	
 	"Tom":Characters.FamilyHead,

@@ -32,22 +32,41 @@ var sound_on:=true:
 
 @onready var menu_music: AudioStreamPlayer = $menu_music
 @onready var game_music: AudioStreamPlayer = $game_music
+@onready var game_music_stream:AudioStreamSynchronized = game_music.stream
+var current_game_music_id=Types.GameMusic.CALM
 
 func _ready():
 	_init_logger()
 	Logger.info("Starting menu music")
-	fade_in_music(menu_music)
-
+	#fade_in_music(menu_music)
+	start_game()
+	
 func start_game():
 	in_game=true
 	
 	fade_music(menu_music,1)
 	await get_tree().create_timer(1).timeout
-	
-	get_tree().change_scene_to_file(GAME_SCENE_PATH)
-	fade_in_music(game_music)
-	
+	for i in range(game_music_stream.stream_count):
+		if i == current_game_music_id:
+			game_music_stream.set_sync_stream_volume(i,0)
+		else:
+			game_music_stream.set_sync_stream_volume(i,-60)
 
+	#get_tree().change_scene_to_file(GAME_SCENE_PATH)
+	fade_in_music(game_music)
+
+func _helper_set_volume(volume_db:float, id:int):
+	game_music_stream.set_sync_stream_volume(id, volume_db)
+	
+func change_game_music_to(new_id:Types.GameMusic, time:=1):
+	if new_id == current_game_music_id:
+		return
+	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
+	tween.tween_method(_helper_set_volume.bind(current_game_music_id),0,-60, time)
+	tween.parallel().tween_method(_helper_set_volume.bind(new_id),-60,0, time).set_ease(Tween.EASE_OUT)
+	await tween.finished
+	current_game_music_id = new_id
+	
 func _init_logger():
 	Logger.set_logger_level(Logger.LOG_LEVEL_INFO)
 	Logger.set_logger_format(Logger.LOG_FORMAT_MORE)
