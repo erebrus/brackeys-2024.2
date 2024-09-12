@@ -1,51 +1,55 @@
-
+#1st hour
 ~ widow_start
-???: Oh, hello. Didn't see you there. 
+#TODO: mark her as ???
+Samantha: Oh, hello. Didn't see you there. 
 You: I'm sorry to startle you, I just wanted to introduce myself.
-???: Who are you? You're not with Frank, are you?
+Samantha: Who are you? You're not with Frank, are you?
 #DONE: hint - there's someone named Frank
 do State.characters[Types.Characters.FriendOfTheFamily].find_name()
 You: Oh, no, no. I'm Angela's partner.
-???: Phew, that's good. This man always has some shady company with him. You just have to be sure, you know?
+Samantha: Phew, that's good. This man always has some shady company with him. You just have to be sure, you know?
 #DONE: hint - Frank is suspicious individual
 do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
-???: Oh, let me introduce myself - I'm Henry's wife.
+Samantha: Oh, let me introduce myself - I'm Henry's wife.
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_husband")
 #DONE: hint - the woman has a husband named Henry
 You: I don't think I've met him yet.
-???: I don't think you will. He's... not here anymore.
+Samantha: I don't think you will. He's... not here anymore.
 #DONE: hint - the husband is dead
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
 You: Oh, I'm sorry, I didn't know.
-???: It's alright, everyone forgets.
+Samantha: It's alright, everyone forgets.
 #DONE: hint - widow is stil mourning 
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
 You: I um... I should be going. I'll see you at the dinner.
-???: Yea... See you later... => END
+Samantha: Yea... See you later... => END
 
+#2nd hour
 ~ friend_start
+#TODO: mark him as ???
 You: Hey, I just -
-???: Are you interested in making some money on the side? 
+Frank: Are you interested in making some money on the side? 
 You: W-what? 
-???: Do you want to earn some easy money?
+Frank: Do you want to earn some easy money?
 #DONE: hint - the man is persistent about making easy money 
 do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
 You: It doesn't sound legal, to be fair.
-???: Oh come on, who are you? The police?
+Frank: Oh come on, who are you? The police?
 You: Actually, yeah.
-???: ...
-???: My bad.
+Frank: ...
+Frank: My bad.
 #DONE: hint - the money he makes is not legal
 do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
-???: I should go. => END
+Frank: I should go. => END
 
+#3rd hour
 ~ firstborn_start
 You: Hello, I'm Taylor.
-???: Oh so it was you who Jessica was mumbling about while drawing. I saw her in her zone like an hour ago.
+Andrew: Oh so it was you who Jessica was mumbling about while drawing. I saw her in her zone like an hour ago.
 #DONE: hint - there's a woman who draws, her name is Jessica
 do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_draws")
-???: She's so weird, I cannot belive we're siblings...
+Andrew: She's so weird, I cannot belive we're siblings...
 #TODO: hint - the woman is this man's sister
 You: Ah yea, we met before.
 Andrew: Anyway, I'm Andrew, pleasure to meet you. You came here with...?

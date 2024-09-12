@@ -1,0 +1,19 @@
+~ WidowAfterSecondSon_start
+You: Samantha. I need to ask you a few questions.
+Samantha: Oh, it's you.
+Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_interrogation1
+
+~ WidowAfterSecondSon_interrogation1
+- What were you doing after the dinner? 
+	Samantha: I cleaned up with Vanda, we were together in the kitchen.
+	#TODO: hint - Samantha claims she was washing dishes with Vanda
+	You: Did you see anyone else?
+	Samantha: [#thinking] Hmmm...
+	Samantha: Oh yea, I saw Jessica. 
+	Samantha: She was going to the garden. => WidowAfterSecondSon_interrogation1
+	#TODO: hint - Samantha claims Jessica was going to the garden.
+- Can you tell me more about the relationship with your father-in-law?
+	Samantha: Oh he was the sweetest. I couldn't ask for a better father-in-law.
+	You: 
+
+=> END

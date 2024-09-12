@@ -1,15 +1,15 @@
-
+#1st hour
 ~ wife_of_firstborn_start
-???: Ohhh hello there! Let me guess, are you with Samantha?
+Vanda: Ohhh hello there! Let me guess, are you with Samantha?
 #DONE: hint - there's a woman named Samantha
 do State.characters[Types.Characters.WidowAfterSecondSon].find_name()
 You: Hi, nope, I'm with Angela. I'm Taylor, nice to meet you.
-???: Angela? That's so unusual. I hoped Samantha finally moved on.
+Vanda: Angela? That's so unusual. I hoped Samantha finally moved on.
 #DONE hint - Samantha didn't move on yet
 do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samantha_mourning2")
 You: You're not the first one to be so surprised hearing about us.
-???: Haha! Yeah, Angela is... well, she's very independend. So her bringing someone home for such a significant event means a lot.
-???: You must be important to her.
+Vanda: Haha! Yeah, Angela is... well, she's very independend. So her bringing someone home for such a significant event means a lot.
+Vanda: You must be important to her.
 You: Well, I hope so, haha! 
 Vanda: Hahaha! Oh by the way, I'm Vanda, pleasure to meet you!
 #DONE: hint - the woman's name is Vanda

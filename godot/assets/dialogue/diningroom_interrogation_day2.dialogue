@@ -76,4 +76,35 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 - Thank you for your answers. Please take care of yourself.
 	Vanda: I just need my pills... If it's all, I'll go grab them now. => END
 
+~ Grandson_start
+You: Hey Jason, I need to talk with you.
+Jason: Umm, sure. Please at least treat me like an adult.
+Jason: My mom forbids me to see grandpa.
+You: She's probably right to not let you see him.
+Jason: [#defeated]  Whatever. => Grandson_interrogation1
+
+~ Grandson_interrogation1
+- What were you doing yesterday after dinner?
+	Jason: [#upset] Do you seriously think I killed my grandpa?!
+	You: Please answer the question, Jason.
+	Jason: Ughhh...
+	Jason: I went to call my girlfrend. Then I was playing on my phone in bed. => Grandson_interrogation1
+	#TODO: hint - Jason claims he called his girlfrend after the celebration and then went to bed.
+
+- Can you tell me more about the relationship with your grandpa?
+	Jason: He was cool. A little bit cheap, but cool.
+	You: What do you mean by cheap?
+	Jason: He was so focused on his money. He never gave me any cash for birthdays and all that.
+	#TODO: hint - Jason claims that Tom was cheap and focused on money.
+	Jason: I even overheard my parents arguing that he used dad's money too.
+	Jason: If that's the reason why he cut my pocket money short, I will be very upset... => Grandson_interrogation1
+	#TODO: hint - Jason's pocket money was cut short recently.
+
+- Did you argue with your grandpa recently? 
+	Jason: Naaah, never, to be honest. 
+	Jason: As I said, he was a cool grandpa. => Grandson_interrogation1
+
+- Alright, thank you for help.
+	Jason: Yea, whatever. => END
+
 => END

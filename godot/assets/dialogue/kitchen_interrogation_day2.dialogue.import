@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b6hg18rx0pllt"
+path="res://.godot/imported/kitchen_interrogation_day2.dialogue-c22f00ccb05f01f3641fec360fe91e25.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/kitchen_interrogation_day2.dialogue"
+dest_files=["res://.godot/imported/kitchen_interrogation_day2.dialogue-c22f00ccb05f01f3641fec360fe91e25.tres"]
+
+[params]
+
+defaults=true
