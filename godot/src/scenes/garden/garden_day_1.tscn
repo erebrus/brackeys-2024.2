@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://be3u4hfjhsvqa"]
+[gd_scene load_steps=13 format=3 uid="uid://be3u4hfjhsvqa"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ur4nb"]
 [ext_resource type="Texture2D" uid="uid://q5x8dgy1r2yo" path="res://assets/gfx/day1GardenTest/layer4.png" id="2_0nkxn"]
@@ -9,10 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/dialogue_trigger.tscn" id="6_g316i"]
 [ext_resource type="Texture2D" uid="uid://by3ve4j2kd0yb" path="res://assets/gfx/day1GardenTest/layer3_wife.png" id="6_uhrwi"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="8_82y6x"]
+[ext_resource type="Texture2D" uid="uid://c4lbph6mra7io" path="res://assets/gfx/characters/artist01.png" id="8_ka4a6"]
+[ext_resource type="Texture2D" uid="uid://d2i2od8a6n5n1" path="res://assets/gfx/characters/ruler01.png" id="10_jctat"]
 [ext_resource type="Texture2D" uid="uid://c4vba08hdo3et" path="res://assets/gfx/day1GardenTest/layer4_mansion.png" id="11_fn2kp"]
 
 [node name="GardenDay1" instance=ExtResource("1_ur4nb")]
-portraits_found_on_enter = Array[int]([1, 2])
+portraits_found_on_enter = Array[int]([1, 2, 4, 7])
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_0nkxn")
@@ -39,6 +41,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_upvxj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandpaTomato" index="1"]
+visible = false
 polygon = PackedVector2Array(-248, 66, -262, 36, -256, 10, -241, -1, -236, -21, -223, -21, -213, -7, -179, 6, -168, 40, -177, 71)
 
 [node name="Wife" parent="." index="3" instance=ExtResource("6_g316i")]
@@ -51,9 +54,37 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_uhrwi")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wife" index="1"]
+visible = false
 polygon = PackedVector2Array(-156, 73, -164, 14, -159, -38, -141, -47, -124, -38, -115, 8, -111, 69, -120, 79)
 
-[node name="Middleground" type="TextureRect" parent="." index="4"]
+[node name="Daughter" parent="." index="4" instance=ExtResource("6_g316i")]
+position = Vector2(1155, 380)
+dialogue = ExtResource("4_6vios")
+character_id = 4
+
+[node name="Sprite2D" parent="Daughter" index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_ka4a6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Daughter" index="1"]
+visible = false
+polygon = PackedVector2Array(-44, 81, -3, -32, -15, -52, -49, -16, -78, -37, 7, -108, 18, -87, -1, -64, 6, -56, 24, -85, 19, -119, 32, -171, 64, -90, 33, -67, 23, -28, 37, -8, 25, 11, 30, 43, 18, 109)
+
+[node name="Grandson" parent="." index="5" instance=ExtResource("6_g316i")]
+position = Vector2(229, 319)
+scale = Vector2(0.5, 0.5)
+dialogue = ExtResource("4_6vios")
+character_id = 7
+
+[node name="Sprite2D" parent="Grandson" index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_jctat")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grandson" index="1"]
+visible = false
+polygon = PackedVector2Array(-82, -56, -24, -70, -34, -98, 22, -108, 50, -84, 38, -62, 76, 26, 64, 28, 34, -6, 18, 88, 40, 94, 38, 78, 62, 76, 70, 98, 44, 110, -26, 110, -38, 90, -20, 32, -22, 4, -10, -28)
+
+[node name="Middleground" type="TextureRect" parent="." index="6"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -62,7 +93,7 @@ grow_vertical = 2
 texture = ExtResource("4_watnj")
 expand_mode = 2
 
-[node name="Foreground" type="TextureRect" parent="." index="5"]
+[node name="Foreground" type="TextureRect" parent="." index="7"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -74,3 +105,5 @@ expand_mode = 2
 [editable path="GoToMansion"]
 [editable path="GrandpaTomato"]
 [editable path="Wife"]
+[editable path="Daughter"]
+[editable path="Grandson"]

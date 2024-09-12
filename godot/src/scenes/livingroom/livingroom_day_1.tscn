@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyx5wmmi2ihrm"]
+
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_q30md"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/dialogue_trigger.tscn" id="2_y33ln"]
+[ext_resource type="Resource" uid="uid://0x3bogk7wbug" path="res://assets/dialogue/livingroom_day1.dialogue" id="3_vjwxr"]
+[ext_resource type="Texture2D" uid="uid://dafae0032udak" path="res://assets/gfx/characters/screwdriver01.png" id="4_lsixu"]
+[ext_resource type="Texture2D" uid="uid://dxcdya7c1gove" path="res://assets/gfx/characters/mouseTrap01.png" id="5_1u4hf"]
+[ext_resource type="Texture2D" uid="uid://dhdopw1qkckm5" path="res://assets/gfx/characters/firstBorn01.png" id="6_jy0lb"]
+[ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="7_sgw8e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sv4uk"]
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_j8we7"]
+font_size = 48
+
+[node name="LivingRoomDay1" instance=ExtResource("1_q30md")]
+portraits_found_on_enter = Array[int]([6])
+
+[node name="Label" type="Label" parent="." index="1"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "LIVING ROOM"
+label_settings = SubResource("LabelSettings_sv4uk")
+
+[node name="Widow" parent="." index="2" instance=ExtResource("2_y33ln")]
+position = Vector2(985, 376)
+dialogue = ExtResource("3_vjwxr")
+character_id = 8
+
+[node name="Sprite2D" parent="Widow" index="0"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_lsixu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Widow" index="1"]
+visible = false
+polygon = PackedVector2Array(-62, -37, -52, 126, -5, 153, 49, 148, 79, 115, 67, -38, 36, -51, 33, -157, -37, -144)
+
+[node name="Friend" parent="." index="3" instance=ExtResource("2_y33ln")]
+position = Vector2(305, 391)
+dialogue = ExtResource("3_vjwxr")
+character_id = 10
+
+[node name="Sprite2D" parent="Friend" index="0"]
+position = Vector2(-100, 70)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_1u4hf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Friend" index="1"]
+visible = false
+polygon = PackedVector2Array(-172, -111, -194, -80, -190, 21, -207, 14, -215, 69, -189, 67, -191, 144, -173, 144, -183, 254, -91, 265, -33, 285, -2, 258, -6, -118)
+
+[node name="FirstBorn" parent="." index="4" instance=ExtResource("2_y33ln")]
+position = Vector2(700, 376)
+dialogue = ExtResource("3_vjwxr")
+character_id = 3
+
+[node name="Sprite2D" parent="FirstBorn" index="0"]
+position = Vector2(-100, 70)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jy0lb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FirstBorn" index="1"]
+visible = false
+polygon = PackedVector2Array(-204, -144, -203, -116, -145, -93, -150, 59, -187, 71, -187, 103, -152, 134, -165, 205, -163, 276, -207, 311, -111, 334, -51, 322, -57, 209, -80, 126, -49, 14, 18, -13, 16, -54, -88, -105, -91, -151, -153, -168)
+
+[node name="GoToDiningRoom" parent="." index="5" instance=ExtResource("7_sgw8e")]
+position = Vector2(827, 542)
+target_location = 2
+
+[node name="Sprite2D" parent="GoToDiningRoom" index="0"]
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="1"]
+polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
+
+[node name="Label" type="Label" parent="GoToDiningRoom" index="2"]
+offset_left = -81.0
+offset_top = -3.0
+offset_right = 86.0
+offset_bottom = 20.0
+text = "GO TO DINING ROOM"
+label_settings = SubResource("LabelSettings_j8we7")
+
+[node name="GoToGarden" parent="." index="6" instance=ExtResource("7_sgw8e")]
+position = Vector2(831, 636)
+target_location = 0
+
+[node name="Sprite2D" parent="GoToGarden" index="0"]
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="1"]
+polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
+
+[node name="Label" type="Label" parent="GoToGarden" index="2"]
+offset_left = -81.0
+offset_top = -3.0
+offset_right = 86.0
+offset_bottom = 20.0
+text = "GO TO GARDEN"
+label_settings = SubResource("LabelSettings_j8we7")
+
+[editable path="Widow"]
+[editable path="Friend"]
+[editable path="FirstBorn"]
+[editable path="GoToDiningRoom"]
+[editable path="GoToGarden"]

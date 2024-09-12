@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_cyt41")
 id = 3
-name = "Darrell M. Meeks"
+name = "Andrew"
 portrait = ExtResource("1_dl4dq")
 name_available = false
 portrait_available = false
@@ -15,4 +15,4 @@ is_dead = false
 is_known = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
-start_dialogue = ""
+start_dialogue = "firstborn_start"

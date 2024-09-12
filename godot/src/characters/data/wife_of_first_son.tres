@@ -6,5 +6,13 @@
 [resource]
 script = ExtResource("2_8hprv")
 id = 6
-name = "Beverly R. Hall"
+name = "Vanda"
 portrait = ExtResource("1_wfrje")
+name_available = false
+portrait_available = false
+is_discovered = false
+is_dead = false
+is_known = false
+portrait_clues = Array[String]([])
+name_clues = Array[String]([])
+start_dialogue = "wife_of_firstborn_start"

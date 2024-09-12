@@ -29,11 +29,11 @@ func change_scene(location: Types.Locations) -> void:
 
 func choose_scene(location: Types.Locations) -> PackedScene:
 	# TODO: choose scene based on location and time of day?
-	match location:
-		Types.Locations.Garden:
-			return load("res://src/scenes/garden/garden_day_1.tscn")
-		_:
-			return load("res://src/scenes/test_scene/test_scene.tscn")
+	
+	var path = "res://src/scenes/%s/%s_day_%s.tscn"
+	var location_name = Types.Locations.keys()[location].to_lower()
+	
+	return load(path % [location_name, location_name, State.current_day])
 	
 
 # TODO: remove
