@@ -6,6 +6,7 @@ extends CanvasLayer
 ## The action to use to skip typing the dialogue
 @export var skip_action: StringName = &"ui_cancel"
 
+@onready var portrait: TextureRect = $Balloon/Portrait
 @onready var balloon: Control = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
@@ -42,9 +43,19 @@ var dialogue_line: DialogueLine:
 			await ready
 
 		dialogue_line = next_dialogue_line
-
+		
 		character_label.visible = not dialogue_line.character.is_empty()
-		character_label.text = tr(dialogue_line.character, "dialogue")
+		portrait.visible = character_label.visible
+		
+		if dialogue_line.character in Types.NAME_MAP:
+			var character:Character = State.characters[Types.NAME_MAP[dialogue_line.character]]
+			character_label.text = tr(character.get_name_label(), "dialogue")
+			portrait.texture = character.portrait
+		else:
+			Logger.warn("Couldn't map character %s" % dialogue_line.character)
+			character_label.text = tr(dialogue_line.character, "dialogue")
+			portrait.visible = false
+
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
