@@ -44,7 +44,11 @@ var dialogue_line: DialogueLine:
 		dialogue_line = next_dialogue_line
 
 		character_label.visible = not dialogue_line.character.is_empty()
-		character_label.text = tr(dialogue_line.character, "dialogue")
+		if dialogue_line.character in Types.NAME_MAP:
+			character_label.text = tr(State.characters[Types.NAME_MAP[dialogue_line.character]].get_name_label(), "dialogue")
+		else:
+			Logger.warn("Couldn't map character %s" % dialogue_line.character)
+			character_label.text = tr(dialogue_line.character, "dialogue")
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

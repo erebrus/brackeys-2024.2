@@ -10,10 +10,14 @@ var current_day:= 1
 var current_time:= 10
 
 func _ready() -> void:
+	verify_dialogue_files()
 	load_characters()
 	load_clues()
 	
-
+func verify_dialogue_files():
+	#TODO got through each file and check characters always exist
+	pass
+	
 func load_characters() -> void:
 	Logger.info("Loading characters")
 	var dir = DirAccess.open(CHARACTER_PATH)  

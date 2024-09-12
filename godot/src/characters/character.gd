@@ -24,7 +24,12 @@ signal name_clue_found
 
 @export var start_dialogue: String
 
-
+func get_name_label() -> String:
+	if is_known or is_discovered:
+		return name
+	else:
+		return "???"
+		
 func find_name() -> void:
 	Logger.info("Character name found: %s" % self)
 	name_available = true
