@@ -27,15 +27,22 @@ jessica_day2_garden|Jessica went to the garden after dinner.|
 jessica_day2_garden_samantha|Jessica claims Samantha was in the kitchen when she was going to the garden.|
 jessica_day2_refused_help|Jessica wanted some financial help from her dad, but he refused her.|
 jessica_day2_nothing|Andrew got 2% of shares in Tom's investments, but she got nothing.|
+jessica_day3_evening|Jessica claims she spent the evening with her Olivia and Andrew.|
+jessica_day3_jason|Jessica claims she went to bed after, and that Jason saw her.|
 andrew_day2_returns|Andrew got 2% of shares in Tom's investments.|
 angela_day2_alibi_stan|Angela and Stan were together at the fireplace.|
 angela_day2_alibi_stan2|Stan was left alone after Angela went to bed.|
 angela_day2_dislike_tom|Angela didn't like Tom.|
 angela_day2_investments|Angela claims Tom was spending Olivia's money on the investments.|
 angela_day2_lending|Tom borrowed lots of money from Angela and didn't give it back.|
+angela_day3_kitchen1|Angela claims that Samantha and Vanda spent an evening in the kitchen.|
+angela_day3_kitchen2|Angela claims Samantha remained in the kitchen after Vanda left.|
 vanda_day2_alibi|Vanda claims she and Samantha were cleaning after the dinner in the kitchen.|
 vanda_day2_alibi_after|After cleaning, Vanda went to bed with her husband.|
 vanda_day2_investments|Andrew took all money for son's education to invest in businesses with his father.|
+vanda_day3_samantha|Vanda claims to spend the evening with Samantha.|
+vanda_day3_bed|Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing.|
+vanda_day3_money|Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.|
 jason_day2_alibi|Jason claims he called his girlfrend after the celebration and then went to bed.|
 jason_day2_tom|Jason claims that Tom was cheap and focused on money.|
 jason_day2_money|Jason's pocket money was cut short recently.|
@@ -56,3 +63,4 @@ frank_day2_jessica|Frank he saw Jessica in the garden.|
 frank_day2_stan|Frank claims to have seen Stan going upstairs.|
 frank_day2_tom_investing|Frank introduced Tom to investing into the illegal spice businesses.|
 frank_day2_olivia|Frank seems to have a crush on Olivia.|
+frank_day3_argue_andrew|Andrew argued with Frank about the 2% shares he got from Tom's businesses.|
