@@ -1,24 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://rumvotveqal5"]
+[gd_scene load_steps=9 format=3 uid="uid://rumvotveqal5"]
 
 [ext_resource type="Script" path="res://src/common/globals.gd" id="1_noqpm"]
 [ext_resource type="Resource" uid="uid://ypf1uhmyb8a2" path="res://src/characters/unknown.tres" id="2_kp614"]
+[ext_resource type="Script" path="res://src/common/music_manager.gd" id="3_h14hn"]
 [ext_resource type="AudioStream" uid="uid://bcq12y4oj1lrx" path="res://assets/music/calm.mp3" id="3_pc6yq"]
 [ext_resource type="AudioStream" uid="uid://bc5gcfvnimxvo" path="res://assets/music/dinner_v3.mp3" id="4_ibfvu"]
+[ext_resource type="AudioStream" uid="uid://ckafyrvdbw2oj" path="res://assets/music/solving_v2.mp3" id="5_b0smt"]
+[ext_resource type="AudioStream" uid="uid://w1xcpuvx8a6w" path="res://assets/music/menu.mp3" id="6_eujtg"]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_q1nu8"]
-stream_count = 2
+stream_count = 3
 stream_0/stream = ExtResource("3_pc6yq")
 stream_0/volume = 0.0
 stream_1/stream = ExtResource("4_ibfvu")
 stream_1/volume = -60.0
+stream_2/stream = ExtResource("5_b0smt")
+stream_2/volume = 0.0
 
 [node name="Globals" type="Node"]
 script = ExtResource("1_noqpm")
 unknown_character = ExtResource("2_kp614")
 
-[node name="game_music" type="AudioStreamPlayer" parent="."]
+[node name="MusicManager" type="Node" parent="."]
+script = ExtResource("3_h14hn")
+
+[node name="game_music" type="AudioStreamPlayer" parent="MusicManager"]
 process_mode = 3
 stream = SubResource("AudioStreamSynchronized_q1nu8")
 
-[node name="menu_music" type="AudioStreamPlayer" parent="."]
+[node name="menu_music" type="AudioStreamPlayer" parent="MusicManager"]
 process_mode = 3
+stream = ExtResource("6_eujtg")
+bus = &"Music"

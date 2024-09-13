@@ -24,7 +24,7 @@ enum Locations {
 	None,
 }
 
-enum GameMusic {CALM, DINING}
+enum GameMusic {CALM, DINING,STORM}
 
 const NAME_MAP:={
 	

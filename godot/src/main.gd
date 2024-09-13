@@ -21,12 +21,14 @@ func change_scene(location: Types.Locations) -> void:
 	await current_scene.tree_exited
 	current_scene = target
 	Logger.info("Entered location: %s" % Types.Locations.keys()[location])
-	Globals.change_game_music_to(get_music_for_location(location))
+	Globals.music_manager.change_game_music_to(get_music_for_location(location))
 	# TODO: fade in
 	
 	
 #TODO complete and move this
 func get_music_for_location(location:Types.Locations):
+	if State.current_day>1:
+		return Types.GameMusic.STORM
 	match location:
 		Types.Locations.Garden:
 			return Types.GameMusic.CALM
