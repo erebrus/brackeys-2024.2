@@ -13,6 +13,7 @@ signal entered_location(location: Types.Locations)
 @export var id: Types.Characters
 @export var name: String = "Unknown"
 @export var portrait: Texture = preload("res://assets/gfx/portraits/person_unknown.png")
+@export var full_portrait: Texture
 
 @export var name_available:= false # true if you can select name in tree popup
 @export var portrait_available:= false # true if you can select name in tree popup

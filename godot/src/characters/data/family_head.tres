@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://8swtf3drk7b5"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://8swtf3drk7b5"]
 
+[ext_resource type="Texture2D" uid="uid://dkwgkmhi2b8mf" path="res://assets/gfx/characters/tomato01.png" id="1_6was8"]
 [ext_resource type="Texture2D" uid="uid://c626e3mg8rkhp" path="res://assets/gfx/portraits/grandfather.png" id="1_01821"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_g272r"]
 
@@ -8,6 +9,7 @@ script = ExtResource("2_g272r")
 id = 1
 name = "Tom"
 portrait = ExtResource("1_01821")
+full_portrait = ExtResource("1_6was8")
 name_available = false
 portrait_available = false
 is_discovered = false

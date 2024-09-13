@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://qa3k4w7r6ffo"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://qa3k4w7r6ffo"]
 
+[ext_resource type="Texture2D" uid="uid://dhdopw1qkckm5" path="res://assets/gfx/characters/firstBorn01.png" id="1_6q14n"]
 [ext_resource type="Texture2D" uid="uid://b2173ekybhiv7" path="res://assets/gfx/portraits/firstBorn.png" id="1_bk5ee"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_cyt41"]
 
@@ -8,6 +9,7 @@ script = ExtResource("2_cyt41")
 id = 3
 name = "Andrew"
 portrait = ExtResource("1_bk5ee")
+full_portrait = ExtResource("1_6q14n")
 name_available = false
 portrait_available = false
 is_discovered = false
