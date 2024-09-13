@@ -12,10 +12,17 @@ jessica_unusual|This woman appears to be enamored by unusual things|
 jason_has_father|The teenage boy has a father|
 jason_aunt|Angela is this boy's aunt|
 jason_mom_grandma|The teenage boy has a mom and a grandma|
+jason_day3_evening|Jason claims to be in his room all evening.|
+jason_day3_stan|Jason claims to wait for Stan to go out of the batroom.|
+jason_day3_stan_jessica|Jason claims to see Stan going to his room and Jessica going upstairs to her bedroom.|
 frank_easy_money|the man is persistent about making easy money|
 frank_illegal_money|The money he makes is not legal|
 jessica_draws|There's a woman who draws, her name is Jessica|
 olivia_day2_bed|Olivia went to bed with Tom after dinner.|
+olivia_day3_alibi|Olivia claims to be in the living room with Andrew and Jessica.|
+olivia_day3_samantha|Olivia claims she went to the kitchen at night and found Samantha there.|
+olivia_day3_husband|Olivia claims that Samantha was "talking" to her husband.|
+olivia_day3_suspect|Olivia suspects Stan.|
 tom_day2_investing_unknown|Tom was investing in some unknown businesses|
 olivia_day2_business|Olivia didn't support Tom's businesses|
 tom_day1_previous_marriage|Tom was married before and had a son.|
@@ -30,6 +37,9 @@ jessica_day2_nothing|Andrew got 2% of shares in Tom's investments, but she got n
 jessica_day3_evening|Jessica claims she spent the evening with her Olivia and Andrew.|
 jessica_day3_jason|Jessica claims she went to bed after, and that Jason saw her.|
 andrew_day2_returns|Andrew got 2% of shares in Tom's investments.|
+andrew_day3_evening|Andrew claims to spent evening with his mom and sister.|
+andrew_day3_samantha|Andrew claims to see Samantha going upstairs at night.|
+andrew_day3_samantha_zone|Samantha was in her zone while coming upstairs.|
 angela_day2_alibi_stan|Angela and Stan were together at the fireplace.|
 angela_day2_alibi_stan2|Stan was left alone after Angela went to bed.|
 angela_day2_dislike_tom|Angela didn't like Tom.|
