@@ -41,3 +41,13 @@ const NAME_MAP:={
 	"Frank":Characters.FriendOfTheFamily,
 	"Henry":Characters.SecondSon,
 }
+
+#day, hou - garden+living room+kitchen+dining room
+const CLUE_COUNTS={
+	Vector2i(1,1):2+4+2+0,
+	Vector2i(1,2):1+2+0+1,
+	Vector2i(1,3):4+1+0+1,
+	Vector2i(2,1):0,
+	Vector2i(3,1):0,
+	Vector2i(4,1):0,
+}
