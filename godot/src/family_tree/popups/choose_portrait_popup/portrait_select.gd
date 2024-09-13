@@ -25,9 +25,9 @@ func _ready() -> void:
 	gui_input.connect(_on_portrait_input)
 	
 
-func _add_clue(clue: String) -> void:
+func _add_clue(clue_key: String) -> void:
 	var label = Label.new()
-	label.text = clue
+	label.text = State.clues[clue_key]
 	%CluesContainer.add_child(label)
 	
 

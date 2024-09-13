@@ -11,6 +11,7 @@ extends CanvasLayer
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
+@onready var type_sfx: AudioStreamPlayer = $type_sfx
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -165,3 +166,8 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	if not letter in [" ", ".", "!"]:
+		type_sfx.play()

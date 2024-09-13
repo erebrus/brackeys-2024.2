@@ -1,6 +1,7 @@
 ~ WidowAfterSecondSon_start
 You: Samantha. I need to ask you a few questions.
 Samantha: Oh, it's you.
+#TODO tag
 Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_interrogation1
 
 ~ WidowAfterSecondSon_interrogation1
@@ -8,7 +9,9 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 	Samantha: I cleaned up with Vanda, we were together in the kitchen.
 	Samantha: Then Jessica passed by, she was going to the garden.
 	Samantha: That's all I think.
-	#TODO: hint - Samantha claims she was washing dishes with Vanda and that Jessica was going to the garden.
+	#DONE: hint - Samantha claims she was washing dishes with Vanda and that Jessica was going to the garden.
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_alibi")
+
 	You: What were you doing after the dishes were done?
 	Samantha: I went to bed, obviosuly.  => WidowAfterSecondSon_interrogation1
 
@@ -18,34 +21,40 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 
 - Did you have any arguments with Tom recently?
 	Samantha: No, I could never do that to Henry's parents. => WidowAfterSecondSon_interrogation1
-	#TODO: hint - Samantha seems to turn every conversation to be about Henry.
+	#DONE: hint - Samantha seems to turn every conversation to be about Henry.
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_henry")
 
 - Thank you for your time.
 	Samantha: You're welcome. At least Henry and his dad are in the same place now. => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Hey Stan, I need to speak with you.
+#TODO tag
 Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHeadOfFamily_interrogation1
 
 ~ SonFromFirstMariageOfHeadOfFamily_interrogation1
 - Where did you go after the dinner?
 	Stan: I-I joined Angela at the fireplace.
-	#TODO: hint - Stan claims to be with Angela at the fireplace after dinner. 
+	#DONE: hint - Stan claims to be with Angela at the fireplace after dinner. 
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_alibi")
 	Stan: Then I... I went to bed... I think Frank saw me on the staircase. => SonFromFirstMariageOfHeadOfFamily_interrogation1
-	#TODO: hint - Stan claims Frank saw him going to the bedroom.
+	#DONE: hint - Stan claims Frank saw him going to the bedroom.
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_frank")
 
 - What was your relationship with Tom?
 	Stan: Well, he was my father... Even after my parents got divorced a long time ago.
 	Stan: He was always including me in his new family. 
 	Stan: Even though no one else liked me here. => SonFromFirstMariageOfHeadOfFamily_interrogation1
-	#TODO: hint - No one liked Stan, except Tom.
+	#DONE: hint - No one liked Stan, except Tom.
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom")
 
 - Did you have any fights or arguments recently?
 	Stan: We didn't have fights per se, but...
 	Stan: Well, my dad was not good with money. He was terrible at economy.
 	Stan: I was trying to tell him his investments were bad and just simply illegal, but he didn't listen.
 	Stan: We just had a heated discussion about his silly investment decisions. => SonFromFirstMariageOfHeadOfFamily_interrogation1
-	#TODO: hint - Stan tried to convince Tom to stop investing in illegal businesses.
+	#DONE: hint - Stan tried to convince Tom to stop investing in illegal businesses.
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom_invest")
 
 - Thank you for answering my questions.
 	Stan: No problem. I hope I could help. => END
@@ -59,23 +68,32 @@ Frank: Well, go on. => FriendOfTheFamily_interrogation1
 - What were you doing after the celebrations?
 	Frank: I went to the garden to smoke a cigarette. 
 	Frank: I saw Jessica was there, but I think she didn't see me. 
-	#TODO: hint - Frank claims to go to the garden and claims he saw Jessica.
+	#DONE: hint - Frank went to the garden after celebration and then went to bed.
+	#DONE: hint - Frank he saw Jessica in the garden.
+
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_alibi")
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_jessica")
+
 	You: What did you do after? 
 	Frank: I went upstairs. I saw Stan going there too. => FriendOfTheFamily_interrogation1
-	#TODO: hint - Frank claims to go to bed after the smoke and seeing Stan going upstairs. 
+	#DONE: hint - Frank claims to have seen Stan going upstairs. 
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_stan")
+
 
 - How would you describe your relationship with your brother?
 	Frank: It was good, really.
 	Frank: We were both very into the spice business, you know?
 	Frank: I actually introduced it to him. => FriendOfTheFamily_interrogation1
-	#TODO: hint - Frank introduced Tom to investing into the illegal spice businesses.
+	#DONE: hint - Frank introduced Tom to investing into the illegal spice businesses.
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_tom_investing")
 
 - Did anyting happen between you both recently?
 	Frank: No, nothing. 
 	Frank: We barely argued in general.
 	Frank: Sometimes he would scold me that I looked at his wife for too long, but...
 	Frank: What can I say, she's a beautiful woman. => FriendOfTheFamily_interrogation1
-	#TODO: hint - Frank seems to have a crush on Olivia.
+	#DONE: hint - Frank seems to have a crush on Olivia.
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_olivia")
 
 - Thank you, if I have more questions for you, I'll let you know.
 	Frank: Of course. Hope you can find this person who did that.

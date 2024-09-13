@@ -35,3 +35,17 @@ angela_day2_lending|Tom borrowed lots of money from Angela and didn't give it ba
 vanda_day2_alibi|Vanda claims she and Samantha were cleaning after the dinner in the kitchen.|
 vanda_day2_alibi_after|After cleaning, Vanda went to bed with her husband.|
 vanda_day2_investments|Andrew took all money for son's education to invest in businesses with his father.|
+jason_day2_alibi|Jason claims he called his girlfrend after the celebration and then went to bed.|
+jason_day2_tom|Jason claims that Tom was cheap and focused on money.|
+jason_day2_money|Jason's pocket money was cut short recently.|
+samantha_day2_alibi|Samantha claims she was washing dishes with Vanda and that Jessica was going to the garden.|
+samantha_day2_henry|Samantha seems to turn every conversation to be about Henry.|
+stan_day2_alibi| Stan claims to be with Angela at the fireplace after dinner. |
+stan_day2_tom|No one liked Stan, except Tom.|
+stan_day2_tom_invest|Stan tried to convince Tom to stop investing in illegal businesses.|
+stan_day2_frank|Stan claims Frank saw him going to the bedroom.|
+frank_day2_alibi|Frank went to the garden after celebration and then went to bed.|
+frank_day2_jessica|Frank he saw Jessica in the garden.|
+frank_day2_stan|Frank claims to have seen Stan going upstairs.|
+frank_day2_tom_investing|Frank introduced Tom to investing into the illegal spice businesses.|
+frank_day2_olivia|Frank seems to have a crush on Olivia.|

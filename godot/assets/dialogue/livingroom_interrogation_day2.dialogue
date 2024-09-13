@@ -6,24 +6,24 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 ~ FamilyHeadsWife_interrogation1
 - What were you doing yesterday after the dinner?
 	Olivia: I went to bed with Tom, I was sleeping the whole night… I think he woke up to grab some water, he does that sometimes… =>  FamilyHeadsWife_interrogation1
-	#TODO: hint - Olivia went to bed with Tom after dinner.
+	#DONE: hint - Olivia went to bed with Tom after dinner.
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_bed")
 
 - Did Tom have any enemies?
 	Olivia: N-no, I don’t think so…
 	Olivia: He was investing in all those businesses, but I don’t think he made any enemies on the way.
-	#TODO: hint - Tom was investing in some unknown businesses
+	#DONE: hint - Tom was investing in some unknown businesses
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_unknown")
 	You: What businesses? 
 	Olivia: I don’t even know! He was wasting money on them…  =>  FamilyHeadsWife_interrogation1
-	#TODO: hint - Olivia didn't support those businesses
+	#DONE: hint - Olivia didn't support those businesses
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_business")
 
 - I have to ask this question, did you guys argue recently?
 	Olivia: We… actually did.
 	Olivia: He told me that he invested a big sum to import some spices…
 	Olivia: I got very upset and we had a fight. But nothing happened!
-	#TODO: hint - Tom invested big money recently and Olivia got upset, they had a fight
+	#DONE: hint - Tom invested big money recently and Olivia got upset, they had a fight
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_fight")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("tom_day2_investing_fight")
 	
@@ -39,19 +39,19 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 ~ FirstBornSon_interrogation1
 - What were you doing yesterday after the dinner?
 	Andrew: Just went to bed, same as he did. My wife can confirm that. => FirstBornSon_interrogation1
-	#TODO: hint - Andrew went to bed after the dinner. 
+	#DONE: hint - Andrew went to bed after the dinner. 
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_bed")
 
 - What was your relationship with your father?
 	Andrew: Good. He was helping me a lot recently. I lost my job.
-	#TODO: hint - Andrew lost his job recently.
+	#DONE: hint - Andrew lost his job recently.
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_job")
 
 	You: How was he helping you?
 	Andrew: By giving money, obviously. I needed it to maintain my lifestyle and for my investments. => FirstBornSon_interrogation1
 	You: What were you investing in? 
 	Andrew: The same stuff as my father did. We were both importing some spices. 
-	#TODO: hint - Andrew was investing in the same type of businesses as Tom.
+	#DONE: hint - Andrew was investing in the same type of businesses as Tom.
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_investing")
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
@@ -65,12 +65,12 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 ~ Daughter_interrogation1
 - Where were you after dinner?
 	Jessica: I went to the garden... The night was beautiful and I was just admiring the night sky.
-	#TODO: hint - Jessica went to the garden after dinner.
+	#DONE: hint - Jessica went to the garden after dinner.
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day2_garden")
 
 	You: Can someone confirm that? 
 	Jessica: I think Samantha was in the kitchen when I was passing by. You can ask her. => Daughter_interrogation1
-	#TODO: hint - Jessica claims Samantha was in the kitchen when she was going to the garden.
+	#DONE: hint - Jessica claims Samantha was in the kitchen when she was going to the garden.
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day2_garden_samantha")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("jessica_day2_garden_samantha")
 	
@@ -80,7 +80,7 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 	You: Help with what?
 	Jessica: I wanted to open my own art gallery, but of course this type of establishment needs lots of money to start running.
 	Jessica: I asked my dad to help, but he refused.
-	#TODO: hint - Jessica wanted some financial help from her dad, but he refused her. 
+	#DONE: hint - Jessica wanted some financial help from her dad, but he refused her. 
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day2_refused_help")
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("jessica_day2_refused_help")
 
@@ -88,7 +88,7 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 	Jessica: A little bit. 
 	Jessica: I just got upset that he was helping Andrew, but not me.
 	Jessica: He gave 2% of his shares in the spice business to Andrew, but couldn't find some spare change for me. => Daughter_interrogation1
-	#TODO: hint - Andrew got 2% of shares in Tom's investments, but she got nothing.
+	#DONE: hint - Andrew got 2% of shares in Tom's investments, but she got nothing.
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("jessica_day2_nothing")
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_returns")
 
