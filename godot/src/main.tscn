@@ -1,19 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbbhfj0irlnxf"]
+[gd_scene load_steps=6 format=3 uid="uid://cbbhfj0irlnxf"]
 
 [ext_resource type="PackedScene" uid="uid://ooahauy24t17" path="res://src/hud/time/calendar.tscn" id="1_16rgn"]
 [ext_resource type="Script" path="res://src/main.gd" id="1_x2tr5"]
 [ext_resource type="PackedScene" uid="uid://be3u4hfjhsvqa" path="res://src/scenes/garden/garden_day_1.tscn" id="2_67wt5"]
 [ext_resource type="PackedScene" uid="uid://cjeibfsvud2bj" path="res://src/hud/time/clock.tscn" id="3_c5k8h"]
 [ext_resource type="PackedScene" uid="uid://cath4tuytbe3i" path="res://src/family_tree/family_trees/day_1.tscn" id="3_t1d23"]
-[ext_resource type="AudioStream" uid="uid://bcq12y4oj1lrx" path="res://assets/music/calm.mp3" id="6_1yojb"]
-[ext_resource type="AudioStream" uid="uid://bc5gcfvnimxvo" path="res://assets/music/dinner_v3.mp3" id="7_rsmir"]
-
-[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_6ce0o"]
-stream_count = 2
-stream_0/stream = ExtResource("6_1yojb")
-stream_0/volume = -60.0
-stream_1/stream = ExtResource("7_rsmir")
-stream_1/volume = -60.0
 
 [node name="Main" type="Node"]
 script = ExtResource("1_x2tr5")
@@ -47,7 +38,3 @@ layout_mode = 2
 
 [node name="Clock" parent="HUD/Top" instance=ExtResource("3_c5k8h")]
 layout_mode = 2
-
-[node name="music" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamSynchronized_6ce0o")
-bus = &"Music"
