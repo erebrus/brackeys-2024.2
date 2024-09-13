@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bmgd4v7clebk"
+path="res://.godot/imported/garden_interrogation_day3.dialogue-07033d6ba6cc8c994b54f798832ecd2f.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/garden_interrogation_day3.dialogue"
+dest_files=["res://.godot/imported/garden_interrogation_day3.dialogue-07033d6ba6cc8c994b54f798832ecd2f.tres"]
+
+[params]
+
+defaults=true
