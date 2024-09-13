@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bkwx8xoi4dd1g"]
 
-[ext_resource type="Texture2D" uid="uid://3tkxukr1fwdn" path="res://assets/gfx/portraits/character_06.png" id="1_wfrje"]
+[ext_resource type="Texture2D" uid="uid://c0xxdvbnxy5x3" path="res://assets/gfx/portraits/wife_of_firstborn.png" id="1_ndapm"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_8hprv"]
 
 [resource]
 script = ExtResource("2_8hprv")
 id = 6
 name = "Vanda"
-portrait = ExtResource("1_wfrje")
+portrait = ExtResource("1_ndapm")
 name_available = false
 portrait_available = false
 is_discovered = false

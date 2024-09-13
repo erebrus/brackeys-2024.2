@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://8swtf3drk7b5"]
 
-[ext_resource type="Texture2D" uid="uid://co5k47yqck42x" path="res://assets/gfx/portraits/character_01.png" id="1_2s0lm"]
+[ext_resource type="Texture2D" uid="uid://c626e3mg8rkhp" path="res://assets/gfx/portraits/grandfather.png" id="1_01821"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_g272r"]
 
 [resource]
 script = ExtResource("2_g272r")
 id = 1
 name = "Tom"
-portrait = ExtResource("1_2s0lm")
+portrait = ExtResource("1_01821")
 name_available = false
 portrait_available = false
 is_discovered = false

@@ -18,8 +18,12 @@ layout_mode = 2
 [node name="Photo" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("1_bwjkd")
+stretch_mode = 3
 
 [node name="Frame" type="TextureRect" parent="."]
 layout_mode = 2
 texture = ExtResource("2_yth4q")
+stretch_mode = 2
