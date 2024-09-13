@@ -19,18 +19,29 @@ dialogue = ExtResource("4_6vios")
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_0nkxn")
 
-[node name="GoToMansion" parent="." index="1" instance=ExtResource("8_82y6x")]
+[node name="GoToLivingRoom" parent="." index="1" instance=ExtResource("8_82y6x")]
 position = Vector2(960, 540)
 target_location = 1
 
-[node name="Sprite2D" parent="GoToMansion" index="0"]
+[node name="Sprite2D" parent="GoToLivingRoom" index="0"]
 texture = ExtResource("11_fn2kp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToMansion" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToLivingRoom" index="1"]
 visible = false
-polygon = PackedVector2Array(-437, 6, 162, 73, 390, 16, 424, -217, 378, -282, 145, -295, 131, -355, -152, -393, -163, -344, -428, -299)
+polygon = PackedVector2Array(-437, 6, 162, 73, 145, -295, 131, -355, -152, -393, -163, -344, -428, -299)
 
-[node name="GrandpaTomato" parent="." index="2" instance=ExtResource("6_g316i")]
+[node name="GoToKitchen" parent="." index="2" instance=ExtResource("8_82y6x")]
+position = Vector2(960, 540)
+target_location = 3
+
+[node name="Sprite2D" parent="GoToKitchen" index="0"]
+texture = ExtResource("11_fn2kp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToKitchen" index="1"]
+visible = false
+polygon = PackedVector2Array(162, 73, 390, 16, 424, -217, 378, -282, 145, -295)
+
+[node name="GrandpaTomato" parent="." index="3" instance=ExtResource("6_g316i")]
 position = Vector2(642, 593)
 character_id = 1
 
@@ -41,7 +52,7 @@ texture = ExtResource("5_upvxj")
 visible = false
 polygon = PackedVector2Array(-33, -45, -34, -73, -10, -73, -3, -53, 42, -40, 64, -4, 69, 28, 20, 60, -42, 64, -65, 35, -72, -18)
 
-[node name="Wife" parent="." index="3" instance=ExtResource("6_g316i")]
+[node name="Wife" parent="." index="4" instance=ExtResource("6_g316i")]
 position = Vector2(767, 575)
 character_id = 2
 
@@ -52,7 +63,7 @@ texture = ExtResource("6_uhrwi")
 visible = false
 polygon = PackedVector2Array(-31, -82, -36, -34, -32, 46, -20, 86, 8, 94, 43, 80, 36, 10, 28, -57, 12, -96, -12, -99)
 
-[node name="Daughter" parent="." index="4" instance=ExtResource("6_g316i")]
+[node name="Daughter" parent="." index="5" instance=ExtResource("6_g316i")]
 position = Vector2(1385, 562)
 character_id = 4
 
@@ -64,7 +75,7 @@ texture = ExtResource("8_ka4a6")
 visible = false
 polygon = PackedVector2Array(-44, 81, -3, -32, -15, -52, -49, -16, -78, -37, 7, -108, 18, -87, -1, -64, 6, -56, 24, -85, 19, -119, 32, -171, 64, -90, 33, -67, 23, -28, 37, -8, 25, 11, 30, 43, 18, 109)
 
-[node name="Grandson" parent="." index="5" instance=ExtResource("6_g316i")]
+[node name="Grandson" parent="." index="6" instance=ExtResource("6_g316i")]
 position = Vector2(420, 549)
 scale = Vector2(0.8, 0.8)
 character_id = 7
@@ -77,7 +88,7 @@ texture = ExtResource("10_jctat")
 visible = false
 polygon = PackedVector2Array(-82, -56, -24, -70, -34, -98, 22, -108, 50, -84, 38, -62, 76, 26, 64, 28, 34, -6, 18, 88, 40, 94, 38, 78, 62, 76, 70, 98, 44, 110, -26, 110, -38, 90, -20, 32, -22, 4, -10, -28)
 
-[node name="Middleground" type="TextureRect" parent="." index="6"]
+[node name="Middleground" type="TextureRect" parent="." index="7"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -86,7 +97,7 @@ grow_vertical = 2
 texture = ExtResource("4_watnj")
 expand_mode = 2
 
-[node name="Foreground" type="TextureRect" parent="." index="7"]
+[node name="Foreground" type="TextureRect" parent="." index="8"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -95,7 +106,8 @@ grow_vertical = 2
 texture = ExtResource("5_nwwoj")
 expand_mode = 2
 
-[editable path="GoToMansion"]
+[editable path="GoToLivingRoom"]
+[editable path="GoToKitchen"]
 [editable path="GrandpaTomato"]
 [editable path="Wife"]
 [editable path="Daughter"]
