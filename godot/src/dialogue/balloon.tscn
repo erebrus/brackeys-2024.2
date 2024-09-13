@@ -75,6 +75,7 @@ stream_1/stream = ExtResource("6_t22bd")
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
+skip_action = &"ui_accept"
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
