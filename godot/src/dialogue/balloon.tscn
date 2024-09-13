@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://src/dialogue/balloon.gd" id="1_36de5"]
-[ext_resource type="Texture2D" uid="uid://co5k47yqck42x" path="res://assets/gfx/portraits/character_01.png" id="2_6jsjn"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://c626e3mg8rkhp" path="res://assets/gfx/portraits/grandfather.png" id="2_leq37"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="AudioStream" uid="uid://c4u38rqfjjdvb" path="res://assets/sfx/Dialog_per_letter_test_1.wav" id="5_i7jsf"]
 [ext_resource type="AudioStream" uid="uid://dvejrc6arqioo" path="res://assets/sfx/Dialog_per_letter_test_2.wav" id="6_t22bd"]
@@ -89,11 +89,11 @@ theme = SubResource("Theme_qq3yp")
 
 [node name="Portrait" type="TextureRect" parent="Balloon"]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 408.0
-offset_right = 121.0
-offset_bottom = 536.0
-texture = ExtResource("2_6jsjn")
+offset_left = 31.0
+offset_top = 701.0
+offset_right = 180.0
+offset_bottom = 901.0
+texture = ExtResource("2_leq37")
 
 [node name="Panel" type="Panel" parent="Balloon"]
 clip_children = 2

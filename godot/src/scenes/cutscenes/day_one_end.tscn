@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://btketith84ctf"]
+
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_2p7mc"]
+[ext_resource type="Script" path="res://src/scenes/cutscenes/day_one_end.gd" id="2_mwf1f"]
+[ext_resource type="Texture2D" uid="uid://db75ml4dxsd2i" path="res://assets/gfx/scenes/LivingRoomgSunny.jpg" id="2_pg4ef"]
+[ext_resource type="Resource" uid="uid://copl4u43xi0de" path="res://assets/dialogue/outro_day1.dialogue" id="3_fwym3"]
+
+[node name="DayOneEnd" instance=ExtResource("1_2p7mc")]
+script = ExtResource("2_mwf1f")
+dialogue = ExtResource("3_fwym3")
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_pg4ef")
