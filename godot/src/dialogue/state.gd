@@ -49,3 +49,8 @@ func change_time(day: int, time: int):
 	current_time = time
 	Events.time_changed.emit(current_day, current_time)
 	
+
+func advance_time(time: int):
+	if time > current_time:
+		change_time(current_day, time)
+	
