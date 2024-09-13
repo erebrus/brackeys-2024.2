@@ -16,6 +16,7 @@ font_size = 48
 
 [node name="LivingRoomDay1" instance=ExtResource("1_q30md")]
 dialogue = ExtResource("3_vjwxr")
+location = 1
 
 [node name="Label" type="Label" parent="." index="1"]
 offset_right = 40.0

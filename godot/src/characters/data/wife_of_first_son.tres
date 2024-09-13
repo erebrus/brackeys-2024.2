@@ -16,3 +16,4 @@ is_known = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
 start_dialogue = "wife_of_firstborn_start"
+location = 3

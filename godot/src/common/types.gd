@@ -20,7 +20,8 @@ enum Locations {
 	Garden,
 	LivingRoom,
 	DiningRoom,
-	Kitchen
+	Kitchen,
+	None,
 }
 
 enum GameMusic {CALM, DINING}

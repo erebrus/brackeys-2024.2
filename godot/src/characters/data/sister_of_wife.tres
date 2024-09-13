@@ -16,3 +16,4 @@ is_known = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
 start_dialogue = "partner_start"
+location = 2

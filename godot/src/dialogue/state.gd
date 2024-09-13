@@ -31,6 +31,7 @@ func load_characters() -> void:
 		file_name = dir.get_next()  
 	Logger.info("Characters loaded")
 	
+
 func load_clues():
 	var clues_file:FileAccess = FileAccess.open("res://assets/dialogue/clues.txt",FileAccess.READ)
 	while not clues_file.eof_reached():

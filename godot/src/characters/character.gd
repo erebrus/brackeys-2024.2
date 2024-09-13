@@ -6,6 +6,8 @@ signal discovered
 signal dialogue_changed
 signal portrait_clue_found
 signal name_clue_found
+signal left_location(location: Types.Locations)
+signal entered_location(location: Types.Locations)
 
 
 @export var id: Types.Characters
@@ -23,6 +25,9 @@ signal name_clue_found
 @export var name_clues: Array[String]
 
 @export var start_dialogue: String
+
+@export var location: Types.Locations = Types.Locations.None
+
 
 func get_name_label() -> String:
 	if is_known or is_discovered:
@@ -68,6 +73,19 @@ func set_dialogue(dialogue: String) -> void:
 		return
 	start_dialogue = dialogue
 	dialogue_changed.emit()
+	
+
+func set_location(value: Types.Locations) -> void:
+	if value == location:
+		return
+		
+	if location != Types.Locations.None:
+		left_location.emit(location)
+	
+	location = value
+	
+	if location != Types.Locations.None:
+		entered_location.emit(location)
 	
 
 func _to_string() -> String:
