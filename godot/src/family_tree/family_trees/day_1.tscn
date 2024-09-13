@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://cath4tuytbe3i"]
 
 [ext_resource type="PackedScene" uid="uid://1gjc20l1fmj6" path="res://src/family_tree/family_tree.tscn" id="1_2gmqh"]
@@ -200,3 +201,10 @@ anchor_right = 0.0
 offset_left = 0.0
 offset_right = 119.0
 grow_horizontal = 1
+=======
+[gd_scene load_steps=2 format=3 uid="uid://cath4tuytbe3i"]
+
+[ext_resource type="PackedScene" uid="uid://1gjc20l1fmj6" path="res://src/family_tree/family_tree.tscn" id="1_2gmqh"]
+
+[node name="" instance=ExtResource("1_2gmqh")]
+>>>>>>> Stashed changes
