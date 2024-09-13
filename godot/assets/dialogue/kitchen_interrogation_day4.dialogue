@@ -1,0 +1,23 @@
+~ SisterOfWife_start
+You: I'm sorry you were the one who found him like that, love.
+Angela: It's... alright... I just need some wine and fresh air.
+Angela: But this damn storm now... => SisterOfWife_interrogation3
+
+~ SisterOfWife_interrogation3
+- Did you see anything suspicious yesterday?
+	Angela: Everyone was a little bit on the edge yesterday.
+	Angela: After you interrogated us, I was just in the kitchen. Jessica and Vanda were there too.
+	#TODO: hint - Angela claims she was with Jessica and Vanda in the kitchen
+	Angela: Samantha was going in and out, I have no idea what was she doing.
+	Angela: She was mumbling to Henry and going to the garden in the rain. => SisterOfWife_interrogation3
+	#TODO: hint - Angela claims Samantha was going in and out to the garden while mumbling to her dead husband
+
+- Did you have any arguments yesterday?
+	Angela: Not at all, surprisingly.
+	Angela: Everyone seemed to be closed off, almost like too scared to talk to each other, you know? => SisterOfWife_interrogation3
+
+- I think that's all for now.
+	Angela: Taylor, it's someone from the family, right?
+	Angela: We cannot trust no one. => END
+
+=> END
