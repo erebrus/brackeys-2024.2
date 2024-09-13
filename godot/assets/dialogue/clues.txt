@@ -18,6 +18,7 @@ jessica_draws|There's a woman who draws, her name is Jessica|
 olivia_day2_bed|Olivia went to bed with Tom after dinner.|
 tom_day2_investing_unknown|Tom was investing in some unknown businesses|
 olivia_day2_business|Olivia didn't support Tom's businesses|
+tom_day1_previous_marriage|Tom was married before and had a son.|
 tom_day2_investing_fight|Tom invested big money recently and Olivia got upset, they had a fight.|
 andrew_day2_bed|Andrew went to bed after the dinner.|
 andrew_day2_job|Andrew lost his job recently.|
@@ -40,10 +41,16 @@ jason_day2_tom|Jason claims that Tom was cheap and focused on money.|
 jason_day2_money|Jason's pocket money was cut short recently.|
 samantha_day2_alibi|Samantha claims she was washing dishes with Vanda and that Jessica was going to the garden.|
 samantha_day2_henry|Samantha seems to turn every conversation to be about Henry.|
+samantha_day3_vanda|Samantha claims to spent the evening with Vanda in the kitchen.|
+samantha_day3_unusual|Samantha seems to not hear or see anything unusual.|
 stan_day2_alibi| Stan claims to be with Angela at the fireplace after dinner. |
 stan_day2_tom|No one liked Stan, except Tom.|
 stan_day2_tom_invest|Stan tried to convince Tom to stop investing in illegal businesses.|
 stan_day2_frank|Stan claims Frank saw him going to the bedroom.|
+stan_day3_jason|Stan claims to spend his evening in the room, Jason saw him going out of the bathroom.|
+stan_day3_argue|Stan claims to hear Andrew and Frank arguing.|
+stan_day3_samantha|Stan claims to see Samantha going downstairs at night.|
+stan_day3_suspect|Stan suspects Samantha.|
 frank_day2_alibi|Frank went to the garden after celebration and then went to bed.|
 frank_day2_jessica|Frank he saw Jessica in the garden.|
 frank_day2_stan|Frank claims to have seen Stan going upstairs.|
