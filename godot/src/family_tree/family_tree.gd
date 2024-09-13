@@ -46,6 +46,7 @@ func _check_fully_discovered() -> void:
 			return
 	
 	Logger.info("Family tree discovered!")
+	Events.family_tree_complete.emit()
 	
 
 func _close_popups() -> void:

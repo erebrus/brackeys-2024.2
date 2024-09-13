@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://fcurp07tsu4p"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://fcurp07tsu4p"]
 
-[ext_resource type="Texture2D" uid="uid://coejfv5sqgfs5" path="res://assets/gfx/portraits/character_07.png" id="1_g511c"]
+[ext_resource type="Texture2D" uid="uid://d2i2od8a6n5n1" path="res://assets/gfx/characters/ruler01.png" id="1_f32it"]
+[ext_resource type="Texture2D" uid="uid://c4lmpvfjc6wf5" path="res://assets/gfx/portraits/grandson.png" id="2_0vgnv"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_n4231"]
 
 [resource]
 script = ExtResource("2_n4231")
 id = 7
 name = "Jason"
-portrait = ExtResource("1_g511c")
+portrait = ExtResource("2_0vgnv")
+full_portrait = ExtResource("1_f32it")
 name_available = false
 portrait_available = false
 is_discovered = false
@@ -16,3 +18,4 @@ is_known = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
 start_dialogue = "grandson_start"
+location = 4
