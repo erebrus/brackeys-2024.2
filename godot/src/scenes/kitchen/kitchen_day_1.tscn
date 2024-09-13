@@ -3,11 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_7wbku"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_3sn7w"]
 [ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
+[ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_dnnkp"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="3_dxuaj"]
 [ext_resource type="Texture2D" uid="uid://ci6xi6k0uaml3" path="res://assets/gfx/characters/scissors01.png" id="4_ot5b1"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_sv4uk"]
-font_size = 128
 
 [sub_resource type="LabelSettings" id="LabelSettings_hdka6"]
 font_size = 48
@@ -16,14 +14,11 @@ font_size = 48
 dialogue = ExtResource("3_dxuaj")
 location = 3
 
-[node name="Label" type="Label" parent="." index="1"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "KITCHEN"
-label_settings = SubResource("LabelSettings_sv4uk")
+[node name="Background" parent="." index="0"]
+texture = ExtResource("3_dnnkp")
 
-[node name="GoToDiningRoom" parent="." index="2" instance=ExtResource("2_3sn7w")]
-position = Vector2(148, 583)
+[node name="GoToDiningRoom" parent="." index="1" instance=ExtResource("2_3sn7w")]
+position = Vector2(773, 959)
 target_location = 2
 
 [node name="Sprite2D" parent="GoToDiningRoom" index="0"]
@@ -40,8 +35,8 @@ offset_bottom = 20.0
 text = "GO TO DINING ROOM"
 label_settings = SubResource("LabelSettings_hdka6")
 
-[node name="WifeOfFirstBorn" parent="." index="3" instance=ExtResource("2_xbthk")]
-position = Vector2(985, 376)
+[node name="WifeOfFirstBorn" parent="." index="2" instance=ExtResource("2_xbthk")]
+position = Vector2(1037, 568)
 character_id = 6
 
 [node name="Sprite2D" parent="WifeOfFirstBorn" index="0"]

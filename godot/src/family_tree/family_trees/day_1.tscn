@@ -6,52 +6,62 @@
 [node name="FamilyTree" instance=ExtResource("1_2gmqh")]
 
 [node name="Line2D10" type="Line2D" parent="." index="1"]
-position = Vector2(106.072, -71)
+position = Vector2(1.22242, -231.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D14" type="Line2D" parent="." index="2"]
-position = Vector2(390.072, 142)
+position = Vector2(567.222, 148.3)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D15" type="Line2D" parent="." index="3"]
-position = Vector2(2.07166, 141)
+position = Vector2(-140.778, 149.3)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D16" type="Line2D" parent="." index="4"]
-position = Vector2(177.072, -71)
+position = Vector2(-39.7776, 155.3)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 571, 387)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D17" type="Line2D" parent="." index="5"]
-position = Vector2(52.0717, 144)
+position = Vector2(322.222, -10.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 571, 381)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D18" type="Line2D" parent="." index="6"]
-position = Vector2(251, 47)
-points = PackedVector2Array(571, 271, 571, 381)
+position = Vector2(100.222, -226.7)
+scale = Vector2(1.7, 1.7)
+points = PackedVector2Array(571, 271, 571.177, 394.118)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D11" type="Line2D" parent="." index="7"]
-position = Vector2(245.072, -164)
+position = Vector2(226.222, -380.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(587, 323, 586.928, 271, 699, 271, 699, 315)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D19" type="Line2D" parent="." index="8"]
-position = Vector2(-359, -171)
+position = Vector2(-194.778, -12.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(587, 323, 586.928, 271, 1012, 271, 1012, 341)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D13" type="Line2D" parent="." index="9"]
-position = Vector2(-34.9283, 47)
+position = Vector2(-741.778, -383.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(587, 323, 586.928, 271, 986, 271, 986, 323)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
 [node name="Line2D12" type="Line2D" parent="." index="10"]
-position = Vector2(-201.928, -70)
+position = Vector2(-524.778, -236.7)
+scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(587, 377, 586.928, 271, 856, 271)
 default_color = Color(0.01, 0.01, 0.01, 1)
 
@@ -66,10 +76,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 599.0
-offset_top = 120.0
-offset_right = 699.0
-offset_bottom = 276.0
+offset_left = 831.5
+offset_top = 107.0
+offset_right = 1023.5
+offset_bottom = 392.0
 solution = 1
 
 [node name="FamilyHeadWife" parent="Portraits" index="1" instance=ExtResource("2_1hkqm")]
@@ -77,10 +87,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 770.0
-offset_top = 122.0
-offset_right = 870.0
-offset_bottom = 278.0
+offset_left = 1117.5
+offset_top = 106.0
+offset_right = 1309.5
+offset_bottom = 391.0
 solution = 2
 
 [node name="FirstBornSon" parent="Portraits" index="2" instance=ExtResource("2_1hkqm")]
@@ -88,10 +98,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 494.0
-offset_top = 323.0
-offset_right = 594.0
-offset_bottom = 479.0
+offset_left = 701.5
+offset_top = 493.0
+offset_right = 893.5
+offset_bottom = 778.0
 solution = 3
 
 [node name="Daughter" parent="Portraits" index="3" instance=ExtResource("2_1hkqm")]
@@ -99,10 +109,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 768.0
-offset_top = 324.0
-offset_right = 868.0
-offset_bottom = 480.0
+offset_left = 1206.0
+offset_top = 490.0
+offset_right = 1366.0
+offset_bottom = 734.0
 solution = 4
 
 [node name="SisterOfWife" parent="Portraits" index="4" instance=ExtResource("2_1hkqm")]
@@ -110,10 +120,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 892.0
-offset_top = 122.0
-offset_right = 992.0
-offset_bottom = 278.0
+offset_left = 1317.5
+offset_top = 102.0
+offset_right = 1509.5
+offset_bottom = 387.0
 solution = 5
 
 [node name="WifeOfFirstBornSon" parent="Portraits" index="5" instance=ExtResource("2_1hkqm")]
@@ -121,10 +131,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 636.0
-offset_top = 324.0
-offset_right = 736.0
-offset_bottom = 480.0
+offset_left = 958.5
+offset_top = 494.0
+offset_right = 1150.5
+offset_bottom = 779.0
 solution = 6
 
 [node name="Grandson" parent="Portraits" index="6" instance=ExtResource("2_1hkqm")]
@@ -132,10 +142,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 568.0
-offset_top = 501.0
-offset_right = 668.0
-offset_bottom = 657.0
+offset_left = 832.5
+offset_top = 753.0
+offset_right = 1024.5
+offset_bottom = 1038.0
 solution = 7
 
 [node name="WidowAfterSecondSon" parent="Portraits" index="7" instance=ExtResource("2_1hkqm")]
@@ -143,10 +153,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1027.0
-offset_top = 326.0
-offset_right = 1127.0
-offset_bottom = 482.0
+offset_left = 1653.0
+offset_top = 484.0
+offset_right = 1813.0
+offset_bottom = 728.0
 solution = 8
 
 [node name="SonOfFirstMarriage" parent="Portraits" index="8" instance=ExtResource("2_1hkqm")]
@@ -154,10 +164,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 329.0
-offset_top = 257.0
-offset_right = 429.0
-offset_bottom = 413.0
+offset_left = 394.0
+offset_top = 339.0
+offset_right = 554.0
+offset_bottom = 583.0
 solution = 9
 
 [node name="FriendOfTheHead" parent="Portraits" index="9" instance=ExtResource("2_1hkqm")]
@@ -165,10 +175,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 177.0
-offset_top = 119.0
-offset_right = 277.0
-offset_bottom = 275.0
+offset_left = 173.0
+offset_top = 104.0
+offset_right = 333.0
+offset_bottom = 348.0
 solution = 10
 
 [node name="SecondSon" parent="Portraits" index="10" instance=ExtResource("2_1hkqm")]
@@ -176,10 +186,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 894.0
-offset_top = 325.0
-offset_right = 994.0
-offset_bottom = 481.0
+offset_left = 1434.0
+offset_top = 485.0
+offset_right = 1594.0
+offset_bottom = 729.0
 solution = 11
 
 [node name="CluesPopup" parent="." index="14"]

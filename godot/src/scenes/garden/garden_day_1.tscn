@@ -20,43 +20,40 @@ dialogue = ExtResource("4_6vios")
 texture = ExtResource("2_0nkxn")
 
 [node name="GoToMansion" parent="." index="1" instance=ExtResource("8_82y6x")]
-position = Vector2(630, 360)
+position = Vector2(960, 540)
 target_location = 1
 
 [node name="Sprite2D" parent="GoToMansion" index="0"]
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_fn2kp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToMansion" index="1"]
 visible = false
-polygon = PackedVector2Array(-279, 3, -298, -167, -260, -213, -224, -212, -182, -226, -109, -232, -103, -262, -22, -255, 17, -241, 91, -237, 92, -205, 259, -186, 279, -145, 278, -99, 261, -90, 264, 31, 135, 42)
+polygon = PackedVector2Array(-437, 6, 162, 73, 390, 16, 424, -217, 378, -282, 145, -295, 131, -355, -152, -393, -163, -344, -428, -299)
 
 [node name="GrandpaTomato" parent="." index="2" instance=ExtResource("6_g316i")]
-position = Vector2(630, 360)
+position = Vector2(642, 593)
 character_id = 1
 
 [node name="Sprite2D" parent="GrandpaTomato" index="0"]
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_upvxj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandpaTomato" index="1"]
 visible = false
-polygon = PackedVector2Array(-248, 66, -262, 36, -256, 10, -241, -1, -236, -21, -223, -21, -213, -7, -179, 6, -168, 40, -177, 71)
+polygon = PackedVector2Array(-33, -45, -34, -73, -10, -73, -3, -53, 42, -40, 64, -4, 69, 28, 20, 60, -42, 64, -65, 35, -72, -18)
 
 [node name="Wife" parent="." index="3" instance=ExtResource("6_g316i")]
-position = Vector2(630, 360)
+position = Vector2(767, 575)
 character_id = 2
 
 [node name="Sprite2D" parent="Wife" index="0"]
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_uhrwi")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wife" index="1"]
 visible = false
-polygon = PackedVector2Array(-156, 73, -164, 14, -159, -38, -141, -47, -124, -38, -115, 8, -111, 69, -120, 79)
+polygon = PackedVector2Array(-31, -82, -36, -34, -32, 46, -20, 86, 8, 94, 43, 80, 36, 10, 28, -57, 12, -96, -12, -99)
 
 [node name="Daughter" parent="." index="4" instance=ExtResource("6_g316i")]
-position = Vector2(1155, 380)
+position = Vector2(1385, 562)
 character_id = 4
 
 [node name="Sprite2D" parent="Daughter" index="0"]
@@ -68,8 +65,8 @@ visible = false
 polygon = PackedVector2Array(-44, 81, -3, -32, -15, -52, -49, -16, -78, -37, 7, -108, 18, -87, -1, -64, 6, -56, 24, -85, 19, -119, 32, -171, 64, -90, 33, -67, 23, -28, 37, -8, 25, 11, 30, 43, 18, 109)
 
 [node name="Grandson" parent="." index="5" instance=ExtResource("6_g316i")]
-position = Vector2(229, 319)
-scale = Vector2(0.5, 0.5)
+position = Vector2(420, 549)
+scale = Vector2(0.8, 0.8)
 character_id = 7
 
 [node name="Sprite2D" parent="Grandson" index="0"]
