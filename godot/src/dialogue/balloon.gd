@@ -54,7 +54,8 @@ var dialogue_line: DialogueLine:
 			character_label.text = tr(character.get_name_label(), "dialogue")
 			portrait.texture = character.portrait
 		else:
-			Logger.warn("Couldn't map character %s" % dialogue_line.character)
+			if dialogue_line.character!="" and dialogue_line.character!="You":
+				Logger.warn("Couldn't map character %s" % dialogue_line.character)
 			character_label.text = tr(dialogue_line.character, "dialogue")
 			portrait.visible = false
 

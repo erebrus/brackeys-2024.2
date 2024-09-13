@@ -21,8 +21,8 @@ do State.characters[Types.Characters.FamilyHead].set_dialogue("family_head_repea
 ~ family_head_repeat
 Tom: Have you meet all family yet?
 Tom: My grandson is hidden somewhere with his little machine.
-do State.characters[Types.Characters.Grandson].set_location(Types.Locations.Garden)
-do State.advance_time(12)
+#do State.characters[Types.Characters.Grandson].set_location(Types.Locations.Garden)
+
 
 => END
 
@@ -38,15 +38,13 @@ Olivia: Alright. Well, not to be mean, but I have lots of preparations before to
 You: Understandable, sorry to bother you ma'am.
 Olivia: See you later, I guess.
 You: Yeah, see you.
-do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
-do State.advance_time(11)
+#do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
 do State.characters[Types.Characters.FamilyHeadsWife].set_location(Types.Locations.None)
-do State.characters[Types.Characters.Daughter].set_location(Types.Locations.Garden)
 => END
 #TODO: She remains ??? in this dialogue as we figure out her name later while talking to Angela.
 
-~ family_head_wife_repeat
-Olivia: Everything has to be perfect! => END!
+#~ family_head_wife_repeat
+#Olivia: Everything has to be perfect! => END!
 
 #2nd hour
 ~ daughter_start
