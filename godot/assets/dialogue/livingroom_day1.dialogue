@@ -7,8 +7,8 @@ Samantha: Who are you? You're not with Frank, are you?
 #DONE: hint - there's someone named Frank
 do State.characters[Types.Characters.FriendOfTheFamily].find_name()
 You: Oh, no, no. I'm Angela's partner.
-Samantha: Phew, that's good. This man always has some shady company with him. You just have to be sure, you know?
-#DONE: hint - Frank is suspicious individual
+Samantha: Phew, that's good. My uncle always has some shady company with him. You just have to be sure, you know?
+#DONE: hint - Frank is suspicious individual and the woman's uncle.
 do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
 Samantha: Oh, let me introduce myself - I'm Henry's wife.
@@ -24,6 +24,7 @@ Samantha: It's alright, everyone forgets.
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
 You: I um... I should be going. I'll see you at the dinner.
 Samantha: Yea... See you later... => END
+#TODO: Her name remains ??? as we figure it out talking to Vanda.
 
 #2nd hour
 ~ friend_start
@@ -35,13 +36,16 @@ Frank: Do you want to earn some easy money?
 #DONE: hint - the man is persistent about making easy money 
 do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
 You: It doesn't sound legal, to be fair.
-Frank: Oh come on, who are you? The police?
-You: Actually, yeah.
+Frank: Oh come on, who are you? The police? 
+Frank: Me and my brother have been doing it for years!
+#TODO: hint - the man has a brother
+You: Actually, yeah. I'm a police detective.
 Frank: ...
 Frank: My bad.
 #DONE: hint - the money he makes is not legal
 do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
 Frank: I should go. => END
+#TODO: His name remaind ??? as we figure it out by talking to Samantha.
 
 #3rd hour
 ~ firstborn_start

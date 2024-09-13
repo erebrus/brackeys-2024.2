@@ -36,6 +36,7 @@ Olivia: See you later, I guess.
 You: Yeah, see you. 
 do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
 => END
+#TODO: She remains ??? in this dialogue as we figure out her name later while talking to Angela.
 
 ~ family_head_wife_repeat
 Olivia: Everything has to be perfect! => END!
@@ -54,6 +55,7 @@ do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusu
 
 You: Thank you?
 Jessica: Yes, yes... Sorry I need to sketch that down... => END
+#TODO: The name remains ??? as we figure out her name later talking to Andrew.
 
 #3rd hour
 ~ grandson_start
@@ -70,7 +72,7 @@ Jason: What?! Damn, you're awesome. Better than my dad, he didn't even want to t
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
 You: Oh, sorry to hear that. 
 Jason: You're new, by the way. You're not some "another new uncle from a forgotten marriage", huh?
-#TODO: hint - there was someone who was married before and had children  
+#TODO: hint - Tom was married before and had a son  
 You: Umm... no. I'm Angela's partner.
 Jason: Oh damn, auntie has a partner?! That's new. 
 #DONE: hint - Angela is this boy's aunt
@@ -82,3 +84,4 @@ Jason: I better get going help mom and grandma.
 #DONE: hint - the teenage boy has a mom and a grandma 
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_mom_grandma")
 You: Alright, see you later. => END
+#TODO: His name remains ??? as we figure it out by knowing he has a mom and a grandma, and Vanda mentioned his name.
