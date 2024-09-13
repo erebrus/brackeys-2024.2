@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cyx5wmmi2ihrm"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_q30md"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/dialogue_trigger.tscn" id="2_y33ln"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_y33ln"]
 [ext_resource type="Resource" uid="uid://0x3bogk7wbug" path="res://assets/dialogue/livingroom_day1.dialogue" id="3_vjwxr"]
 [ext_resource type="Texture2D" uid="uid://dafae0032udak" path="res://assets/gfx/characters/screwdriver01.png" id="4_lsixu"]
 [ext_resource type="Texture2D" uid="uid://dxcdya7c1gove" path="res://assets/gfx/characters/mouseTrap01.png" id="5_1u4hf"]
@@ -15,7 +15,7 @@ font_size = 128
 font_size = 48
 
 [node name="LivingRoomDay1" instance=ExtResource("1_q30md")]
-portraits_found_on_enter = Array[int]([6])
+dialogue = ExtResource("3_vjwxr")
 
 [node name="Label" type="Label" parent="." index="1"]
 offset_right = 40.0
@@ -25,7 +25,6 @@ label_settings = SubResource("LabelSettings_sv4uk")
 
 [node name="Widow" parent="." index="2" instance=ExtResource("2_y33ln")]
 position = Vector2(985, 376)
-dialogue = ExtResource("3_vjwxr")
 character_id = 8
 
 [node name="Sprite2D" parent="Widow" index="0"]
@@ -38,7 +37,6 @@ polygon = PackedVector2Array(-62, -37, -52, 126, -5, 153, 49, 148, 79, 115, 67, 
 
 [node name="Friend" parent="." index="3" instance=ExtResource("2_y33ln")]
 position = Vector2(305, 391)
-dialogue = ExtResource("3_vjwxr")
 character_id = 10
 
 [node name="Sprite2D" parent="Friend" index="0"]
@@ -52,7 +50,6 @@ polygon = PackedVector2Array(-172, -111, -194, -80, -190, 21, -207, 14, -215, 69
 
 [node name="FirstBorn" parent="." index="4" instance=ExtResource("2_y33ln")]
 position = Vector2(700, 376)
-dialogue = ExtResource("3_vjwxr")
 character_id = 3
 
 [node name="Sprite2D" parent="FirstBorn" index="0"]

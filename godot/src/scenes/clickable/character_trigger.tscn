@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwfadg6rehyeq"]
+
+[ext_resource type="PackedScene" uid="uid://bvdbhrqvi4tce" path="res://src/scenes/clickable/clickable.tscn" id="1_ru8p5"]
+[ext_resource type="Script" path="res://src/scenes/clickable/character_trigger.gd" id="2_4aypo"]
+
+[node name="CharacterTrigger" instance=ExtResource("1_ru8p5")]
+script = ExtResource("2_4aypo")
+character_id = 0
