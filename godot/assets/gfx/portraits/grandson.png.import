@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cum38qgwpmjfa"
-path="res://.godot/imported/character_03.png-21357ed818134be6c56ababa6a98d2c0.ctex"
+uid="uid://c4lmpvfjc6wf5"
+path="res://.godot/imported/grandson.png-1e4fcb1042b17ca869a41962601a97ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gfx/portraits/character_03.png"
-dest_files=["res://.godot/imported/character_03.png-21357ed818134be6c56ababa6a98d2c0.ctex"]
+source_file="res://assets/gfx/portraits/grandson.png"
+dest_files=["res://.godot/imported/grandson.png-1e4fcb1042b17ca869a41962601a97ea.ctex"]
 
 [params]
 

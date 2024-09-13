@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dww76bnuas6k5"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dww76bnuas6k5"]
 
+[ext_resource type="Texture2D" uid="uid://dbt81pxpebsvx" path="res://assets/gfx/characters/knife01.png" id="1_66ujg"]
 [ext_resource type="Texture2D" uid="uid://dcs4uukxfan8a" path="res://assets/gfx/portraits/wife.png" id="1_ot3se"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_xu0fe"]
 
@@ -8,6 +9,7 @@ script = ExtResource("2_xu0fe")
 id = 2
 name = "Olivia"
 portrait = ExtResource("1_ot3se")
+full_portrait = ExtResource("1_66ujg")
 name_available = false
 portrait_available = false
 is_discovered = false

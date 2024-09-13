@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4djnq2s5f31u"
-path="res://.godot/imported/character_02.png-9c60cce387bb8ef5dba49049eb2302ee.ctex"
+uid="uid://ddioqdb48w3hh"
+path="res://.godot/imported/first_wifes_son.png-68248f5929fd309ab43c370700888bf3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gfx/portraits/character_02.png"
-dest_files=["res://.godot/imported/character_02.png-9c60cce387bb8ef5dba49049eb2302ee.ctex"]
+source_file="res://assets/gfx/portraits/first_wifes_son.png"
+dest_files=["res://.godot/imported/first_wifes_son.png-68248f5929fd309ab43c370700888bf3.ctex"]
 
 [params]
 
