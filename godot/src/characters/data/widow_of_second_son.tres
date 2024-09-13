@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bnq2vl3njk3rv"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bnq2vl3njk3rv"]
 
+[ext_resource type="Texture2D" uid="uid://dafae0032udak" path="res://assets/gfx/characters/screwdriver01.png" id="1_k0158"]
 [ext_resource type="Texture2D" uid="uid://dk2ywv0q02oq6" path="res://assets/gfx/portraits/widow.png" id="1_t6x4e"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_kirvc"]
 
@@ -8,6 +9,7 @@ script = ExtResource("2_kirvc")
 id = 8
 name = "Samantha"
 portrait = ExtResource("1_t6x4e")
+full_portrait = ExtResource("1_k0158")
 name_available = false
 portrait_available = false
 is_discovered = false
