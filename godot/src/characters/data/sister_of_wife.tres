@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bfyqx4s6k0mih"]
 
-[ext_resource type="Texture2D" uid="uid://v8orftc7sbb3" path="res://assets/gfx/portraits/character_05.png" id="1_6jkd0"]
+[ext_resource type="Texture2D" uid="uid://p8iaswhq6eym" path="res://assets/gfx/portraits/sister_of_wife.png" id="1_3nlrm"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_dwrjl"]
 
 [resource]
 script = ExtResource("2_dwrjl")
 id = 5
 name = "Angela"
-portrait = ExtResource("1_6jkd0")
+portrait = ExtResource("1_3nlrm")
 name_available = false
 portrait_available = false
 is_discovered = false

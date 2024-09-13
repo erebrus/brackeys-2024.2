@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bnq2vl3njk3rv"]
 
-[ext_resource type="Texture2D" uid="uid://bybwrj36brpi" path="res://assets/gfx/portraits/character_08.png" id="1_kt7tu"]
+[ext_resource type="Texture2D" uid="uid://dk2ywv0q02oq6" path="res://assets/gfx/portraits/widow.png" id="1_t6x4e"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_kirvc"]
 
 [resource]
 script = ExtResource("2_kirvc")
 id = 8
 name = "Samantha"
-portrait = ExtResource("1_kt7tu")
+portrait = ExtResource("1_t6x4e")
 name_available = false
 portrait_available = false
 is_discovered = false

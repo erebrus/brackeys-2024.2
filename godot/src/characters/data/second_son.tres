@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bpny67vbcttlm"]
 
-[ext_resource type="Texture2D" uid="uid://3tkxukr1fwdn" path="res://assets/gfx/portraits/character_06.png" id="1_y1h5f"]
+[ext_resource type="Texture2D" uid="uid://bmwvok7mh5a4n" path="res://assets/gfx/portraits/second_son.png" id="1_a1q17"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_4vv3y"]
 
 [resource]
 script = ExtResource("2_4vv3y")
 id = 11
 name = "Henry"
-portrait = ExtResource("1_y1h5f")
+portrait = ExtResource("1_a1q17")
 name_available = false
 portrait_available = false
 is_discovered = false
@@ -16,3 +16,4 @@ is_known = false
 portrait_clues = Array[String]([])
 name_clues = Array[String]([])
 start_dialogue = ""
+location = 4

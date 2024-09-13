@@ -98,10 +98,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 701.5
-offset_top = 493.0
-offset_right = 893.5
-offset_bottom = 778.0
+offset_left = 702.0
+offset_top = 460.0
+offset_right = 894.0
+offset_bottom = 745.0
 solution = 3
 
 [node name="Daughter" parent="Portraits" index="3" instance=ExtResource("2_1hkqm")]
@@ -109,9 +109,9 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1206.0
-offset_top = 490.0
-offset_right = 1366.0
+offset_left = 1191.5
+offset_top = 460.0
+offset_right = 1381.5
 offset_bottom = 734.0
 solution = 4
 
@@ -131,10 +131,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 958.5
-offset_top = 494.0
-offset_right = 1150.5
-offset_bottom = 779.0
+offset_left = 959.0
+offset_top = 460.0
+offset_right = 1151.0
+offset_bottom = 745.0
 solution = 6
 
 [node name="Grandson" parent="Portraits" index="6" instance=ExtResource("2_1hkqm")]
@@ -153,10 +153,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1653.0
-offset_top = 484.0
-offset_right = 1813.0
-offset_bottom = 728.0
+offset_left = 1638.5
+offset_top = 460.0
+offset_right = 1828.5
+offset_bottom = 734.0
 solution = 8
 
 [node name="SonOfFirstMarriage" parent="Portraits" index="8" instance=ExtResource("2_1hkqm")]
@@ -186,10 +186,10 @@ layout_mode = 2
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1434.0
-offset_top = 485.0
-offset_right = 1594.0
-offset_bottom = 729.0
+offset_left = 1419.5
+offset_top = 460.0
+offset_right = 1609.5
+offset_bottom = 734.0
 solution = 11
 
 [node name="CluesPopup" parent="." index="14"]
