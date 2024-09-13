@@ -18,4 +18,7 @@ signal time_changed(day: int, time: int)
 signal request_location_change(target: Types.Locations)
 
 @warning_ignore("unused_signal")
+signal dialogue_finished()
+
+@warning_ignore("unused_signal")
 signal family_tree_complete
