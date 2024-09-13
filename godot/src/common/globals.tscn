@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/common/globals.gd" id="1_noqpm"]
 [ext_resource type="Resource" uid="uid://ypf1uhmyb8a2" path="res://src/characters/unknown.tres" id="2_kp614"]
-[ext_resource type="AudioStream" uid="uid://c22lhtsga4itp" path="res://assets/music/calm.mp3" id="3_pc6yq"]
+[ext_resource type="AudioStream" uid="uid://bcq12y4oj1lrx" path="res://assets/music/calm.mp3" id="3_pc6yq"]
 [ext_resource type="AudioStream" uid="uid://bc5gcfvnimxvo" path="res://assets/music/dinner_v3.mp3" id="4_ibfvu"]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_q1nu8"]
