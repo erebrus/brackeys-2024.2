@@ -49,7 +49,7 @@ var dialogue_line: DialogueLine:
 		character_label.get_parent().visible = not dialogue_line.character == ""
 		portrait.visible = character_label.visible
 		
-		if dialogue_line.character in Types.NAME_MAP:
+		if State.characters and dialogue_line.character in Types.NAME_MAP:
 			var character:Character = State.characters[Types.NAME_MAP[dialogue_line.character]]
 			character_label.text = tr(character.get_name_label(), "dialogue")
 			portrait.texture = character.full_portrait

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys 2024.2"
-run/main_scene="res://src/main.tscn"
+run/main_scene="res://src/start_screen/start_screen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -55,7 +55,7 @@ toggle_tree={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://assets/dialogue/ponytest.dialogue", "res://assets/dialogue/test.dialogue", "res://assets/dialogue/garden_day1.dialogue", "res://assets/dialogue/livingroom_day1.dialogue", "res://assets/dialogue/diningroom_day1.dialogue", "res://assets/dialogue/intro.dialogue", "res://assets/dialogue/kitchen_day1.dialogue", "res://assets/dialogue/outro_day1.dialogue", "res://assets/dialogue/livingroom_interrogation_day2.dialogue", "res://assets/dialogue/intro_day2.dialogue", "res://assets/dialogue/diningroom_interrogation_day2.dialogue", "res://assets/dialogue/kitchen_interrogation_day2.dialogue", "res://assets/dialogue/outro_day2.dialogue", "res://assets/dialogue/intro_day3.dialogue", "res://assets/dialogue/garden_interrogation_day3.dialogue", "res://assets/dialogue/livingroom_interrogation_day3.dialogue", "res://assets/dialogue/diningroom_interrogation_day3.dialogue", "res://assets/dialogue/intro_day4.dialogue", "res://assets/dialogue/kitchen_interrogation_day4.dialogue", "res://assets/dialogue/livingroom_interrogation_day4.dialogue", "res://assets/dialogue/diningroom_interrogation_day4.dialogue")
+locale/translations_pot_files=PackedStringArray("res://assets/dialogue/ponytest.dialogue", "res://assets/dialogue/test.dialogue", "res://assets/dialogue/garden_day1.dialogue", "res://assets/dialogue/livingroom_day1.dialogue", "res://assets/dialogue/diningroom_day1.dialogue", "res://assets/dialogue/intro.dialogue", "res://assets/dialogue/kitchen_day1.dialogue", "res://assets/dialogue/outro_day1.dialogue", "res://assets/dialogue/livingroom_interrogation_day2.dialogue", "res://assets/dialogue/intro_day2.dialogue", "res://assets/dialogue/diningroom_interrogation_day2.dialogue", "res://assets/dialogue/kitchen_interrogation_day2.dialogue", "res://assets/dialogue/outro_day2.dialogue", "res://assets/dialogue/intro_day3.dialogue", "res://assets/dialogue/garden_interrogation_day3.dialogue", "res://assets/dialogue/livingroom_interrogation_day3.dialogue", "res://assets/dialogue/diningroom_interrogation_day3.dialogue", "res://assets/dialogue/intro_day4.dialogue", "res://assets/dialogue/kitchen_interrogation_day4.dialogue", "res://assets/dialogue/livingroom_interrogation_day4.dialogue", "res://assets/dialogue/diningroom_interrogation_day4.dialogue", "res://assets/dialogue/outro_day3.dialogue", "res://assets/dialogue/outro_day4.dialogue")
 
 [rendering]
 

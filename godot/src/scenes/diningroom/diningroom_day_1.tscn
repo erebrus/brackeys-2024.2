@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ebdt1"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_mywir"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_s60ww"]
+[ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="2_s60ww"]
 [ext_resource type="Texture2D" uid="uid://ccw8f5mdqjpj7" path="res://assets/gfx/scenes/DiningRoomSunny.jpg" id="3_7on1b"]
 [ext_resource type="Resource" uid="uid://c8skhdpaia6sd" path="res://assets/dialogue/diningroom_day1.dialogue" id="3_080w1"]
 [ext_resource type="Texture2D" uid="uid://cr6l0lbqcufop" path="res://assets/gfx/scenes/characters in Scene/DiningRoomWine01.png" id="6_m7cvf"]
