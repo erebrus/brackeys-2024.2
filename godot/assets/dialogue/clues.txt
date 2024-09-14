@@ -22,6 +22,7 @@ jason_day4_olivia|Jason claims to see Olivia in the kitchen later in the evening
 jason_day4_samantha|Jason claims to see Samantha in the dining room talking to herself.|
 frank_easy_money|the man is persistent about making easy money|
 frank_illegal_money|The money he makes is not legal|
+frank_brother|the man has a brother.|
 jessica_draws|There's a woman who draws, her name is Jessica|
 olivia_day2_bed|Olivia went to bed with Tom after dinner.|
 olivia_day3_alibi|Olivia claims to be in the living room with Andrew and Jessica.|
@@ -45,6 +46,10 @@ jessica_day2_refused_help|Jessica wanted some financial help from her dad, but h
 jessica_day2_nothing|Andrew got 2% of shares in Tom's investments, but she got nothing.|
 jessica_day3_evening|Jessica claims she spent the evening with her Olivia and Andrew.|
 jessica_day3_jason|Jessica claims she went to bed after, and that Jason saw her.|
+jessica_day4_kitchen|Jessica claims to be with Angela and Vanda in the kitchen last evening.|
+jessica_day4_samantha|Jessica claims that Samantha was being creepy and going in and out to the garden despite the rain.|
+jessica_day4_olivia_stan|Jessica claims she saw Olivia with Stan in the living room.|
+jessica_day4_samantha2|Jessica claims she heard Samantha going upstairs late at night while talikng to herself.|
 andrew_day2_returns|Andrew got 2% of shares in Tom's investments.|
 andrew_day3_evening|Andrew claims to spent evening with his mom and sister.|
 andrew_day3_samantha|Andrew claims to see Samantha going upstairs at night.|
@@ -81,6 +86,9 @@ stan_day3_jason|Stan claims to spend his evening in the room, Jason saw him goin
 stan_day3_argue|Stan claims to hear Andrew and Frank arguing.|
 stan_day3_samantha|Stan claims to see Samantha going downstairs at night.|
 stan_day3_suspect|Stan suspects Samantha.|
+stan_day4_olivia|Stan claims to spend evening with Olivia in the living room.|
+stan_day4_olivia2|Stan claims that Olivia went to the kitchen later in the evening.|
+stan_day4_samantha|Stan claims he saw Samantha going downstairs at night.|
 frank_day2_alibi|Frank went to the garden after celebration and then went to bed.|
 frank_day2_jessica|Frank he saw Jessica in the garden.|
 frank_day2_stan|Frank claims to have seen Stan going upstairs.|

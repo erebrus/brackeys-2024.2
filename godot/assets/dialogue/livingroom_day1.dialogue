@@ -70,7 +70,8 @@ Frank: Are you interested in making some money on the side? => friend_continue1
 	You: It doesn't sound legal, to be fair.
 	Frank: Oh come on, who are you? The police? 
 	Frank: Me and my brother have been doing it for years!
-	#TODO: hint - the man has a brother
+	#DONE: hint - the man has a brother
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_brother")
 	You: Actually, yeah. I'm a police detective.
 	Frank: ...
 	Frank: My bad.

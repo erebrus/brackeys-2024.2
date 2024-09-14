@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjyhw8kjijtyl"]
+[gd_scene load_steps=10 format=3 uid="uid://die0mxak3i3ns"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_c1ly0"]
 [ext_resource type="Resource" uid="uid://b6hg18rx0pllt" path="res://assets/dialogue/kitchen_interrogation_day2.dialogue" id="2_bdx0q"]
 [ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_m0qbt"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_0sdaa"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="5_vm06b"]
-[ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="6_mgrpn"]
+[ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="5_vm06b"]
+[ext_resource type="Texture2D" uid="uid://bvfgg5rgq320c" path="res://assets/gfx/scenes/characters in Scene/KitchenMouseTrap02.png" id="6_t5g75"]
+[ext_resource type="Texture2D" uid="uid://c0lgxrovubd1r" path="res://assets/gfx/scenes/characters in Scene/KitchenScrewdriver02.png" id="6_y5b75"]
+[ext_resource type="Texture2D" uid="uid://dt2v2smjyj2xe" path="res://assets/gfx/scenes/characters in Scene/KitchenHammer02.png" id="7_i1ity"]
 [ext_resource type="AudioStream" uid="uid://bpci1e024fgde" path="res://assets/sfx/Kitchen_DayOne_Amb.mp3" id="7_l4ux2"]
-[ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="7_p4d8v"]
-[ext_resource type="Texture2D" uid="uid://cxl5n3a5x6i6b" path="res://assets/gfx/scenes/characters in Scene/placeholder3.png" id="8_6vi8j"]
 
 [node name="KitchenDay2" instance=ExtResource("1_c1ly0")]
 dialogue = ExtResource("2_bdx0q")
@@ -30,47 +30,41 @@ position = Vector2(767, 588)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
 polygon = PackedVector2Array(-62, -241, -52, 124, 419, 118, 416, -229, 308, -367, 167, -411, 40, -370)
 
-[node name="WidowAfterSecondSon" parent="." index="3" instance=ExtResource("5_vm06b")]
-position = Vector2(-24, 357)
-character_id = 8
-
-[node name="Sprite2D" parent="WidowAfterSecondSon" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("6_mgrpn")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WidowAfterSecondSon" index="1"]
-position = Vector2(15, 202)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
-
-[node name="SonFromFirstMarriage" parent="." index="4" instance=ExtResource("5_vm06b")]
-position = Vector2(-24, 357)
-character_id = 9
-
-[node name="Sprite2D" parent="SonFromFirstMarriage" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("7_p4d8v")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SonFromFirstMarriage" index="1"]
-position = Vector2(354, 204)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
-
-[node name="Friend" parent="." index="5" instance=ExtResource("5_vm06b")]
-position = Vector2(-24, 357)
+[node name="Friend" parent="." index="3" instance=ExtResource("5_vm06b")]
 character_id = 10
 
 [node name="Sprite2D" parent="Friend" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("8_6vi8j")
+texture = ExtResource("6_t5g75")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Friend" index="1"]
 position = Vector2(674, 211)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(360, 259, 524, 261, 523, 477, 444, 489, 448, 598, 412, 570, 382, 537, 357, 521)
+
+[node name="WidowAfterSecondSon" parent="." index="4" instance=ExtResource("5_vm06b")]
+character_id = 8
+
+[node name="Sprite2D" parent="WidowAfterSecondSon" index="0"]
+texture = ExtResource("6_y5b75")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WidowAfterSecondSon" index="1"]
+position = Vector2(15, 202)
+polygon = PackedVector2Array(1041, 819, 1093, 797, 1085, 631, 933, 469, 913, 493, 919, 619, 951, 793)
+
+[node name="SonFromFirstMarriage" parent="." index="5" instance=ExtResource("5_vm06b")]
+character_id = 9
+
+[node name="Sprite2D" parent="SonFromFirstMarriage" index="0"]
+texture = ExtResource("7_i1ity")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SonFromFirstMarriage" index="1"]
+position = Vector2(354, 204)
+polygon = PackedVector2Array(249, 480, 286, 386, 277, 219, 156, 239, 147, 323, 167, 372, 199, 483)
 
 [node name="ambience" parent="." index="6"]
 stream = ExtResource("7_l4ux2")
 
 [editable path="GoToDiningRoom"]
 [editable path="GoToGarden"]
+[editable path="Friend"]
 [editable path="WidowAfterSecondSon"]
 [editable path="SonFromFirstMarriage"]
-[editable path="Friend"]

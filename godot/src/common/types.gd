@@ -46,8 +46,8 @@ const NAME_MAP:={
 const CLUE_COUNTS={
 	Vector2i(1,1):2+5+2+0,
 	Vector2i(1,2):1+2+0+1,
-	Vector2i(1,3):4+1+0+1-1, #something needs to be fixed here
-	Vector2i(2,1):1, # TODO: added 1 so it doesn't autoadvance during cutscenes
-	Vector2i(3,1):1,
-	Vector2i(4,1):1,
+	Vector2i(1,3):4+1+0+1, #something needs to be fixed here
+	Vector2i(2,1):0+16+11+12, 
+	Vector2i(3,1):10+12+0+12,
+	Vector2i(4,1):0+10+20+13,
 }
