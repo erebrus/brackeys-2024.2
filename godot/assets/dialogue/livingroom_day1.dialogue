@@ -1,14 +1,17 @@
 #1st hour
 ~ widow_start
 #TODO: mark her as ???
+#PLEASE CHANGE THE CLUES FOR THIS DIALOGUE 
 Samantha: Oh, hello. Didn't see you there. 
 You: I'm sorry to startle you, I just wanted to introduce myself.
-Samantha: Who are you? You're not with Frank, are you?
-#DONE: hint - there's someone named Frank
+Samantha: Who are you? You're not with my uncle, are you?
+#I changed this clue
+#DONE: hint - the woman has an uncle 
 do State.characters[Types.Characters.FriendOfTheFamily].find_name()
 You: Oh, no, no. I'm Angela's partner.
-Samantha: Phew, that's good. My uncle always has some shady company with him. You just have to be sure, you know?
-#DONE: hint - Frank is suspicious individual and the woman's uncle.
+Samantha: Phew, that's good. Frank always has some shady company with him. You just have to be sure, you know?
+#I changed this clue
+#DONE: hint - the uncle name is Frank and he's a suspicious individual 
 do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
 Samantha: Oh, let me introduce myself - I'm Henry's wife.
