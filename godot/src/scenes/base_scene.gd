@@ -10,6 +10,7 @@ func _ready() -> void:
 	_setup_characters(self)
 	Logger.info("Entered location: %s" % Types.Locations.keys()[location])
 	Globals.music_manager.change_game_music_to(get_music_for_location(location))
+	Globals.music_manager.fade_in_stream(ambience, .5)
 	
 
 #TODO complete this

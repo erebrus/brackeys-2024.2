@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_yq3k5"]
 [ext_resource type="Texture2D" uid="uid://ccw8f5mdqjpj7" path="res://assets/gfx/scenes/DiningRoomSunny.jpg" id="2_14c2h"]
-[ext_resource type="Texture2D" uid="uid://f45ikrbnaa6y" path="res://assets/gfx/scenes/TomatoMurder.jpg" id="2_fcayb"]
+[ext_resource type="Texture2D" uid="uid://dey7k6bhx1lpk" path="res://assets/gfx/scenes/TomatoMurder.jpg" id="2_fcayb"]
 
 [node name="DayOneEnd" instance=ExtResource("1_yq3k5")]
 night_timeout = 2.0

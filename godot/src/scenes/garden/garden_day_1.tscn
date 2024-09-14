@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bkkmpa1xgyd7f" path="res://assets/gfx/day1GardenTest/layer2.png" id="4_watnj"]
 [ext_resource type="Texture2D" uid="uid://dl6au6dlv02s1" path="res://assets/gfx/day1GardenTest/layer1.png" id="5_nwwoj"]
 [ext_resource type="Texture2D" uid="uid://rvbq8b3fxs6l" path="res://assets/gfx/day1GardenTest/layer3_family_head.png" id="5_upvxj"]
-[ext_resource type="PackedScene" path="res://src/scenes/clickable/character_trigger.tscn" id="6_g316i"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="6_g316i"]
 [ext_resource type="Texture2D" uid="uid://by3ve4j2kd0yb" path="res://assets/gfx/day1GardenTest/layer3_wife.png" id="6_uhrwi"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="8_82y6x"]
 [ext_resource type="Texture2D" uid="uid://c4lbph6mra7io" path="res://assets/gfx/characters/artist01.png" id="8_ka4a6"]
