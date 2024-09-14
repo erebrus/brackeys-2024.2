@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://btketith84ctf"]
+
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_3vuqy"]
+[ext_resource type="Script" path="res://src/scenes/day_end/day_end.gd" id="2_oubf0"]
+[ext_resource type="Resource" uid="uid://copl4u43xi0de" path="res://assets/dialogue/outro_day1.dialogue" id="3_jttbv"]
+[ext_resource type="Texture2D" uid="uid://db75ml4dxsd2i" path="res://assets/gfx/scenes/LivingRoomgSunny.jpg" id="4_8g5we"]
+
+[node name="DayOneEnd" instance=ExtResource("1_3vuqy")]
+script = ExtResource("2_oubf0")
+dialogue_start = ""
+dialogue_murder = "murder"
+start_timeout = 1.0
+night_timeout = 3.0
+murder_timeout = 1.0
+murder_music_fade_in = 0.2
+dialogue = ExtResource("3_jttbv")
+location = 2
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("4_8g5we")

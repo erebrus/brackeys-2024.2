@@ -9,7 +9,8 @@ var tween: Tween
 
 func _ready() -> void:
 	Events.request_location_change.connect(_on_location_change)
-	Events.family_tree_complete.connect(_on_family_tree_complete)
+	Events.day_ended.connect(_on_day_ended)
+	Events.day_changed.connect(_on_day_changed)
 	_fade_in()
 	
 
@@ -63,22 +64,46 @@ func choose_scene(location: Types.Locations) -> GameScene:
 	return scene.instantiate()
 	
 
+func day_end_scene() -> GameScene:
+	var path = "res://src/scenes/day_end/day_%s.tscn"
+	var scene = load(path % (State.current_day))
+	return scene.instantiate()
+	
+
 # TODO: remove
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_T:
-			var day = State.current_day
-			var time = State.current_time + 1
-			if time >= 24:
-				time -= 24
-				day += 1
-			
-			State.change_time(day, time)
+			var character = State.characters.values().front()
+			var all_clues = State.clues.keys()
+			for clue in all_clues:
+				if not character.name_clues.has(clue):
+					character.find_name_clue(clue)
+					State._on_dialogue_finished()
+					return
+		
+		if event.pressed and event.keycode == KEY_E:
+			Events.family_tree_complete.emit()
+	
 
 func _on_location_change(location: Types.Locations) -> void:
-	Logger.info("changing location")
 	_change_scene(choose_scene.bind(location))
 	
 
-func _on_family_tree_complete() -> void:
-	State.advance_time(4)
+func _on_day_changed(day) -> void:
+	var location = Types.Locations.LivingRoom
+	if day == 3:
+		location = Types.Locations.Garden
+	elif day == 4:
+		location = Types.Locations.Kitchen
+	
+	for character in State.characters.values():
+		character.start_dialogue = "%s_start" % Types.Characters.keys()[character.id]
+		
+	
+	_change_scene(choose_scene.bind(Types.Locations.LivingRoom))
+	
+
+func _on_day_ended() -> void:
+	_change_scene(day_end_scene)
+	

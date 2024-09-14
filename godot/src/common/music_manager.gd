@@ -23,10 +23,10 @@ func fade_game_music(time:float=1):
 
 
 func fade_in_murder_music(time:float=1):
-	fade_in_music(game_music, time)
+	fade_in_music(murder_music, time)
 
 func fade_murder_music(time:float=1):
-	fade_music(game_music, time)
+	fade_music(murder_music, time)
 		
 func play_music(node:AudioStreamPlayer):
 	if not node.playing:

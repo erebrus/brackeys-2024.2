@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3mipuuevsk4i"]
+
+[ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_yq3k5"]
+[ext_resource type="Texture2D" uid="uid://ccw8f5mdqjpj7" path="res://assets/gfx/scenes/DiningRoomSunny.jpg" id="2_14c2h"]
+[ext_resource type="Texture2D" uid="uid://f45ikrbnaa6y" path="res://assets/gfx/scenes/TomatoMurder.jpg" id="2_fcayb"]
+
+[node name="DayOneEnd" instance=ExtResource("1_yq3k5")]
+night_timeout = 2.0
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_14c2h")
+
+[node name="Overlay" type="ColorRect" parent="." index="1"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03032, 0.0288, 0.12, 1)
+
+[node name="Murder" type="TextureRect" parent="." index="2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_fcayb")
