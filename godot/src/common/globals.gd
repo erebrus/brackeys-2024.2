@@ -29,7 +29,7 @@ var sound_on:=true:
 	
 
 @export var unknown_character: Character
-@onready var music_manager: Node = $MusicManager
+@onready var music_manager: MusicManager = $MusicManager
 
 
 

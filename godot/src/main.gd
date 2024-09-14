@@ -87,6 +87,10 @@ func _input(event: InputEvent) -> void:
 		
 		if event.pressed and event.keycode == KEY_E:
 			Events.family_tree_complete.emit()
+		
+		if event.pressed and event.keycode == KEY_G:
+			Events.day_ended.emit()
+		
 	
 
 func _on_location_change(location: Types.Locations) -> void:

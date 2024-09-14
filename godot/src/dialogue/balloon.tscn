@@ -98,11 +98,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
+[node name="Overlay" type="ColorRect" parent="Balloon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.352941)
+
 [node name="Portrait" type="Sprite2D" parent="Balloon"]
 unique_name_in_owner = true
-position = Vector2(318, 509)
+position = Vector2(309, 659)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_d7qcc")
+flip_h = true
 
 [node name="DialogBox" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
