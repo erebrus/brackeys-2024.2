@@ -1,0 +1,15 @@
+~ accusations_start
+This is it - the grand finale.
+After gathering all the clues you need to point out who is the murderer.
+So Taylor, who would that be? => accusations_decision
+
+~ accusations_decision
+- Olivia
+- Jessica
+- Angela
+- Vanda
+- Jason
+- Samantha
+- Stanley
+
+=> END
