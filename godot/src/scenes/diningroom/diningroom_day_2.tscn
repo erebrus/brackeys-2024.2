@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cp8o47i7d47r0"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ia6sh"]
-[ext_resource type="Resource" uid="uid://c8skhdpaia6sd" path="res://assets/dialogue/diningroom_day1.dialogue" id="2_4knop"]
+[ext_resource type="Resource" uid="uid://1firsua3w8da" path="res://assets/dialogue/diningroom_interrogation_day2.dialogue" id="2_wn375"]
 [ext_resource type="Texture2D" uid="uid://cur6an5t3ifov" path="res://assets/gfx/scenes/Mirror01.jpg" id="4_8mwi1"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_82h1x"]
 [ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="5_87gft"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cxl5n3a5x6i6b" path="res://assets/gfx/scenes/characters in Scene/placeholder3.png" id="8_wiiak"]
 
 [node name="DiningRoomDay2" instance=ExtResource("1_ia6sh")]
-dialogue = ExtResource("2_4knop")
+dialogue = ExtResource("2_wn375")
 location = 2
 
 [node name="Background" parent="." index="0"]

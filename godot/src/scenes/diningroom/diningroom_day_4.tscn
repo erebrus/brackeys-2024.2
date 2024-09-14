@@ -1,20 +1,20 @@
 [gd_scene load_steps=9 format=3 uid="uid://bob1an75cqac1"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_l17bs"]
-[ext_resource type="Resource" uid="uid://c8skhdpaia6sd" path="res://assets/dialogue/diningroom_day1.dialogue" id="2_cj0s3"]
-[ext_resource type="Texture2D" uid="uid://bb1jx5k35sur8" path="res://assets/gfx/scenes/Mirror02.jpg" id="3_3nk25"]
+[ext_resource type="Resource" uid="uid://bdavc77ef6cuy" path="res://assets/dialogue/diningroom_interrogation_day4.dialogue" id="2_jp62n"]
+[ext_resource type="Texture2D" uid="uid://c7y86tlypqhm8" path="res://assets/gfx/scenes/Mirror03.jpg" id="3_xk4a7"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_vwip1"]
 [ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="5_swyk7"]
 [ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="6_mir5n"]
 [ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="7_x3ubg"]
 [ext_resource type="AudioStream" uid="uid://csqr5ti1b12hy" path="res://assets/sfx/DiningRoom_DayOne_Amb.mp3" id="8_o57xg"]
 
-[node name="DiningRoomDay3" instance=ExtResource("1_l17bs")]
-dialogue = ExtResource("2_cj0s3")
+[node name="DiningRoomDay4" instance=ExtResource("1_l17bs")]
+dialogue = ExtResource("2_jp62n")
 location = 2
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("3_3nk25")
+texture = ExtResource("3_xk4a7")
 
 [node name="GoToLivingRoom" parent="." index="1" instance=ExtResource("4_vwip1")]
 position = Vector2(464, 525)

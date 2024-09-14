@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://6ho3yhye37h4"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_gwvpt"]
-[ext_resource type="Resource" uid="uid://1firsua3w8da" path="res://assets/dialogue/diningroom_interrogation_day2.dialogue" id="2_7a544"]
+[ext_resource type="Resource" uid="uid://033favl3romc" path="res://assets/dialogue/livingroom_interrogation_day3.dialogue" id="2_nco2t"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_yqrpk"]
 [ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="4_6ec3m"]
 [ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="5_sj3pf"]
@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://d2xvphi7qtfaa" path="res://assets/sfx/LivingRoom_DayOne_Amb.mp3" id="9_snayn"]
 
 [node name="LivingRoomDay3" instance=ExtResource("1_gwvpt")]
-dialogue = ExtResource("2_7a544")
+dialogue = ExtResource("2_nco2t")
 location = 1
 
 [node name="Background" parent="." index="0"]
