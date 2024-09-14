@@ -5,18 +5,20 @@ Angela: Mhm, I found some good wine in Tom's storage. => SisterOfWife_continue
 
 ~ SisterOfWife_continue
 - Are you sure he won't notice it? 
-	Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man. => SisterOfWife_continue2
-	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
+#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man. => SisterOfWife_continue2
+	
 	=> SisterOfWife_continue2
 - I see you're enjoying yourself.
 	Angela: Of course I am! 
 	Angela: That's the least I could do here while visiting Olivia. 
-	Angela: I hope there will be some good quality vintage at the party. It's thier 50th marriage anniversary after all! => SisterOfWife_continue2
 	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	Angela: I hope there will be some good quality vintage at the party. It's thier 50th marriage anniversary after all! => SisterOfWife_continue2
+	
 	=> SisterOfWife_continue2
 
 ~ SisterOfWife_continue2
