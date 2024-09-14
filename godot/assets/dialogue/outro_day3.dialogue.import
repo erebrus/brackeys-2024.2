@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cw87il2prt50c"
+path="res://.godot/imported/outro_day3.dialogue-e3d108e94244c44a2129c84a7b7ae3c8.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/outro_day3.dialogue"
+dest_files=["res://.godot/imported/outro_day3.dialogue-e3d108e94244c44a2129c84a7b7ae3c8.tres"]
+
+[params]
+
+defaults=true

@@ -10,8 +10,12 @@ var portraits: Array[TreePortrait]
 
 func _ready() -> void:
 	_find_portraits(self)
-	
+	Events.family_tree_requested.connect(_on_family_tree_requested )
 
+func _on_family_tree_requested():
+		_close_popups()
+		visible = true
+		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_tree"):
 		_close_popups()
