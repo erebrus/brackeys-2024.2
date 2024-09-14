@@ -1,4 +1,4 @@
-~ FamilyHeadsWife_start_day2
+~ FamilyHeadsWife_start
 You: Olivia, I know it’s difficult for you, but I need to ask a few questions.
 #TODO tag
 Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
@@ -31,7 +31,7 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 - Thank you for your cooperation.
 	Olivia: Yeah… Please find whoever did that. => END
 
-~ FirstBornSon_start_day2
+~ FirstBornSon_start
 You: Can we talk for a moment?
 #TODO tag
 Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
@@ -57,7 +57,7 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 - Thank you for answering, if I have any other questions, I'll get back to you.
 	Andrew: No problem, Taylor. I hope I can help. => END
 
-~ Daughter_start_day2
+~ Daughter_start
 You: Hey Jessica, I'm sorry to interrupt, but I need to talk with you.
 #TODO tag
 Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... => Daughter_interrogation1
