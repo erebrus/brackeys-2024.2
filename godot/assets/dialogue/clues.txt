@@ -74,3 +74,4 @@ frank_day2_stan|Frank claims to have seen Stan going upstairs.|
 frank_day2_tom_investing|Frank introduced Tom to investing into the illegal spice businesses.|
 frank_day2_olivia|Frank seems to have a crush on Olivia.|
 frank_day3_argue_andrew|Andrew argued with Frank about the 2% shares he got from Tom's businesses.|
+henry_dead|Henry is dead.|

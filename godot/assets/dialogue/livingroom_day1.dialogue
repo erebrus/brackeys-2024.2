@@ -16,11 +16,16 @@ do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_su
 You: Understandable. 
 Samantha: Oh, let me introduce myself - I'm Henry's wife.
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_husband")
+do State.characters[Types.Characters.SecondSon].find_name()
+
 #DONE: hint - the woman has a husband named Henry
 You: I don't think I've met him yet.
 Samantha: I don't think you will. He's... not here anymore.
 #DONE: hint - the husband is dead
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
+do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
+
+do State.characters[Types.Characters.SecondSon].find_portrait()
 You: Oh, I'm sorry, I didn't know.
 Samantha: It's alright, everyone forgets.
 #DONE: hint - widow is stil mourning 
