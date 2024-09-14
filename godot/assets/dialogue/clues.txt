@@ -22,6 +22,7 @@ jason_day4_olivia|Jason claims to see Olivia in the kitchen later in the evening
 jason_day4_samantha|Jason claims to see Samantha in the dining room talking to herself.|
 frank_easy_money|the man is persistent about making easy money|
 frank_illegal_money|The money he makes is not legal|
+frank_brother|the man has a brother.|
 jessica_draws|There's a woman who draws, her name is Jessica|
 olivia_day2_bed|Olivia went to bed with Tom after dinner.|
 olivia_day3_alibi|Olivia claims to be in the living room with Andrew and Jessica.|
