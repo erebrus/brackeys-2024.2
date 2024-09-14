@@ -7,14 +7,21 @@ Tom: Where are my manners! Just call me Tom! And you must be Taylor, right?
 do State.characters[Types.Characters.FamilyHead].find_name()
 do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_name")
 set State.characters[Types.Characters.FamilyHead].is_known = true
-Tom: Angela says you have some dangerous job, huh?
-You: I mean, you could say that. I'm a police detective.
-Tom: Sounds quite dangerous to me!
-You: Heh... Anyway, it was nice talking to you. I should go meet others.
-You: Angela will be upset if I don't introduce myself to everyone before dinner.
-Tom: Ah yea, she'll probably be upset anyway, that's how she is...
-Tom: Well, enjoy the stay at the mansion!
-You: Thanks, Tom.
+Tom: Angela says you have some dangerous job, huh? => family_head_continue
+
+~ family_head_continue
+- I mean, you could say that. I'm a police detective.
+	Tom: Sounds quite dangerous to me!
+	You: Heh... Anyway, it was nice talking to you. I should go meet others.
+	Tom: Well, enjoy the stay at the mansion!
+	You: Thanks, Tom. 
+	
+- It's not that dangerous, she's making it sound like I risk my life everyday.
+	Tom: I knew she was exaggerating. She always does it.
+	You: I don't think it's that serious, she just -
+	Tom: Nah, she's always been like that! Making things look more serious than they should be! 
+	Tom: Well, I won't keep you here any longer! Go meet the rest! 
+	You: Thanks, Tom.
 do State.characters[Types.Characters.FamilyHead].set_dialogue("family_head_repeat")
 => END
 
@@ -29,13 +36,21 @@ Tom: My grandson is hidden somewhere with his little machine.
 #1st hour
 ~ family_head_wife_start
 #TODO: mark her as ???
-Olivia: Hello, are you my sister's newest partner? She always changes them so quickly...
+Olivia: Hello, are you my sister's newest partner, right? She always changes them so quickly...
 #DONE: hint - Angela has a sister
 do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela_has_sister")
 #TODO or do we want the clue on her sister? or both
-You: Nice to meet you too. I guess, yes. I'm Taylor.
-Olivia: Alright. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
-You: Understandable, sorry to bother you ma'am.
+~ family_head_wife_continue1
+-  Nice to meet you too. I guess, yes. I'm Taylor.
+	Olivia: Hmm... I wonder for how long you'll stay.
+	You: Excuse me? => family_head_wife_continue2
+- We've been together for over a year now. I'm Taylor.
+	Olivia: Oh really? Fascinating... 
+	Olivia: You must be special. => family_head_wife_continue2
+
+~ family_head_wife_continue2
+Olivia: Anyway. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
+You: Understandable, sorry to bother.
 Olivia: See you later, I guess.
 You: Yeah, see you.
 #do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
@@ -52,19 +67,25 @@ do State.characters[Types.Characters.FamilyHeadsWife].set_location(Types.Locatio
 Jessica: Such captivating color... It'll go perfectly with...
 Jessica: Oh, hi.
 You: Hey, sorry if I disturb you, I just wanted to introduce myself, I'm Taylor.
-Jessica: Oh, no, no, no! Don't worry! You have... unusual features.
-You: Umm... Should I be concerned?
-Jessica: It's a compliment! Your face's harmony is... fascinating.
-#DONE: hint - the woman appears to be enamored by unusual things
-do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusual")
+Jessica: Oh, no, no, no! Don't worry! You have... unusual features. => daughter_continue
 
-You: Thank you?
-Jessica: Yes, yes... Sorry I need to sketch that down... 
+~ daughter_continue
+- Umm... Should I be concerned?
+	Jessica: It's a compliment! Your face's harmony is... fascinating.
+	#DONE: hint - the woman appears to be enamored by unusual things
+	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusual")
+	You: Thank you?
+	Jessica: Yes, yes... Sorry I need to sketch that down... 
+
+- It's kind of rude, you know?
+	Jessica: Oh no! No, no, no, no!
+	Jessica: You're blessed! Not everyone is so intriguing to look at! 
+	You: That's still kind of mean...
+	Jessica: You don't understand the art! No one here does! 
+ 
 do State.characters[Types.Characters.Daughter].set_location(Types.Locations.None)
 => END
 #TODO: The name remains ??? as we figure out her name later talking to Andrew.
-
-
 
 #3rd hour
 ~ grandson_start
