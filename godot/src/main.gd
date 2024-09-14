@@ -31,6 +31,9 @@ func _fade_out() -> void:
 	
 	tween = create_tween()
 	
+	#Globals.music_manager.fade_stream(current_scene.ambience,.5)
+	current_scene.ambience.stop()
+
 	overlay.modulate.a = 0
 	overlay.show()
 	tween.tween_property(overlay, "modulate:a", 1, 0.5)

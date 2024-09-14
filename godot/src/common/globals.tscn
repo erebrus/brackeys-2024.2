@@ -28,6 +28,7 @@ script = ExtResource("3_h14hn")
 [node name="game_music" type="AudioStreamPlayer" parent="MusicManager"]
 process_mode = 3
 stream = SubResource("AudioStreamSynchronized_q1nu8")
+bus = &"Music"
 
 [node name="menu_music" type="AudioStreamPlayer" parent="MusicManager"]
 process_mode = 3
