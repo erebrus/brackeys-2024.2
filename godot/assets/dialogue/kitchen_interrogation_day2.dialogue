@@ -53,6 +53,12 @@ Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHea
 	#DONE: hint - No one liked Stan, except Tom.
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom")
 
+- Many people here seem not to like you, why?
+	Stan: Because I'm Tom's son. But not from this current marriage, obviously. 
+	Stan: I don't know why they dislike me so much, honestly. 
+	Stan: I got used to it by now. Dad was always treating me the same way as his other kids. I couldn't complain.
+	Stan: My guess is that they simply didn't accept me as thier half-brother. And we just grew up like that, so it stayed this way even in our adulthood. => SonFromFirstMariageOfHeadOfFamily_interrogation1
+
 - Did you have any fights or arguments recently?
 	Stan: We didn't have fights per se, but...
 	Stan: Well, my dad was not good with money. He was terrible at economy.
