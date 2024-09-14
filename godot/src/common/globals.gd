@@ -37,7 +37,7 @@ func _ready():
 	_init_logger()
 	Logger.info("Starting menu music")
 	music_manager.fade_in_menu_music()
-	start_game()
+	#start_game()
 	
 func start_game():
 	in_game=true

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpu7kpj8b5hou"]
+
+[ext_resource type="Texture2D" uid="uid://ccpkkp7c11s1s" path="res://assets/gfx/ui/SpeechLetter/reply_template.png" id="1_y1ras"]
+[ext_resource type="Script" path="res://src/dialogue/response_template.gd" id="2_pfxg2"]
+[ext_resource type="FontFile" uid="uid://dkw267p7r3j5b" path="res://assets/fonts/DOMINICA.TTF" id="2_qtnhb"]
+
+[sub_resource type="FontVariation" id="FontVariation_830no"]
+base_font = ExtResource("2_qtnhb")
+spacing_bottom = 16
+
+[node name="ResponseTemplate" type="TextureButton"]
+texture_normal = ExtResource("1_y1ras")
+script = ExtResource("2_pfxg2")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.0901961, 0.160784, 0.588235, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_830no")
+theme_override_font_sizes/normal_font_size = 32
+text = "How would you describe your relationship with your brother?"
