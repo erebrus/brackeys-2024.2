@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3mipuuevsk4i"]
+[gd_scene load_steps=5 format=3 uid="uid://c3mipuuevsk4i"]
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_yq3k5"]
 [ext_resource type="Texture2D" uid="uid://ccw8f5mdqjpj7" path="res://assets/gfx/scenes/DiningRoomSunny.jpg" id="2_14c2h"]
 [ext_resource type="Texture2D" uid="uid://dey7k6bhx1lpk" path="res://assets/gfx/scenes/TomatoMurder.jpg" id="2_fcayb"]
+[ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="4_uveui"]
 
 [node name="DayOneEnd" instance=ExtResource("1_yq3k5")]
 night_timeout = 2.0
@@ -24,3 +25,6 @@ visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_fcayb")
+
+[node name="ambience" parent="." index="3"]
+stream = ExtResource("4_uveui")
