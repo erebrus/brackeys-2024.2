@@ -4,7 +4,7 @@
 #PLEASE CHANGE THE CLUES FOR THIS DIALOGUE 
 Samantha: Oh, hello. Didn't see you there. 
 You: I'm sorry to startle you, I just wanted to introduce myself.
-Samantha: Who are you? You're not with my uncle, are you?
+Samantha: Who are you? You're not with Henry's uncle, are you?
 #I changed this clue
 #DONE: hint - the woman has an uncle 
 do State.characters[Types.Characters.FriendOfTheFamily].find_name()
