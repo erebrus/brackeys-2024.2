@@ -9,6 +9,7 @@ Angela: Mhm, I found some good wine in Tom's storage. => SisterOfWife_continue
 	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	=> SisterOfWife_continue2
 - I see you're enjoying yourself.
 	Angela: Of course I am! 
 	Angela: That's the least I could do here while visiting Olivia. 
@@ -16,6 +17,7 @@ Angela: Mhm, I found some good wine in Tom's storage. => SisterOfWife_continue
 	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	=> SisterOfWife_continue2
 
 ~ SisterOfWife_continue2
 Angela: Anyway, did you meet everyone?
@@ -33,11 +35,11 @@ Angela: The game is not over yet! => END
 You: Hey, I'm Taylor, Angela's partner. 
 Stan: Angela? 
 Stan: Oh yea, her. 
-Stan: Well, I'm Stanley. Stan for short. => son_from_first_marriage_continue1
+Stan: Well, I'm Stanley. Stan for short. 
 #DONE: hint - the man's name is Stanley
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name()
 set State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].is_known = true
-
+=> son_from_first_marriage_continue1
 
 ~ son_from_first_marriage_continue1
 - Nice to meet you, Stan.
