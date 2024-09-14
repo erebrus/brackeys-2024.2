@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_7wbku"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_3sn7w"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
+[ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
 [ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_dnnkp"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="3_dxuaj"]
-[ext_resource type="Texture2D" uid="uid://ci6xi6k0uaml3" path="res://assets/gfx/characters/scissors01.png" id="4_ot5b1"]
+[ext_resource type="Texture2D" uid="uid://bhb2er44fhb0s" path="res://assets/gfx/scenes/characters in Scene/KitchenScissors01.png" id="6_11dpd"]
 [ext_resource type="AudioStream" uid="uid://bpci1e024fgde" path="res://assets/sfx/Kitchen_DayOne_Amb.mp3" id="7_vjudf"]
 
 [node name="KitchenDay1" instance=ExtResource("1_7wbku")]
@@ -29,17 +29,14 @@ position = Vector2(767, 588)
 polygon = PackedVector2Array(-62, -241, -52, 124, 419, 118, 416, -229, 308, -367, 167, -411, 40, -370)
 
 [node name="WifeOfFirstBorn" parent="." index="3" instance=ExtResource("2_xbthk")]
-position = Vector2(1325, 650)
 character_id = 6
 
 [node name="Sprite2D" parent="WifeOfFirstBorn" index="0"]
-position = Vector2(-3, 52)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("4_ot5b1")
+texture = ExtResource("6_11dpd")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WifeOfFirstBorn" index="1"]
 position = Vector2(-2, 0)
-polygon = PackedVector2Array(-2, -93, 42, -150, 78, -155, 96, -84, 62, -55, 50, 27, 26, 55, 70, 142, 50, 212, -63, 200, -56, 143, -14, 60, -68, 50, -68, -23, -108, -55)
+polygon = PackedVector2Array(576, 1058, 639, 971, 663, 816, 561, 778, 512, 554, 856, 374, 902, 541, 788, 751, 775, 937, 836, 1073, 574, 1083)
 
 [node name="ambience" parent="." index="4"]
 stream = ExtResource("7_vjudf")
