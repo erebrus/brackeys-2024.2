@@ -15,6 +15,9 @@ jason_mom_grandma|The teenage boy has a mom and a grandma|
 jason_day3_evening|Jason claims to be in his room all evening.|
 jason_day3_stan|Jason claims to wait for Stan to go out of the batroom.|
 jason_day3_stan_jessica|Jason claims to see Stan going to his room and Jessica going upstairs to her bedroom.|
+jason_day4_room|Jason claims to be in his room the whole evening.|
+jason_day4_olivia|Jason claims to see Olivia in the kitchen later in the evening.|
+jason_day4_samantha|Jason claims to see Samantha in the dining room talking to herself.|
 frank_easy_money|the man is persistent about making easy money|
 frank_illegal_money|The money he makes is not legal|
 jessica_draws|There's a woman who draws, her name is Jessica|
@@ -23,6 +26,10 @@ olivia_day3_alibi|Olivia claims to be in the living room with Andrew and Jessica
 olivia_day3_samantha|Olivia claims she went to the kitchen at night and found Samantha there.|
 olivia_day3_husband|Olivia claims that Samantha was "talking" to her husband.|
 olivia_day3_suspect|Olivia suspects Stan.|
+olivia_day4_stan|Olivia claims to be in the living room with Stan.|
+olivia_day4_kitchen|Olivia saw Angela, Jessica and Vanda going out of the kitchen.|
+olivia_day4_jason|Olivia claims she met with Jason in the kitchen.|
+olivia_day4_samantha|Olivia claims she saw Samantha in the dining room, talking to herself and acting creepy.|
 tom_day2_investing_unknown|Tom was investing in some unknown businesses|
 olivia_day2_business|Olivia didn't support Tom's businesses|
 tom_day1_previous_marriage|Tom was married before and had a son.|
@@ -47,6 +54,8 @@ angela_day2_investments|Angela claims Tom was spending Olivia's money on the inv
 angela_day2_lending|Tom borrowed lots of money from Angela and didn't give it back.|
 angela_day3_kitchen1|Angela claims that Samantha and Vanda spent an evening in the kitchen.|
 angela_day3_kitchen2|Angela claims Samantha remained in the kitchen after Vanda left.|
+angela_day4_jessica_vanda|Angela claims she was with Jessica and Vanda in the kitchen.|
+angela_day4_samantha|Angela claims Samantha was going in and out to the garden while mumbling to her dead husband.|
 vanda_day2_alibi|Vanda claims she and Samantha were cleaning after the dinner in the kitchen.|
 vanda_day2_alibi_after|After cleaning, Vanda went to bed with her husband.|
 vanda_day2_investments|Andrew took all money for son's education to invest in businesses with his father.|
