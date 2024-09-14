@@ -87,8 +87,7 @@ func _on_dialogue_finished():
 		clues_previous_count = count
 		if current_day == 1 and current_time < 3:
 			change_time(current_day, current_time+1)
-		else:
-			current_day += 1
-			current_time = 1
+		else: 
+			change_time(current_day + 1, 1)
 			Events.day_changed.emit(current_day)
 			
