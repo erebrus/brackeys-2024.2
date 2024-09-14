@@ -14,22 +14,29 @@ Samantha: Phew, that's good. Frank always has some shady company with him. You j
 #DONE: hint - the uncle name is Frank and he's a suspicious individual 
 do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
-Samantha: Oh, let me introduce myself - I'm Henry's wife.
+Samantha: Oh, let me introduce myself - I'm Henry's wife. => widow_continue1
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_husband")
 do State.characters[Types.Characters.SecondSon].find_name()
-
 #DONE: hint - the woman has a husband named Henry
-You: I don't think I've met him yet.
-Samantha: I don't think you will. He's... not here anymore.
-#DONE: hint - the husband is dead
-do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
-do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
 
-do State.characters[Types.Characters.SecondSon].find_portrait()
-You: Oh, I'm sorry, I didn't know.
-Samantha: It's alright, everyone forgets.
-#DONE: hint - widow is stil mourning 
-do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
+~ widow_continue1
+- I don't think I've met him yet.
+	Samantha: I don't think you will. He's... not here anymore.
+	#DONE: hint - the husband is dead
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
+	do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
+	
+	do State.characters[Types.Characters.SecondSon].find_portrait()
+	You: Oh, I'm sorry, I didn't know.
+	Samantha: It's alright, everyone forgets. => widow_continue2
+	#DONE: hint - widow is stil mourning 
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
+
+- Is that your name? 
+	Samantha: How could you?!
+	Samantha: A mourning wife is in 
+
+~ widow_continue2
 You: I um... I should be going. I'll see you at the dinner.
 Samantha: Yea... See you later... 
 do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")

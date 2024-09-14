@@ -44,6 +44,7 @@ do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela
 -  Nice to meet you too. I guess, yes. I'm Taylor.
 	Olivia: Hmm... I wonder for how long you'll stay.
 	You: Excuse me? => family_head_wife_continue2
+
 - We've been together for over a year now. I'm Taylor.
 	Olivia: Oh really? Fascinating... 
 	Olivia: You must be special. => family_head_wife_continue2
@@ -132,7 +133,6 @@ do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_aunt")
 	Jason: Oh wow, that's nice. I hope you're happy. => grandson_continue4
 
 ~ grandson_continue4
-
 Jason: Anyway, I better get going to help mom and grandma.
 #DONE: hint - the teenage boy has a mom and a grandma
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_mom_grandma")
