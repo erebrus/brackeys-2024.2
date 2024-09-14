@@ -81,6 +81,8 @@ Jessica: Oh, no, no, no! Don't worry! You have... unusual features. => daughter_
 - It's kind of rude, you know?
 	Jessica: Oh no! No, no, no, no!
 	Jessica: You're blessed! Not everyone is so intriguing to look at! 
+		#DONE: hint - the woman appears to be enamored by unusual things
+	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusual")
 	You: That's still kind of mean...
 	Jessica: You don't understand the art! No one here does! 
  
@@ -108,9 +110,10 @@ Jason: Damn it... => grandson_continue
 
 - Are you old enough to talk like that?
 	Jason: Who are you, my dad? 
-	Jason: Even he doesn't care if I speak like that. => grandson_continue2
+	Jason: Even he doesn't care if I speak like that. 
 	#DONE hint - the teenage boy has a father
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
+	=> grandson_continue2
 
 ~ grandson_continue2
 #Jason: Better than my dad, he didn't even want to try to help me...
