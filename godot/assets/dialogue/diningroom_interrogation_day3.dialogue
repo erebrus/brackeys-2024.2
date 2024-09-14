@@ -54,7 +54,7 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 	Stan: Why go downstairs while mumbling? => END
 	#DONE: hint - Stan suspects Samantha
   do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
-	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_repeat
@@ -65,11 +65,11 @@ Stan: Poor Frank, he didn't deserve that... => END
 	Vanda: In the evening I was with Samantha...
 	Vanda: We were just drinking some lemon balm tea to calm down...
 	#DONE: hint - Vanda claims to spend the evening with Samantha
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_samantha")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_samantha")
 	You: What did you do after that?
 	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_bed")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_bed")
 
 - Did you had any confrontation yesterday with anyone?
 	Vanda: No, not really.
@@ -78,7 +78,7 @@ Stan: Poor Frank, he didn't deserve that... => END
 	Vanda: He was just disappointed, but he wouldn't hurt a fly!
 	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_money")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_money")
 
 - Thank you, if I have more questions, I'll find you later.
 	Vanda: Andrew didn't do it! I swear! 
@@ -102,12 +102,12 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 	Angela: Hmm... not really.
 	Angela: I just saw Samantha sitting in the kitchen alone. I think before she was with Vanda.
 	#DONE: hint - Angela claims that Samantha and Vanda spent an evening in the kitchen
-	do State.characters[Types.Characters.SisterOfWife].set_dialogue("angela_day3_kitchen1")
+	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen1")
 	Angela: But when Vanda left, she was just sitting there.
 	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
 	#DONE: hint - Angela claims Samantha remained in the kitchen after Vanda left
-	do State.characters[Types.Characters.SisterOfWife].set_dialogue("angela_day3_kitchen2")
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("angela_day3_kitchen2")
+	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen2")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("angela_day3_kitchen2")
 
 - Alright, thank you, darling.
 	Angela: Of course. Do you have any suspects already?
