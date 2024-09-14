@@ -14,24 +14,41 @@ Samantha: Phew, that's good. Frank always has some shady company with him. You j
 #DONE: hint - the uncle name is Frank and he's a suspicious individual 
 do State.characters[Types.Characters.FriendOfTheFamily].find_name_clue("frank_suspicious")
 You: Understandable. 
-Samantha: Oh, let me introduce myself - I'm Henry's wife.
+Samantha: Oh, let me introduce myself - I'm Henry's wife. 
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_husband")
 do State.characters[Types.Characters.SecondSon].find_name()
-
 #DONE: hint - the woman has a husband named Henry
-You: I don't think I've met him yet.
-Samantha: I don't think you will. He's... not here anymore.
-#DONE: hint - the husband is dead
-do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
-do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
+=> widow_continue1
 
-do State.characters[Types.Characters.SecondSon].find_portrait()
-You: Oh, I'm sorry, I didn't know.
-Samantha: It's alright, everyone forgets.
-#DONE: hint - widow is stil mourning 
-do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
+~ widow_continue1
+- I don't think I've met him yet.
+	Samantha: I don't think you will. He's... not here anymore.
+	#DONE: hint - the husband is dead
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
+	do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
+	
+	do State.characters[Types.Characters.SecondSon].find_portrait()
+	You: Oh, I'm sorry, I didn't know.
+	Samantha: It's alright, everyone forgets. 
+	#DONE: hint - widow is stil mourning 
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
+	=> widow_continue2
+
+- Is that your name? 
+	Samantha: How could you?!
+	Samantha: A wife is mourning her husband and you dare to ask such questions?! 
+	#DONE: hint - the husband is dead
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_henry_dead")
+	do State.characters[Types.Characters.SecondSon].find_name_clue("henry_dead")
+	
+	do State.characters[Types.Characters.SecondSon].find_portrait()
+	#DONE: hint - widow is stil mourning 
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
+	=> widow_continue2
+
+~ widow_continue2
 You: I um... I should be going. I'll see you at the dinner.
-Samantha: Yea... See you later... 
+Samantha: Goodbye.
 do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 => END
 #TODO: Her name remains ??? as we figure it out talking to Vanda.
@@ -43,20 +60,39 @@ Samantha: Please leave me alone with my husband... => END
 ~ friend_start
 #TODO: mark him as ???
 You: Hey, I just -
-Frank: Are you interested in making some money on the side? 
-You: W-what? 
-Frank: Do you want to earn some easy money?
-#DONE: hint - the man is persistent about making easy money 
-do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
-You: It doesn't sound legal, to be fair.
-Frank: Oh come on, who are you? The police? 
-Frank: Me and my brother have been doing it for years!
-#TODO: hint - the man has a brother
-You: Actually, yeah. I'm a police detective.
-Frank: ...
-Frank: My bad.
-#DONE: hint - the money he makes is not legal
-do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
+Frank: Are you interested in making some money on the side? => friend_continue1
+
+~ friend_continue1
+- W-what? 
+	Frank: Do you want to earn some easy money?
+	#DONE: hint - the man is persistent about making easy money 
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
+	You: It doesn't sound legal, to be fair.
+	Frank: Oh come on, who are you? The police? 
+	Frank: Me and my brother have been doing it for years!
+	#TODO: hint - the man has a brother
+	You: Actually, yeah. I'm a police detective.
+	Frank: ...
+	Frank: My bad.
+	#DONE: hint - the money he makes is not legal
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
+	=> friend_continue2
+
+- Tell me more about it.
+	Frank: Perfect! It's very simple and easy.
+	Frank: You just invest some sum of money into this one business and then your account grows with more zeros.
+	#DONE: hint - the man is persistent about making easy money 
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_easy_money")
+	You: Are you sure it's safe?
+	Frank: Yes, totally!
+	Frank: Me and my brother have been doing it for years!
+	#TODO: hint - the man has a brother
+	You: Interesting. My the fraud department in my unit would be very happy to hear more about it.
+	#DONE: hint - the money he makes is not legal
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
+	=> friend_continue2
+
+~ friend_continue2
 Frank: I should go. 
 do State.characters[Types.Characters.FriendOfTheFamily].set_location(Types.Locations.None)
 => END
@@ -71,15 +107,34 @@ do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_draws
 do State.characters[Types.Characters.Daughter].find_name()
 Andrew: She's so weird, I cannot belive we're siblings...
 #TODO: hint - the woman is this man's sister
-You: Ah yea, we met before.
-Andrew: Anyway, I'm Andrew, pleasure to meet you. You came here with...?
-#DONE: hint - the man's name is Andrew
-do State.characters[Types.Characters.FirstBornSon].find_name()
-set State.characters[Types.Characters.FirstBornSon].is_known = true
-You: Angela.
-Andrew: Who would have thought that she could have a stable relationship... hm.
-You: Everyone is shocked, to be fair. 
-Andrew: Well, we have our reasons. Anyway, welcome to the family Taylor. 
+=> firstborn_continue1
+
+~ firstborn_continue1
+- Ah yea, we met before.
+	Andrew: Oh really? Hope she didn't say anything weird to you.
+	Andrew: Anyway, I'm Andrew, pleasure to meet you. You came here with...?
+	#DONE: hint - the man's name is Andrew
+	do State.characters[Types.Characters.FirstBornSon].find_name()
+	set State.characters[Types.Characters.FirstBornSon].is_known = true
+	You: Angela.
+	Andrew: Who would have thought that she could have a stable relationship... hm.
+	You: Everyone is shocked, to be fair. 
+	Andrew: Well, we have our reasons. Anyway, welcome to the family, Taylor. 
+
+- Yeah, she said I had a weird face. 
+	Andrew: Well... To be honest..
+	Andrew: When I look at you for a long time...
+	Andrew: Ha! No, I'm joking! My sister is like that, don't take it personally. 
+	You: ...
+	Andrew: By the way, I'm Andrew. 
+	#DONE: hint - the man's name is Andrew
+	do State.characters[Types.Characters.FirstBornSon].find_name()
+	set State.characters[Types.Characters.FirstBornSon].is_known = true
+	Andrew: Who did you come here with?
+	You: With Angela.
+	Andrew: Oh I see! Interesting. I assume everyone is acting all shocked that she has a partner, so I won't add to it.
+	You: Well, you just kind of did...
+	Andrew: Ha! I like you already!
 do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
 => END
 

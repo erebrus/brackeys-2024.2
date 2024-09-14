@@ -44,6 +44,7 @@ do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela
 -  Nice to meet you too. I guess, yes. I'm Taylor.
 	Olivia: Hmm... I wonder for how long you'll stay.
 	You: Excuse me? => family_head_wife_continue2
+
 - We've been together for over a year now. I'm Taylor.
 	Olivia: Oh really? Fascinating... 
 	Olivia: You must be special. => family_head_wife_continue2
@@ -80,6 +81,8 @@ Jessica: Oh, no, no, no! Don't worry! You have... unusual features. => daughter_
 - It's kind of rude, you know?
 	Jessica: Oh no! No, no, no, no!
 	Jessica: You're blessed! Not everyone is so intriguing to look at! 
+		#DONE: hint - the woman appears to be enamored by unusual things
+	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusual")
 	You: That's still kind of mean...
 	Jessica: You don't understand the art! No one here does! 
  
@@ -107,9 +110,10 @@ Jason: Damn it... => grandson_continue
 
 - Are you old enough to talk like that?
 	Jason: Who are you, my dad? 
-	Jason: Even he doesn't care if I speak like that. => grandson_continue2
+	Jason: Even he doesn't care if I speak like that. 
 	#DONE hint - the teenage boy has a father
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
+	=> grandson_continue2
 
 ~ grandson_continue2
 #Jason: Better than my dad, he didn't even want to try to help me...
@@ -132,7 +136,6 @@ do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_aunt")
 	Jason: Oh wow, that's nice. I hope you're happy. => grandson_continue4
 
 ~ grandson_continue4
-
 Jason: Anyway, I better get going to help mom and grandma.
 #DONE: hint - the teenage boy has a mom and a grandma
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_mom_grandma")

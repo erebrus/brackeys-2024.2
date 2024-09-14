@@ -1,14 +1,25 @@
 #2nd hour
 ~ SisterOfWife_start
 You: Oh, there you are.
-Angela: Mhm, I found some good wine in Tom's storage.
+Angela: Mhm, I found some good wine in Tom's storage. => SisterOfWife_continue
 
+~ SisterOfWife_continue
+- Are you sure he won't notice it? 
+	Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man. => SisterOfWife_continue2
+	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	=> SisterOfWife_continue2
+- I see you're enjoying yourself.
+	Angela: Of course I am! 
+	Angela: That's the least I could do here while visiting Olivia. 
+	Angela: I hope there will be some good quality vintage at the party. It's thier 50th marriage anniversary after all! => SisterOfWife_continue2
+	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+	=> SisterOfWife_continue2
 
-You: Are you sure he won't notice it? 
-Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man.
-#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
-do State.characters[Types.Characters.FamilyHeadsWife].find_name()
-do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
+~ SisterOfWife_continue2
 Angela: Anyway, did you meet everyone?
 You: From what I know, not yet.  
 Angela: Well, you better get going then. 
@@ -24,14 +35,25 @@ Angela: The game is not over yet! => END
 You: Hey, I'm Taylor, Angela's partner. 
 Stan: Angela? 
 Stan: Oh yea, her. 
-Stan: Well, I'm Stanley. Stan for short.
+Stan: Well, I'm Stanley. Stan for short. 
 #DONE: hint - the man's name is Stanley
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name()
 set State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].is_known = true
-You: Nice to meet you, Stan.
-Stan: Have you met everyone from this weird family? 
-You: I... think so? 
-Stan: Good, good. Please don't associate me with themm, though.
+=> son_from_first_marriage_continue1
+
+~ son_from_first_marriage_continue1
+- Nice to meet you, Stan.
+	Stan: Likewise. Hope you enjoy this peculiar family.
+	Stan: Have you met everyone already? 
+	You: I... think so? 
+	Stan: Good, good. => son_from_first_marriage_continue2
+- Pleasure to meet you Stanley.
+	Stan: It's Stan.
+	Stan: ...
+	Stan: Anyway... => son_from_first_marriage_continue2
+	
+~ son_from_first_marriage_continue2
+Stan: Please don't associate me with themm, though.
 #DONE: hint - Stan doesn't associate himself with the family
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name_clue("stan_family")
 Stan: I'm not such a freak as they are. 

@@ -7,18 +7,22 @@ Angela: But this damn storm now... => SisterOfWife_interrogation3
 - Did you see anything suspicious yesterday?
 	Angela: Everyone was a little bit on the edge yesterday.
 	Angela: After you interrogated us, I was just in the kitchen. Jessica and Vanda were there too.
-	#TODO: hint - Angela claims she was with Jessica and Vanda in the kitchen
+	#DONE: hint - Angela claims she was with Jessica and Vanda in the kitchen
+	do State.characters[Types.Characters.SisterOfWife].find_name_clue("angela_day4_jessica_vanda")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_name_clue("angela_day4_jessica_vanda")
+	do State.characters[Types.Characters.Daughter].find_name_clue("angela_day4_jessica_vanda")
 	Angela: Samantha was going in and out, I have no idea what was she doing.
 	Angela: She was mumbling to Henry and going to the garden in the rain. => SisterOfWife_interrogation3
-	#TODO: hint - Angela claims Samantha was going in and out to the garden while mumbling to her dead husband
-
+	#DONE: hint - Angela claims Samantha was going in and out to the garden while mumbling to her dead husband
+	do State.characters[Types.Characters.SisterOfWife].find_name_clue("angela_day4_samantha")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("angela_day4_samantha")
 - Did you have or heard any arguments yesterday?
 	Angela: Not at all, surprisingly.
 	Angela: Everyone seemed to be closed off, almost like too scared to talk to each other, you know? => SisterOfWife_interrogation3
 
 - I think that's all for now.
 	Angela: Taylor, it's someone from the family, right?
-	Angela: We cannot trust no one. 
+	Angela: We cannot trust no one.
 	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 	=> END
 
@@ -27,17 +31,20 @@ Angela: I don't feel safe here anymore... => END
 
 ~ Grandson_start
 You: Hey Jason.
-Jason: We really can't have a normal family reunion, can we? 
+Jason: We really can't have a normal family reunion, can we?
 Jason: My grandpa, my uncle, now my dad...
 Jason: Whatever, do your job I guess. => Grandson_interrogation3
 
 ~ Grandson_interrogation3
 - What were you doing yesterday evening?
 	Jason: I was agian in my room. My mom was really crazy about me not leaving it.
-	#TODO: hint - Jason claims to be in his room the whole evening
+	#DONE: hint - Jason claims to be in his room the whole evening
+	do State.characters[Types.Characters.Grandson].find_name_clue("jason_day4_room")
 	Jason: Late evening I went to the kitchen to grab something to eat.
-	Jason: Grandma was there, she made me a sandwich and we talked for a bit. 
-	#TODO: hint - Jason claims to see Olivia in the kitchen later in the evening
+	Jason: Grandma was there, she made me a sandwich and we talked for a bit.
+	#DONE: hint - Jason claims to see Olivia in the kitchen later in the evening
+	do State.characters[Types.Characters.Grandson].find_name_clue("jason_day4_olivia")
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("jason_day4_olivia")
 	Jason: Then we both went upstairs. => Grandson_interrogation3
 
 - Did you hear any arugments or anything like that?
@@ -45,10 +52,12 @@ Jason: Whatever, do your job I guess. => Grandson_interrogation3
 	Jason: I saw Samantha in the dining room when I was going upstairs.
 	Jason: She was sitting at the fire place and talking to herself.
 	Jason: I know she does it sometimes, but she creeped me out a bit.  => Grandson_interrogation3
-	#TODO: hint - Jason claims to see Samantha in the dining room talking to herself 
+	#DONE: hint - Jason claims to see Samantha in the dining room talking to herself
+	do State.characters[Types.Characters.Grandson].find_name_clue("jason_day4_samantha")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("jason_day4_samantha")
 
 - That's all for now, thanks.
-	Jason: I really hope I make it home in one piece. 
+	Jason: I really hope I make it home in one piece.
 	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
 	=> END
 
@@ -62,24 +71,34 @@ Olivia: Yes, of course...
 ~ FamilyHeadsWife_interrogation3
 - What were you doing in the evening?
 	Olivia: I was in the living room for the majority of the evening, Stan was with me.
-	#TODO: hint - Olivia claims to be in the living room with Stan
+	#DONE: hint - Olivia claims to be in the living room with Stan
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_day4_stan")
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name_clue("olivia_day4_stan")
 	Olivia: Then I saw Anegla, Jessica and Vanda go out of the kitchen.
-	#TODO: hint - Olivia saw Angela, Jessica and Vanda going out of the kitchen
+	#DONE: hint - Olivia saw Angela, Jessica and Vanda going out of the kitchen
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_day4_kitchen")
+	do State.characters[Types.Characters.SisterOfWife].find_name_clue("olivia_day4_kitchen")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_name_clue("olivia_day4_kitchen")
+	do State.characters[Types.Characters.Daughter].find_name_clue("olivia_day4_kitchen")
 	Olivia: Later in the evening I went there to made some tea and my grandson came in.
-	#TODO: hint - Olivia claims she met with Jason in the kitchen
-	Olivia: So I made him something to eat and we sat for a while. 
+	#DONE: hint - Olivia claims she met with Jason in the kitchen
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_day4_jason")
+	do State.characters[Types.Characters.Grandson].find_name_clue("olivia_day4_jason")
+	Olivia: So I made him something to eat and we sat for a while.
 	Olivia: Then we all went upstairs. => FamilyHeadsWife_interrogation3
 
-- Did you see or hear anything unusual? 
+- Did you see or hear anything unusual?
 	Olivia: Well, I did actually.
 	Olivia: When I was going upstairs with my grandson, I saw Samantha in the dining room.
 	Olivia: She was more weird than ususal. Talking to herself... well... to her husband.
 	Olivia: She scared me a little bit, she looked maniac... => FamilyHeadsWife_interrogation3
-	#TODO: hint - Olivia claims she saw Samantha in the dining room, talking to herself and acting creepy
+	#DONE: hint - Olivia claims she saw Samantha in the dining room, talking to herself and acting creepy
+	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_day4_samantha")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("olivia_day4_samantha")
 
 - Thank you for your help.
 	Olivia: I want this storm to end, and they all can go away already...
-	Olivia: I'm so done with this family reunion. 
+	Olivia: I'm so done with this family reunion.
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
