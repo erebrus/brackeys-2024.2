@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://bob1an75cqac1"]
+
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_l17bs"]
+[ext_resource type="Resource" uid="uid://c8skhdpaia6sd" path="res://assets/dialogue/diningroom_day1.dialogue" id="2_cj0s3"]
+[ext_resource type="Texture2D" uid="uid://bb1jx5k35sur8" path="res://assets/gfx/scenes/Mirror02.jpg" id="3_3nk25"]
+[ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_vwip1"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="5_swyk7"]
+[ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="6_mir5n"]
+[ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="7_x3ubg"]
+[ext_resource type="AudioStream" uid="uid://csqr5ti1b12hy" path="res://assets/sfx/DiningRoom_DayOne_Amb.mp3" id="8_o57xg"]
+
+[node name="DiningRoomDay3" instance=ExtResource("1_l17bs")]
+dialogue = ExtResource("2_cj0s3")
+location = 2
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("3_3nk25")
+
+[node name="GoToLivingRoom" parent="." index="1" instance=ExtResource("4_vwip1")]
+position = Vector2(464, 525)
+target_location = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToLivingRoom" index="0"]
+polygon = PackedVector2Array(107, -187, 107, 307, 186, 245, 189, -117)
+
+[node name="GoToKitchen" parent="." index="2" instance=ExtResource("4_vwip1")]
+position = Vector2(222, 959)
+target_location = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToKitchen" index="0"]
+polygon = PackedVector2Array(1907, 150, 1501, -57, -255, -37, -271, 177)
+
+[node name="WidowAfterSecondSon" parent="." index="3" instance=ExtResource("5_swyk7")]
+position = Vector2(527, -258)
+character_id = 8
+
+[node name="Sprite2D" parent="WidowAfterSecondSon" index="0"]
+position = Vector2(971, 544)
+texture = ExtResource("6_mir5n")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WidowAfterSecondSon" index="1"]
+position = Vector2(15, 202)
+polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+
+[node name="SonFromFirstMariage" parent="." index="4" instance=ExtResource("5_swyk7")]
+character_id = 9
+
+[node name="Sprite2D" parent="SonFromFirstMariage" index="0"]
+position = Vector2(971, 544)
+texture = ExtResource("7_x3ubg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SonFromFirstMariage" index="1"]
+position = Vector2(354, 204)
+polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+
+[node name="ambience" parent="." index="5"]
+stream = ExtResource("8_o57xg")
+
+[editable path="GoToLivingRoom"]
+[editable path="GoToKitchen"]
+[editable path="WidowAfterSecondSon"]
+[editable path="SonFromFirstMariage"]
