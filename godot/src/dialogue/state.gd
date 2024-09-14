@@ -1,7 +1,19 @@
 extends Node
 
 const CHARACTER_PATH = "res://src/characters/data"
-
+const CHARACTERS = [
+	preload("res://src/characters/data/daughter.tres"),
+	preload("res://src/characters/data/family_head.tres"),
+	preload("res://src/characters/data/first_son.tres"),
+	preload("res://src/characters/data/friend_of_the_family.tres"),
+	preload("res://src/characters/data/grandson.tres"),
+	preload("res://src/characters/data/second_son.tres"),
+	preload("res://src/characters/data/sister_of_wife.tres"),
+	preload("res://src/characters/data/son_from_first_marriage.tres"),
+	preload("res://src/characters/data/widow_of_second_son.tres"),
+	preload("res://src/characters/data/wife.tres"),
+	preload("res://src/characters/data/wife_of_first_son.tres")
+]
 
 var character:String = "Test"
 var characters: Dictionary # [Types.Characters, Character]
@@ -23,15 +35,17 @@ func verify_dialogue_files():
 	
 func load_characters() -> void:
 	Logger.info("Loading characters")
-	var dir = DirAccess.open(CHARACTER_PATH)  
-	dir.list_dir_begin()  
-	var file_name = dir.get_next()  
-	while file_name != "":  
-		var file_path = CHARACTER_PATH + "/" + file_name  
-		var character: Character = ResourceLoader.load(file_path)
+	#var dir = DirAccess.open(CHARACTER_PATH)  
+	#dir.list_dir_begin()  
+	#var file_name = dir.get_next()  
+	#while file_name != "":  
+		#var file_path = CHARACTER_PATH + "/" + file_name  
+		#var character: Character = ResourceLoader.load(file_path)
+		#characters[character.id] = character
+		#
+		#file_name = dir.get_next()  
+	for character in CHARACTERS:
 		characters[character.id] = character
-		
-		file_name = dir.get_next()  
 	Logger.info("Characters loaded")
 	
 

@@ -13,3 +13,4 @@ export.cfg
 data_*/
 mono_crash.*.json
 godot/debug.log
+/build
