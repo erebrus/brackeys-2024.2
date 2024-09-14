@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://src/dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="Texture2D" uid="uid://cot3ejpq8uqn3" path="res://assets/gfx/ui/SpeechLetter/SpeechBubbleBase.png" id="2_8du5n"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Texture2D" uid="uid://c626e3mg8rkhp" path="res://assets/gfx/portraits/grandfather.png" id="2_leq37"]
+[ext_resource type="Texture2D" uid="uid://dkwgkmhi2b8mf" path="res://assets/gfx/characters/tomato01.png" id="2_d7qcc"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://ci2x464vv1mbu" path="res://assets/gfx/ui/SpeechLetter/nameTag.png" id="3_tdwp7"]
-[ext_resource type="FontFile" uid="uid://dvnlstb2bi067" path="res://assets/fonts/Royrush.otf" id="4_oepr7"]
+[ext_resource type="FontFile" uid="uid://crfe33fs74qgf" path="res://assets/fonts/Royrush.otf" id="4_oepr7"]
 [ext_resource type="AudioStream" uid="uid://c4u38rqfjjdvb" path="res://assets/sfx/Dialog_per_letter_test_1.wav" id="5_i7jsf"]
 [ext_resource type="AudioStream" uid="uid://dvejrc6arqioo" path="res://assets/sfx/Dialog_per_letter_test_2.wav" id="6_t22bd"]
-[ext_resource type="FontFile" uid="uid://daluq2yx30sh1" path="res://assets/fonts/DOMINICA.TTF" id="7_3b2aj"]
+[ext_resource type="FontFile" uid="uid://pdhxn744ro3y" path="res://assets/fonts/DOMINICA.TTF" id="7_3b2aj"]
 [ext_resource type="PackedScene" uid="uid://dpu7kpj8b5hou" path="res://src/dialogue/response_template.tscn" id="9_nsqvd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -73,7 +73,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [sub_resource type="FontVariation" id="FontVariation_830no"]
 base_font = ExtResource("7_3b2aj")
-spacing_bottom = 30
+spacing_bottom = 17
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55p51"]
 
@@ -98,13 +98,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
-[node name="Portrait" type="TextureRect" parent="Balloon"]
-layout_mode = 0
-offset_left = 163.0
-offset_top = 504.0
-offset_right = 312.0
-offset_bottom = 704.0
-texture = ExtResource("2_leq37")
+[node name="Portrait" type="Sprite2D" parent="Balloon"]
+unique_name_in_owner = true
+position = Vector2(318, 509)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_d7qcc")
 
 [node name="DialogBox" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
@@ -113,10 +111,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -870.0
-offset_top = 138.0
-offset_right = 920.0
-offset_bottom = 532.0
+offset_left = -901.0
+offset_top = 195.0
+offset_right = 899.0
+offset_bottom = 539.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
@@ -126,35 +124,41 @@ theme_override_constants/margin_bottom = 0
 
 [node name="Base" type="TextureRect" parent="Balloon/DialogBox"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_8du5n")
 stretch_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/DialogBox"]
 layout_mode = 2
-theme_override_constants/margin_left = 210
+theme_override_constants/margin_left = 160
 theme_override_constants/margin_top = 114
-theme_override_constants/margin_right = 300
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 70
 
 [node name="DialogueLabel" parent="Balloon/DialogBox/MarginContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.0901961, 0.160784, 0.588235, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_830no")
 theme_override_font_sizes/normal_font_size = 24
 text = "Dominican 10 Once the player arrives at the mansion, the rich aunt goes to enjoy some wine and chill bvy herself and leaves her partner alone to meet up with the family. (figure out relationships.)"
 seconds_per_step = 0.04
 
+[node name="SizeHelp" type="ColorRect" parent="Balloon/DialogBox/MarginContainer"]
+visible = false
+layout_mode = 2
+color = Color(1, 0.19, 0.19, 0.576471)
+
 [node name="NameTagTexture" type="TextureRect" parent="Balloon"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 58.0
-offset_top = 8.0
-offset_right = 58.0
-offset_bottom = 8.0
+offset_left = 43.0
+offset_top = 89.0
+offset_right = 43.0
+offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_tdwp7")
@@ -210,9 +214,11 @@ anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1023.0
+offset_top = -6.0
+offset_bottom = -6.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/margin_bottom = 400
+theme_override_constants/margin_bottom = 340
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true

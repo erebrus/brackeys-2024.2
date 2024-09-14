@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccpkkp7c11s1s" path="res://assets/gfx/ui/SpeechLetter/reply_template.png" id="1_y1ras"]
 [ext_resource type="Script" path="res://src/dialogue/response_template.gd" id="2_pfxg2"]
-[ext_resource type="FontFile" uid="uid://daluq2yx30sh1" path="res://assets/fonts/DOMINICA.TTF" id="2_qtnhb"]
+[ext_resource type="FontFile" uid="uid://pdhxn744ro3y" path="res://assets/fonts/DOMINICA.TTF" id="2_qtnhb"]
 
 [sub_resource type="FontVariation" id="FontVariation_830no"]
 base_font = ExtResource("2_qtnhb")
