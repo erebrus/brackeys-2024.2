@@ -46,7 +46,7 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 		
-		character_label.visible = not dialogue_line.character.is_empty()
+		character_label.get_parent().visible = not dialogue_line.character == ""
 		portrait.visible = character_label.visible
 		
 		if dialogue_line.character in Types.NAME_MAP:
