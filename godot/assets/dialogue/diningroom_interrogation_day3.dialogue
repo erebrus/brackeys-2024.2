@@ -60,5 +60,64 @@ do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dial
 ~ SonFromFirstMariageOfHeadOfFamily_repeat
 Stan: Poor Frank, he didn't deserve that... => END
 
+~ WifeOfFirstBorn_interrogation2
+- I need to know where were you yesterday's evening and night.
+	Vanda: In the evening I was with Samantha...
+	Vanda: We were just drinking some lemon balm tea to calm down...
+	#DONE: hint - Vanda claims to spend the evening with Samantha
+	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_samantha")
+	You: What did you do after that?
+	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
+	#DONE: hint - Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing
+	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_bed")
+
+- Did you had any confrontation yesterday with anyone?
+	Vanda: No, not really.
+	Vanda: When Andrew came to bed, we spoke about the money.
+	Vanda: He just told me he wished to receive more from his dad. Because, he took all of our money to invest in his shady businesses.
+	Vanda: He was just disappointed, but he wouldn't hurt a fly!
+	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
+	#DONE: hint - Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.
+	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_money")
+
+- Thank you, if I have more questions, I'll find you later.
+	Vanda: Andrew didn't do it! I swear! 
+	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+	=> END
+
+~ WifeOfFirstBorn_repeat
+Vanda: I should be there for my mother-in-law... 
+Vanda: She needs lots of support now. => END
+
+~ SisterOfWife_start
+You: I know we were all evening and night together, but I have to ask you a few questions anyway.
+Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
+
+~ SisterOfWife_interrogation2
+- Did you argue with anyone yesterday?
+	Angela: No, not at all.
+	Angela: Before we went to bed, I was just reading a book in the living room. I didn't speak to anyone much. => SisterOfWife_interrogation2
+
+- Did you see or hear anything suspicious?
+	Angela: Hmm... not really.
+	Angela: I just saw Samantha sitting in the kitchen alone. I think before she was with Vanda.
+	#DONE: hint - Angela claims that Samantha and Vanda spent an evening in the kitchen
+	do State.characters[Types.Characters.SisterOfWife].set_dialogue("angela_day3_kitchen1")
+	Angela: But when Vanda left, she was just sitting there.
+	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
+	#DONE: hint - Angela claims Samantha remained in the kitchen after Vanda left
+	do State.characters[Types.Characters.SisterOfWife].set_dialogue("angela_day3_kitchen2")
+	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("angela_day3_kitchen2")
+
+- Alright, thank you, darling.
+	Angela: Of course. Do you have any suspects already?
+	You: That's confidencial.
+	Angela: Ugh, you're no fun. 
+	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
+	=> END
+
+~ SisterOfWife_repeat
+Angela: If you don't want to tell me your suspicions, I'll go to comfort my sister. => END
+
 => END
 

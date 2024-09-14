@@ -100,4 +100,38 @@ do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_re
 ~ FirstBornSon_repeat
 Andrew: I swear it wasn't me! I swear! => END
 
+~ Daughter_start
+You: Jessica, you found the body, I need to talk to you.
+Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interrogation2
+
+~ Daughter_interrogation2
+- I need to know what were you doing yesterday's night.
+	Jessica: I was just sitting in the living room..
+	Jessica: With my mom and brother. We spent all evening together.
+	#DONE: hint - Jessica claims she spent the evening with her Olivia and Andrew.
+	do State.characters[Types.Characters.Daughter].set_dialogue("jessica_day3_evening")
+	Jessica: Then I went to bed, Jason saw me going to my room. He was waiting at the batroom door. => Daughter_interrogation2
+	#DONE: hint - Jessica claims she went to bed after, and that Jason saw her.
+	do State.characters[Types.Characters.Daughter].set_dialogue("jessica_day3_jason")
+
+- Did you argue with anyone yesterday?
+	Jessica: N-no! I did hear some arguments though.
+	You: Tell me more about it.
+	Jessica: I heard Andrew being upset... He was screaming and shouting about 2% of shares he got after dad's murder.
+	Jessica: Apparently everyone knew about the 2%, but not him. He hoped for more.
+	You: Who was he arguing with?
+	Jessica: Uncle Frank. => Daughter_interrogation2
+	#DONE: hint - Andrew argued with Frank about the 2% shares he got from Tom's businesses.
+	do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("frank_day3_argue_andrew")
+	do State.characters[Types.Characters.FirstBornSon].set_dialogue("frank_day3_argue_andrew")
+
+- Thank you for your answers.
+	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already... 
+	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	=> END
+
+~ Daughter_repeat
+Jessica: My mom is devastated...
+Jessica: And so am I. => END
+
 => END
