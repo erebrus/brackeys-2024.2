@@ -18,7 +18,12 @@ Angela: But this damn storm now... => SisterOfWife_interrogation3
 
 - I think that's all for now.
 	Angela: Taylor, it's someone from the family, right?
-	Angela: We cannot trust no one. => END
+	Angela: We cannot trust no one. 
+	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
+	=> END
+
+~ SisterOfWife_repeat
+Angela: I don't feel safe here anymore... => END
 
 ~ Grandson_start
 You: Hey Jason.
@@ -43,7 +48,12 @@ Jason: Whatever, do your job I guess. => Grandson_interrogation3
 	#TODO: hint - Jason claims to see Samantha in the dining room talking to herself 
 
 - That's all for now, thanks.
-	Jason: I really hope I make it home in one piece. => END
+	Jason: I really hope I make it home in one piece. 
+	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
+	=> END
+
+~ Grandson_repeat
+Jason: This is not what I expected out of this family event. => END
 
 ~ FamilyHeadsWife_start
 You: Hello Olivia, can we talk?
@@ -69,6 +79,11 @@ Olivia: Yes, of course...
 
 - Thank you for your help.
 	Olivia: I want this storm to end, and they all can go away already...
-	Olivia: I'm so done with this family reunion. => END
+	Olivia: I'm so done with this family reunion. 
+	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
+	=> END
+
+~ FamilyHeadsWife_repeat
+Olivia: I'll sell this house and move out after it's all done... => END
 
 => END

@@ -21,7 +21,12 @@ Jason: Damn, this family is indeed grazy, huh? => Grandson_interrogation2
 	Jason: Then he went to his room, I went to the bathroom and went to bed. => Grandson_interrogation2
 
 - Alright, I think that's all for now.
-	Jason: Sure, no problem. => END
+	Jason: Sure, no problem. 
+	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
+	=> END
+
+~ Grandson_repeat
+Jason: Ehh, I really want to go home. => END
 
 ~ FamilyHeadsWife_start
 You: Olivia? I'm sorry to bother you once again, but you know the rules...
@@ -52,7 +57,12 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 	#DONE: hint - Olivia suspects Stan
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("olivia_day3_suspect")
 	Olivia: He got very upsed when my husband was spending all my moeny on this damn business, together with Frank.
-	Olivia: This man is not even in the family! => END
+	Olivia: This man is not even in the family! 
+	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
+	=> END
+
+~ FamilyHeadsWife_repeat
+Olivia: Please leave me now. I need some space. => END
 
 ~ FirstBornSon_start
 You: Andrew I-
@@ -84,5 +94,10 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 - Alright, thanks for answering my questions.
 	Andrew: Please tell me you believe me!
 	You: I cannot promise you anything now, Andrew. => END
+do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
+=> END
+
+~ FirstBornSon_repeat
+Andrew: I swear it wasn't me! I swear! => END
 
 => END

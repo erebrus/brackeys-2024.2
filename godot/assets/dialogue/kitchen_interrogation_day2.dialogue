@@ -30,8 +30,7 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 	=> END
 
 ~ WidowAfterSecondSon_repeat
-Samantha: 
-
+Samantha: Tom and Henry are happy together now, I know it. => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Hey Stan, I need to speak with you.
@@ -63,7 +62,12 @@ Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHea
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom_invest")
 
 - Thank you for answering my questions.
-	Stan: No problem. I hope I could help. => END
+	Stan: No problem. I hope I could help. 
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	=> END
+
+~ SonFromFirstMariageOfHeadOfFamily_repeat
+Stan: I cannot believe that... my father... => END
 
 ~ FriendOfTheFamily_start
 You: Hey, sorry to interrupt, but I need to talk with you.
@@ -103,6 +107,11 @@ Frank: Well, go on. => FriendOfTheFamily_interrogation1
 
 - Thank you, if I have more questions for you, I'll let you know.
 	Frank: Of course. Hope you can find this person who did that.
-	Frank: My brother deserved better than that... => END
+	Frank: My brother deserved better than that... 
+	do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("FriendOfTheFamily_repeat")
+	=> END
+
+~ FriendOfTheFamily_repeat
+Frank: I'll miss him deeply... => END
 
 => END

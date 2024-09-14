@@ -29,7 +29,12 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 	
 	Olivia: Even though he’s very… he was very irresponsible with money, I loved this man. =>  FamilyHeadsWife_interrogation1
 - Thank you for your cooperation.
-	Olivia: Yeah… Please find whoever did that. => END
+	Olivia: Yeah… Please find whoever did that. 
+	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
+	=> END
+
+~ FamilyHeadsWife_repeat
+Olivia: My poor Tom... => END
 
 ~ FirstBornSon_start
 You: Can we talk for a moment?
@@ -55,7 +60,12 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_investing")
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
-	Andrew: No problem, Taylor. I hope I can help. => END
+	Andrew: No problem, Taylor. I hope I can help. 
+	do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
+	=> END
+
+~ FirstBornSon_repeat
+Andrew: I didn't expect to loose my father like this... => END
 
 ~ Daughter_start
 You: Hey Jessica, I'm sorry to interrupt, but I need to talk with you.
@@ -94,6 +104,11 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 
 - Thank you for your time, I'll leave you now.
 	Jessica: Thank you, I hope you'll find out who did it.
-	Jessica: My poor father... => END
+	Jessica: My poor father... 
+	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	=> END
+
+~ Daughter_repeat
+Jessica: Please... Just let me be for a while... => END
 
 => END
