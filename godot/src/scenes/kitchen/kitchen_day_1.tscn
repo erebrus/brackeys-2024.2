@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_7wbku"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_3sn7w"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
+[ext_resource type="PackedScene" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
 [ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_dnnkp"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="3_dxuaj"]
 [ext_resource type="Texture2D" uid="uid://ci6xi6k0uaml3" path="res://assets/gfx/characters/scissors01.png" id="4_ot5b1"]
