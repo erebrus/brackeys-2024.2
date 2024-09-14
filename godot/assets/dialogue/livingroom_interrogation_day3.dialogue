@@ -11,17 +11,17 @@ Jason: Damn, this family is indeed grazy, huh? => Grandson_interrogation2
 - What were you doing last night?
 	Jason: I was mostly in my room, on my phone. My mom forbid me to go out much...
 	#DONE: hint - Jason claims to be in his room all evening.
-	do State.characters[Types.Characters.Grandson].set_dialogue("jason_day3_evening")
+	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day3_evening")
 	Jason: Later I wanted to go to the bathroom, but Stan was there, so I was waiting outside.
 	#DONE: hint - Jason claims to wait for Stan to go out of the batroom
-	do State.characters[Types.Characters.Grandson].set_dialogue("jason_day3_stan")
+	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day3_stan")
 	Jason: I saw Jessica going upstairs while I was waiting for Stan to go out.
 	#DONE: hint - Jason claims to see Stan going to his room and Jessica going upstairs to her bedroom
-	do State.characters[Types.Characters.Grandson].set_dialogue("jason_day3_stan_jessica")
+	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day3_stan_jessica")
 	Jason: Then he went to his room, I went to the bathroom and went to bed. => Grandson_interrogation2
 
 - Alright, I think that's all for now.
-	Jason: Sure, no problem. 
+	Jason: Sure, no problem.
 	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
 	=> END
 
@@ -37,16 +37,16 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 - I need to know where were you yesterday in the evening and night.
 	Olivia: I was with my children in the living room.
 	#DONE: hint - Olivia claims to be in the living room with Andrew and Jessica
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("olivia_day3_alibi")
+	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_alibi")
 	Olivia: Later, I went to bed early, but I was tossing around, couldn't fall asleep.
 	Olivia: Around 2:00 am I went downstairs to the kitchen to grab some water. I met Samantha there. => FamilyHeadsWife_interrogation2
 	#DONE: hint - Olivia claims she went to the kitchen at night and found Samantha there
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("olivia_day3_samantha")
+	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_samantha")
 	You: Did you talk to her?
 	Olivia: I um... I didn't, she was busy talking to Henry.
 	Olivia: She does that, she's mumbling something under her breath, talking to her husband.
 	#DONE: hint - Olivia claims that Samantha was "talking" to her husband
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("olivia_day3_husband")
+	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_husband")
 
 - Did you hear anyone arguing or had an argument with someone?
 	Olivia: No, I did not.
@@ -55,9 +55,9 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 - That's all I wanted to ask you for now.
 	Olivia: Does no one even suspect Stan?!
 	#DONE: hint - Olivia suspects Stan
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("olivia_day3_suspect")
+	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_suspect")
 	Olivia: He got very upsed when my husband was spending all my moeny on this damn business, together with Frank.
-	Olivia: This man is not even in the family! 
+	Olivia: This man is not even in the family!
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
@@ -75,7 +75,7 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 - Where were you in the evening?
 	Andrew: I was with my mom and sister, tryuing to calm them down.
 	#DONE: hint - Andrew claims to spent evening with his mom and sister
-	do State.characters[Types.Characters.FirstBornSon].set_dialogue("andrew_day3_evening")
+	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_evening")
 	Andrew: Then while going upstairs I met Frank and we started talking about the investments.
 	Andrew: We argued, because he told me that my dad had given me only 2% of the shares.
 	Andrew: I'm not going to lie, I expected more.
@@ -85,12 +85,12 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 	Andrew: Not really, I think.
 	Andrew: Somewhere at night I went to the bathroom and Saw Samantha coming upstairs.
 	#DONE: hint - Andrew claims to see Samantha going upstairs at night
-	do State.characters[Types.Characters.FirstBornSon].set_dialogue("andrew_day3_samantha")
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("andrew_day3_samantha")
+	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha")
 	Andrew: She was in her zone, but she said she went to drink some water. => FirstBornSon_interrogation2
 	#DONE: hint - Samantha was in her zone while coming upstairs
-	do State.characters[Types.Characters.FirstBornSon].set_dialogue("andrew_day3_samantha_zone")
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("andrew_day3_samantha_zone")
+	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha_zone")
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha_zone")
 - Alright, thanks for answering my questions.
 	Andrew: Please tell me you believe me!
 	You: I cannot promise you anything now, Andrew. => END

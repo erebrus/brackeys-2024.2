@@ -8,7 +8,7 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	#DONE: hint - Angela and Stan were together at the fireplace.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_alibi_stan")
 	You: Stan? For how long?
-	Angela: I went to our room before he left, I don't know what was he doing after. => SisterOfWife_interrogation1	
+	Angela: I went to our room before he left, I don't know what was he doing after. => SisterOfWife_interrogation1
 	#DONE: hint - Stan was left alone after Angela went to bed.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_alibi_stan2")
 
@@ -19,10 +19,10 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_dislike_tom")
 	You: Why didn't you like him?
 	Angela: I think my sister deserved better, you know? Not someone who spent all her money on some shady businesses. => SisterOfWife_interrogation1
-	#DONE: hint - Angela claims Tom was spending Olivia's money on the investments. 
+	#DONE: hint - Angela claims Tom was spending Olivia's money on the investments.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_investments")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela_day2_investments")
-	
+
 
 - Did anything happen between you two recently?
 	Angela: Honestly, yes.
@@ -33,8 +33,8 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_lending")
 
 	Angela: Well now he's dead and I don't have my money. => SisterOfWife_interrogation1
-- Thanks for your information. 
-	Angela: Of course, my love. I hope you don't think I killed him. I didn't like him, but I would never do such thing. 
+- Thanks for your information.
+	Angela: Of course, my love. I hope you don't think I killed him. I didn't like him, but I would never do such thing.
 	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 	=> END
 
@@ -47,7 +47,7 @@ You: Um, excuse me Vanda.
 You: Vanda?
 #TODO tag
 Vanda: [#shaking, #crying] Oh! I-I'm sorry, I need my pills.
-Vanda: I don't understand how it happened... Just yesterday... I'm so scared... 
+Vanda: I don't understand how it happened... Just yesterday... I'm so scared...
 You: I understand you're nervous, but I need to ask some questions.
 Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 
@@ -62,23 +62,23 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 	#DONE: hint - after cleaning, Vanda went to bed with her husband.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_alibi_after")
 
-- How was your relationship with your father-in-law? 
+- How was your relationship with your father-in-law?
 	Vanda: He was a good man... Really.
 	Vanda: But he made some stupid mistakes. And pulled my Andrew into them.
-	You: What do you mean? Can you elaborate? 
+	You: What do you mean? Can you elaborate?
 	Vanda: Andrew withdrawed all our money we had for Jason's college! Can you imagine?
-	Vanda: To invest in the spice business with his father. 
-	Vanda: Unbelivible. 
-	Vanda: We argued about that a lot, because now my son has no funds for school! 
+	Vanda: To invest in the spice business with his father.
+	Vanda: Unbelivible.
+	Vanda: We argued about that a lot, because now my son has no funds for school!
 	#DONE: Andrew took all money for son's education to invest in businesses with his father.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_investments")
 	=> WifeOfFirstBorn_interrogation1
 
 - Did you argue with Tom recently?
-	Vanda: No, I was always very respectful towards him. 
+	Vanda: No, I was always very respectful towards him.
 	Vanda: Me and Andrew always keep our problems between us, even if they involve other people. => WifeOfFirstBorn_interrogation1
 - Thank you for your answers. Please take care of yourself.
-	Vanda: I just need my pills... If it's all, I'll go grab them now. 
+	Vanda: I just need my pills... If it's all, I'll go grab them now.
 	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
@@ -113,12 +113,12 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 	Jason: If that's the reason why he cut my pocket money short, I will be very upset... => Grandson_interrogation1
 	#DONE: hint - Jason's pocket money was cut short recently.
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day2_money")
-- Did you argue with your grandpa recently? 
-	Jason: Naaah, never, to be honest. 
+- Did you argue with your grandpa recently?
+	Jason: Naaah, never, to be honest.
 	Jason: As I said, he was a cool grandpa. => Grandson_interrogation1
 
 - Alright, thank you for help.
-	Jason: Yea, whatever. 
+	Jason: Yea, whatever.
 do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
 => END
 
