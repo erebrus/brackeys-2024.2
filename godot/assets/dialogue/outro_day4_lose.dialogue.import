@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b0rhkulsdxisy"
+path="res://.godot/imported/outro_day4_lose.dialogue-6eb24c780900eca569d164b561fe0198.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/outro_day4_lose.dialogue"
+dest_files=["res://.godot/imported/outro_day4_lose.dialogue-6eb24c780900eca569d164b561fe0198.tres"]
+
+[params]
+
+defaults=true

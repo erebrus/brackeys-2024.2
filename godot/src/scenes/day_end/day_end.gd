@@ -14,9 +14,9 @@ func _ready() -> void:
 	#super._ready()
 	
 	await get_tree().create_timer(start_timeout).timeout
-	
-	DialogueManager.show_dialogue_balloon(dialogue, dialogue_start)
-	await Events.dialogue_finished
+	if dialogue:
+		DialogueManager.show_dialogue_balloon(dialogue, dialogue_start)
+		await Events.dialogue_finished
 	
 	Globals.music_manager.fade_game_music()
 	Globals.music_manager.fade_in_stream(ambience, 6)

@@ -66,5 +66,8 @@ func _init_logger():
 	Logger.info("Logger initialized.")
 
 
+func do_lose():
+	get_tree().quit()
 
-	
+func do_win():
+	get_tree().quit()

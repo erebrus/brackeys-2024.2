@@ -71,7 +71,13 @@ func choose_scene(location: Types.Locations) -> GameScene:
 	
 
 func day_end_scene() -> GameScene:
+	
 	var path = "res://src/scenes/day_end/day_%s.tscn"
+	if State.current_day == 4:
+		if State.win:
+			path = "res://src/scenes/day_end/day_%s_win.tscn"
+		else:
+			path = "res://src/scenes/day_end/day_%s_lose.tscn"
 	var scene = load(path % (State.current_day))
 	return scene.instantiate()
 	
@@ -94,7 +100,11 @@ func _input(event: InputEvent) -> void:
 		if event.pressed and event.keycode == KEY_G:
 			Events.day_ended.emit()
 		
-	
+	if Input.is_action_just_pressed("end"):
+		State.current_day=4		
+		_on_day_ended()
+	if Input.is_action_just_pressed("win"):
+		State.win = not State.win
 
 func _on_location_change(location: Types.Locations) -> void:
 	_change_scene(choose_scene.bind(location))
