@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b76ecpxbyrti6"]
+
+[ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_6ts2b"]
+[ext_resource type="Resource" uid="uid://cb7nflu4e53d0" path="res://assets/dialogue/outro_day2.dialogue" id="2_puuux"]
+[ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_lld7p"]
+[ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="4_fnvw3"]
+[ext_resource type="Texture2D" uid="uid://brrnvtbr3ss6u" path="res://assets/gfx/scenes/GardenMurder_01.jpg" id="4_nqmgf"]
+
+[node name="DayEnd2" instance=ExtResource("1_6ts2b")]
+dialogue_start = "living_room_start"
+night_timeout = 2.0
+dialogue = ExtResource("2_puuux")
+location = 1
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("3_lld7p")
+
+[node name="Overlay" type="ColorRect" parent="." index="1"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03032, 0.0288, 0.12, 1)
+
+[node name="Murder" type="TextureRect" parent="." index="2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_nqmgf")
+
+[node name="ambience" parent="." index="3"]
+stream = ExtResource("4_fnvw3")
