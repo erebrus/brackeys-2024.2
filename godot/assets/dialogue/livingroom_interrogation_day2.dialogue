@@ -57,11 +57,12 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 	
 
 	You: How was he helping you?
-	Andrew: By giving money, obviously. I needed it to maintain my lifestyle and for my investments. => FirstBornSon_interrogation1
-	You: What were you investing in? 
+	Andrew: By giving money, obviously. I needed it to maintain my lifestyle and for my investments. 
 	#DONE: hint - Andrew was investing in the same type of businesses as Tom.
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_investing")
-	Andrew: The same stuff as my father did. We were both importing some spices. 
+	You: What were you investing in? 
+	
+	Andrew: The same stuff as my father did. We were both importing some spices. => FirstBornSon_interrogation1
 	
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
