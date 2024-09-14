@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://be3u4hfjhsvqa"]
+[gd_scene load_steps=13 format=3 uid="uid://be3u4hfjhsvqa"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ur4nb"]
 [ext_resource type="Texture2D" uid="uid://q5x8dgy1r2yo" path="res://assets/gfx/day1GardenTest/layer4.png" id="2_0nkxn"]
-[ext_resource type="Resource" uid="uid://htyfujgi01c8" path="res://assets/dialogue/intro.dialogue" id="3_dk256"]
 [ext_resource type="Resource" uid="uid://cmrr3xb8dy5bv" path="res://assets/dialogue/garden_day1.dialogue" id="4_6vios"]
 [ext_resource type="Texture2D" uid="uid://bkkmpa1xgyd7f" path="res://assets/gfx/day1GardenTest/layer2.png" id="4_watnj"]
 [ext_resource type="Texture2D" uid="uid://dl6au6dlv02s1" path="res://assets/gfx/day1GardenTest/layer1.png" id="5_nwwoj"]
@@ -16,7 +15,6 @@
 
 [node name="GardenDay1" instance=ExtResource("1_ur4nb")]
 dialogue = ExtResource("4_6vios")
-intro = ExtResource("3_dk256")
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_0nkxn")
