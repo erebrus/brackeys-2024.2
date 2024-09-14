@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvdbhrqvi4tce"]
+[gd_scene load_steps=2 format=3 uid="uid://bvdbhrqvi4tce"]
 
 [ext_resource type="Script" path="res://src/scenes/clickable/clickable.gd" id="1_rla5p"]
-[ext_resource type="Material" uid="uid://vjodffkx8t2x" path="res://src/scenes/clickable/outline_material.tres" id="2_pjmnf"]
 
 [node name="Clickable" type="Area2D"]
 script = ExtResource("1_rla5p")
-outline_shader = ExtResource("2_pjmnf")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

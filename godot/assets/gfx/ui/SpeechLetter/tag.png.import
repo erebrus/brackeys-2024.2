@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbrpbucyrdl7v"
-path="res://.godot/imported/LivingRoomFirstBorn01.png-452c0f7eccb1da4efcf562bba8c50246.ctex"
+uid="uid://r5323thqk7pe"
+path="res://.godot/imported/tag.png-eb88fa4a7ca962d8e0931269c18be6d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gfx/scenes/LivingRoomFirstBorn01.png"
-dest_files=["res://.godot/imported/LivingRoomFirstBorn01.png-452c0f7eccb1da4efcf562bba8c50246.ctex"]
+source_file="res://assets/gfx/ui/SpeechLetter/tag.png"
+dest_files=["res://.godot/imported/tag.png-eb88fa4a7ca962d8e0931269c18be6d3.ctex"]
 
 [params]
 

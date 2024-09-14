@@ -5,4 +5,4 @@
 
 [node name="SceneChange" instance=ExtResource("1_gbi36")]
 script = ExtResource("2_1php4")
-target_scene = null
+target_location = 0

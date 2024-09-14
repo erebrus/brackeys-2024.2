@@ -1,15 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dr05enk8dxc4i"]
+[gd_scene load_steps=8 format=3 uid="uid://dr05enk8dxc4i"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_7wbku"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_3sn7w"]
-[ext_resource type="PackedScene" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="2_xbthk"]
 [ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_dnnkp"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="3_dxuaj"]
 [ext_resource type="Texture2D" uid="uid://ci6xi6k0uaml3" path="res://assets/gfx/characters/scissors01.png" id="4_ot5b1"]
 [ext_resource type="AudioStream" uid="uid://bpci1e024fgde" path="res://assets/sfx/Kitchen_DayOne_Amb.mp3" id="7_vjudf"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_hdka6"]
-font_size = 48
 
 [node name="KitchenDay1" instance=ExtResource("1_7wbku")]
 dialogue = ExtResource("3_dxuaj")
@@ -22,48 +19,26 @@ texture = ExtResource("3_dnnkp")
 position = Vector2(767, 988)
 target_location = 2
 
-[node name="Sprite2D" parent="GoToDiningRoom" index="0"]
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="1"]
-polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
-
-[node name="Label" type="Label" parent="GoToDiningRoom" index="2"]
-offset_left = -81.0
-offset_top = -3.0
-offset_right = 86.0
-offset_bottom = 20.0
-text = "GO TO DINING ROOM"
-label_settings = SubResource("LabelSettings_hdka6")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="0"]
+polygon = PackedVector2Array(705, -672, 691, -168, 807, -145, 821, -717)
 
 [node name="GoToGarden" parent="." index="2" instance=ExtResource("2_3sn7w")]
 position = Vector2(767, 588)
-target_location = 0
 
-[node name="Sprite2D" parent="GoToGarden" index="0"]
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="1"]
-polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
-
-[node name="Label" type="Label" parent="GoToGarden" index="2"]
-offset_left = -81.0
-offset_top = -3.0
-offset_right = 86.0
-offset_bottom = 20.0
-text = "GO TO GARDEN"
-label_settings = SubResource("LabelSettings_hdka6")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
+polygon = PackedVector2Array(-62, -241, -52, 124, 419, 118, 416, -229, 308, -367, 167, -411, 40, -370)
 
 [node name="WifeOfFirstBorn" parent="." index="3" instance=ExtResource("2_xbthk")]
-position = Vector2(1380, 504)
+position = Vector2(1325, 650)
 character_id = 6
 
 [node name="Sprite2D" parent="WifeOfFirstBorn" index="0"]
+position = Vector2(-3, 52)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_ot5b1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WifeOfFirstBorn" index="1"]
-visible = false
+position = Vector2(-2, 0)
 polygon = PackedVector2Array(-2, -93, 42, -150, 78, -155, 96, -84, 62, -55, 50, 27, 26, 55, 70, 142, 50, 212, -63, 200, -56, 143, -14, 60, -68, 50, -68, -23, -108, -55)
 
 [node name="ambience" parent="." index="4"]

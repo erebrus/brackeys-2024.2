@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_iodyc"]
 [ext_resource type="Resource" uid="uid://0x3bogk7wbug" path="res://assets/dialogue/livingroom_day1.dialogue" id="2_yyl51"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_f4bgw"]
-[ext_resource type="PackedScene" path="res://src/scenes/clickable/character_trigger.tscn" id="4_4aadw"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="4_4aadw"]
 [ext_resource type="Texture2D" uid="uid://dafae0032udak" path="res://assets/gfx/characters/screwdriver01.png" id="5_ju5e5"]
 [ext_resource type="Texture2D" uid="uid://dxcdya7c1gove" path="res://assets/gfx/characters/mouseTrap01.png" id="6_5up0q"]
 [ext_resource type="Texture2D" uid="uid://dhdopw1qkckm5" path="res://assets/gfx/characters/firstBorn01.png" id="7_rb0xi"]
@@ -62,13 +62,10 @@ polygon = PackedVector2Array(-204, -144, -203, -116, -145, -93, -150, 59, -187, 
 position = Vector2(1472, 254)
 target_location = 2
 
-[node name="Sprite2D" parent="GoToDiningRoom" index="0"]
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="0"]
 polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
 
-[node name="Label" type="Label" parent="GoToDiningRoom" index="2"]
+[node name="Label" type="Label" parent="GoToDiningRoom" index="1"]
 offset_left = -81.0
 offset_top = -3.0
 offset_right = 86.0
@@ -78,15 +75,11 @@ label_settings = SubResource("LabelSettings_j8we7")
 
 [node name="GoToGarden" parent="." index="5" instance=ExtResource("8_olsmj")]
 position = Vector2(106, 261)
-target_location = 0
 
-[node name="Sprite2D" parent="GoToGarden" index="0"]
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
 polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
 
-[node name="Label" type="Label" parent="GoToGarden" index="2"]
+[node name="Label" type="Label" parent="GoToGarden" index="1"]
 offset_left = -81.0
 offset_top = -3.0
 offset_right = 86.0
