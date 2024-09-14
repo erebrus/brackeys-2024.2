@@ -8,24 +8,32 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 - What were you doing after the dinner? 
 	Samantha: I cleaned up with Vanda, we were together in the kitchen.
 	Samantha: Then Jessica passed by, she was going to the garden.
-	Samantha: That's all I think.
+	Samantha: That's all I think. Yes...
 	#DONE: hint - Samantha claims she was washing dishes with Vanda and that Jessica was going to the garden.
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_alibi")
 
 	You: What were you doing after the dishes were done?
-	Samantha: I went to bed, obviosuly.  => WidowAfterSecondSon_interrogation1
+	Samantha: I went to bed, obviosuly. That's what happened.  => WidowAfterSecondSon_interrogation1
 
 - Can you tell me more about the relationship with your father-in-law?
 	Samantha: Oh, he was the sweetest. I couldn't ask for a better father-in-law. 
 	Samantha: He allowed me to stay in the family even after Henry's death. => WidowAfterSecondSon_interrogation1
 
 - Did you have any arguments with Tom recently?
-	Samantha: No, I could never do that to Henry's parents. => WidowAfterSecondSon_interrogation1
+	Samantha: No, I could never do that to Henry's parents.
+	Samantha: He and Tom were working together at the businesses. Even thought thry brought him death...
+	#TODO: hint - Henry died because of the businesses he was investing in with Tom
+	 => WidowAfterSecondSon_interrogation1
 	#DONE: hint - Samantha seems to turn every conversation to be about Henry.
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_henry")
 
+- Can you tell me something about Henry?
+	Samantha: He was my beloved, my better half. 
+	Samantha: I miss him deeply, yes...
+	Samantha: Life is not the same after his death. => WidowAfterSecondSon_interrogation1
+
 - Thank you for your time.
-	Samantha: You're welcome. At least Henry and his dad are in the same place now. 
+	Samantha: You're welcome. At least Henry and his dad are in the same place now. Happy together.
 	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	=> END
 
@@ -95,7 +103,6 @@ Frank: Well, go on. => FriendOfTheFamily_interrogation1
 	#DONE: hint - Frank claims to have seen Stan going upstairs. 
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_stan")
 
-
 - How would you describe your relationship with your brother?
 	Frank: It was good, really.
 	Frank: We were both very into the spice business, you know?
@@ -110,6 +117,11 @@ Frank: Well, go on. => FriendOfTheFamily_interrogation1
 	Frank: What can I say, she's a beautiful woman. => FriendOfTheFamily_interrogation1
 	#DONE: hint - Frank seems to have a crush on Olivia.
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_olivia")
+
+- Where you close with your brother?
+	Frank: Yes, I'd say that, yes. 
+	Frank: We're simialr age, so we did lots of things together grownig up.
+	Frank: It kinda stayed that way the whole life. You know, us two, always together. Heh... => FriendOfTheFamily_interrogation1
 
 - Thank you, if I have more questions for you, I'll let you know.
 	Frank: Of course. Hope you can find this person who did that.
