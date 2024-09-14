@@ -53,7 +53,7 @@ set State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].is_know
 	Stan: It's Stan.
 	Stan: ...
 	Stan: Anyway... => son_from_first_marriage_continue2
-	
+
 ~ son_from_first_marriage_continue2
 Stan: Please don't associate me with themm, though.
 #DONE: hint - Stan doesn't associate himself with the family
