@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bnhcitkai28vb"
+path="res://.godot/imported/outro_day4_win.dialogue-72b644002c067b24414f352a02b23f96.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/outro_day4_win.dialogue"
+dest_files=["res://.godot/imported/outro_day4_win.dialogue-72b644002c067b24414f352a02b23f96.tres"]
+
+[params]
+
+defaults=true

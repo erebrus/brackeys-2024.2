@@ -23,6 +23,7 @@ var current_time:= 1
 
 var clues_previous_count=0
 var family_tree_complete:= false
+var win:=false
 
 func _ready() -> void:
 	verify_dialogue_files()
