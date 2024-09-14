@@ -90,28 +90,50 @@ do State.characters[Types.Characters.Daughter].set_location(Types.Locations.None
 #3rd hour
 ~ grandson_start
 #TODO: mark him as ???
-Jason: Damn it...
-You: Hey, need some help with that?
-Jason: I can't beat this level, I've been trying all day.
-You: Here, let me try.
-You: Oh yea, I can see the challenge...
-You: Just a little bit more and...
-You: Yeah, done. Here's your phone.
-Jason: What?! Damn, you're awesome. Better than my dad, he didn't even want to try to help me...
+Jason: Damn it... => grandson_continue
+
+~ grandson_continue
+- Hey, need some help with that?
+	Jason: I can't beat this level, I've been trying all day.
+	You: Here, let me try.
+	You: Oh yea, I can see the challenge...
+	You: Just a little bit more and...
+	You: Yeah, done. Here's your phone.
+	Jason: What?! Damn, you're awesome. 
+	Jason: Better than my dad, he didn't even want to try to help me...
+	#DONE hint - the teenage boy has a father
+	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
+	You: Oh, sorry to hear that. => grandson_continue2
+
+- Are you old enough to talk like that?
+	Jason: Who are you, my dad? 
+	Jason: Even he doesn't care if I speak like that. => grandson_continue2
+	#DONE hint - the teenage boy has a father
+	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
+
+~ grandson_continue2
+#Jason: Better than my dad, he didn't even want to try to help me...
 #DONE hint - the teenage boy has a father
-do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
-You: Oh, sorry to hear that.
+#do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
+#You: Oh, sorry to hear that.
 Jason: You're new, by the way. You're not some "another new uncle from a forgotten marriage", huh?
 #DONE: hint - Tom was married before and had a son
 do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day1_previous_marriage")
 You: Umm... no. I'm Angela's partner.
-Jason: Oh damn, auntie has a partner?! That's new.
+Jason: Oh damn, auntie has a partner?! That's new. => grandson_continue3
 #DONE: hint - Angela is this boy's aunt
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_aunt")
 #TODO: should we add this to Angela
-You: Yea, I've heard that a lot in the past few hours.
-Jason: Well, get used to it. This family is crazy.
-Jason: I better get going help mom and grandma.
+
+~ grandson_continue3
+- You: Yea, I've heard that a lot in the past few hours.
+	Jason: Well, get used to it. This family is crazy. => grandson_continue4
+- You: Yes, we've been together for over a year now.
+	Jason: Oh wow, that's nice. I hope you're happy. => grandson_continue4
+
+~ grandson_continue4
+
+Jason: Anyway, I better get going to help mom and grandma.
 #DONE: hint - the teenage boy has a mom and a grandma
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_mom_grandma")
 You: Alright, see you later. 

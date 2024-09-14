@@ -68,6 +68,7 @@ You: Hello, I'm Taylor.
 Andrew: Oh so it was you who Jessica was mumbling about while drawing. I saw her in her zone like an hour ago.
 #DONE: hint - there's a woman who draws, her name is Jessica
 do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_draws")
+do State.characters[Types.Characters.Daughter].find_name()
 Andrew: She's so weird, I cannot belive we're siblings...
 #TODO: hint - the woman is this man's sister
 You: Ah yea, we met before.
