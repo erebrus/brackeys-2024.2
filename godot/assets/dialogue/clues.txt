@@ -1,17 +1,19 @@
-tom_name|Head of the family is named Tom|
-angela_has_sister|Angela has a sister|
-frank_suspicious|Frank is a suspicious individual and the woman's uncle|
-samantha_henry_husband|The woman has a husband named Henry|
-samantha_henry_dead|Her husband is dead|
-samantha_mourning|Widow is stil mourning|
-samantha_mourning2|Samantha didn't move on yet|
-vanda_name|The woman's name is Vanda|
-olivia_50years|Angela's sister spent 50 years with her husband, her name is Olivia|
-stan_family|Stan doesn't associate himself with the family|
-jessica_unusual|This woman appears to be enamored by unusual things|
-jason_has_father|The teenage boy has a father|
-jason_aunt|Angela is this boy's aunt|
-jason_mom_grandma|The teenage boy has a mom and a grandma|
+tom_name|Head of the family is named Tom.|
+angela_has_sister|Angela has a sister.|
+frank_suspicious|Frank is a suspicious individual and the woman's uncle.|
+samantha_henry_husband|The woman has a husband named Henry.|
+samantha_henry_dead|Her husband is dead.|
+samantha_mourning|Widow is stil mourning.|
+samantha_mourning2|Samantha didn't move on yet.|
+samantha_day4_kitchen|Samantha claims to be in the kitchen with Vanda, Angela and Jessica.|
+samantha_day4_night|Samantha claims that no one left any room at night.|
+vanda_name|The woman's name is Vanda.|
+olivia_50years|Angela's sister spent 50 years with her husband, her name is Olivia.|
+stan_family|Stan doesn't associate himself with the family.|
+jessica_unusual|This woman appears to be enamored by unusual things.|
+jason_has_father|The teenage boy has a father.|
+jason_aunt|Angela is this boy's aunt.|
+jason_mom_grandma|The teenage boy has a mom and a grandma.|
 jason_day3_evening|Jason claims to be in his room all evening.|
 jason_day3_stan|Jason claims to wait for Stan to go out of the batroom.|
 jason_day3_stan_jessica|Jason claims to see Stan going to his room and Jessica going upstairs to her bedroom.|
@@ -62,6 +64,8 @@ vanda_day2_investments|Andrew took all money for son's education to invest in bu
 vanda_day3_samantha|Vanda claims to spend the evening with Samantha.|
 vanda_day3_bed|Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing.|
 vanda_day3_money|Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.|
+vanda_day4_angela_jessica|Vanda claims to be in the kitchen with Angela and Jessica.|
+vanda_day4_andrew|Vanda claims that Andrew went downstairs at night and someone followed him.|
 jason_day2_alibi|Jason claims he called his girlfrend after the celebration and then went to bed.|
 jason_day2_tom|Jason claims that Tom was cheap and focused on money.|
 jason_day2_money|Jason's pocket money was cut short recently.|
