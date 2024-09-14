@@ -87,7 +87,8 @@ Frank: Are you interested in making some money on the side? => friend_continue1
 	You: Are you sure it's safe?
 	Frank: Yes, totally!
 	Frank: Me and my brother have been doing it for years!
-	#TODO: hint - the man has a brother
+	#DONE: hint - the man has a brother
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_brother")
 	You: Interesting. My the fraud department in my unit would be very happy to hear more about it.
 	#DONE: hint - the money he makes is not legal
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
