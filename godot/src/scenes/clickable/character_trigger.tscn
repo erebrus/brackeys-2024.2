@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwfadg6rehyeq"]
+[gd_scene load_steps=4 format=3 uid="uid://cn52laysvt77h"]
 
 [ext_resource type="PackedScene" uid="uid://bvdbhrqvi4tce" path="res://src/scenes/clickable/clickable.tscn" id="1_ru8p5"]
 [ext_resource type="Script" path="res://src/scenes/clickable/character_trigger.gd" id="2_4aypo"]
-[ext_resource type="Material" uid="uid://vjodffkx8t2x" path="res://src/scenes/clickable/outline_material.tres" id="3_qh6a0"]
+[ext_resource type="Material" uid="uid://ca5c4o1ca2bew" path="res://src/scenes/clickable/outline_material.tres" id="3_qh6a0"]
 
 [node name="CharacterTrigger" instance=ExtResource("1_ru8p5")]
 script = ExtResource("2_4aypo")

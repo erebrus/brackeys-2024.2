@@ -1,52 +1,61 @@
-~ WifeOfFirstBorn_start 
+~ WifeOfFirstBorn_start
 You: I'm sorry Vanda, but we need to talk.
 Vanda: Yes... yes I know...
 Vanda: My poor Andrew... => WifeOfFirstBorn_interrogation3
 
 ~ WifeOfFirstBorn_interrogation3
 - Where were you yesterday evening?
-	Vanda: I was in the kitchen with Angela and Jessica. 
-	#TODO: hint - Vanda claims to be in the kitchen with Angela and Jessica
+	Vanda: I was in the kitchen with Angela and Jessica.
+	#DONE: hint - Vanda claims to be in the kitchen with Angela and Jessica
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_name_clue("vanda_day4_angela_jessica")
+	do State.characters[Types.Characters.SisterOfWife].find_name_clue("vanda_day4_angela_jessica")
+	do State.characters[Types.Characters.Daughter].find_name_clue("vanda_day4_angela_jessica")
 	Vanda: Then we all went upstairs and I went to the bed. Andrew was already there...
 	Vanda: I still can't believe he's gone... => WifeOfFirstBorn_interrogation3
 
-- Did you see anything weird or unusual? 
-	Vanda: I-I don't think so really. 
+- Did you see anything weird or unusual?
+	Vanda: I-I don't think so really.
 	Vanda: At night, Andrew went to grab some water and he woke me up.
 	Vanda: Once he went out I heard someone going downstairs too.
-	#TODO: hint - Vanda claims that Andrew went downstairs at night and someone followed him
+	#DONE: hint - Vanda claims that Andrew went downstairs at night and someone followed him
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_name_clue("vanda_day4_andrew")
+	do State.characters[Types.Characters.FirstBornSon].find_name_clue("vanda_day4_andrew")
 	Vanda: Then I fell back asleep, not expecting him to never come back upstairs... => WifeOfFirstBorn_interrogation3
 
 - Thank you for your help.
-	Vanda: Please find who did it... 
-	Vanda: I don't know what I'll do now without my Andrew... 
+	Vanda: Please find who did it...
+	Vanda: I don't know what I'll do now without my Andrew...
 	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
 ~ WifeOfFirstBorn_repeat
 Vanda: I want to mourn in peace now... => END
 
-~ WidowAfterSecondSon_start 
+~ WidowAfterSecondSon_start
 You: Samantha, can we talk?
 Samantha: Henry, my love... I did...
 Samantha: Oh... it's you.
 Samantha: Yes, we can. => WidowAfterSecondSon_interrogation3
 
 ~ WidowAfterSecondSon_interrogation3
-- What were you doing last evening and night? 
+- What were you doing last evening and night?
 	Samantha: I was... where was I?
 	Samantha: Oh, I was in the kitchen with Vanda, Angela and Jessica.
-	#TODO: hint - Samantha claims to be in the kitchen with Vanda, Angela and Jessica
+	#DONE: hint - Samantha claims to be in the kitchen with Vanda, Angela and Jessica
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samantha_day4_kitchen")
+	do State.characters[Types.Characters.WifeOfFirstBorn].find_name_clue("samantha_day4_kitchen")
+	do State.characters[Types.Characters.SisterOfWife].find_name_clue("samantha_day4_kitchen")
+	do State.characters[Types.Characters.Daughter].find_name_clue("samantha_day4_kitchen")
 	Samantha: Yes, yes. => WidowAfterSecondSon_interrogation3
 
 - Did you experience anything unusual?
 	Samantha: No... nothing out of the ordinary.
 	Samantha: The night was calm.
 	Samantha: Everyone was in their rooms. Yes. => WidowAfterSecondSon_interrogation3
-	#TODO: hint - Samantha claims that no one left any room at night. 
-
+	#DONE: hint - Samantha claims that no one left any room at night.
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samantha_day4_night")
 - Thank you for your time.
-	Samantha: Yes, yes. 
+	Samantha: Yes, yes.
 	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	=> END
 

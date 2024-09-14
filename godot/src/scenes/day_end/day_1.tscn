@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3mipuuevsk4i"]
+[gd_scene load_steps=6 format=3 uid="uid://c3mipuuevsk4i"]
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_yq3k5"]
+[ext_resource type="Resource" uid="uid://dl25wgm5w3s23" path="res://assets/dialogue/intro_day2.dialogue" id="2_bou0f"]
 [ext_resource type="Texture2D" uid="uid://dey7k6bhx1lpk" path="res://assets/gfx/scenes/TomatoMurder.jpg" id="2_fcayb"]
 [ext_resource type="Texture2D" uid="uid://d07tm81bxxiry" path="res://assets/gfx/scenes/DiningRoomStorm.jpg" id="2_qqfbe"]
 [ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="4_uveui"]
@@ -8,6 +9,7 @@
 [node name="DayEnd1" instance=ExtResource("1_yq3k5")]
 dialogue_start = "the_dining_room_party_start"
 night_timeout = 2.0
+intro = ExtResource("2_bou0f")
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_qqfbe")

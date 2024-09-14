@@ -8,11 +8,11 @@
 [node name="DayOneEnd" instance=ExtResource("1_3vuqy")]
 script = ExtResource("2_oubf0")
 dialogue_start = ""
-dialogue_murder = "murder"
 start_timeout = 1.0
 night_timeout = 3.0
-murder_timeout = 1.0
+murder_timeout = 2.0
 murder_music_fade_in = 0.2
+intro = null
 dialogue = ExtResource("3_jttbv")
 location = 2
 
