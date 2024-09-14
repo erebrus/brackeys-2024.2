@@ -1,3 +1,4 @@
+#2nd hour
 ~ partner_start
 You: Oh, there you are.
 Angela: Mhm, I found some good wine in Tom's storage.
@@ -8,8 +9,15 @@ do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
 Angela: Anyway, did you meet everyone?
 You: From what I know, not yet.  
-Angela: Well, you better get going then. => END
+Angela: Well, you better get going then. 
+do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
+=> END
 
+~ SisterOfWife_repeat
+Angela: What are you doing here?
+Angela: The game is not over yet! => END
+
+#3rd hour
 ~ son_from_first_marriage_start
 You: Hey, I'm Taylor, Angela's partner. 
 Stan: Angela? 
@@ -24,6 +32,10 @@ You: I... think so?
 Stan: Good, good. Please don't associate me with themm, though.
 #DONE: hint - Stan doesn't associate himself with the family
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name_clue("stan_family")
-Stan: I'm not such a freak as they are. => END
-
+Stan: I'm not such a freak as they are. 
+do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 => END
+
+~ SonFromFirstMariageOfHeadOfFamily_repeat
+Stan: Huh? Do you want something?
+Stan: I don't think we have much to talk about. => END

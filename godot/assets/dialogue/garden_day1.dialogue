@@ -59,8 +59,12 @@ Jessica: It's a compliment! Your face's harmony is... fascinating.
 do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_unusual")
 
 You: Thank you?
-Jessica: Yes, yes... Sorry I need to sketch that down... => END
+Jessica: Yes, yes... Sorry I need to sketch that down... 
+do State.characters[Types.Characters.Daughter].set_location(Types.Locations.None)
+=> END
 #TODO: The name remains ??? as we figure out her name later talking to Andrew.
+
+
 
 #3rd hour
 ~ grandson_start
@@ -89,5 +93,7 @@ Jason: Well, get used to it. This family is crazy.
 Jason: I better get going help mom and grandma.
 #DONE: hint - the teenage boy has a mom and a grandma
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_mom_grandma")
-You: Alright, see you later. => END
+You: Alright, see you later. 
+do State.characters[Types.Characters.Grandson].set_location(Types.Locations.None)
+=> END
 #TODO: His name remains ??? as we figure it out by knowing he has a mom and a grandma, and Vanda mentioned his name.

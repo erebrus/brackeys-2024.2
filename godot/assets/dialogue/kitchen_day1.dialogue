@@ -22,4 +22,10 @@ You: Thanks. Well I'll go then, try to find others. It was nice chatting to you!
 Vanda: I can say the same! If you see Jason, tell him to come help me, he's probably just on his phone as always...
 #DONE: hint - Vanda mentiones Jason
 do State.characters[Types.Characters.Grandson].find_name()
-You: Will do! => END
+You: Will do! 
+do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+=> END
+
+~ WifeOfFirstBorn_repeat
+Vanda: Sorry, but I'm a bit busy right now.
+Vanda: I have to help my mother-in-law with the preparations. => END

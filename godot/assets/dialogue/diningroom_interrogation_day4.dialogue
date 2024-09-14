@@ -22,7 +22,12 @@ Jessica: Are we cursed or something?
 	#TODO: hint - Jessica claims she heard Samantha going upstairs late at night while talikng to herself
 
 - Alright, thank you for your help.
-	Jessica: This is horrible... poor mom... => END
+	Jessica: This is horrible... poor mom... 
+	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	=> END
+
+~ Daughter_repeat
+Jessica: Please, I want to be left alone now.. => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Can we talk for a moment?
@@ -44,6 +49,11 @@ Stan: Y-yes, of course we can. => SonFromFirstMariageOfHeadOfFamily_interrogatio
 	#TODO: hint - Stan claims he saw Samantha going downstairs at night. 
 
 - Thank you for answering my questions.
-	Stan: This all got so werid... => END
+	Stan: This all got so werid... 
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	=> END
+
+~ SonFromFirstMariageOfHeadOfFamily_repeat
+Stan: Something is very wrong here... => END
 
 => END

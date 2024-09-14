@@ -25,7 +25,13 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_henry")
 
 - Thank you for your time.
-	Samantha: You're welcome. At least Henry and his dad are in the same place now. => END
+	Samantha: You're welcome. At least Henry and his dad are in the same place now. 
+	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
+	=> END
+
+~ WidowAfterSecondSon_repeat
+Samantha: 
+
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Hey Stan, I need to speak with you.
