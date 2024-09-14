@@ -3,24 +3,33 @@ extends Node
 @export var music_bus_volume:=-9.0
 @onready var menu_music: AudioStreamPlayer = $menu_music
 @onready var game_music: AudioStreamPlayer = $game_music
+@onready var murder_music: AudioStreamPlayer = $murder_music
+
+
 @onready var game_music_stream:AudioStreamSynchronized = game_music.stream
 var current_game_music_id=Types.GameMusic.CALM
 
-func fade_in_menu_music():
-	fade_in_music(menu_music)
+func fade_in_menu_music(time:float=1):
+	fade_in_music(menu_music,time)
 
-func fade_menu_music():
-	fade_music(menu_music,1)
+func fade_menu_music(time:float=1):
+	fade_music(menu_music, time)
 	
-func fade_in_game_music():
-	fade_in_music(game_music)
+func fade_in_game_music(time:float=1):
+	fade_in_music(game_music, time)
 
-func fade_game_music():
-	fade_music(game_music,1)
-	
+func fade_game_music(time:float=1):
+	fade_music(game_music, time)
+
+
+func fade_in_murder_music(time:float=1):
+	fade_in_music(game_music, time)
+
+func fade_murder_music(time:float=1):
+	fade_music(game_music, time)
+		
 func play_music(node:AudioStreamPlayer):
 	if not node.playing:
-		node.volume_db = -9
 		node.play()
 	
 func reset_synchronized_stream():

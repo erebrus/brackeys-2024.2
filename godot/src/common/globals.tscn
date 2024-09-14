@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rumvotveqal5"]
+[gd_scene load_steps=10 format=3 uid="uid://rumvotveqal5"]
 
 [ext_resource type="Script" path="res://src/common/globals.gd" id="1_noqpm"]
 [ext_resource type="Resource" uid="uid://ypf1uhmyb8a2" path="res://src/characters/unknown.tres" id="2_kp614"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bc5gcfvnimxvo" path="res://assets/music/dinner_v3.mp3" id="4_ibfvu"]
 [ext_resource type="AudioStream" uid="uid://ckafyrvdbw2oj" path="res://assets/music/solving_v2.mp3" id="5_b0smt"]
 [ext_resource type="AudioStream" uid="uid://w1xcpuvx8a6w" path="res://assets/music/menu.mp3" id="6_eujtg"]
+[ext_resource type="AudioStream" uid="uid://bl24wmnrcknih" path="res://assets/music/murder.mp3" id="8_uq4fq"]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_q1nu8"]
 stream_count = 3
@@ -31,4 +32,8 @@ stream = SubResource("AudioStreamSynchronized_q1nu8")
 [node name="menu_music" type="AudioStreamPlayer" parent="MusicManager"]
 process_mode = 3
 stream = ExtResource("6_eujtg")
+bus = &"Music"
+
+[node name="murder_music" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("8_uq4fq")
 bus = &"Music"
