@@ -53,8 +53,8 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 	Stan: If I can say something, I think Samantha seems weird.
 	Stan: Why go downstairs while mumbling? => END
 	#DONE: hint - Stan suspects Samantha
-  do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
-do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
+	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_repeat
