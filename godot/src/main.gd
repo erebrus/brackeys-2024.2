@@ -14,7 +14,9 @@ func _ready() -> void:
 	Events.time_changed.connect(func(x,y): $time_sfx.play())
 	_fade_in()
 	DialogueManager.show_dialogue_balloon(preload("res://assets/dialogue/intro.dialogue"), "start")
-
+	
+	get_viewport().physics_object_picking_sort = true
+	get_viewport().physics_object_picking_first_only = true
 	
 
 func _fade_in() -> void:
