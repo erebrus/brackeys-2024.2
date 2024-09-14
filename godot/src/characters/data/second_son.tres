@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bpny67vbcttlm"]
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cbk2y4tjri4ax"]
 
 [ext_resource type="Texture2D" uid="uid://bmwvok7mh5a4n" path="res://assets/gfx/portraits/second_son.png" id="1_a1q17"]
 [ext_resource type="Script" path="res://src/characters/character.gd" id="2_4vv3y"]

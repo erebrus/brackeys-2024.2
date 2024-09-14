@@ -3,10 +3,26 @@ class_name GameScene extends Node
 
 @export var dialogue: DialogueResource
 @export var location: Types.Locations
+@onready var ambience: AudioStreamPlayer = $ambience
 
 
 func _ready() -> void:
 	_setup_characters(self)
+	Logger.info("Entered location: %s" % Types.Locations.keys()[location])
+	Globals.music_manager.change_game_music_to(get_music_for_location(location))
+	Globals.music_manager.fade_in_stream(ambience, .5)
+	
+
+#TODO complete this
+func get_music_for_location(location:Types.Locations):
+	if State.current_day>1:
+		return Types.GameMusic.STORM
+	match location:
+		Types.Locations.Garden:
+			return Types.GameMusic.CALM
+		_:
+			return Types.GameMusic.DINING
+		 
 	
 
 func _setup_characters(node: Node) -> void:

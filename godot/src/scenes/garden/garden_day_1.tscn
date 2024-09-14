@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://be3u4hfjhsvqa"]
+[gd_scene load_steps=14 format=3 uid="uid://be3u4hfjhsvqa"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ur4nb"]
 [ext_resource type="Texture2D" uid="uid://q5x8dgy1r2yo" path="res://assets/gfx/day1GardenTest/layer4.png" id="2_0nkxn"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4lbph6mra7io" path="res://assets/gfx/characters/artist01.png" id="8_ka4a6"]
 [ext_resource type="Texture2D" uid="uid://d2i2od8a6n5n1" path="res://assets/gfx/characters/ruler01.png" id="10_jctat"]
 [ext_resource type="Texture2D" uid="uid://c4vba08hdo3et" path="res://assets/gfx/day1GardenTest/layer4_mansion.png" id="11_fn2kp"]
+[ext_resource type="AudioStream" uid="uid://r85gxngftq7m" path="res://assets/sfx/Garden_DayOne_Amb.mp3" id="13_l2761"]
 
 [node name="GardenDay1" instance=ExtResource("1_ur4nb")]
 dialogue = ExtResource("4_6vios")
@@ -105,6 +106,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_nwwoj")
 expand_mode = 2
+
+[node name="ambience" parent="." index="9"]
+stream = ExtResource("13_l2761")
 
 [editable path="GoToLivingRoom"]
 [editable path="GoToKitchen"]

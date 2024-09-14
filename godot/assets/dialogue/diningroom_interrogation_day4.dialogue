@@ -1,13 +1,49 @@
-~ start
+~ Daughter_start
+You: Hello Jessica.
+Jessica: Hello...
+Jessica: Are we cursed or something?
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue {{State.characters[Types.Characters.FirstBornSon].name}}.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+~ Daughter_interrogation3
+- Tell me, what were you doing yesterday evening? 
+	Jessica: I was in the kitchen with Angela and Vanda. 
+	#TODO: hint - Jessica claims to be with Angela and Vanda in the kitchen last evening
+	Jessica: Samantha was there too... well, kind of.
+	Jessica: She was being weird, going out to the garden in the rain, and then getting back in. 
+	Jessica: She was creepy, to be honest. 
+	#TODO: hint - Jessica claims that Samantha was being creepy and going in and out to the garden despite the rain
+	Jessica: Then when I was going upstairs with Angela and Vanda, I saw mom and Stan in the living room. => Daughter_interrogation3
+	#TODO: hint - Jessica claims she saw Olivia with Stan in the living room
+
+- Did you see or hear any arguments?
+	Jessica: No, everyone was very silent. I think we all were just scared of each other.
+	Jessica: But when I was in my room, I couldn't sleep at night, and I heard something.
+	Jessica: It was very late at night. I heard someone coming upstairs, talking.
+	Jessica: I think it was Samantha, mumbling to her husband again. => Daughter_interrogation3
+	#TODO: hint - Jessica claims she heard Samantha going upstairs late at night while talikng to herself
+
+- Alright, thank you for your help.
+	Jessica: This is horrible... poor mom... => END
+
+~ SonFromFirstMariageOfHeadOfFamily_start
+You: Can we talk for a moment?
+Stan: Y-yes, of course we can. => SonFromFirstMariageOfHeadOfFamily_interrogation3
+
+~ SonFromFirstMariageOfHeadOfFamily_interrogation3
+- What were you doing last evening?
+	Stan: I was sitting with Olivia in the living room.
+	#TODO: hint - Stan claims to spend evening with Olivia in the living room
+	Stan: Then when she went to the kitchen, I walked upstairs to bed.
+	#TODO: hint - Stan claims that Olivia went to the kitchen later in the evening.
+	Stan: I was there until morning. => SonFromFirstMariageOfHeadOfFamily_interrogation3
+
+- Did you notice anything unusual? 
+	Stan: Hmmm...
+	Stan: Actually, I think I did.
+	Stan: I was going to the batroom at night, and I saw Samantha at the end of the hallway. She was going downstairs.
+	Stan: She didn't even turn the light on. => SonFromFirstMariageOfHeadOfFamily_interrogation3
+	#TODO: hint - Stan claims he saw Samantha going downstairs at night. 
+
+- Thank you for answering my questions.
+	Stan: This all got so werid... => END
 
 => END

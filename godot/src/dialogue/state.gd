@@ -22,12 +22,14 @@ var current_day:= 1
 var current_time:= 1
 
 var clues_previous_count=0
+var family_tree_complete:= false
 
 func _ready() -> void:
 	verify_dialogue_files()
 	load_characters()
 	load_clues()
 	Events.dialogue_finished.connect(_on_dialogue_finished)
+	Events.family_tree_complete.connect(_on_family_tree_complete)
 	
 func verify_dialogue_files():
 	#TODO got through each file and check characters always exist
@@ -60,19 +62,23 @@ func load_clues():
 		Logger.debug(str(line))
 		clues[line[0]] = line[1]
 		
-		
-func change_time(day: int, time: int):
-	current_day = day
-	current_time = time
+	
+
+func advance_day() -> void:
+	Logger.info("advancing day")
+	current_day += 1
+	current_time = 1
+	Events.day_changed.emit(current_day)
 	Events.time_changed.emit(current_day, current_time)
 	
 
-func advance_time(time: int):
-	if time > current_time:
-		change_time(current_day, time)
-		
+func advance_time() -> void:
+	Logger.info("advancing time")
+	current_time += 1
+	Events.time_changed.emit(current_day, current_time)
+	
 
-func _on_dialogue_finished():
+func _check_clues_for_advancement() -> void:
 	var count = 0
 	for cid in Types.Characters.values():
 		if cid == Types.Characters.Unknown:
@@ -83,12 +89,21 @@ func _on_dialogue_finished():
 	Logger.info("clues count %d vs %s" % [count, clues_previous_count + Types.CLUE_COUNTS[Vector2i(current_day, current_time)]] )
 	
 	if count - clues_previous_count == Types.CLUE_COUNTS[Vector2i(current_day, current_time)]:
-		Logger.info("advancing time/day")
-		clues_previous_count = count
+		
 		if current_day == 1 and current_time < 3:
-			change_time(current_day, current_time+1)
-		else:
-			current_day += 1
-			current_time = 1
-			Events.day_changed.emit(current_day)
-			
+			clues_previous_count = count
+			advance_time()
+		else: 
+			if current_day != 1 or family_tree_complete:
+				clues_previous_count = count
+				Events.day_ended.emit()
+	
+
+func _on_family_tree_complete():
+	family_tree_complete = true
+	_check_clues_for_advancement() 
+	
+
+func _on_dialogue_finished():
+	_check_clues_for_advancement()
+	
