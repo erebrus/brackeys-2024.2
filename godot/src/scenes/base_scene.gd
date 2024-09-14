@@ -3,6 +3,7 @@ class_name GameScene extends Node
 
 @export var dialogue: DialogueResource
 @export var location: Types.Locations
+@onready var ambience: AudioStreamPlayer = $ambience
 
 
 func _ready() -> void:

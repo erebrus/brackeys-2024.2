@@ -6,10 +6,14 @@ extends Node
 
 func _ready() -> void:
 	Events.request_location_change.connect(change_scene)
-	
+	#current_scene.ambience.play()
+	Globals.music_manager.fade_in_stream(current_scene.ambience)
+
 
 func change_scene(location: Types.Locations) -> void:
 	# TODO: start fade to black
+	#Globals.music_manager.fade_stream(current_scene.ambience,.5)
+	current_scene.ambience.stop()
 	var target = choose_scene(location).instantiate()
 	
 	# TODO: wait until is black
@@ -18,10 +22,12 @@ func change_scene(location: Types.Locations) -> void:
 	add_child(target)
 	move_child(target, 0)
 	
+	#
 	await current_scene.tree_exited
 	current_scene = target
 	Logger.info("Entered location: %s" % Types.Locations.keys()[location])
 	Globals.music_manager.change_game_music_to(get_music_for_location(location))
+	Globals.music_manager.fade_in_stream(current_scene.ambience,.5)
 	# TODO: fade in
 	
 	

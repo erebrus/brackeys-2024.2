@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dr05enk8dxc4i"]
+[gd_scene load_steps=9 format=3 uid="uid://dr05enk8dxc4i"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_7wbku"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="2_3sn7w"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_dnnkp"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="3_dxuaj"]
 [ext_resource type="Texture2D" uid="uid://ci6xi6k0uaml3" path="res://assets/gfx/characters/scissors01.png" id="4_ot5b1"]
+[ext_resource type="AudioStream" uid="uid://bpci1e024fgde" path="res://assets/sfx/Kitchen_DayOne_Amb.mp3" id="7_vjudf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hdka6"]
 font_size = 48
@@ -64,6 +65,9 @@ texture = ExtResource("4_ot5b1")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WifeOfFirstBorn" index="1"]
 visible = false
 polygon = PackedVector2Array(-2, -93, 42, -150, 78, -155, 96, -84, 62, -55, 50, 27, 26, 55, 70, 142, 50, 212, -63, 200, -56, 143, -14, 60, -68, 50, -68, -23, -108, -55)
+
+[node name="ambience" parent="." index="4"]
+stream = ExtResource("7_vjudf")
 
 [editable path="GoToDiningRoom"]
 [editable path="GoToGarden"]
