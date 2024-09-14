@@ -41,6 +41,7 @@ func _ready():
 	
 func start_game():
 	in_game=true
+	State.reset()
 	
 	music_manager.fade_menu_music()
 	await get_tree().create_timer(1).timeout
@@ -48,6 +49,8 @@ func start_game():
 
 	get_tree().change_scene_to_file(GAME_SCENE_PATH)
 	music_manager.fade_in_game_music()
+	
+	
 
 
 	

@@ -1,97 +1,73 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfyt2iofmlpt0"]
+[gd_scene load_steps=10 format=3 uid="uid://drot47pmqhq10"]
 
-[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_iodyc"]
-[ext_resource type="Resource" uid="uid://0x3bogk7wbug" path="res://assets/dialogue/livingroom_day1.dialogue" id="2_yyl51"]
-[ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_f4bgw"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="4_4aadw"]
-[ext_resource type="Texture2D" uid="uid://dafae0032udak" path="res://assets/gfx/characters/screwdriver01.png" id="5_ju5e5"]
-[ext_resource type="Texture2D" uid="uid://dxcdya7c1gove" path="res://assets/gfx/characters/mouseTrap01.png" id="6_5up0q"]
-[ext_resource type="Texture2D" uid="uid://dhdopw1qkckm5" path="res://assets/gfx/characters/firstBorn01.png" id="7_rb0xi"]
-[ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="8_olsmj"]
-[ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="9_1djvj"]
+[ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_3e43y"]
+[ext_resource type="Resource" uid="uid://dds8n1cen4v8y" path="res://assets/dialogue/livingroom_interrogation_day2.dialogue" id="2_0mhcg"]
+[ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_oskyp"]
+[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="4_wtygu"]
+[ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="6_55tht"]
+[ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="7_6qt2u"]
+[ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="8_jcrpn"]
+[ext_resource type="Texture2D" uid="uid://cxl5n3a5x6i6b" path="res://assets/gfx/scenes/characters in Scene/placeholder3.png" id="8_slbyu"]
+[ext_resource type="AudioStream" uid="uid://d2xvphi7qtfaa" path="res://assets/sfx/LivingRoom_DayOne_Amb.mp3" id="9_jlhqx"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_j8we7"]
-font_size = 48
-
-[node name="LivingRoomDay2" instance=ExtResource("1_iodyc")]
-dialogue = ExtResource("2_yyl51")
+[node name="LivingRoomDay2" instance=ExtResource("1_3e43y")]
+dialogue = ExtResource("2_0mhcg")
 location = 1
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("3_f4bgw")
+texture = ExtResource("3_oskyp")
 
-[node name="Widow" parent="." index="1" instance=ExtResource("4_4aadw")]
-position = Vector2(1158, 767)
-character_id = 8
-
-[node name="Sprite2D" parent="Widow" index="0"]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_ju5e5")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Widow" index="1"]
-visible = false
-polygon = PackedVector2Array(-62, -37, -52, 126, -5, 153, 49, 148, 79, 115, 67, -38, 36, -51, 33, -157, -37, -144)
-
-[node name="Friend" parent="." index="2" instance=ExtResource("4_4aadw")]
-position = Vector2(697, 736)
-character_id = 10
-
-[node name="Sprite2D" parent="Friend" index="0"]
-position = Vector2(-100, 70)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("6_5up0q")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Friend" index="1"]
-visible = false
-polygon = PackedVector2Array(-172, -111, -194, -80, -190, 21, -207, 14, -215, 69, -189, 67, -191, 144, -173, 144, -183, 254, -91, 265, -33, 285, -2, 258, -6, -118)
-
-[node name="FirstBorn" parent="." index="3" instance=ExtResource("4_4aadw")]
-position = Vector2(1475, 696)
-character_id = 3
-
-[node name="Sprite2D" parent="FirstBorn" index="0"]
-position = Vector2(-100, 70)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("7_rb0xi")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FirstBorn" index="1"]
-visible = false
-polygon = PackedVector2Array(-204, -144, -203, -116, -145, -93, -150, 59, -187, 71, -187, 103, -152, 134, -165, 205, -163, 276, -207, 311, -111, 334, -51, 322, -57, 209, -80, 126, -49, 14, 18, -13, 16, -54, -88, -105, -91, -151, -153, -168)
-
-[node name="GoToDiningRoom" parent="." index="4" instance=ExtResource("8_olsmj")]
+[node name="GoToDiningRoom" parent="." index="1" instance=ExtResource("8_jcrpn")]
 position = Vector2(1472, 254)
 target_location = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToDiningRoom" index="0"]
-polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
+polygon = PackedVector2Array(278, -8, 286, 643, 491, 758, 473, -102)
 
-[node name="Label" type="Label" parent="GoToDiningRoom" index="1"]
-offset_left = -81.0
-offset_top = -3.0
-offset_right = 86.0
-offset_bottom = 20.0
-text = "GO TO DINING ROOM"
-label_settings = SubResource("LabelSettings_j8we7")
-
-[node name="GoToGarden" parent="." index="5" instance=ExtResource("8_olsmj")]
+[node name="GoToGarden" parent="." index="2" instance=ExtResource("8_jcrpn")]
 position = Vector2(106, 261)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
-polygon = PackedVector2Array(-97, -7, -105, 73, 437, 63, 442, -20)
+polygon = PackedVector2Array(-158, -124, -163, 808, 1, 692, 4, -34)
 
-[node name="Label" type="Label" parent="GoToGarden" index="1"]
-offset_left = -81.0
-offset_top = -3.0
-offset_right = 86.0
-offset_bottom = 20.0
-text = "GO TO GARDEN"
-label_settings = SubResource("LabelSettings_j8we7")
+[node name="FamilyHeadsWife" parent="." index="3" instance=ExtResource("4_wtygu")]
+character_id = 2
+
+[node name="Sprite2D" parent="FamilyHeadsWife" index="0"]
+position = Vector2(971, 544)
+texture = ExtResource("6_55tht")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FamilyHeadsWife" index="1"]
+position = Vector2(15, 202)
+polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+
+[node name="FirstBornSon" parent="." index="4" instance=ExtResource("4_wtygu")]
+character_id = 3
+
+[node name="Sprite2D" parent="FirstBornSon" index="0"]
+position = Vector2(971, 544)
+texture = ExtResource("7_6qt2u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FirstBornSon" index="1"]
+position = Vector2(354, 204)
+polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+
+[node name="Daughter" parent="." index="5" instance=ExtResource("4_wtygu")]
+character_id = 4
+
+[node name="Sprite2D" parent="Daughter" index="0"]
+position = Vector2(971, 544)
+texture = ExtResource("8_slbyu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Daughter" index="1"]
+position = Vector2(674, 211)
+polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
 
 [node name="ambience" parent="." index="6"]
-stream = ExtResource("9_1djvj")
+stream = ExtResource("9_jlhqx")
 
-[editable path="Widow"]
-[editable path="Friend"]
-[editable path="FirstBorn"]
 [editable path="GoToDiningRoom"]
 [editable path="GoToGarden"]
+[editable path="FamilyHeadsWife"]
+[editable path="FirstBornSon"]
+[editable path="Daughter"]
