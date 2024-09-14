@@ -128,9 +128,10 @@ Jason: You're new, by the way. You're not grandpa's another son, huh?
 #DONE: hint - Tom was married before and had a son
 do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day1_previous_marriage")
 You: Umm... no. I'm Angela's partner.
-Jason: Oh damn, auntie has a partner?! That's new. => grandson_continue3
 #DONE: hint - Angela is this boy's aunt
 do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_aunt")
+Jason: Oh damn, auntie has a partner?! That's new. => grandson_continue3
+
 #TODO: should we add this to Angela
 
 ~ grandson_continue3

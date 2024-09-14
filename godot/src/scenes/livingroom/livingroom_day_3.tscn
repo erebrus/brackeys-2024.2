@@ -1,13 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://6ho3yhye37h4"]
+[gd_scene load_steps=10 format=3 uid="uid://p16ehdy62mm1"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_gwvpt"]
 [ext_resource type="Resource" uid="uid://033favl3romc" path="res://assets/dialogue/livingroom_interrogation_day3.dialogue" id="2_nco2t"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_yqrpk"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="4_6ec3m"]
-[ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="5_sj3pf"]
-[ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="6_qlhmr"]
+[ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="4_6ec3m"]
+[ext_resource type="Texture2D" uid="uid://c8414vpiynmor" path="res://assets/gfx/scenes/characters in Scene/LivingRoomKnife03.png" id="6_7fa2o"]
+[ext_resource type="Texture2D" uid="uid://x3hlv3e43t0d" path="res://assets/gfx/scenes/characters in Scene/LivingRoomFirstBorn03.png" id="7_w1rq1"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="8_keyk1"]
-[ext_resource type="Texture2D" uid="uid://cxl5n3a5x6i6b" path="res://assets/gfx/scenes/characters in Scene/placeholder3.png" id="8_lseqs"]
+[ext_resource type="Texture2D" uid="uid://bu8eimaei04q" path="res://assets/gfx/scenes/characters in Scene/LivingRoomRuler03.png" id="8_lgd8j"]
 [ext_resource type="AudioStream" uid="uid://d2xvphi7qtfaa" path="res://assets/sfx/LivingRoom_DayOne_Amb.mp3" id="9_snayn"]
 
 [node name="LivingRoomDay3" instance=ExtResource("1_gwvpt")]
@@ -34,34 +34,31 @@ polygon = PackedVector2Array(-158, -124, -163, 808, 1, 692, 4, -34)
 character_id = 2
 
 [node name="Sprite2D" parent="FamilyHeadsWife" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("5_sj3pf")
+texture = ExtResource("6_7fa2o")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FamilyHeadsWife" index="1"]
 position = Vector2(15, 202)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(1340, 739, 1321, 639, 1413, 622, 1490, 574, 1459, 420, 1461, 328, 1326, 311, 1357, 407, 1372, 506, 1374, 582, 1278, 622, 1288, 721)
 
 [node name="FirstBornSon" parent="." index="4" instance=ExtResource("4_6ec3m")]
 character_id = 3
 
 [node name="Sprite2D" parent="FirstBornSon" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("6_qlhmr")
+texture = ExtResource("7_w1rq1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FirstBornSon" index="1"]
 position = Vector2(354, 204)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(341, 775, 296, 576, 330, 539, 331, 497, 378, 461, 292, 333, 344, 303, 365, 254, 262, 249, 218, 331, 115, 362, 122, 396, 195, 430, 221, 582, 211, 790, 280, 805)
 
 [node name="Grandson" parent="." index="5" instance=ExtResource("4_6ec3m")]
 character_id = 7
 
 [node name="Sprite2D" parent="Grandson" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("8_lseqs")
+texture = ExtResource("8_lgd8j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grandson" index="1"]
 position = Vector2(674, 211)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(486, 551, 575, 556, 588, 535, 618, 457, 546, 382, 493, 387, 500, 512)
 
 [node name="ambience" parent="." index="6"]
 stream = ExtResource("9_snayn")

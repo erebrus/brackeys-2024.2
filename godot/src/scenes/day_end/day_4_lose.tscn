@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://760y3s3mxvj"]
+
+[ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_iosci"]
+[ext_resource type="Resource" uid="uid://b0rhkulsdxisy" path="res://assets/dialogue/outro_day4_lose.dialogue" id="2_jlwrk"]
+[ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_05fm4"]
+[ext_resource type="Texture2D" uid="uid://c4shu7ufongsl" path="res://assets/gfx/scenes/PlierMurder.jpg" id="4_dkonk"]
+[ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="5_e8ua2"]
+
+[node name="DayEnd4Lose" instance=ExtResource("1_iosci")]
+dialogue_start = "start"
+night_timeout = 2.0
+intro = ExtResource("2_jlwrk")
+dialogue = null
+location = 1
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("3_05fm4")
+
+[node name="Overlay" type="ColorRect" parent="." index="1"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03032, 0.0288, 0.12, 1)
+
+[node name="Murder" type="TextureRect" parent="." index="2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_dkonk")
+
+[node name="ambience" parent="." index="3"]
+stream = ExtResource("5_e8ua2")
