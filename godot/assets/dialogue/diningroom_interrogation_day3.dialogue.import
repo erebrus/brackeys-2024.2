@@ -3,11 +3,12 @@
 importer="dialogue_manager_compiler_12"
 type="Resource"
 uid="uid://nsk0c85r7fci"
-valid=false
+path="res://.godot/imported/diningroom_interrogation_day3.dialogue-fb73bbafb73417bc9d03b0572cb1bc83.tres"
 
 [deps]
 
 source_file="res://assets/dialogue/diningroom_interrogation_day3.dialogue"
+dest_files=["res://.godot/imported/diningroom_interrogation_day3.dialogue-fb73bbafb73417bc9d03b0572cb1bc83.tres"]
 
 [params]
 
