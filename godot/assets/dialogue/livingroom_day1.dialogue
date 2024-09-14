@@ -23,8 +23,13 @@ Samantha: It's alright, everyone forgets.
 #DONE: hint - widow is stil mourning 
 do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_mourning")
 You: I um... I should be going. I'll see you at the dinner.
-Samantha: Yea... See you later... => END
+Samantha: Yea... See you later... 
+do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
+=> END
 #TODO: Her name remains ??? as we figure it out talking to Vanda.
+
+~ WidowAfterSecondSon_repeat
+Samantha: Please leave me alone with my husband... => END
 
 #2nd hour
 ~ friend_start
@@ -44,7 +49,9 @@ Frank: ...
 Frank: My bad.
 #DONE: hint - the money he makes is not legal
 do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_illegal_money")
-Frank: I should go. => END
+Frank: I should go. 
+do State.characters[Types.Characters.FriendOfTheFamily].set_location(Types.Locations.None)
+=> END
 #TODO: His name remaind ??? as we figure it out by talking to Samantha.
 
 #3rd hour
@@ -63,4 +70,10 @@ set State.characters[Types.Characters.FirstBornSon].is_known = true
 You: Angela.
 Andrew: Who would have thought that she could have a stable relationship... hm.
 You: Everyone is shocked, to be fair. 
-Andrew: Well, we have our reasons. Anyway, welcome to the family Taylor. => END
+Andrew: Well, we have our reasons. Anyway, welcome to the family Taylor. 
+do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
+=> END
+
+~ FirstBornSon_repeat
+Andrew: Have you heard this record? 
+Andrew: It's really good. I can show it to you later. => END

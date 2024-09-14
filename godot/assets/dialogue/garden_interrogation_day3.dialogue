@@ -22,8 +22,16 @@ Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interr
 	#DONE: hint - Andrew argued with Frank about the 2% shares he got from Tom's businesses.
 	do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("frank_day3_argue_andrew")
 	do State.characters[Types.Characters.FirstBornSon].set_dialogue("frank_day3_argue_andrew")
+
 - Thank you for your answers.
-	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already... => END
+	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already... 
+	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	=> END
+
+~ Daughter_repeat
+Jessica: My mom is devastated...
+Jessica: And so am I. => END
+
 
 ~ WifeOfFirstBorn_start
 You: Hello Vanda.
@@ -51,7 +59,13 @@ Vanda: What did we do to deserve it? => WifeOfFirstBorn_interrogation2
 	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("vanda_day3_money")
 
 - Thank you, if I have more questions, I'll find you later.
-	Vanda: Andrew didn't do it! I swear! => END
+	Vanda: Andrew didn't do it! I swear! 
+	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+	=> END
+
+~ WifeOfFirstBorn_repeat
+Vanda: I should be there for my mother-in-law... 
+Vanda: She needs lots of support now. => END
 
 ~ SisterOfWife_start
 You: I know we were all evening and night together, but I have to ask you a few questions anyway.
@@ -76,6 +90,11 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 - Alright, thank you, darling.
 	Angela: Of course. Do you have any suspects already?
 	You: That's confidencial.
-	Angela: Ugh, you're no fun. => END
-
+	Angela: Ugh, you're no fun. 
+	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 	=> END
+
+~ SisterOfWife_repeat
+Angela: If you don't want to tell me your suspicions, I'll go to comfort my sister. => END
+
+=> END
