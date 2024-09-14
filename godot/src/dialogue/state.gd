@@ -26,11 +26,11 @@ var family_tree_complete:= false
 
 func _ready() -> void:
 	verify_dialogue_files()
-	load_characters()
 	load_clues()
 	Events.dialogue_finished.connect(_on_dialogue_finished)
 	Events.family_tree_complete.connect(_on_family_tree_complete)
 	
+
 func verify_dialogue_files():
 	#TODO got through each file and check characters always exist
 	pass
@@ -61,8 +61,24 @@ func load_clues():
 			continue
 		Logger.debug(str(line))
 		clues[line[0]] = line[1]
-		
 	
+
+func reset() -> void:
+	load_characters()
+	var hidden_characters = [
+		Types.Characters.SisterOfWife,
+		Types.Characters.FriendOfTheFamily,
+		Types.Characters.Daughter,
+		Types.Characters.FirstBornSon,
+		Types.Characters.Grandson,
+		Types.Characters.SonFromFirstMariageOfHeadOfFamily,
+		
+	]
+	
+	for id in hidden_characters:
+		var character = characters[id]
+		character.set_location(Types.Locations.None)
+		
 
 func advance_day() -> void:
 	Logger.info("advancing day")
@@ -75,6 +91,17 @@ func advance_day() -> void:
 func advance_time() -> void:
 	Logger.info("advancing time")
 	current_time += 1
+	
+	match current_time:
+		2:
+			characters[Types.Characters.Daughter].set_location(Types.Locations.Garden)
+			characters[Types.Characters.SisterOfWife].set_location(Types.Locations.DiningRoom)
+			characters[Types.Characters.FriendOfTheFamily].set_location(Types.Locations.LivingRoom)
+		3:
+			characters[Types.Characters.FirstBornSon].set_location(Types.Locations.LivingRoom)
+			characters[Types.Characters.Grandson].set_location(Types.Locations.Garden)
+			characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_location(Types.Locations.DiningRoom)
+			
 	Events.time_changed.emit(current_day, current_time)
 	
 
