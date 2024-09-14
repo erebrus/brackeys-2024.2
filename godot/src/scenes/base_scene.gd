@@ -34,7 +34,7 @@ func _setup_characters(node: Node) -> void:
 			character.left_location.connect(_on_character_left.bind(child))
 			character.entered_location.connect(_on_character_entered.bind(child))
 			
-			if character.location != location:
+			if State.current_day == 1 and character.location != location:
 				child.hide()
 			
 		else:
