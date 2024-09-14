@@ -11,6 +11,7 @@ func _ready() -> void:
 	Events.request_location_change.connect(_on_location_change)
 	Events.day_ended.connect(_on_day_ended)
 	Events.day_changed.connect(_on_day_changed)
+	Events.time_changed.connect(func(x,y): $time_sfx.play())
 	_fade_in()
 	DialogueManager.show_dialogue_balloon(preload("res://assets/dialogue/intro.dialogue"), "start")
 

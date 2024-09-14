@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cp8o47i7d47r0"]
+[gd_scene load_steps=10 format=3 uid="uid://bm1wg8juistmn"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ia6sh"]
 [ext_resource type="Resource" uid="uid://1firsua3w8da" path="res://assets/dialogue/diningroom_interrogation_day2.dialogue" id="2_wn375"]
 [ext_resource type="Texture2D" uid="uid://cur6an5t3ifov" path="res://assets/gfx/scenes/Mirror01.jpg" id="4_8mwi1"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_82h1x"]
-[ext_resource type="PackedScene" uid="uid://bwfadg6rehyeq" path="res://src/scenes/clickable/character_trigger.tscn" id="5_87gft"]
-[ext_resource type="Texture2D" uid="uid://5i5nwfwjs7uh" path="res://assets/gfx/scenes/characters in Scene/placeholder1.png" id="6_xj2s8"]
-[ext_resource type="Texture2D" uid="uid://bca32w3j1lgt3" path="res://assets/gfx/scenes/characters in Scene/placeholder2.png" id="7_xn3yk"]
+[ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="5_87gft"]
+[ext_resource type="Texture2D" uid="uid://dl8b4h3sehvdq" path="res://assets/gfx/scenes/characters in Scene/DiningRoomWine02.png" id="6_jopol"]
+[ext_resource type="Texture2D" uid="uid://dmnjdwarmjtst" path="res://assets/gfx/scenes/characters in Scene/DiningRoomScissor02.png" id="7_1bvw3"]
+[ext_resource type="Texture2D" uid="uid://j7634lja1mbj" path="res://assets/gfx/scenes/characters in Scene/DiningRoomRuler02.png" id="8_dlsgc"]
 [ext_resource type="AudioStream" uid="uid://csqr5ti1b12hy" path="res://assets/sfx/DiningRoom_DayOne_Amb.mp3" id="8_jiqjn"]
-[ext_resource type="Texture2D" uid="uid://cxl5n3a5x6i6b" path="res://assets/gfx/scenes/characters in Scene/placeholder3.png" id="8_wiiak"]
 
 [node name="DiningRoomDay2" instance=ExtResource("1_ia6sh")]
 dialogue = ExtResource("2_wn375")
@@ -32,38 +32,34 @@ target_location = 3
 polygon = PackedVector2Array(1907, 150, 1501, -57, -255, -37, -271, 177)
 
 [node name="SisterOfWife" parent="." index="3" instance=ExtResource("5_87gft")]
-position = Vector2(527, -258)
 character_id = 5
 
 [node name="Sprite2D" parent="SisterOfWife" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("6_xj2s8")
+texture = ExtResource("6_jopol")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SisterOfWife" index="1"]
 position = Vector2(15, 202)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(337, 794, 334, 699, 321, 525, 370, 307, 421, 314, 484, 395, 503, 518, 491, 787, 450, 812, 373, 813)
 
 [node name="WifeOfFirstBorn" parent="." index="4" instance=ExtResource("5_87gft")]
 character_id = 6
 
 [node name="Sprite2D" parent="WifeOfFirstBorn" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("7_xn3yk")
+texture = ExtResource("7_1bvw3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WifeOfFirstBorn" index="1"]
 position = Vector2(354, 204)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(1153, 786, 1196, 656, 1050, 557, 1121, 489, 1135, 282, 1235, 339, 1192, 432, 1287, 455, 1276, 569, 1274, 735, 1228, 836)
 
 [node name="Grandson" parent="." index="5" instance=ExtResource("5_87gft")]
 character_id = 7
 
 [node name="Sprite2D" parent="Grandson" index="0"]
-position = Vector2(971, 544)
-texture = ExtResource("8_wiiak")
+texture = ExtResource("8_dlsgc")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grandson" index="1"]
 position = Vector2(674, 211)
-polygon = PackedVector2Array(630, 244, 690, 287, 718, 358, 675, 401, 597, 423, 514, 348, 556, 252)
+polygon = PackedVector2Array(831, 762, 821, 614, 824, 566, 762, 554, 686, 641, 769, 651, 768, 711, 720, 717, 720, 748)
 
 [node name="ambience" parent="." index="6"]
 stream = ExtResource("8_jiqjn")
