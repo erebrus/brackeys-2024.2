@@ -11,24 +11,19 @@ streams_count = 2
 stream_0/stream = ExtResource("4_tlb4c")
 stream_1/stream = ExtResource("5_kv7h5")
 
-[node name="ChoosePortraitPopup" type="PanelContainer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -77.5
-offset_right = 250.0
-offset_bottom = 77.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ChoosePortraitPopup" type="PopupPanel"]
+position = Vector2i(800, 446)
+size = Vector2i(319, 100)
+visible = true
 theme = ExtResource("1_n7ln5")
 script = ExtResource("1_6u0b6")
 PortraitScene = ExtResource("2_mw0xb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 289.0
+offset_bottom = 80.0
 size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="VBoxContainer"]
