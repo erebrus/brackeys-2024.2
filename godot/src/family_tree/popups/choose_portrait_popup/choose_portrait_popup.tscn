@@ -12,8 +12,8 @@ stream_0/stream = ExtResource("4_tlb4c")
 stream_1/stream = ExtResource("5_kv7h5")
 
 [node name="ChoosePortraitPopup" type="PopupPanel"]
-position = Vector2i(800, 446)
-size = Vector2i(319, 100)
+initial_position = 1
+size = Vector2i(1063, 586)
 visible = true
 theme = ExtResource("1_n7ln5")
 script = ExtResource("1_6u0b6")
@@ -22,8 +22,8 @@ PortraitScene = ExtResource("2_mw0xb")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 30.0
 offset_top = 20.0
-offset_right = 289.0
-offset_bottom = 80.0
+offset_right = 1033.0
+offset_bottom = 566.0
 size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -32,8 +32,20 @@ size_flags_horizontal = 4
 theme_type_variation = &"HeaderMedium"
 text = "Who is this?"
 
-[node name="PortraitContainer" type="GridContainer" parent="VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 3
+
+[node name="PortraitContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
