@@ -30,11 +30,11 @@ Samantha: Um, yes. => WidowAfterSecondSon_interrogation2
 - Thank you for your time.
 	Samantha: I hope Frank and Henry are together now.
 	Samantha: He would be so happy.
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
+	#do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	 => END
 
-~ WidowAfterSecondSon_repeat
-Samantha: Henry... he's the love of my life, you know? => END
+#~ WidowAfterSecondSon_repeat
+#Samantha: Henry... he's the love of my life, you know? => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Can we talk for a bit?
@@ -69,14 +69,14 @@ Stan: Yes of course. Someone is killing us here like flies... => SonFromFirstMar
 	Stan: If I may say something, I think Samantha seems weird.
 	#DONE: hint - Stan suspects Samantha
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
-	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	#do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 	Stan: Why go downstairs while mumbling? => END
 	
 
 => END
 
-~ SonFromFirstMariageOfHeadOfFamily_repeat
-Stan: Poor Frank, he didn't deserve that... => END
+#~ SonFromFirstMariageOfHeadOfFamily_repeat
+#Stan: Poor Frank, he didn't deserve that... => END
 
 ~ WifeOfFirstBorn_start
 You: Can we talk for a bit?
@@ -111,12 +111,12 @@ Vanda: Um, yes. => WifeOfFirstBorn_interrogation2
 
 - Thank you, if I have more questions, I'll find you later.
 	Vanda: Andrew didn't do it! I swear! 
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+	#do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
-~ WifeOfFirstBorn_repeat
-Vanda: I should be there for my mother-in-law... 
-Vanda: She needs lots of support now. => END
+#~ WifeOfFirstBorn_repeat
+#Vanda: I should be there for my mother-in-law... 
+#Vanda: She needs lots of support now. => END
 
 ~ SisterOfWife_start
 You: I know we were together all evening, but I have to ask you a few questions anyway.
@@ -149,10 +149,10 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 	Angela: Of course. Do you have any suspects already?
 	You: That's confidencial.
 	Angela: Ugh, you're no fun. 
-	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
+	#do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 	=> END
 
-~ SisterOfWife_repeat
-Angela: If you don't want to tell me your suspicions, I'll go to comfort my sister. => END
+#~ SisterOfWife_repeat
+#Angela: If you don't want to tell me your suspicions, I'll go to comfort my sister. => END
 
 => END

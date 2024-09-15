@@ -38,11 +38,11 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 
 - Thank you for your cooperation.
 	Olivia: Yeah… Please find whoever did this. 
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
+	#do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
-~ FamilyHeadsWife_repeat
-Olivia: My poor Tom... => END
+#~ FamilyHeadsWife_repeat
+#Olivia: My poor Tom... => END
 
 ~ FirstBornSon_start
 You: Can we talk for a moment?
@@ -77,11 +77,11 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
 	Andrew: No problem, Taylor. I hope I helped. 
-	do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
+	#do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
 	=> END
 
-~ FirstBornSon_repeat
-Andrew: I didn't expect to lose my father like this... => END
+#~ FirstBornSon_repeat
+#Andrew: I didn't expect to lose my father like this... => END
 
 ~ Daughter_start
 You: Hey Jessica, I'm sorry to interrupt, but I need to speak with you.
@@ -126,10 +126,10 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 - Thank you for your time, I'll leave you now.
 	Jessica: Thank you, I hope you find out who did this.
 	Jessica: My poor father... 
-	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	#do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
 	=> END
 
-~ Daughter_repeat
-Jessica: Please... Just let me be for a while... => END
+#~ Daughter_repeat
+#Jessica: Please... Just let me be for a while... => END
 
 => END

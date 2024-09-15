@@ -27,11 +27,11 @@ Jason: Damn, this family is crazy, huh? => Grandson_interrogation2
 
 - Alright, I think that's all for now.
 	Jason: Sure, no problem.
-	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
+	#do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
 	=> END
 
-~ Grandson_repeat
-Jason: Ehh, I really want to go home. => END
+#~ Grandson_repeat
+#Jason: Ehh, I really want to go home. => END
 
 ~ FamilyHeadsWife_start
 You: Olivia? I'm sorry to bother you once again, but you know the rules...
@@ -69,11 +69,11 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_suspect")
 	Olivia: He got very upset when my husband was spending all my moeny on those damn businesses, together with Frank.
 	Olivia: This man is not even in the family!
-	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
+	#do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
-~ FamilyHeadsWife_repeat
-Olivia: Please leave me alone. I need some space. => END
+#~ FamilyHeadsWife_repeat
+#Olivia: Please leave me alone. I need some space. => END
 
 ~ FirstBornSon_start
 You: Andrew I-
@@ -113,11 +113,11 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 - Alright, thanks for answering my questions.
 	Andrew: Please tell me you believe me!
 	You: I cannot promise you anything right now, Andrew. => END
-do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
+#do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
 => END
 
-~ FirstBornSon_repeat
-Andrew: I swear it wasn't me! I swear! => END
+#~ FirstBornSon_repeat
+#Andrew: I swear it wasn't me! I swear! => END
 
 ~ Daughter_start
 You: Jessica, you found the body, I need to talk to you.
@@ -148,11 +148,11 @@ Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interr
 
 - Thank you for your answers.
 	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already...
-	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	#do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
 	=> END
 
-~ Daughter_repeat
-Jessica: My mom is devastated...
-Jessica: And so am I. => END
+#~ Daughter_repeat
+#Jessica: My mom is devastated...
+#Jessica: And so am I. => END
 
 => END

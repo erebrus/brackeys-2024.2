@@ -47,11 +47,11 @@ Angela: Yea, yea, I know. You have to interrogate everyone... Ask away. => Siste
 
 - Thanks for your information.
 	Angela: Of course, my love. I hope you don't think I killed him. I didn't like him, but I would never do such thing.
-	do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
+	#do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 	=> END
 
-~ SisterOfWife_repeat
-Angela: I don't think I have anything more to add dear. => END
+#~ SisterOfWife_repeat
+#Angela: I don't think I have anything more to add dear. => END
 
 ~ WifeOfFirstBorn_start
 You: Um, excuse me Vanda.
@@ -99,11 +99,11 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 
 - Thank you for your answers. Please take care of yourself.
 	Vanda: I just need my pills... If that's all, I'll go grab them now.
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+	#do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
-~ WifeOfFirstBorn_repeat
-Vanda: I'm sorry, I need to calm down... => END
+#~ WifeOfFirstBorn_repeat
+#Vanda: I'm sorry, I need to calm down... => END
 
 ~ Grandson_start
 You: Hey Jason, I need to talk with you.
@@ -154,8 +154,8 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 
 - Alright, thank you for help.
 	Jason: Yea, whatever.
-do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
+#do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
 => END
 
-~ Grandson_repeat
-Jason: Huh? I really don't have anything else to add. => END
+#~ Grandson_repeat
+#Jason: Huh? I really don't have anything else to add. => END
