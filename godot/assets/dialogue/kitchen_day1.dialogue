@@ -19,7 +19,7 @@ do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samant
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_name()
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_name")
 	set State.characters[Types.Characters.WifeOfFirstBorn].is_known = true
-=> wife_of_firstborn_continue2
+	=> wife_of_firstborn_continue2
 
 - We've been together for a while now.
 	Vanda: Oh I'm so happy for you!
@@ -29,7 +29,7 @@ do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samant
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_name()
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_name")
 	set State.characters[Types.Characters.WifeOfFirstBorn].is_known = true
-=> wife_of_firstborn_continue2
+	=> wife_of_firstborn_continue2
 
 ~ wife_of_firstborn_continue2
 You: Likewise. Do you know where everyone else is? 
