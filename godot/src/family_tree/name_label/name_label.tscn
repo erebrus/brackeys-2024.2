@@ -1,27 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdr3iwyew1jjo"]
+[gd_scene load_steps=6 format=3 uid="uid://cdr3iwyew1jjo"]
 
 [ext_resource type="Script" path="res://src/family_tree/name_label/name_label.gd" id="1_lf1ty"]
-[ext_resource type="LabelSettings" uid="uid://1cctb0wneea1" path="res://src/family_tree/name_label/solved_font.tres" id="2_1t8ms"]
-[ext_resource type="LabelSettings" uid="uid://bnob0d6pp54bx" path="res://src/family_tree/name_label/guess_font.tres" id="2_6f5e7"]
+[ext_resource type="Texture2D" uid="uid://ddaaidcg4tlov" path="res://assets/gfx/ui/NameTag.png" id="1_wxj1n"]
+[ext_resource type="LabelSettings" path="res://src/family_tree/name_label/solved_font.tres" id="2_1t8ms"]
+[ext_resource type="LabelSettings" uid="uid://cq6mv3wf5iyh" path="res://src/family_tree/name_label/guess_font.tres" id="2_6f5e7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xt6mi"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-bg_color = Color(0.85, 0.755508, 0.6035, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.31, 0.275538, 0.2201, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnrjs"]
+texture = ExtResource("1_wxj1n")
 
 [node name="NameLabel" type="PanelContainer"]
-custom_minimum_size = Vector2(160, 0)
+custom_minimum_size = Vector2(160, 40)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -35,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_xt6mi")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nnrjs")
 script = ExtResource("1_lf1ty")
 solved_font = ExtResource("2_1t8ms")
 guess_font = ExtResource("2_6f5e7")

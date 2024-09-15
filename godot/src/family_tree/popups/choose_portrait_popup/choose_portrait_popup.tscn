@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxmvrcqgee7rj"]
+[gd_scene load_steps=5 format=3 uid="uid://dxmvrcqgee7rj"]
 
 [ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup/choose_portrait_popup.gd" id="1_6u0b6"]
+[ext_resource type="Texture2D" uid="uid://bnodlyagby2do" path="res://assets/gfx/ui/PopUp.png" id="1_fd1fc"]
 [ext_resource type="PackedScene" uid="uid://ctvm00qj8fk7f" path="res://src/family_tree/popups/choose_portrait_popup/portrait_select.tscn" id="2_mw0xb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oecuh"]
-bg_color = Color(0.113725, 0.133333, 0.160784, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orxtj"]
+texture = ExtResource("1_fd1fc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
 [node name="ChoosePortraitPopup" type="PanelContainer"]
 anchors_preset = 8
@@ -18,7 +23,7 @@ offset_right = 250.0
 offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_oecuh")
+theme_override_styles/panel = SubResource("StyleBoxTexture_orxtj")
 script = ExtResource("1_6u0b6")
 PortraitScene = ExtResource("2_mw0xb")
 
