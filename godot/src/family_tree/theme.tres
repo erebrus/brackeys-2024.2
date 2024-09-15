@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bk41ojufkf5px"]
+
+[ext_resource type="Texture2D" uid="uid://bnodlyagby2do" path="res://assets/gfx/ui/PopUp.png" id="1_pvmpr"]
+[ext_resource type="FontFile" uid="uid://dltiuxgv6gdwu" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_leb7t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqkeu"]
+content_margin_left = 30.0
+content_margin_right = 30.0
+texture = ExtResource("1_pvmpr")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[resource]
+default_font = ExtResource("2_leb7t")
+default_font_size = 20
+HeaderMedium/font_sizes/font_size = 32
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_yqkeu")

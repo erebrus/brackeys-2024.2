@@ -29,61 +29,61 @@ texture = ExtResource("3_3fblf")
 position = Vector2(1.22242, -226.7)
 scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
-default_color = Color(0.01, 0.01, 0.01, 1)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D14" type="Line2D" parent="." index="4"]
 position = Vector2(567.222, 148.3)
 scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
-default_color = Color(0.01, 0.01, 0.01, 1)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D15" type="Line2D" parent="." index="5"]
 position = Vector2(-140.778, 149.3)
 scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 693, 271)
-default_color = Color(0.01, 0.01, 0.01, 1)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D16" type="Line2D" parent="." index="6"]
 position = Vector2(-42.7776, 155.3)
 scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 571, 387)
-default_color = Color(0.01, 0.01, 0.01, 1)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D17" type="Line2D" parent="." index="7"]
 position = Vector2(315.222, -10.7)
 scale = Vector2(1.7, 1.7)
 points = PackedVector2Array(571, 271, 571, 381)
-default_color = Color(0.01, 0.01, 0.01, 1)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D18" type="Line2D" parent="." index="8"]
 position = Vector2(97.222, -226.7)
 scale = Vector2(1.7, 1.7)
-points = PackedVector2Array(571, 271, 571.177, 394.118)
-default_color = Color(0.01, 0.01, 0.01, 1)
+points = PackedVector2Array(571, 271, 571, 396)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D11" type="Line2D" parent="." index="9"]
 position = Vector2(219, -369)
 scale = Vector2(1.7, 1.7)
-points = PackedVector2Array(587, 323, 586.928, 271, 699, 271, 699, 315)
-default_color = Color(0.01, 0.01, 0.01, 1)
+points = PackedVector2Array(587, 323, 587, 271, 699, 271, 699, 323)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D19" type="Line2D" parent="." index="10"]
 position = Vector2(-199, -9)
 scale = Vector2(1.7, 1.7)
-points = PackedVector2Array(587, 323, 586.928, 271, 1006.47, 271.176, 1006.47, 341.176)
-default_color = Color(0.01, 0.01, 0.01, 1)
+points = PackedVector2Array(587, 323, 587, 271, 1006, 271, 1006, 323)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D13" type="Line2D" parent="." index="11"]
 position = Vector2(-741, -373)
 scale = Vector2(1.7, 1.7)
-points = PackedVector2Array(587, 323, 586.928, 271, 986, 271, 986, 323)
-default_color = Color(0.01, 0.01, 0.01, 1)
+points = PackedVector2Array(587, 323, 587, 271, 986, 271, 986, 323)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Line2D12" type="Line2D" parent="." index="12"]
 position = Vector2(-525, -229)
 scale = Vector2(1.7, 1.7)
-points = PackedVector2Array(587, 377, 586.928, 271, 856, 271)
-default_color = Color(0.01, 0.01, 0.01, 1)
+points = PackedVector2Array(587, 377, 587, 271, 856, 271)
+default_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="Portraits" parent="." index="13"]
 offset_left = 4.0
@@ -97,9 +97,9 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 828.5
-offset_top = 118.0
+offset_top = 117.0
 offset_right = 1020.5
-offset_bottom = 403.0
+offset_bottom = 402.0
 solution = 1
 
 [node name="FamilyHeadWife" parent="Portraits" index="1" instance=ExtResource("2_1hkqm")]
@@ -141,9 +141,9 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 1307.5
-offset_top = 113.0
+offset_top = 117.0
 offset_right = 1499.5
-offset_bottom = 398.0
+offset_bottom = 402.0
 solution = 5
 
 [node name="WifeOfFirstBornSon" parent="Portraits" index="5" instance=ExtResource("2_1hkqm")]
@@ -213,13 +213,4 @@ offset_bottom = 741.0
 solution = 11
 
 [node name="CluesPopup" parent="." index="16"]
-visible = true
-anchors_preset = 9
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-offset_left = 0.0
-offset_top = 0.0
 offset_right = 119.0
-grow_horizontal = 1
-grow_vertical = 2
