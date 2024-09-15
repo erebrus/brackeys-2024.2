@@ -25,7 +25,7 @@ Vanda: My poor Andrew... => WifeOfFirstBorn_interrogation3
 - How are you holding up?
 	Vanda: Barely...
 	Vanda: I don't know what I'll do now. I don't have a job, Jason is still at school...
-	Vanda: Maybe I have to ask for help my mother-in-law... I really don't know... => WifeOfFirstBorn_interrogation3
+	Vanda: Maybe I'll have to ask for help from my mother-in-law... I really don't know... => WifeOfFirstBorn_interrogation3
 
 - Thank you for your help.
 	Vanda: Please find who did it...
@@ -43,7 +43,7 @@ Samantha: Oh... it's you.
 Samantha: Yes, we can. => WidowAfterSecondSon_interrogation3
 
 ~ WidowAfterSecondSon_interrogation3
-- What were you doing last evening and night?
+- What were you doing yesterday evening and last night?
 	Samantha: I was... where was I?
 	Samantha: Oh, I was in the kitchen with Vanda, Angela and Jessica.
 	#DONE: hint - Samantha claims to be in the kitchen with Vanda, Angela and Jessica
