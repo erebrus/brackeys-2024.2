@@ -1,10 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://be3u4hfjhsvqa"]
+[gd_scene load_steps=11 format=3 uid="uid://be3u4hfjhsvqa"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_ur4nb"]
-[ext_resource type="Texture2D" uid="uid://q5x8dgy1r2yo" path="res://assets/gfx/day1GardenTest/layer4.png" id="2_0nkxn"]
+[ext_resource type="Texture2D" uid="uid://1obg51hj7pvo" path="res://assets/gfx/scenes/GardenDay.jpg" id="3_7rf3e"]
 [ext_resource type="Resource" uid="uid://cmrr3xb8dy5bv" path="res://assets/dialogue/garden_day1.dialogue" id="4_6vios"]
-[ext_resource type="Texture2D" uid="uid://bkkmpa1xgyd7f" path="res://assets/gfx/day1GardenTest/layer2.png" id="4_watnj"]
-[ext_resource type="Texture2D" uid="uid://dl6au6dlv02s1" path="res://assets/gfx/day1GardenTest/layer1.png" id="5_nwwoj"]
 [ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="6_g316i"]
 [ext_resource type="Texture2D" uid="uid://bvuw85lix5htr" path="res://assets/gfx/scenes/characters in Scene/GardenTomato01.png" id="6_t3nmg"]
 [ext_resource type="Texture2D" uid="uid://bhqf0mlnbcj40" path="res://assets/gfx/scenes/characters in Scene/GardenKnife01.png" id="7_wjt6t"]
@@ -17,14 +15,14 @@
 dialogue = ExtResource("4_6vios")
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("2_0nkxn")
+texture = ExtResource("3_7rf3e")
 
 [node name="GoToLivingRoom" parent="." index="1" instance=ExtResource("8_82y6x")]
 position = Vector2(960, 540)
 target_location = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToLivingRoom" index="0"]
-polygon = PackedVector2Array(-199, -174, -191, 21, 67, 66, 62, -153)
+polygon = PackedVector2Array(-199, -174, -191, 21, 138, 50, 142, -150)
 
 [node name="GoToKitchen" parent="." index="2" instance=ExtResource("8_82y6x")]
 position = Vector2(960, 540)
@@ -40,8 +38,9 @@ character_id = 1
 texture = ExtResource("6_t3nmg")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandpaTomato" index="1"]
+visible = false
 position = Vector2(655, 587)
-polygon = PackedVector2Array(-33, -45, -34, -73, -10, -73, -3, -53, 42, -40, 64, -4, 69, 28, 20, 60, -42, 64, -65, 35, -72, -18)
+polygon = PackedVector2Array(-68, -54, -30, -89, 28, -65, 45, -93, 71, -55, 92, -21, 86, 25, 61, 61, -42, 64, -87, 13, -68, -32)
 
 [node name="Wife" parent="." index="4" instance=ExtResource("6_g316i")]
 character_id = 2
@@ -50,8 +49,9 @@ character_id = 2
 texture = ExtResource("7_wjt6t")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wife" index="1"]
+visible = false
 position = Vector2(771, 569)
-polygon = PackedVector2Array(-31, -82, -36, -34, -32, 46, -20, 86, 8, 94, 43, 80, 36, 10, 28, -57, 12, -96, -12, -99)
+polygon = PackedVector2Array(-66, 77, 33, 91, 54, 68, 60, -33, 34, -64, 80, -81, 93, -115, -87, -122, -134, 2, -101, 24, -55, 0)
 
 [node name="Daughter" parent="." index="5" instance=ExtResource("6_g316i")]
 character_id = 4
@@ -75,25 +75,7 @@ visible = false
 position = Vector2(1, 0)
 polygon = PackedVector2Array(670, 643, 693, 532, 739, 506, 785, 512, 815, 562, 882, 580, 783, 614, 788, 652)
 
-[node name="Middleground" type="TextureRect" parent="." index="7"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_watnj")
-expand_mode = 2
-
-[node name="Foreground" type="TextureRect" parent="." index="8"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_nwwoj")
-expand_mode = 2
-
-[node name="ambience" parent="." index="9"]
+[node name="ambience" parent="." index="7"]
 stream = ExtResource("13_l2761")
 
 [editable path="GoToLivingRoom"]
