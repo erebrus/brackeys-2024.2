@@ -35,3 +35,6 @@ signal family_tree_requested(close:bool)
 signal show_tootip(locaation: Types.Locations)
 @warning_ignore("unused_signal")
 signal hide_tooltip
+
+@warning_ignore("unused_signal")
+signal retry_request
