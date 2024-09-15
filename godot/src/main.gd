@@ -3,6 +3,7 @@ extends Node
 @onready var current_scene: Node = %StartScene
 @onready var family_tree: FamilyTree = %FamilyTree
 @onready var overlay: Control = %Overlay
+@onready var tree_toggle: TextureButton = %TreeToggle
 
 var tween: Tween
 
@@ -14,8 +15,11 @@ func _ready() -> void:
 	Events.time_changed.connect(func(x,y): $time_sfx.play())
 	_fade_in()
 	DialogueManager.show_dialogue_balloon(preload("res://assets/dialogue/intro.dialogue"), "start")
-
-	
+	Events.family_tree_requested.connect(_on_family_tree_requested)
+	#family_tree.visibility_changed.connect(func():tree_toggle.button_pressed ==  family_tree.visible)
+func _on_family_tree_requested(close:=false):
+	await get_tree().process_frame
+	tree_toggle.set_pressed_no_signal (family_tree.visible)
 
 func _fade_in() -> void:
 	if tween != null:
@@ -127,3 +131,7 @@ func _on_day_changed(day) -> void:
 func _on_day_ended() -> void:
 	_change_scene(day_end_scene)
 	
+
+
+func _on_tree_toggle_toggled(toggled_on: bool) -> void:
+	family_tree.toggle_tree()
