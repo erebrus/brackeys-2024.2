@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://kfptpkucdj11"]
+
+[ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_edy63"]
+[ext_resource type="Script" path="res://src/scenes/day_end/end_game_check.gd" id="2_col01"]
+[ext_resource type="Resource" uid="uid://bxc1gsvvw7tra" path="res://assets/dialogue/accusations.dialogue" id="3_dwpxf"]
+[ext_resource type="Resource" uid="uid://bnhcitkai28vb" path="res://assets/dialogue/outro_day4_win.dialogue" id="3_k6t1j"]
+[ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="4_2pywh"]
+[ext_resource type="Resource" uid="uid://b0rhkulsdxisy" path="res://assets/dialogue/outro_day4_lose.dialogue" id="4_afr1d"]
+[ext_resource type="Texture2D" uid="uid://marfls1eco21" path="res://assets/gfx/scenes/BadEnding.jpg" id="5_k7wna"]
+[ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="6_f5230"]
+[ext_resource type="Texture2D" uid="uid://duyy1ytoenuq2" path="res://assets/gfx/scenes/GoodEnding.jpg" id="6_wjhfi"]
+[ext_resource type="AudioStream" uid="uid://cox7iudu7sd85" path="res://assets/sfx/Win.wav" id="10_jaecs"]
+[ext_resource type="AudioStream" uid="uid://vfquyvdeow71" path="res://assets/sfx/Lose.wav" id="11_3as3x"]
+
+[node name="DayEnd4" instance=ExtResource("1_edy63")]
+script = ExtResource("2_col01")
+win_intro = ExtResource("3_k6t1j")
+dialogue_start = "living_room_start"
+night_timeout = 2.0
+intro = ExtResource("4_afr1d")
+dialogue = ExtResource("3_dwpxf")
+location = 1
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("4_2pywh")
+
+[node name="Overlay" type="ColorRect" parent="." index="1"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03032, 0.0288, 0.12, 1)
+
+[node name="Murder" type="TextureRect" parent="." index="2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_k7wna")
+
+[node name="Win" type="TextureRect" parent="." index="3"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_wjhfi")
+
+[node name="ambience" parent="." index="4"]
+stream = ExtResource("6_f5230")
+
+[node name="win_sfx" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("10_jaecs")
+bus = &"Sound"
+
+[node name="death_sfx" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("11_3as3x")
+bus = &"Sound"

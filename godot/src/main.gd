@@ -77,11 +77,11 @@ func choose_scene(location: Types.Locations) -> GameScene:
 func day_end_scene() -> GameScene:
 	
 	var path = "res://src/scenes/day_end/day_%s.tscn"
-	if State.current_day == 4:
-		if State.win:
-			path = "res://src/scenes/day_end/day_%s_win.tscn"
-		else:
-			path = "res://src/scenes/day_end/day_%s_lose.tscn"
+	#if State.current_day == 4:
+		#if State.win:
+			#path = "res://src/scenes/day_end/day_%s_win.tscn"
+		#else:
+			#path = "res://src/scenes/day_end/day_%s_lose.tscn"
 	var scene = load(path % (State.current_day))
 	return scene.instantiate()
 	
