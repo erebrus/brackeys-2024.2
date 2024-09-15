@@ -129,6 +129,7 @@ func _check_clues_for_advancement() -> void:
 
 func _on_family_tree_complete():
 	family_tree_complete = true
+	Events.family_tree_requested.emit(false)
 	_check_clues_for_advancement() 
 	
 
