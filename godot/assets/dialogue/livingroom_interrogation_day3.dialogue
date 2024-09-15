@@ -20,6 +20,11 @@ Jason: Damn, this family is indeed grazy, huh? => Grandson_interrogation2
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day3_stan_jessica")
 	Jason: Then he went to his room, I went to the bathroom and went to bed. => Grandson_interrogation2
 
+- What do you think about your family?
+	Jason: I think I've stressed it enough already that we're all weird.
+	Jason: But honestly, I don't mind it as much. 
+	Jason: I just hope it all woulnd't happen, you know? => Grandson_interrogation2
+
 - Alright, I think that's all for now.
 	Jason: Sure, no problem.
 	do State.characters[Types.Characters.Grandson].set_dialogue("Grandson_repeat")
@@ -51,6 +56,11 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 - Did you hear anyone arguing or had an argument with someone?
 	Olivia: No, I did not.
 	Olivia: I heard people gossiping that Andrew did it, but it's not true. => FamilyHeadsWife_interrogation2
+
+- How would you describe your relationship with your kids?
+	Olivia: They are all so different, but I love every singe one of them.
+	Olivia: It's a shame we lost Henry so fast. It was a few years ago, I managed to heal from that already.
+	Olivia: But grownig up, they were all very close together. I really wished they would be like that as adults and then elders, but fate has decided differently. => FamilyHeadsWife_interrogation2
 
 - That's all I wanted to ask you for now.
 	Olivia: Does no one even suspect Stan?!
@@ -91,6 +101,13 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 	#DONE: hint - Samantha was in her zone while coming upstairs
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha_zone")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha_zone")
+
+- How are you feeling?
+	Andrew: I have no idea.
+	Andrew: It's too much for my nerves. I know you cannot be prepared for an unusual situation like this one, but it never crossed my mind that such tragedy may happen.
+	Andrew: I'm more worried about my wife and mom than myself. 
+	Andrew: They're both so sensitive. => FirstBornSon_interrogation2
+
 - Alright, thanks for answering my questions.
 	Andrew: Please tell me you believe me!
 	You: I cannot promise you anything now, Andrew. => END
