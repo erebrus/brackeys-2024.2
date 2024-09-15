@@ -109,11 +109,11 @@ func _input(event: InputEvent) -> void:
 		if event.pressed and event.keycode == KEY_G:
 			Events.day_ended.emit()
 		
-	if Input.is_action_just_pressed("end"):
-		State.current_day=4		
-		_on_day_ended()
-	if Input.is_action_just_pressed("win"):
-		State.win = not State.win
+	#if Input.is_action_just_pressed("end"):
+		#State.current_day=4		
+		#_on_day_ended()
+	#if Input.is_action_just_pressed("win"):
+		#State.win = not State.win
 	if Input.is_action_just_pressed("advance_time"):
 		debug_advance_time()
 
