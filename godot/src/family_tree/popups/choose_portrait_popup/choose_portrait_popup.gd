@@ -7,6 +7,8 @@ signal selected(character: Character)
 
 @onready var container: Container = %PortraitContainer
 
+var available: Array[Character]
+
 
 func _ready() -> void:
 	assert(PortraitScene != null)
@@ -28,9 +30,11 @@ func _add_portrait(character: Character) -> void:
 	var portrait = PortraitScene.instantiate()
 	portrait.character_id = character.id
 	portrait.clicked.connect(_on_portrait_clicked.bind(character))
-	character.portrait_found.connect(show_character.bind(character))
+	character.portrait_found.connect(_on_portrait_found.bind(character))
 	
-	if not character.portrait_available:
+	if character.portrait_available:
+		available.append(character)
+	else:
 		portrait.visible = false
 	
 	container.add_child(portrait)
@@ -58,3 +62,9 @@ func _on_portrait_clicked(character: Character) -> void:
 	selected.emit(character)
 	$sfx_pickup_portrait.play()
 	hide()
+
+
+func _on_portrait_found(character: Character) -> void:
+	if not available.has(character):
+		available.append(character)
+		show_character(character)
