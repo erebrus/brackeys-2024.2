@@ -23,6 +23,8 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 - Did you have any arguments with Tom recently?
 #DONE: hint - Samantha seems to turn every conversation to be about Henry.
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day2_henry")
+	#DONE: hint - Henry died because of the businesses he was investing in with Tom.
+	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("henry_cause")
 	Samantha: No, I could never do that to Henry's parents. => WidowAfterSecondSon_interrogation1
 	
 
