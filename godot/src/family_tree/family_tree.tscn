@@ -70,7 +70,6 @@ visible = false
 [node name="ChooseNamePopup" parent="." instance=ExtResource("6_nxtea")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 1
 
 [node name="CluesPopup" parent="." instance=ExtResource("4_7rarm")]
 unique_name_in_owner = true
