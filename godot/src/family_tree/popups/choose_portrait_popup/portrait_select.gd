@@ -28,6 +28,7 @@ func _ready() -> void:
 func _add_clue(clue_key: String) -> void:
 	var label = Label.new()
 	label.text = State.clues[clue_key]
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	%CluesContainer.add_child(label)
 	
 
