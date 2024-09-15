@@ -7,29 +7,29 @@ Olivia: [#crying] I... Yes... Go ahead... => FamilyHeadsWife_interrogation1
 - What were you doing yesterday after dinner?
 	#DONE: hint - Olivia went to bed with Tom after dinner.
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_bed")
-	Olivia: I went to bed with Tom, I was sleeping the whole night… I think he woke up to grab some water, he does that sometimes… =>  FamilyHeadsWife_interrogation1
+	Olivia: I went to bed with Tom, I was sleeping the whole night... I think he woke up to grab some water, he does that sometimes... =>  FamilyHeadsWife_interrogation1
 	
 
 - Did Tom have any enemies?
-	Olivia: N-no, I don’t think so…
+	Olivia: N-no, I don’t think so...
 	Olivia: He was investing in all those businesses, but I don’t think he made any enemies along the way.
 	#DONE: hint - Tom was investing in some unknown businesses
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_unknown")
 	#DONE: hint - Olivia didn't support those businesses
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_business")
 	You: What businesses? 
-	Olivia: I don’t even know! He was blowing money on them…  =>  FamilyHeadsWife_interrogation1
+	Olivia: I don’t even know! He was blowing money on them...  =>  FamilyHeadsWife_interrogation1
 	
 
 - I have to ask this question, have you guys argued recently?
-	Olivia: We… did actually.
-	Olivia: He told me that he invested a big sum to import some spices…
+	Olivia: We... did actually.
+	Olivia: He told me that he invested a big sum to import some spices...
 	Olivia: I got very upset and we had a fight. But nothing happened!
 	#DONE: hint - Tom invested big money recently and Olivia got upset, they had a fight
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_fight")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("tom_day2_investing_fight")
 	
-	Olivia: Even though he’s very… he was very irresponsible with money, I loved him. =>  FamilyHeadsWife_interrogation1
+	Olivia: Even though he’s very... he was very irresponsible with money, I loved him. =>  FamilyHeadsWife_interrogation1
 
 - How was your life with Tom?
 	Olivia: We spent so much time together. It was fantastic.
@@ -37,7 +37,7 @@ Olivia: [#crying] I... Yes... Go ahead... => FamilyHeadsWife_interrogation1
 	Olivia: I don't regret spending 50 years with him, it was all worth it, even though he could be a difficult person, our love never faded away. =>  FamilyHeadsWife_interrogation1
 
 - Thank you for your cooperation.
-	Olivia: Yeah… Please find whoever did this. 
+	Olivia: Yeah... Please find whoever did this. 
 	#do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
