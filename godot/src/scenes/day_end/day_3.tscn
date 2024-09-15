@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cekuw15jh0i56"]
+[gd_scene load_steps=7 format=3 uid="uid://btctvjhc4817a"]
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_t5sap"]
+[ext_resource type="Resource" uid="uid://bcqj2x1qv5ny6" path="res://assets/dialogue/intro_day4.dialogue" id="2_4t3ay"]
 [ext_resource type="Resource" uid="uid://cw87il2prt50c" path="res://assets/dialogue/outro_day3.dialogue" id="2_ud23r"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_iou3u"]
 [ext_resource type="Texture2D" uid="uid://c4shu7ufongsl" path="res://assets/gfx/scenes/PlierMurder.jpg" id="4_dhbn0"]
@@ -9,6 +10,7 @@
 [node name="DayEnd3" instance=ExtResource("1_t5sap")]
 dialogue_start = "living_room_start"
 night_timeout = 2.0
+intro = ExtResource("2_4t3ay")
 dialogue = ExtResource("2_ud23r")
 location = 1
 

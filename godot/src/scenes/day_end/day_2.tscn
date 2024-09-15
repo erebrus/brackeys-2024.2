@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b76ecpxbyrti6"]
+[gd_scene load_steps=7 format=3 uid="uid://uwxnyl066khf"]
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_6ts2b"]
+[ext_resource type="Resource" uid="uid://b0okt3gca4u0j" path="res://assets/dialogue/intro_day3.dialogue" id="2_cuprl"]
 [ext_resource type="Resource" uid="uid://cb7nflu4e53d0" path="res://assets/dialogue/outro_day2.dialogue" id="2_puuux"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_lld7p"]
 [ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="4_fnvw3"]
@@ -9,6 +10,7 @@
 [node name="DayEnd2" instance=ExtResource("1_6ts2b")]
 dialogue_start = "living_room_start"
 night_timeout = 2.0
+intro = ExtResource("2_cuprl")
 dialogue = ExtResource("2_puuux")
 location = 1
 
