@@ -27,6 +27,11 @@ func _input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("toggle_tree"):
 		toggle_tree()
+	
+	if event.is_action_pressed("scroll_down"):
+		clues_popup.scroll(20)
+	if event.is_action_pressed("scroll_up"):
+		clues_popup.scroll(-20)
 		
 func toggle_tree():
 		_close_popups()

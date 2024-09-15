@@ -57,11 +57,18 @@ theme_type_variation = &"HeaderMedium"
 theme_override_colors/font_color = Color(0.00784314, 0.117647, 0.352941, 1)
 text = "Notes"
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/margin_top = -3
 
-[node name="CluesContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/MarginContainer"]
+[node name="CluesContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = SubResource("Theme_fd287")

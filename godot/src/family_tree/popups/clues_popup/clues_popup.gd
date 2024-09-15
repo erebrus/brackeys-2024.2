@@ -23,6 +23,10 @@ func close() -> void:
 		child.queue_free()
 	
 
+func scroll(distance):
+	%ScrollContainer.scroll_vertical += distance
+	
+
 func _add_clue(clue_key: String) -> void:
 	var label = Label.new()
 	label.text = State.clues[clue_key]
