@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://760y3s3mxvj"]
+[gd_scene load_steps=8 format=3 uid="uid://760y3s3mxvj"]
 
 [ext_resource type="PackedScene" uid="uid://btketith84ctf" path="res://src/scenes/day_end/day_end.tscn" id="1_iosci"]
 [ext_resource type="Resource" uid="uid://b0rhkulsdxisy" path="res://assets/dialogue/outro_day4_lose.dialogue" id="2_jlwrk"]
+[ext_resource type="Script" path="res://src/scenes/day_end/day_4_lose.gd" id="2_uxqbv"]
 [ext_resource type="Texture2D" uid="uid://bmkg2j01brftk" path="res://assets/gfx/scenes/LivingRoomStorm.jpg" id="3_05fm4"]
-[ext_resource type="Texture2D" uid="uid://c4shu7ufongsl" path="res://assets/gfx/scenes/PlierMurder.jpg" id="4_dkonk"]
+[ext_resource type="Texture2D" uid="uid://marfls1eco21" path="res://assets/gfx/scenes/BadEnding.jpg" id="4_0vbu8"]
+[ext_resource type="AudioStream" uid="uid://vfquyvdeow71" path="res://assets/sfx/Lose.wav" id="5_1urrt"]
 [ext_resource type="AudioStream" uid="uid://g1sbodehpvho" path="res://assets/sfx/LivingRoom_DayTwo_Amb.mp3" id="5_e8ua2"]
 
 [node name="DayEnd4Lose" instance=ExtResource("1_iosci")]
+script = ExtResource("2_uxqbv")
 dialogue_start = "start"
 night_timeout = 2.0
 intro = ExtResource("2_jlwrk")
@@ -29,7 +32,12 @@ color = Color(0.03032, 0.0288, 0.12, 1)
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("4_dkonk")
+texture = ExtResource("4_0vbu8")
 
 [node name="ambience" parent="." index="3"]
 stream = ExtResource("5_e8ua2")
+
+[node name="death_sfx" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("5_1urrt")
+
+[connection signal="on_murder" from="." to="." method="_on_on_murder"]

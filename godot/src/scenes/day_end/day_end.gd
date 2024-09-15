@@ -1,10 +1,14 @@
 extends GameScene
+
+signal on_murder
+
 @export var dialogue_start:= "the_dining_room_party"
 
 @export var start_timeout:= 1.0
 @export var night_timeout:= 2.0
 @export var murder_timeout:= 1.0
 @export var murder_music_fade_in:= 0.2
+@export var murder_ambience_fade_in := 6.0
 @export var intro: DialogueResource
 
 var done := false
@@ -19,13 +23,14 @@ func _ready() -> void:
 		await Events.dialogue_finished
 	
 	Globals.music_manager.fade_game_music()
-	Globals.music_manager.fade_in_stream(ambience, 6)
+	Globals.music_manager.fade_in_stream(ambience, murder_ambience_fade_in)
 	
 	
 	var tween = create_tween()
 	tween.tween_property($Overlay, "modulate:a", 1, night_timeout)
 	
 	await tween.finished
+	on_murder.emit()
 	
 	Globals.music_manager.fade_in_murder_music(murder_music_fade_in)
 	$Murder.show()

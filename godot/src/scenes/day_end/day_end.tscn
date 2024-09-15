@@ -12,6 +12,7 @@ start_timeout = 1.0
 night_timeout = 3.0
 murder_timeout = 2.0
 murder_music_fade_in = 0.2
+murder_ambience_fade_in = 6.0
 intro = null
 dialogue = ExtResource("3_jttbv")
 location = 2
