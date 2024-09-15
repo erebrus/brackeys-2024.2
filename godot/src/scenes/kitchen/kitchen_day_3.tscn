@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0velgs8udh26"]
+[gd_scene load_steps=6 format=3 uid="uid://davh8icgq8wka"]
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_u7v4l"]
 [ext_resource type="Resource" uid="uid://ioc5dhntf2t1" path="res://assets/dialogue/kitchen_day1.dialogue" id="2_1dyul"]
@@ -22,9 +22,11 @@ polygon = PackedVector2Array(705, -672, 691, -168, 807, -145, 821, -717)
 
 [node name="GoToGarden" parent="." index="2" instance=ExtResource("4_53mpe")]
 position = Vector2(767, 588)
+monitoring = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
 polygon = PackedVector2Array(-62, -241, -52, 124, 419, 118, 416, -229, 308, -367, 167, -411, 40, -370)
+disabled = true
 
 [node name="ambience" parent="." index="3"]
 stream = ExtResource("9_o8fw2")

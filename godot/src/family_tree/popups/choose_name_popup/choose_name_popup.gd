@@ -56,5 +56,6 @@ func _input(event: InputEvent) -> void:
 
 func _on_name_clicked(character: Character) -> void:
 	selected.emit(character)
+	$sfx_pickup_portrait.play()
 	hide()
 	

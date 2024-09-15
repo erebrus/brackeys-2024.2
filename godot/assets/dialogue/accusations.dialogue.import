@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bxc1gsvvw7tra"
+path="res://.godot/imported/accusations.dialogue-4d4e1f618343bfba18a76cc910fd110c.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/accusations.dialogue"
+dest_files=["res://.godot/imported/accusations.dialogue-4d4e1f618343bfba18a76cc910fd110c.tres"]
+
+[params]
+
+defaults=true

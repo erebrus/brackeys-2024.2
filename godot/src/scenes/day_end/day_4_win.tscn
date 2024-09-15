@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_fbtie"]
 [ext_resource type="Script" path="res://src/scenes/day_end/day_4_win.gd" id="2_tahjo"]
 [ext_resource type="Resource" uid="uid://bnhcitkai28vb" path="res://assets/dialogue/outro_day4_win.dialogue" id="3_0y682"]
-[ext_resource type="Texture2D" uid="uid://1obg51hj7pvo" path="res://assets/gfx/scenes/GardenDay.jpg" id="4_4dxdb"]
+[ext_resource type="Texture2D" uid="uid://duyy1ytoenuq2" path="res://assets/gfx/scenes/GoodEnding.jpg" id="4_i2ik2"]
 [ext_resource type="AudioStream" uid="uid://cox7iudu7sd85" path="res://assets/sfx/Win.wav" id="5_gfevm"]
 
 [node name="DayEnd4Win" instance=ExtResource("1_fbtie")]
@@ -12,7 +12,7 @@ dialogue = ExtResource("3_0y682")
 location = 1
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("4_4dxdb")
+texture = ExtResource("4_i2ik2")
 
 [node name="ambience" parent="." index="1"]
 stream = ExtResource("5_gfevm")

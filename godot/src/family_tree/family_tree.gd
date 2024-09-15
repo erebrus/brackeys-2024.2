@@ -15,12 +15,16 @@ func _ready() -> void:
 func _on_family_tree_requested():
 		_close_popups()
 		visible = true
+		$sfx_open.play()
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_tree"):
 		_close_popups()
 		visible = not visible
-	
+		if visible:
+			$sfx_open.play()
+		else:
+			$sfx_close.play()
 
 func _find_portraits(node: Node) -> void:
 	for child in node.get_children():
