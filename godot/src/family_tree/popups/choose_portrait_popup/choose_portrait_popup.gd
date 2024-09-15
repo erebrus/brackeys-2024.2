@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Popup
 
 signal selected(character: Character)
 
@@ -8,11 +8,13 @@ signal selected(character: Character)
 @onready var container: Container = %PortraitContainer
 
 var available: Array[Character]
+var is_open:= false
 
 
 func _ready() -> void:
 	assert(PortraitScene != null)
 	
+	close_requested.connect(close)
 	Events.character_portrait_set.connect(hide_character)
 	Events.character_portrait_unset.connect(show_character)
 	
@@ -21,8 +23,14 @@ func _ready() -> void:
 		_add_portrait(character)
 	
 
+func open() -> void:
+	popup_centered()
+	is_open = true
+	
 func close() -> void:
-	selected.emit(null)
+	if is_open:
+		selected.emit(null)
+	is_open = false
 	hide()
 	
 
