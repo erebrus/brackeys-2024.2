@@ -44,7 +44,7 @@ Jason: Whatever, do your job I guess. => Grandson_interrogation3
 
 ~ Grandson_interrogation3
 - What were you doing yesterday evening?
-	Jason: I was agian in my room. My mom was really crazy about me not leaving it.
+	Jason: I was in my room again. My mom was really crazy about me not leaving it.
 	#DONE: hint - Jason claims to be in his room the whole evening
 	do State.characters[Types.Characters.Grandson].find_name_clue("jason_day4_room")
 	Jason: Late evening I went to the kitchen to grab something to eat.
