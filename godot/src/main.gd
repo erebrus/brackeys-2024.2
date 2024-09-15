@@ -93,21 +93,21 @@ func day_end_scene() -> GameScene:
 
 # TODO: remove
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_T:
-			var character = State.characters.values().front()
-			var all_clues = State.clues.keys()
-			for clue in all_clues:
-				if not character.name_clues.has(clue):
-					character.find_name_clue(clue)
-					State._on_dialogue_finished()
-					return
-		
-		if event.pressed and event.keycode == KEY_E:
-			Events.family_tree_complete.emit()
-		
-		if event.pressed and event.keycode == KEY_G:
-			Events.day_ended.emit()
+	#if event is InputEventKey:
+		#if event.pressed and event.keycode == KEY_T:
+			#var character = State.characters.values().front()
+			#var all_clues = State.clues.keys()
+			#for clue in all_clues:
+				#if not character.name_clues.has(clue):
+					#character.find_name_clue(clue)
+					#State._on_dialogue_finished()
+					#return
+		#
+		#if event.pressed and event.keycode == KEY_E:
+			#Events.family_tree_complete.emit()
+		#
+		#if event.pressed and event.keycode == KEY_G:
+			#Events.day_ended.emit()
 		
 	#if Input.is_action_just_pressed("end"):
 		#State.current_day=4		
