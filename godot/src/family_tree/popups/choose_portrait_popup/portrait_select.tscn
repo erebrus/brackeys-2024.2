@@ -1,18 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctvm00qj8fk7f"]
+[gd_scene load_steps=4 format=3 uid="uid://ctvm00qj8fk7f"]
 
 [ext_resource type="PackedScene" uid="uid://ccggktijkb35s" path="res://src/family_tree/portrait/portrait.tscn" id="1_ccgwl"]
 [ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup/portrait_select.gd" id="1_d3d37"]
 
-[node name="PortraitSelect" type="HBoxContainer"]
-size_flags_horizontal = 3
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tg3j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.88, 0.88, 0.88, 0.439216)
+
+[node name="PortraitSelect" type="PanelContainer"]
+offset_left = 548.0
+offset_right = 548.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4tg3j")
 script = ExtResource("1_d3d37")
 
-[node name="Portrait" parent="." instance=ExtResource("1_ccgwl")]
+[node name="PortraitSelect" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Portrait" parent="PortraitSelect" instance=ExtResource("1_ccgwl")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="CluesContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="PortraitSelect"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="CluesContainer" type="VBoxContainer" parent="PortraitSelect/MarginContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
