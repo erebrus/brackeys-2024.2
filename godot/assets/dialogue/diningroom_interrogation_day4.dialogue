@@ -1,7 +1,7 @@
 ~ Daughter_start
 You: Hello Jessica.
 Jessica: Hello...
-Jessica: Are we cursed or something?
+Jessica: Is this family cursed or something?
 
 ~ Daughter_interrogation3
 - Tell me, what were you doing yesterday evening? 
@@ -11,7 +11,7 @@ Jessica: Are we cursed or something?
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("jessica_day4_kitchen")
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("jessica_day4_kitchen")
 	Jessica: Samantha was there too... well, kind of.
-	Jessica: She was being weird, going out to the garden in the rain, and then getting back in. 
+	Jessica: She was being weird, going out to the garden in the rain, and then coming back in. 
 	Jessica: She was creepy, to be honest. 
 	#DONE: hint - Jessica claims that Samantha was being creepy and going in and out to the garden despite the rain
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day4_samantha")
@@ -34,9 +34,9 @@ Jessica: Are we cursed or something?
 	
 
 - Do your family reunions always include so much drama?
-	Jessica: Are you serious right now?
+	Jessica: Are you being serious right now?
 	Jessica: Ehh... Of course not.
-	Jessica: You just came to this family and say such thing! 
+	Jessica: You just met this family and you think it's ok to say such a thing? 
 	Jessica: You truly fit Angela... => Daughter_interrogation3
 
 - Alright, thank you for your help.
@@ -52,11 +52,11 @@ You: Can we talk for a moment?
 Stan: Y-yes, of course we can. => SonFromFirstMariageOfHeadOfFamily_interrogation3
 
 ~ SonFromFirstMariageOfHeadOfFamily_interrogation3
-- What were you doing last evening?
+- What were you doing yesterday evening?
 	Stan: I was sitting with Olivia in the living room.
 	#DONE: hint - Stan claims to spend evening with Olivia in the living room
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day4_olivia")
-	Stan: Then when she went to the kitchen, I walked upstairs to bed.
+	Stan: Then when she went to the kitchen, I went upstairs to bed.
 	#DONE: hint - Stan claims that Olivia went to the kitchen later in the evening.
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day4_olivia2")
 	
@@ -73,7 +73,7 @@ Stan: Y-yes, of course we can. => SonFromFirstMariageOfHeadOfFamily_interrogatio
 
 - How's the family treating you now?
 	Stan: Surprisingly, they're all nicer. 
-	Stan: That's sad that a chain of tragedies like that had to happen for us to find a common tongue...
+	Stan: It's sad that it took a chain of tragedies like this for us to find some common ground...
 	Stan: I hope that at least our relationships will be better after that. Dad would like it to happen. => SonFromFirstMariageOfHeadOfFamily_interrogation3
 
 - Thank you for answering my questions.
