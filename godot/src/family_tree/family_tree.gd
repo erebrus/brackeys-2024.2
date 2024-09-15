@@ -26,6 +26,9 @@ func _input(event: InputEvent) -> void:
 	if Globals.in_dialogue:
 		return
 	if event.is_action_pressed("toggle_tree"):
+		toggle_tree()
+		
+func toggle_tree():
 		_close_popups()
 		visible = not visible
 		if visible:
