@@ -4,26 +4,26 @@ You: Oh, there you are.
 Angela: Mhm, I found some good wine in Tom's storage. => SisterOfWife_continue
 
 ~ SisterOfWife_continue
-- Are you sure he won't notice it? 
+- Are you sure he won't notice? 
 #DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
-	Angela: Nonsense, he's too blind for that. I don't know how Olivia managed to spend 50 years with this man. => SisterOfWife_continue2
+	Angela: Nonsense, he's too blind for that. I don't know how Olivia managed put up with him for 50 years. => SisterOfWife_continue2
 	
 	=> SisterOfWife_continue2
 - I see you're enjoying yourself.
 	Angela: Of course I am! 
-	Angela: That's the least I could do here while visiting Olivia. 
+	Angela: It's the least I can do while visiting Olivia. 
 	#DONE: hint - Angela's sister spent 50 years with her husband, her name is Olivia
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name()
 	do State.characters[Types.Characters.FamilyHeadsWife].find_name_clue("olivia_50years")
-	Angela: I hope there will be some good quality vintage at the party. It's thier 50th marriage anniversary after all! => SisterOfWife_continue2
+	Angela: I hope there will be some good quality vintage at the party. It's their 50th marriage anniversary after all! => SisterOfWife_continue2
 	
 	=> SisterOfWife_continue2
 
 ~ SisterOfWife_continue2
 Angela: Anyway, did you meet everyone?
-You: From what I know, not yet.  
+You: I don't think so, not yet.  
 Angela: Well, you better get going then. 
 do State.characters[Types.Characters.SisterOfWife].set_dialogue("SisterOfWife_repeat")
 => END
@@ -55,10 +55,10 @@ set State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].is_know
 	Stan: Anyway... => son_from_first_marriage_continue2
 
 ~ son_from_first_marriage_continue2
-Stan: Please don't associate me with themm, though.
+Stan: Please don't associate me with.. them.
 #DONE: hint - Stan doesn't associate himself with the family
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_name_clue("stan_family")
-Stan: I'm not such a freak as they are. 
+Stan: I'm not as much of a freak. 
 do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 => END
 

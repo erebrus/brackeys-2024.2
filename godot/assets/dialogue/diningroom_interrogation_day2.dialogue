@@ -1,48 +1,48 @@
 ~ SisterOfWife_start
 You: Angela...
-Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_interrogation1
+Angela: Yea, yea, I know. You have to interrogate everyone... Ask away. => SisterOfWife_interrogation1
 
 ~ SisterOfWife_interrogation1
 - What did you do after dinner, but before you came to bed?
-	Angela: I was sitting at the fireplace, drinking wine. Surprisingly, Stan joined me.
+	Angela: I was sitting by the fireplace, drinking wine. Surprisingly, Stan joined me.
 	#DONE: hint - Angela and Stan were together at the fireplace.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_alibi_stan")
 	You: Stan? 
 	Angela: Yeah, I was surprised too. He doesn't usually talk to me.
-	Angela: Or anyone else from this family, to be honest...
+	Angela: Or anyone else in the family, to be honest...
 	#DONE: hint - Stan was left alone after Angela went to bed.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_alibi_stan2")
-	Angela: Anyway, I went to our room before he left, though. I don't know what was he doing after. 
+	Angela: Anyway, when I went back to our room he was still there. I don't know what he did after. 
 	
 	=> SisterOfWife_interrogation1
 
 - How was your relationship with Tom?
 	Angela: Ugh, I guess you can say it was okay.
-	Angela: Just okay. You know I didn't like him much. But I never wished him the worst.
+	Angela: Just okay. You know I didn't like him much, But I never wished any harm on him.
 	#DONE: hint - Angela didn't like Tom.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_dislike_tom")
 	You: Why didn't you like him?
 	#DONE: hint - Angela claims Tom was spending Olivia's money on the investments.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_investments")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela_day2_investments")
-	Angela: I think my sister deserved better, you know? Not someone who spent all her money on some shady businesses. 
+	Angela: I think my sister deserved better, you know? Not someone who spent all her money on shady businesses. 
 	
 	=> SisterOfWife_interrogation1
 
 - Did anything happen between you two recently?
-	Angela: Honestly, yes.
+	Angela: To tell you the truth, yes.
 	Angela: I didn't tell you, but he had borrowed some money from me. Quite a lot, actually.
-	Angela: I was asking him a few times, reminind him to give it all back.
+	Angela: I asked him a few times, reminding him to give it all back.
 	#DONE: hint - Tom borrowed lots of money from Angela and didn't give it back.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_lending")
-	Angela: But he was refusing, postponing, saying it'll all pay out soon.
+	Angela: But he kept refusing, postponing, saying it'll all pay out soon.
 	
 	Angela: Well now he's dead and I don't have my money. => SisterOfWife_interrogation1
 
 - You seem to not like Tom much, why?
-	Angela: Tom was always very bad with money. He thought he was an economist, but he was far from that.
-	Angela: Olivia gathered most of their wealth, it's majority a fruit of her work.
-	Angela: He was always just wasting it.
+	Angela: Tom was always very bad with money. He thought he was an economist, but he was far from it.
+	Angela: Olivia gathered most of their wealth, it's mostly the fruit of her labours.
+	Angela: He was always just blowing it.
 	Angela: She could have been so much better with someone else, yet she spent 50 years with him... => SisterOfWife_interrogation1
 
 - Thanks for your information.
@@ -51,7 +51,7 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	=> END
 
 ~ SisterOfWife_repeat
-Angela: I don't think I have anything more to add, dear. => END
+Angela: I don't think I have anything more to add dear. => END
 
 ~ WifeOfFirstBorn_start
 You: Um, excuse me Vanda.
@@ -64,7 +64,7 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 
 ~ WifeOfFirstBorn_interrogation1
 - Where did you go after the dinner?
-	Vanda: I helped Samantha in the kitchen... cleaning after the dinner.
+	Vanda: I helped Samantha in the kitchen... cleaning up after the dinner.
 	#DONE: hint - Vanda claims she and Samantha were cleaning after the dinner in the kitchen.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_alibi")
 	Vanda: Later I... went to bed...
@@ -78,7 +78,7 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 	Vanda: He was a good man... Really.
 	Vanda: But he made some stupid mistakes. And pulled my Andrew into them.
 	You: What do you mean? Can you elaborate?
-	Vanda: Andrew withdrawed all our money we had for Jason's college! Can you imagine?
+	Vanda: Andrew withdrew all our money we had for Jason's college! Can you imagine?
 	Vanda: To invest in the spice business with his father.
 	Vanda: Unbelivible.
 	#DONE: Andrew took all money for son's education to invest in businesses with his father.
@@ -89,16 +89,16 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 
 - Did you argue with Tom recently?
 	Vanda: No, I was always very respectful towards him.
-	Vanda: Me and Andrew always keep our problems between us, even if they involve other people. => WifeOfFirstBorn_interrogation1
+	Vanda: Me and Andrew always keep our problems between us, even if they involved other people. => WifeOfFirstBorn_interrogation1
 
 - Can you tell me more about Tom?
 	Vanda: He was a very lovely grandpa and father-in-law. 
-	Vanda: A little bit cheap sometimes, but it was alright. He was helping us anytime we needed it.
+	Vanda: A little bit cheap sometimes, but it was alright. He helped us anytime we needed it.
 	Vanda: Despite his poor money management skills, he was a good person, you know?
-	Vanda: Surely, I'll miss him... => WifeOfFirstBorn_interrogation1
+	Vanda: I'll surely miss him... => WifeOfFirstBorn_interrogation1
 
 - Thank you for your answers. Please take care of yourself.
-	Vanda: I just need my pills... If it's all, I'll go grab them now.
+	Vanda: I just need my pills... If that's all, I'll go grab them now.
 	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
@@ -107,9 +107,9 @@ Vanda: I'm sorry, I need to calm down... => END
 
 ~ Grandson_start
 You: Hey Jason, I need to talk with you.
-Jason: Umm, sure. Please at least treat me like an adult.
-Jason: My mom forbids me to see grandpa.
-You: She's probably right to not let you see him.
+Jason: Umm, sure. Can you at least treat me as an adult?
+Jason: My mom forbade me to see grandpa.
+You: She's probably right not to let you see him.
 #TODO tag
 Jason: [#defeated]  Whatever. => Grandson_interrogation1
 
@@ -121,7 +121,7 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 	Jason: Ughhh...
 	#DONE: hint - Jason claims he called his girlfrend after the celebration and then went to bed.
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day2_alibi")
-	Jason: I went to call my girlfrend. Then I was in bed, playing on my phone. 
+	Jason: I went to call my girlfrend. Then I went to bed and played on my phone. 
 	
 	=> Grandson_interrogation1
 
@@ -147,7 +147,7 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 	Jason: You're an adult and so stupid at the same time.
 	Jason: Have you seen our family?
 	Jason: Do we look normal to you? Everyone is weird here.
-	Jason: An aunt who mourns her husband for years, an uncle disliked by everyone, grandpa's brother who tries to bring whole family into a pyramid scheme?
+	Jason: An aunt who mourns her husband for years, an uncle disliked by everyone, grandpa's brother who tries to bring the whole family into a pyramid scheme?
 	Jason: Does it look normal to you?  
 	You: Right...
 	Jason: Ehh, adults. => Grandson_interrogation1

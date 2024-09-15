@@ -1,4 +1,4 @@
-extends PanelContainer
+extends PopupPanel
 
 signal selected(character: Character)
 
@@ -9,11 +9,13 @@ signal selected(character: Character)
 
 
 var available: Array[Character]
+var is_open:= false
 
 
 func _ready() -> void:
 	assert(NameScene != null)
 	
+	close_requested.connect(close)
 	Events.character_name_set.connect(hide_character)
 	Events.character_name_unset.connect(show_character)
 	
@@ -22,8 +24,15 @@ func _ready() -> void:
 		_add_name(character)
 	
 
+func open() -> void:
+	popup_centered()
+	is_open = true
+	
+
 func close() -> void:
-	selected.emit(null)
+	if is_open:
+		selected.emit(null)
+	is_open = false
 	hide()
 	
 

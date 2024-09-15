@@ -17,3 +17,4 @@ default_font = ExtResource("2_64vqg")
 default_font_size = 20
 HeaderMedium/font_sizes/font_size = 32
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yqkeu")
+PopupPanel/styles/panel = SubResource("StyleBoxTexture_yqkeu")

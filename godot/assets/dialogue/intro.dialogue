@@ -1,9 +1,9 @@
 ~ start
 
 The mansion is getting closer as you drive. 
-Sunrays reflect in the tall windows, some birds fly over the red rooftop.
-	It's the perfect setting for a few days at your partner's family house.
-	Celebrating the 50th anniversary of the wedding. 
+Sunrays reflect off of the tall windows, some birds fly over the red rooftop.
+	It's the perfect setting for a few days at your partner's family home.
+	Celebrating the 50th anniversary of her sister's wedding. 
 #You can just relax from work and enjoy the lavish mansion for a bit.
 do State.characters[Types.Characters.SisterOfWife].find_name()
 do State.characters[Types.Characters.SisterOfWife].find_portrait()

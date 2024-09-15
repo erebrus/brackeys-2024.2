@@ -2,7 +2,7 @@
 You: Samantha. I need to ask you a few questions.
 Samantha: Oh, it's you.
 #TODO tag
-Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_interrogation1
+Samantha: [#nervous] Yes, I suppose you have to. Go ahead. => WidowAfterSecondSon_interrogation1
 
 ~ WidowAfterSecondSon_interrogation1
 - What were you doing after the dinner? 
@@ -13,12 +13,12 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 	Samantha: That's all I think.
 	
 
-	You: What were you doing after the dishes were done?
-	Samantha: I went to bed, obviosuly.  => WidowAfterSecondSon_interrogation1
+	You: What did you do after the dishes were done?
+	Samantha: I went to bed, obviously.  => WidowAfterSecondSon_interrogation1
 
-- Can you tell me more about the relationship with your father-in-law?
+- Can you tell me more about your relationship with your father-in-law?
 	Samantha: Oh, he was the sweetest. I couldn't ask for a better father-in-law. 
-	Samantha: He allowed me to stay in the family even after Henry's death. => WidowAfterSecondSon_interrogation1
+	Samantha: He allowed me to stay a part of the family even after Henry's death. => WidowAfterSecondSon_interrogation1
 
 - Did you have any arguments with Tom recently?
 #DONE: hint - Samantha seems to turn every conversation to be about Henry.
@@ -29,7 +29,7 @@ Samantha: [#nervous] Yes, I guess you have to. Go ahead. => WidowAfterSecondSon_
 	
 
 - Thank you for your time.
-	Samantha: You're welcome. At least Henry and his dad are in the same place now. 
+	Samantha: You're welcome. At least Henry and his dad are together again. 
 	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	=> END
 
@@ -52,25 +52,25 @@ Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHea
 	
 
 - What was your relationship with Tom?
-	Stan: Well, he was my father... Even after my parents got divorced a long time ago.
+	Stan: Well, he was always a father to me... Even after my parents got divorced a long time ago.
 	#DONE: hint - No one liked Stan, except Tom.
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom")
-	Stan: He was always including me in his new family. 
+	Stan: He was always trying to include me in his new family. 
 	Stan: Even though no one else liked me here. => SonFromFirstMariageOfHeadOfFamily_interrogation1
 	
 
 - Many people here seem not to like you, why?
-	Stan: Because I'm Tom's son. But not from this current marriage, obviously. 
+	Stan: Because I'm Tom's son. But not from his current marriage, obviously. 
 	Stan: I don't know why they dislike me so much, honestly. 
-	Stan: I got used to it by now. Dad was always treating me the same way as his other kids. I couldn't complain.
-	Stan: My guess is that they simply didn't accept me as thier half-brother. And we just grew up like that, so it stayed this way even in our adulthood. => SonFromFirstMariageOfHeadOfFamily_interrogation1
+	Stan: I've gotten used to it by now. Dad was always treating me the same way as his other kids. I couldn't complain.
+	Stan: My guess is that they simply didn't accept me as their half-brother. And we just grew up like that, so it stayed that way even in adulthood. => SonFromFirstMariageOfHeadOfFamily_interrogation1
 
 - Did you have any fights or arguments recently?
 	Stan: We didn't have fights per se, but...
-	Stan: Well, my dad was not good with money. He was terrible at economy.
+	Stan: Well, my dad was not good with money. He was terrible at economics.
 	#DONE: hint - Stan tried to convince Tom to stop investing in illegal businesses.
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day2_tom_invest")
-	Stan: I was trying to tell him his investments were bad and just simply illegal, but he didn't listen.
+	Stan: I was trying to tell him his investments were bad and just straight up illegal, but he didn't listen.
 	Stan: We just had a heated discussion about his silly investment decisions. => SonFromFirstMariageOfHeadOfFamily_interrogation1
 	
 
@@ -80,17 +80,17 @@ Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHea
 	=> END
 
 ~ SonFromFirstMariageOfHeadOfFamily_repeat
-Stan: I cannot believe that... my father... => END
+Stan: I can't believe it... my father... => END
 
 ~ FriendOfTheFamily_start
-You: Hey, sorry to interrupt, but I need to talk with you.
-Frank: Oh right. You're the police. 
-Frank: Well, go on. => FriendOfTheFamily_interrogation1
+You: Hey, sorry to interrupt, but I need to talk to you.
+Frank: Oh right. You're with the police. 
+Frank: Well, go on then. => FriendOfTheFamily_interrogation1
 
 ~ FriendOfTheFamily_interrogation1
 - What were you doing after the celebrations?
 	Frank: I went to the garden to smoke a cigarette. 
-	Frank: I saw Jessica was there, but I think she didn't see me. 
+	Frank: I saw Jessica there, but I don't think she saw me. 
 	#DONE: hint - Frank went to the garden after celebration and then went to bed.
 	#DONE: hint - Frank he saw Jessica in the garden.
 
@@ -98,35 +98,35 @@ Frank: Well, go on. => FriendOfTheFamily_interrogation1
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_jessica")
 	#DONE: hint - Frank claims to have seen Stan going upstairs. 
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_stan")
-	You: What did you do after? 
-	Frank: I went upstairs. I saw Stan going there too. => FriendOfTheFamily_interrogation1
+	You: What did you do after that? 
+	Frank: I went upstairs. I saw Stan heading up too. => FriendOfTheFamily_interrogation1
 	
 
 
 - How would you describe your relationship with your brother?
-	Frank: It was good, really.
+	Frank: It was good.
 	#DONE: hint - Frank introduced Tom to investing into the illegal spice businesses.
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_tom_investing")
 	Frank: We were both very into the spice business, you know?
 	Frank: I actually introduced it to him. => FriendOfTheFamily_interrogation1
 	
 
-- Did anyting happen between you both recently?
-	Frank: No, nothing. 
-	Frank: We barely argued in general.
+- Did anyting happen between you two recently?
+	Frank: No, not really. 
+	Frank: We never argued.
 	#DONE: hint - Frank seems to have a crush on Olivia.
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day2_olivia")
-	Frank: Sometimes he would scold me that I looked at his wife for too long, but...
+	Frank: Sometimes he would scold me for staring at his wife for too long, but...
 	Frank: What can I say, she's a beautiful woman. => FriendOfTheFamily_interrogation1
 	
 
 - Thank you, if I have more questions for you, I'll let you know.
-	Frank: Of course. Hope you can find this person who did that.
+	Frank: Of course. Hope you can catch the person who did this.
 	Frank: My brother deserved better than that... 
 	do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("FriendOfTheFamily_repeat")
 	=> END
 
 ~ FriendOfTheFamily_repeat
-Frank: I'll miss him deeply... => END
+Frank: I'll miss him dearly... => END
 
 => END

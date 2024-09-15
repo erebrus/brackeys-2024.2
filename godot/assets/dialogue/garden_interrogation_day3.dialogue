@@ -12,20 +12,22 @@ Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interr
 	Jessica: With my mom and brother. We spent all evening together.
 	#DONE: hint - Jessica claims she spent the evening with her Olivia and Andrew.
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day3_evening")
-	Jessica: Then I went to bed, Jason saw me going to my room. He was waiting at the batroom door. => Daughter_interrogation2
 	#DONE: hint - Jessica claims she went to bed after, and that Jason saw her.
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day3_jason")
+	Jessica: Then I went to bed, Jason saw me going to my room. He was waiting at the batroom door. => Daughter_interrogation2
+	
 
 - Did you argue with anyone yesterday?
 	Jessica: N-no! I did hear some arguments though.
 	You: Tell me more about it.
 	Jessica: I heard Andrew being upset... He was screaming and shouting about 2% of shares he got after dad's murder.
 	Jessica: Apparently everyone knew about the 2%, but not him. He hoped for more.
-	You: Who was he arguing with?
-	Jessica: Uncle Frank. => Daughter_interrogation2
 	#DONE: hint - Andrew argued with Frank about the 2% shares he got from Tom's businesses.
 	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day3_argue_andrew")
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("frank_day3_argue_andrew")
+	You: Who was he arguing with?
+	Jessica: Uncle Frank. => Daughter_interrogation2
+	
 
 - Thank you for your answers.
 	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already...
@@ -49,18 +51,20 @@ Vanda: What did we do to deserve it? => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims to spend the evening with Samantha
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_samantha")
 	You: What did you do after that?
-	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_bed")
+	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
+	
 
 - Did you had any confrontation yesterday with anyone?
 	Vanda: No, not really.
 	Vanda: When Andrew came to bed, we spoke about the money.
 	Vanda: He just told me he wished to receive more from his dad. Because, he took all of our money to invest in his shady businesses.
 	Vanda: He was just disappointed, but he wouldn't hurt a fly!
-	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_money")
+	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
+	
 
 - Thank you, if I have more questions, I'll find you later.
 	Vanda: Andrew didn't do it! I swear!
@@ -86,10 +90,11 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 	#DONE: hint - Angela claims that Samantha and Vanda spent an evening in the kitchen
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen1")
 	Angela: But when Vanda left, she was just sitting there.
-	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
 	#DONE: hint - Angela claims Samantha remained in the kitchen after Vanda left
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen2")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("angela_day3_kitchen2")
+	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
+	
 
 - Alright, thank you, darling.
 	Angela: Of course. Do you have any suspects already?
