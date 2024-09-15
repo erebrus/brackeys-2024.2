@@ -22,6 +22,8 @@ signal day_ended
 signal request_location_change(target: Types.Locations)
 
 @warning_ignore("unused_signal")
+signal dialogue_started()
+@warning_ignore("unused_signal")
 signal dialogue_finished()
 
 @warning_ignore("unused_signal")

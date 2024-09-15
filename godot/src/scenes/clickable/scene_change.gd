@@ -13,5 +13,7 @@ func _ready() -> void:
 	
 
 func _on_clicked() -> void:
+	if Globals.in_dialogue:
+		return
 	Logger.info("Clicked location change: %s" % Types.Locations.keys()[target_location])
 	Events.request_location_change.emit(target_location)

@@ -11,6 +11,7 @@ var config:ConfigFile
 
 var debug_build := false
 var in_game:=false
+var in_dialogue:=false
 
 var music_on:=true:
 	set(v):
@@ -37,6 +38,8 @@ func _ready():
 	_init_logger()
 	Logger.info("Starting menu music")
 	music_manager.fade_in_menu_music()
+	Events.dialogue_finished.connect(func():in_dialogue=false)
+	Events.dialogue_started.connect(func():in_dialogue=true)
 	#start_game()
 	
 func start_game():

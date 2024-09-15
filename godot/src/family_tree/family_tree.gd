@@ -13,11 +13,13 @@ func _ready() -> void:
 	Events.family_tree_requested.connect(_on_family_tree_requested )
 
 func _on_family_tree_requested():
-		_close_popups()
-		visible = true
-		$sfx_open.play()
+	_close_popups()
+	visible = true
+	$sfx_open.play()
 		
 func _input(event: InputEvent) -> void:
+	if Globals.in_dialogue:
+		return
 	if event.is_action_pressed("toggle_tree"):
 		_close_popups()
 		visible = not visible
@@ -30,7 +32,7 @@ func _find_portraits(node: Node) -> void:
 	for child in node.get_children():
 		if child is TreePortrait:
 			portraits.append(child)
-			
+
 			child.portrait_clicked.connect(_on_portrait_clicked.bind(child))
 			child.name_label_clicked.connect(_on_name_clicked.bind(child))
 			child.mouse_entered.connect(_on_portrait_mouse_entered.bind(child))

@@ -38,6 +38,7 @@ alignment = 2
 layout_mode = 2
 
 [node name="Clock" parent="HUD/Top" instance=ExtResource("3_c5k8h")]
+visible = false
 layout_mode = 2
 
 [node name="Overlay" type="ColorRect" parent="."]

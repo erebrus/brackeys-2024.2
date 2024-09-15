@@ -43,6 +43,8 @@ func _setup_characters(node: Node) -> void:
 	
 
 func start_dialogue_with(character_id: Types.Characters) -> void:
+	if Globals.in_dialogue:
+		return
 	var character = State.characters[character_id]
 	character.find_portrait()
 	
