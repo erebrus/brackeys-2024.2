@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bpy5ncwwln4c1" path="res://src/scenes/base_scene.tscn" id="1_c1ly0"]
 [ext_resource type="Resource" uid="uid://b6hg18rx0pllt" path="res://assets/dialogue/kitchen_interrogation_day2.dialogue" id="2_bdx0q"]
-[ext_resource type="Texture2D" uid="uid://dwt00o1ju53q3" path="res://assets/gfx/scenes/KitchenSunny.jpg" id="3_m0qbt"]
+[ext_resource type="Texture2D" uid="uid://cpk0gwi51xoyh" path="res://assets/gfx/scenes/KitchenNight.jpg" id="3_a2151"]
 [ext_resource type="PackedScene" uid="uid://dnmt80lx7jrts" path="res://src/scenes/clickable/scene_change.tscn" id="4_0sdaa"]
 [ext_resource type="PackedScene" uid="uid://cn52laysvt77h" path="res://src/scenes/clickable/character_trigger.tscn" id="5_vm06b"]
 [ext_resource type="Texture2D" uid="uid://bvfgg5rgq320c" path="res://assets/gfx/scenes/characters in Scene/KitchenMouseTrap02.png" id="6_t5g75"]
@@ -15,7 +15,7 @@ dialogue = ExtResource("2_bdx0q")
 location = 3
 
 [node name="Background" parent="." index="0"]
-texture = ExtResource("3_m0qbt")
+texture = ExtResource("3_a2151")
 
 [node name="GoToDiningRoom" parent="." index="1" instance=ExtResource("4_0sdaa")]
 position = Vector2(767, 988)
