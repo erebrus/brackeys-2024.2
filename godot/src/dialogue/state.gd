@@ -15,6 +15,7 @@ const CHARACTERS = [
 	preload("res://src/characters/data/wife_of_first_son.tres")
 ]
 
+var debug_clue_count:=0
 var character:String = "Test"
 var characters: Dictionary # [Types.Characters, Character]
 var clues:Dictionary={}
@@ -106,13 +107,19 @@ func advance_time() -> void:
 	Events.time_changed.emit(current_day, current_time)
 	
 
-func _check_clues_for_advancement() -> void:
-	var count = 0
+func count_clues():
+	if debug_clue_count>0:
+		return debug_clue_count
+	var count= 0
 	for cid in Types.Characters.values():
 		if cid == Types.Characters.Unknown:
 			continue
 		var c = characters[cid]
 		count+=c.name_clues.size() + c.portrait_clues.size()
+	return count
+
+func _check_clues_for_advancement() -> void:
+	var count = count_clues()
 		
 	Logger.info("clues count %d vs %s" % [count, clues_previous_count + Types.CLUE_COUNTS[Vector2i(current_day, current_time)]] )
 	
