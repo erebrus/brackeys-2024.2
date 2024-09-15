@@ -14,11 +14,12 @@ func _ready() -> void:
 
 func _on_family_tree_requested(close:=false):
 	_close_popups()
-	if not close:
+	if not close and not visible:
 		visible = true
 		$sfx_open.play()
-	else:
-		visible = true
+		return
+	if close and visible:
+		visible = false
 		$sfx_close.play()
 		
 func _input(event: InputEvent) -> void:
