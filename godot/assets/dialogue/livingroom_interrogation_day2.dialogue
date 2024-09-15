@@ -30,6 +30,12 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("tom_day2_investing_fight")
 	
 	Olivia: Even though he’s very… he was very irresponsible with money, I loved this man. =>  FamilyHeadsWife_interrogation1
+
+- How was your life with Tom?
+	Olivia: We spent so much time together. It was fantastic.
+	Olivia: I know that not everyone was happy with our relationship, like my sister. But I love this man.
+	Olivia: I don't regret spending 50 days with him, it was all worht it, even though he could be a difficult person, the love never faded away. =>  FamilyHeadsWife_interrogation1
+
 - Thank you for your cooperation.
 	Olivia: Yeah… Please find whoever did that. 
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
@@ -63,7 +69,11 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 	You: What were you investing in? 
 	
 	Andrew: The same stuff as my father did. We were both importing some spices. => FirstBornSon_interrogation1
-	
+
+- Can you tell me how Tom was as your dad? 
+	Andrew: He was the best, really...
+	Andrew: My parents were always very happy together. And that happiness was transferred to us too.
+	Andrew: My sister would probably say the same, he was a great dad. => FirstBornSon_interrogation1
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
 	Andrew: No problem, Taylor. I hope I can help. 
@@ -107,7 +117,11 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("jessica_day2_nothing")
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_returns")
 	Jessica: He gave 2% of his shares in the spice business to Andrew, but couldn't find some spare change for me. => Daughter_interrogation1
-	
+
+- What type of father was Tom?
+	Jessica: He was alright... I think he liked Andrew more than me.
+	Jessica: He's always been dad's favorite, you know? Even now when we're adults.
+	Jessica: I got used to that, but of course I still loved him deeply. => Daughter_interrogation1
 
 - Thank you for your time, I'll leave you now.
 	Jessica: Thank you, I hope you'll find out who did it.
