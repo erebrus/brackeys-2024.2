@@ -70,7 +70,7 @@ func _init_logger():
 
 
 func do_lose():
-	get_tree().quit()
+	Events.retry_request.emit()
 
 func do_win():
 	get_tree().quit()
