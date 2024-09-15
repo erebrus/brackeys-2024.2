@@ -14,7 +14,8 @@ Tom: Angela says you have some dangerous job, huh? => family_head_continue
 	Tom: Sounds quite dangerous to me!
 	You: Heh... Anyway, it was nice talking to you. I should go meet others.
 	Tom: Well, enjoy the stay at the mansion! Hope you and Stan will become friends! I really wish they'd like my son more...
-	#TODO: hint - Tom mentiones Stan as his son
+	#DONE: hint - Tom mentiones Stan as his son
+	do State.characters[Types.Characters.FamilyHead].find_name_clue("tom_stan")
 	You: Thanks, Tom. 
 	
 - It's not that dangerous, she's making it sound like I risk my life everyday.
@@ -24,6 +25,7 @@ Tom: Angela says you have some dangerous job, huh? => family_head_continue
 	Tom: Well, I won't keep you here any longer! Go meet the rest! I hope you'll get alone with Stan.
 	Tom: My son could use some company.
 	#TODO: hint - Tom mentiones Stan as his son
+	do State.characters[Types.Characters.FamilyHead].find_name_clue("tom_stan")
 	You: Thanks, Tom.
 do State.characters[Types.Characters.FamilyHead].set_dialogue("family_head_repeat")
 => END

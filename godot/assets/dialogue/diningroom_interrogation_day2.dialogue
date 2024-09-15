@@ -10,9 +10,10 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	You: Stan? 
 	Angela: Yeah, I was surprised too. He doesn't usually talk to me.
 	Angela: Or anyone else from this family, to be honest...
-	Angela: Anyway, I went to our room before he left, though. I don't know what was he doing after. 
 	#DONE: hint - Stan was left alone after Angela went to bed.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_alibi_stan2")
+	Angela: Anyway, I went to our room before he left, though. I don't know what was he doing after. 
+	
 	=> SisterOfWife_interrogation1
 
 - How was your relationship with Tom?
@@ -21,19 +22,21 @@ Angela: Yea, yea, I know. You have to interrogate me. Ask away. => SisterOfWife_
 	#DONE: hint - Angela didn't like Tom.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_dislike_tom")
 	You: Why didn't you like him?
-	Angela: I think my sister deserved better, you know? Not someone who spent all her money on some shady businesses. 
 	#DONE: hint - Angela claims Tom was spending Olivia's money on the investments.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_investments")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela_day2_investments")
+	Angela: I think my sister deserved better, you know? Not someone who spent all her money on some shady businesses. 
+	
 	=> SisterOfWife_interrogation1
 
 - Did anything happen between you two recently?
 	Angela: Honestly, yes.
 	Angela: I didn't tell you, but he had borrowed some money from me. Quite a lot, actually.
 	Angela: I was asking him a few times, reminind him to give it all back.
-	Angela: But he was refusing, postponing, saying it'll all pay out soon.
 	#DONE: hint - Tom borrowed lots of money from Angela and didn't give it back.
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day2_lending")
+	Angela: But he was refusing, postponing, saying it'll all pay out soon.
+	
 	Angela: Well now he's dead and I don't have my money. => SisterOfWife_interrogation1
 
 - You seem to not like Tom much, why?
@@ -65,9 +68,10 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 	#DONE: hint - Vanda claims she and Samantha were cleaning after the dinner in the kitchen.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_alibi")
 	Vanda: Later I... went to bed...
-	Vanda: My husband can confirm that. 
 	#DONE: hint - after cleaning, Vanda went to bed with her husband.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_alibi_after")
+	Vanda: My husband can confirm that. 
+	
 	=> WifeOfFirstBorn_interrogation1
 
 - How was your relationship with your father-in-law?
@@ -77,9 +81,10 @@ Vanda: O-okay... => WifeOfFirstBorn_interrogation1
 	Vanda: Andrew withdrawed all our money we had for Jason's college! Can you imagine?
 	Vanda: To invest in the spice business with his father.
 	Vanda: Unbelivible.
-	Vanda: We argued about that a lot, because now my son has no funds for school!
 	#DONE: Andrew took all money for son's education to invest in businesses with his father.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day2_investments")
+	Vanda: We argued about that a lot, because now my son has no funds for school!
+	
 	=> WifeOfFirstBorn_interrogation1
 
 - Did you argue with Tom recently?
@@ -114,9 +119,10 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 	Jason: [#upset] Do you seriously think I killed my grandpa?!
 	You: Please answer the question, Jason.
 	Jason: Ughhh...
-	Jason: I went to call my girlfrend. Then I was in bed, playing on my phone. 
 	#DONE: hint - Jason claims he called his girlfrend after the celebration and then went to bed.
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day2_alibi")
+	Jason: I went to call my girlfrend. Then I was in bed, playing on my phone. 
+	
 	=> Grandson_interrogation1
 
 - Can you tell me more about the relationship with your grandpa?
@@ -127,9 +133,10 @@ Jason: [#defeated]  Whatever. => Grandson_interrogation1
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day2_tom")
 	Jason: I even overheard my parents arguing that he had used dad's money too.
 	Jason: If that's the reason why dad cut my pocket money short, I will have to talk with him.
-	Jason: He made me very upset doing that. 
 	#DONE: hint - Jason's pocket money was cut short recently.
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_day2_money")
+	Jason: He made me very upset doing that. 
+	
 	=> Grandson_interrogation1
 
 - Did you argue with your grandpa recently?
