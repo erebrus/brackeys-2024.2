@@ -12,10 +12,14 @@ func _ready() -> void:
 	_find_portraits(self)
 	Events.family_tree_requested.connect(_on_family_tree_requested )
 
-func _on_family_tree_requested():
+func _on_family_tree_requested(close:=false):
 	_close_popups()
-	visible = true
-	$sfx_open.play()
+	if not close:
+		visible = true
+		$sfx_open.play()
+	else:
+		visible = true
+		$sfx_close.play()
 		
 func _input(event: InputEvent) -> void:
 	if Globals.in_dialogue:
