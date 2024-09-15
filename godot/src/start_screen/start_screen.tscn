@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://tew5nggvlbv0"]
+[gd_scene load_steps=5 format=3 uid="uid://tew5nggvlbv0"]
 
 [ext_resource type="Texture2D" uid="uid://cbi00346vpvae" path="res://assets/gfx/scenes/TitleScene.jpg" id="1_txarl"]
 [ext_resource type="Script" path="res://src/start_screen/start_screen.gd" id="1_yk0mb"]
 [ext_resource type="FontFile" uid="uid://b462n8vtp5alq" path="res://assets/fonts/Portal Kids.otf" id="3_me0g3"]
+[ext_resource type="AudioStream" uid="uid://cbwun1cq8hper" path="res://assets/sfx/UI_General_1.wav" id="4_3dm81"]
 
 [node name="StartScreen" type="TextureRect"]
 anchors_preset = 15
@@ -38,6 +39,7 @@ horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="SoundButton" type="TextureButton" parent="."]
+visible = false
 custom_minimum_size = Vector2(265, 205)
 layout_mode = 0
 offset_left = 1488.0
@@ -48,6 +50,7 @@ toggle_mode = true
 button_pressed = true
 
 [node name="MusicButton" type="TextureButton" parent="."]
+visible = false
 custom_minimum_size = Vector2(265, 205)
 layout_mode = 0
 offset_left = 1488.0
@@ -58,6 +61,7 @@ toggle_mode = true
 button_pressed = true
 
 [node name="sfx_button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3dm81")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="toggled" from="SoundButton" to="." method="_on_sound_button_toggled"]
