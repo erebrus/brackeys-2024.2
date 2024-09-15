@@ -44,14 +44,15 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 	#DONE: hint - Olivia claims to be in the living room with Andrew and Jessica
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_alibi")
 	Olivia: Later, I went to bed early, but I was tossing around, couldn't fall asleep.
-	Olivia: Around 2:00 am I went downstairs to the kitchen to grab some water. I met Samantha there. => FamilyHeadsWife_interrogation2
+	Olivia: Around 2:00 am I went downstairs to the kitchen to grab some water. I met Samantha there.
 	#DONE: hint - Olivia claims she went to the kitchen at night and found Samantha there
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_samantha")
 	You: Did you talk to her?
 	Olivia: I um... I didn't, she was busy talking to Henry.
-	Olivia: She does that, she's mumbling something under her breath, talking to her husband.
 	#DONE: hint - Olivia claims that Samantha was "talking" to her husband
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_husband")
+	Olivia: She does that, she's mumbling something under her breath, talking to her husband. => FamilyHeadsWife_interrogation2
+	
 
 - Did you hear anyone arguing or had an argument with someone?
 	Olivia: No, I did not.
@@ -97,10 +98,11 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 	#DONE: hint - Andrew claims to see Samantha going upstairs at night
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha")
-	Andrew: She was in her zone, but she said she went to drink some water. => FirstBornSon_interrogation2
 	#DONE: hint - Samantha was in her zone while coming upstairs
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha_zone")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha_zone")
+	Andrew: She was in her zone, but she said she went to drink some water. => FirstBornSon_interrogation2
+	
 
 - How are you feeling?
 	Andrew: I have no idea.

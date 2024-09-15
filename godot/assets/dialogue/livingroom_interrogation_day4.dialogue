@@ -56,9 +56,10 @@ Samantha: Yes, we can. => WidowAfterSecondSon_interrogation3
 - Did you experience anything unusual?
 	Samantha: No... nothing out of the ordinary.
 	Samantha: The night was calm. Yes...
-	Samantha: Everyone was in their rooms. Yes, yes.. => WidowAfterSecondSon_interrogation3
 	#DONE: hint - Samantha claims that no one left any room at night.
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samantha_day4_night")
+	Samantha: Everyone was in their rooms. Yes, yes.. => WidowAfterSecondSon_interrogation3
+	
 
 - Does this whole situation affect you somehow?
 	Samantha: Oh? Hmmm... It should, right?

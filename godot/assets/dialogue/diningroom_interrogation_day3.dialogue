@@ -14,10 +14,11 @@ Samantha: Um, yes. => WidowAfterSecondSon_interrogation2
 
 - Did you see anything suspicious or unusual?
 	Samantha: Except for the obvious death of our beloved father-in-law? No.
-	You: Did you hear any conversations? Arguments?
-	Samantha: No. I was busy. Henry was talking to me. => WidowAfterSecondSon_interrogation2
 	#DONE: hint - Samantha seems to not hear or see anything unusual
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day3_unusual")
+	You: Did you hear any conversations? Arguments?
+	Samantha: No. I was busy. Henry was talking to me. => WidowAfterSecondSon_interrogation2
+	
 
 - Samantha, can you tell me something about yourself?
 	Samantha: Wha-what do you mean about myself?
@@ -42,19 +43,21 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 ~ SonFromFirstMariageOfHeadOfFamily_interrogation2
 - Where were you yesterday evening?
 	Stan: I was in my room. Later I went to the bathroom, saw Jason waiting for me to leave it, and then went to bed.
-	Stan: No one likes me in this family, so I guessed if my father was gone, I'd just let them be by themselves.  => SonFromFirstMariageOfHeadOfFamily_interrogation2
 	#DONE: hint - Stan claims to spend his evening in the room, Jason saw him going out of the bathroom
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_jason")
+	Stan: No one likes me in this family, so I guessed if my father was gone, I'd just let them be by themselves.  => SonFromFirstMariageOfHeadOfFamily_interrogation2
+	
 
 - Did you hear or see anything suspicious?
 	Stan: I heard Andrew and Frank arguing, but I don't know the reason. I just heard their voices.
 	#DONE: hint - Stan claims to hear Andrew and Frank arguing
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_argue")
 	Stan: When I went to the bathroom in the middle of the night I saw Samantha going downstairs.
-	Stan: I think she was going for water or something.
-	Stan: She was mumbling something too. => SonFromFirstMariageOfHeadOfFamily_interrogation2
 	#DONE: hint - Stan claims to see Samantha going downstairs at night
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_samantha")
+	Stan: I think she was going for water or something.
+	Stan: She was mumbling something too. => SonFromFirstMariageOfHeadOfFamily_interrogation2
+	
 
 - Were you close with Frank?
 	Stan: Not so much. I saw him a few times when I was a kid, when my parents were still together.
@@ -64,10 +67,11 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 - I think that's all for now.
 	Stan: Alright, glad I could help.
 	Stan: If I can say something, I think Samantha seems weird.
-	Stan: Why go downstairs while mumbling? => END
 	#DONE: hint - Stan suspects Samantha
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	Stan: Why go downstairs while mumbling? => END
+	
 
 => END
 
@@ -81,18 +85,20 @@ Stan: Poor Frank, he didn't deserve that... => END
 	#DONE: hint - Vanda claims to spend the evening with Samantha
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_samantha")
 	You: What did you do after that?
-	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims to go to bed after the tea, and she heard Andrew and Frank arguing
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_bed")
+	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
+	
 
 - Did you had any confrontation yesterday with anyone?
 	Vanda: No, not really.
 	Vanda: When Andrew came to bed, we spoke about the money.
 	Vanda: He just told me he wished to receive more from his dad. Because, he took all of our money to invest in his shady businesses.
-	Vanda: He was just disappointed, but he wouldn't hurt a fly!
-	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
 	#DONE: hint - Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_money")
+	Vanda: He was just disappointed, but he wouldn't hurt a fly!
+	Vanda: Then we went to sleep. => WifeOfFirstBorn_interrogation2
+	
 
 - How is Andrew? As a husband?
 	Vanda: He's a very good partner! I couldn't ask for a better husband.
@@ -122,11 +128,12 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 	Angela: I just saw Samantha sitting in the kitchen alone. I think before she was with Vanda.
 	#DONE: hint - Angela claims that Samantha and Vanda spent an evening in the kitchen
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen1")
-	Angela: But when Vanda left, she was just sitting there.
-	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
 	#DONE: hint - Angela claims Samantha remained in the kitchen after Vanda left
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen2")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("angela_day3_kitchen2")
+	Angela: But when Vanda left, she was just sitting there.
+	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
+	
 
 - Can you tell me something more about your family?
 	Angela: Well, you know it's not techically "my" family, but me and my sister were always close, so after our parents' death we stayed close.
