@@ -9,6 +9,9 @@ var tween: Tween
 
 
 func _ready() -> void:
+	get_viewport().physics_object_picking_sort = true
+	get_viewport().physics_object_picking_first_only = true
+	
 	Events.request_location_change.connect(_on_location_change)
 	Events.day_ended.connect(_on_day_ended)
 	Events.day_changed.connect(_on_day_changed)
@@ -16,6 +19,8 @@ func _ready() -> void:
 	_fade_in()
 	DialogueManager.show_dialogue_balloon(preload("res://assets/dialogue/intro.dialogue"), "start")
 	Events.family_tree_requested.connect(_on_family_tree_requested)
+	Events.retry_request.connect(_on_day_ended)
+	
 	#family_tree.visibility_changed.connect(func():tree_toggle.button_pressed ==  family_tree.visible)
 func _on_family_tree_requested(close:=false):
 	await get_tree().process_frame
@@ -77,11 +82,11 @@ func choose_scene(location: Types.Locations) -> GameScene:
 func day_end_scene() -> GameScene:
 	
 	var path = "res://src/scenes/day_end/day_%s.tscn"
-	if State.current_day == 4:
-		if State.win:
-			path = "res://src/scenes/day_end/day_%s_win.tscn"
-		else:
-			path = "res://src/scenes/day_end/day_%s_lose.tscn"
+	#if State.current_day == 4:
+		#if State.win:
+			#path = "res://src/scenes/day_end/day_%s_win.tscn"
+		#else:
+			#path = "res://src/scenes/day_end/day_%s_lose.tscn"
 	var scene = load(path % (State.current_day))
 	return scene.instantiate()
 	
