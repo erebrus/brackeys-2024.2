@@ -4,6 +4,6 @@ The next morning there's another body.
 It's you.
 You were getting close to solving the mystery, but made a mistake pointing out the killer.
 	So now you're dead.
-We're joking. This is just a game. You can start again from the beginning of last day.
+We're joking. This is just a game. Try again.
 do Globals.do_lose()
 => END
