@@ -22,6 +22,11 @@ Vanda: My poor Andrew... => WifeOfFirstBorn_interrogation3
 	do State.characters[Types.Characters.FirstBornSon].find_name_clue("vanda_day4_andrew")
 	Vanda: Then I fell back asleep, not expecting him to never come back upstairs... => WifeOfFirstBorn_interrogation3
 
+- How are you holding up?
+	Vanda: Barely...
+	Vanda: I don't know what I'll do now. I don't have a job, Jason is still at school...
+	Vanda: Maybe I have to ask for help my mother-in-law... I really don't know... => WifeOfFirstBorn_interrogation3
+
 - Thank you for your help.
 	Vanda: Please find who did it...
 	Vanda: I don't know what I'll do now without my Andrew...
@@ -50,10 +55,16 @@ Samantha: Yes, we can. => WidowAfterSecondSon_interrogation3
 
 - Did you experience anything unusual?
 	Samantha: No... nothing out of the ordinary.
-	Samantha: The night was calm.
-	Samantha: Everyone was in their rooms. Yes. => WidowAfterSecondSon_interrogation3
+	Samantha: The night was calm. Yes...
+	Samantha: Everyone was in their rooms. Yes, yes.. => WidowAfterSecondSon_interrogation3
 	#DONE: hint - Samantha claims that no one left any room at night.
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_name_clue("samantha_day4_night")
+
+- Does this whole situation affect you somehow?
+	Samantha: Oh? Hmmm... It should, right?
+	Samantha: Yes, yes, it does affect me.
+	Samantha: I feel.. I don't know... It's bizarre.  => WidowAfterSecondSon_interrogation3
+
 - Thank you for your time.
 	Samantha: Yes, yes.
 	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
