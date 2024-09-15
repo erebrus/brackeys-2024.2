@@ -40,6 +40,7 @@ func toggle_tree():
 			$sfx_open.play()
 		else:
 			$sfx_close.play()
+		Events.family_tree_toggled.emit()
 
 func _find_portraits(node: Node) -> void:
 	for child in node.get_children():

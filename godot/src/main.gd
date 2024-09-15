@@ -19,12 +19,15 @@ func _ready() -> void:
 	_fade_in()
 	DialogueManager.show_dialogue_balloon(preload("res://assets/dialogue/intro.dialogue"), "start")
 	Events.family_tree_requested.connect(_on_family_tree_requested)
+	Events.family_tree_toggled.connect(func():_on_family_tree_requested())
 	Events.retry_request.connect(_on_day_ended)
 	
 	#family_tree.visibility_changed.connect(func():tree_toggle.button_pressed ==  family_tree.visible)
 func _on_family_tree_requested(close:=false):
 	await get_tree().process_frame
 	tree_toggle.set_pressed_no_signal (family_tree.visible)
+
+
 
 func _fade_in() -> void:
 	if tween != null:
