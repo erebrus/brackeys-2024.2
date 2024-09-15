@@ -1,15 +1,22 @@
-~ accusations_start
+~ living_room_start
 This is it - the grand finale.
 After gathering all the clues you need to point out who is the murderer.
 So Taylor, who would that be? => accusations_decision
 
 ~ accusations_decision
 - Olivia
+	Let's hope you're right.
 - Jessica
+	Let's hope you're right.
 - Angela
+	Let's hope you're right.
 - Vanda
+	Let's hope you're right.
 - Jason
+	Let's hope you're right.
 - Samantha
+	set State.win = true
+	Let's hope you're right.
 - Stanley
-
+	Let's hope you're right.
 => END
