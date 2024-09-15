@@ -30,11 +30,11 @@ Vanda: My poor Andrew... => WifeOfFirstBorn_interrogation3
 - Thank you for your help.
 	Vanda: Please find who did it...
 	Vanda: I don't know what I'll do now without my Andrew...
-	do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
+	#do State.characters[Types.Characters.WifeOfFirstBorn].set_dialogue("WifeOfFirstBorn_repeat")
 	=> END
 
-~ WifeOfFirstBorn_repeat
-Vanda: I want to mourn in peace now... => END
+#~ WifeOfFirstBorn_repeat
+#Vanda: I want to mourn in peace now... => END
 
 ~ WidowAfterSecondSon_start
 You: Samantha, can we talk?
@@ -68,10 +68,10 @@ Samantha: Yes, we can. => WidowAfterSecondSon_interrogation3
 
 - Thank you for your time.
 	Samantha: Yes, yes.
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
+	#do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	=> END
 
-~ WidowAfterSecondSon_repeat
-Samantha: Yes Henry... yes... => END
+#~ WidowAfterSecondSon_repeat
+#Samantha: Yes Henry... yes... => END
 
 => END

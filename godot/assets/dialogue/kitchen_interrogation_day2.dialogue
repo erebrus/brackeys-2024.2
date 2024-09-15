@@ -30,11 +30,11 @@ Samantha: [#nervous] Yes, I suppose you have to. Go ahead. => WidowAfterSecondSo
 
 - Thank you for your time.
 	Samantha: You're welcome. At least Henry and his dad are together again. 
-	do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
+	#do State.characters[Types.Characters.WidowAfterSecondSon].set_dialogue("WidowAfterSecondSon_repeat")
 	=> END
 
-~ WidowAfterSecondSon_repeat
-Samantha: Tom and Henry are happy together now, I know it. => END
+#~ WidowAfterSecondSon_repeat
+#Samantha: Tom and Henry are happy together now, I know it. => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Hey Stan, I need to speak with you.
@@ -76,11 +76,11 @@ Stan: [#jittery] Y-yes, of course. What do you need? => SonFromFirstMariageOfHea
 
 - Thank you for answering my questions.
 	Stan: No problem. I hope I could help. 
-	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	#do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 	=> END
 
-~ SonFromFirstMariageOfHeadOfFamily_repeat
-Stan: I can't believe it... my father... => END
+#~ SonFromFirstMariageOfHeadOfFamily_repeat
+#Stan: I can't believe it... my father... => END
 
 ~ FriendOfTheFamily_start
 You: Hey, sorry to interrupt, but I need to talk to you.
@@ -123,10 +123,10 @@ Frank: Well, go on then. => FriendOfTheFamily_interrogation1
 - Thank you, if I have more questions for you, I'll let you know.
 	Frank: Of course. Hope you can catch the person who did this.
 	Frank: My brother deserved better than that... 
-	do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("FriendOfTheFamily_repeat")
+	#do State.characters[Types.Characters.FriendOfTheFamily].set_dialogue("FriendOfTheFamily_repeat")
 	=> END
 
-~ FriendOfTheFamily_repeat
-Frank: I'll miss him dearly... => END
+#~ FriendOfTheFamily_repeat
+#Frank: I'll miss him dearly... => END
 
 => END

@@ -41,11 +41,11 @@ Jessica: Is this family cursed or something?
 
 - Alright, thank you for your help.
 	Jessica: This is horrible... poor mom... 
-	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	#do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
 	=> END
 
-~ Daughter_repeat
-Jessica: Please, I want to be left alone now.. => END
+#~ Daughter_repeat
+#Jessica: Please, I want to be left alone now.. => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Can we talk for a moment?
@@ -78,10 +78,10 @@ Stan: Y-yes, of course we can. => SonFromFirstMariageOfHeadOfFamily_interrogatio
 
 - Thank you for answering my questions.
 	Stan: This all got so werid... 
-	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
+	#do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
 	=> END
 
-~ SonFromFirstMariageOfHeadOfFamily_repeat
-Stan: Something is very wrong here... => END
+#~ SonFromFirstMariageOfHeadOfFamily_repeat
+#Stan: Something is very wrong here... => END
 
 => END
