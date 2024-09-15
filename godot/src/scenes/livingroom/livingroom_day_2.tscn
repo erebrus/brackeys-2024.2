@@ -26,9 +26,11 @@ polygon = PackedVector2Array(278, -8, 286, 643, 491, 758, 473, -102)
 
 [node name="GoToGarden" parent="." index="2" instance=ExtResource("8_jcrpn")]
 position = Vector2(106, 261)
+monitoring = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GoToGarden" index="0"]
 polygon = PackedVector2Array(-158, -124, -163, 808, 1, 692, 4, -34)
+disabled = true
 
 [node name="FamilyHeadsWife" parent="." index="3" instance=ExtResource("4_wtygu")]
 character_id = 2
