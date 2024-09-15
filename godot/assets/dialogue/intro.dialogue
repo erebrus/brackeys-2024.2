@@ -11,6 +11,6 @@ set State.characters[Types.Characters.SisterOfWife].is_known = true
 Angela: Here we are, welcome to my family's mansion. 
 Angela: Since you're a detective, I have a small game for you. 
 Angela: Go and meet my family, but I won't tell you who is who - you have to figure it out yourself, love.
-do Events.family_tree_requested.emit()
+do Events.family_tree_requested.emit(false)
 Angela: You can use your little notebook and this family tree to collect all the clues. 
 Angela: Good luck and have fun. => END

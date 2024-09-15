@@ -22,12 +22,14 @@ signal day_ended
 signal request_location_change(target: Types.Locations)
 
 @warning_ignore("unused_signal")
+signal dialogue_started()
+@warning_ignore("unused_signal")
 signal dialogue_finished()
 
 @warning_ignore("unused_signal")
 signal family_tree_complete
 @warning_ignore("unused_signal")
-signal family_tree_requested()
+signal family_tree_requested(close:bool)
 
 @warning_ignore("unused_signal")
 signal show_tootip(locaation: Types.Locations)

@@ -16,6 +16,8 @@ func _ready() -> void:
 
 
 func _on_mouse_entered() -> void:
+	if Globals.in_dialogue:
+		return
 	sprite.material = outline_shader
 	
 
