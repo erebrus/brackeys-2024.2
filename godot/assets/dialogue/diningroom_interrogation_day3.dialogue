@@ -9,11 +9,11 @@ Samantha: Um, yes. => WidowAfterSecondSon_interrogation2
 	#DONE: hint - Samantha claims to spent the evening with Vanda in the kitchen
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day3_vanda")
 	Samantha: When she went upstairs, I was talking to my beloved Henry.
-	Samantha: I was telling him how this family got corrupted. There's a murderer among us and we don't know who that is... Yes, yes...
-	Samantha: Later, I just went to bed... Yes that was this way. => WidowAfterSecondSon_interrogation2
+	Samantha: I was telling him how this family got corrupted. There's a murderer among us and we don't know who it is... Yes, yes...
+	Samantha: Later, I just went to bed... Yes that was what I did. => WidowAfterSecondSon_interrogation2
 
 - Did you see anything suspicious or unusual?
-	Samantha: Except for the obvious death of our beloved father-in-law? No.
+	Samantha: Except for the death of our beloved father-in-law? No.
 	#DONE: hint - Samantha seems to not hear or see anything unusual
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("samantha_day3_unusual")
 	You: Did you hear any conversations? Arguments?
@@ -23,7 +23,7 @@ Samantha: Um, yes. => WidowAfterSecondSon_interrogation2
 - Samantha, can you tell me something about yourself?
 	Samantha: Wha-what do you mean about myself?
 	Samantha: I... am... Henry's wife.
-	You: Yes, this I know, I want to know more about you. You as Samantha.
+	You: Yes, I know. I want to know more about you. You as Samantha.
 	Samantha: But... I...
 	You: Never mind... => WidowAfterSecondSon_interrogation2
 
@@ -38,14 +38,14 @@ Samantha: Henry... he's the love of my life, you know? => END
 
 ~ SonFromFirstMariageOfHeadOfFamily_start
 You: Can we talk for a bit?
-Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageOfHeadOfFamily_interrogation2
+Stan: Yes of course. Someone is killing us here like flies... => SonFromFirstMariageOfHeadOfFamily_interrogation2
 
 ~ SonFromFirstMariageOfHeadOfFamily_interrogation2
 - Where were you yesterday evening?
-	Stan: I was in my room. Later I went to the bathroom, saw Jason waiting for me to leave it, and then went to bed.
+	Stan: I was in my room. Later I went to the bathroom, saw Jason waiting for me to leave, and then I went to bed.
 	#DONE: hint - Stan claims to spend his evening in the room, Jason saw him going out of the bathroom
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_jason")
-	Stan: No one likes me in this family, so I guessed if my father was gone, I'd just let them be by themselves.  => SonFromFirstMariageOfHeadOfFamily_interrogation2
+	Stan: No one likes me in this family, so I guess if my father was gone, I'd just let them be by themselves.  => SonFromFirstMariageOfHeadOfFamily_interrogation2
 	
 
 - Did you hear or see anything suspicious?
@@ -61,12 +61,12 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 
 - Were you close with Frank?
 	Stan: Not so much. I saw him a few times when I was a kid, when my parents were still together.
-	Stan: After the divorce I've been seeing him only on some grand family celebrations at dad's mansion.
+	Stan: After the divorce I've been seeing him only during these family get togethers at dad's mansion.
 	Stan: But even now when we're both adults we never speak much. Well... Spoke, I should say. => SonFromFirstMariageOfHeadOfFamily_interrogation2
 
 - I think that's all for now.
 	Stan: Alright, glad I could help.
-	Stan: If I can say something, I think Samantha seems weird.
+	Stan: If I may say something, I think Samantha seems weird.
 	#DONE: hint - Stan suspects Samantha
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].find_portrait_clue("stan_day3_suspect")
 	do State.characters[Types.Characters.SonFromFirstMariageOfHeadOfFamily].set_dialogue("SonFromFirstMariageOfHeadOfFamily_repeat")
@@ -83,7 +83,7 @@ You: Can we talk for a bit?
 Vanda: Um, yes. => WifeOfFirstBorn_interrogation2
 
 ~ WifeOfFirstBorn_interrogation2
-- I need to know where were you yesterday's evening and night.
+- I need to know where you were yesterday's evening and night.
 	Vanda: In the evening I was with Samantha...
 	Vanda: We were just drinking some lemon balm tea to calm down...
 	#DONE: hint - Vanda claims to spend the evening with Samantha
@@ -94,10 +94,10 @@ Vanda: Um, yes. => WifeOfFirstBorn_interrogation2
 	Vanda: I left to go to bed. I heard Andrew arguing with Frank in his room, but I don't believe he did it! => WifeOfFirstBorn_interrogation2
 	
 
-- Did you had any confrontation yesterday with anyone?
+- Did you have any confrontations yesterday with anyone?
 	Vanda: No, not really.
 	Vanda: When Andrew came to bed, we spoke about the money.
-	Vanda: He just told me he wished to receive more from his dad. Because, he took all of our money to invest in his shady businesses.
+	Vanda: He just told me he wanted to get more from his dad. Because, he took all of our money to invest in his shady businesses.
 	#DONE: hint - Vanda claims that Andrew was disappointed in his dad and he argued with Frank about money. Then they both went to bed.
 	do State.characters[Types.Characters.WifeOfFirstBorn].find_portrait_clue("vanda_day3_money")
 	Vanda: He was just disappointed, but he wouldn't hurt a fly!
@@ -106,7 +106,7 @@ Vanda: Um, yes. => WifeOfFirstBorn_interrogation2
 
 - How is Andrew? As a husband?
 	Vanda: He's a very good partner! I couldn't ask for a better husband.
-	Vanda: He's always trying his best. Even when it doesn't work out, but he has good intentions.
+	Vanda: He's always trying his best. Even when it doesn't work out.
 	Vanda: Honestly, I think he's one of the best people in this family. But don't tell Olivia I said that. => WifeOfFirstBorn_interrogation2
 
 - Thank you, if I have more questions, I'll find you later.
@@ -119,7 +119,7 @@ Vanda: I should be there for my mother-in-law...
 Vanda: She needs lots of support now. => END
 
 ~ SisterOfWife_start
-You: I know we were all evening and night together, but I have to ask you a few questions anyway.
+You: I know we were together all evening, but I have to ask you a few questions anyway.
 Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 
 ~ SisterOfWife_interrogation2
@@ -129,7 +129,7 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 
 - Did you see or hear anything suspicious?
 	Angela: Hmm... not really.
-	Angela: I just saw Samantha sitting in the kitchen alone. I think before she was with Vanda.
+	Angela: I just saw Samantha sitting in the kitchen alone. I think she was with Vanda before that.
 	#DONE: hint - Angela claims that Samantha and Vanda spent an evening in the kitchen
 	do State.characters[Types.Characters.SisterOfWife].find_portrait_clue("angela_day3_kitchen1")
 	#DONE: hint - Angela claims Samantha remained in the kitchen after Vanda left
@@ -139,11 +139,11 @@ Angela: Yea, yea, I know how it works. => SisterOfWife_interrogation2
 	Angela: I managed to finish reading and go to bed, and she was still there. => SisterOfWife_interrogation2
 	
 
-- Can you tell me something more about your family?
+- Can you tell me anything more about your family?
 	Angela: Well, you know it's not techically "my" family, but me and my sister were always close, so after our parents' death we stayed close.
 	Angela: They're alright I suppose. 
-	Angela: Honestly, I would never suspect, even in my deepest nightmares, that something like this can happen in my family.
-	Angela: I'm really shocked someone is so brave enough to be under the same roof as us and just remove us one by one. => SisterOfWife_interrogation2
+	Angela: Honestly, I would never suspect, even in my deepest nightmares, that something like this would happen in this family.
+	Angela: I'm really shocked someone is brave enough to be under the same roof as us and just remove us one by one. => SisterOfWife_interrogation2
 
 - Alright, thank you, darling.
 	Angela: Of course. Do you have any suspects already?

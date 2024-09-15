@@ -1,7 +1,7 @@
 ~ Grandson_start
 You: Hey Jason, can I speak with you?
 Jason: Oh hi, yeah.
-Jason: Damn, this family is indeed grazy, huh? => Grandson_interrogation2
+Jason: Damn, this family is crazy, huh? => Grandson_interrogation2
 
 ~ Grandson_interrogation2
 - Did you see anything suspicious yesterday?
@@ -22,8 +22,8 @@ Jason: Damn, this family is indeed grazy, huh? => Grandson_interrogation2
 
 - What do you think about your family?
 	Jason: I think I've stressed it enough already that we're all weird.
-	Jason: But honestly, I don't mind it as much. 
-	Jason: I just hope it all woulnd't happen, you know? => Grandson_interrogation2
+	Jason: But honestly, I don't mind it too much. 
+	Jason: I just never thought something like this would happen, you know? => Grandson_interrogation2
 
 - Alright, I think that's all for now.
 	Jason: Sure, no problem.
@@ -39,7 +39,7 @@ Olivia: Yeah... Yes I know...
 Olivia: Go on... => FamilyHeadsWife_interrogation2
 
 ~ FamilyHeadsWife_interrogation2
-- I need to know where were you yesterday in the evening and night.
+- I need to know where you were yesterday in the evening and night.
 	Olivia: I was with my children in the living room.
 	#DONE: hint - Olivia claims to be in the living room with Andrew and Jessica
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_alibi")
@@ -51,29 +51,29 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 	Olivia: I um... I didn't, she was busy talking to Henry.
 	#DONE: hint - Olivia claims that Samantha was "talking" to her husband
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_husband")
-	Olivia: She does that, she's mumbling something under her breath, talking to her husband. => FamilyHeadsWife_interrogation2
+	Olivia: She does that, mumbling something under her breath, talking to her husband. => FamilyHeadsWife_interrogation2
 	
 
-- Did you hear anyone arguing or had an argument with someone?
+- Did you hear anyone arguing or have an argument with someone?
 	Olivia: No, I did not.
 	Olivia: I heard people gossiping that Andrew did it, but it's not true. => FamilyHeadsWife_interrogation2
 
 - How would you describe your relationship with your kids?
-	Olivia: They are all so different, but I love every singe one of them.
-	Olivia: It's a shame we lost Henry so fast. It was a few years ago, I managed to heal from that already.
-	Olivia: But grownig up, they were all very close together. I really wished they would be like that as adults and then elders, but fate has decided differently. => FamilyHeadsWife_interrogation2
+	Olivia: They are all so different, but I love every single one of them.
+	Olivia: It's a shame we lost Henry so fast. It was a few years ago, I've managed to heal from that already.
+	Olivia: But growing up, they were all very close together. I really wished they would be like that as adults and then elders, but fate has decided differently. => FamilyHeadsWife_interrogation2
 
 - That's all I wanted to ask you for now.
 	Olivia: Does no one even suspect Stan?!
 	#DONE: hint - Olivia suspects Stan
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_suspect")
-	Olivia: He got very upsed when my husband was spending all my moeny on this damn business, together with Frank.
+	Olivia: He got very upset when my husband was spending all my moeny on those damn businesses, together with Frank.
 	Olivia: This man is not even in the family!
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
 ~ FamilyHeadsWife_repeat
-Olivia: Please leave me now. I need some space. => END
+Olivia: Please leave me alone. I need some space. => END
 
 ~ FirstBornSon_start
 You: Andrew I-
@@ -84,16 +84,16 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 
 ~ FirstBornSon_interrogation2
 - Where were you in the evening?
-	Andrew: I was with my mom and sister, tryuing to calm them down.
+	Andrew: I was with my mom and sister, trying to calm them down.
 	#DONE: hint - Andrew claims to spent evening with his mom and sister
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_evening")
 	Andrew: Then while going upstairs I met Frank and we started talking about the investments.
 	Andrew: We argued, because he told me that my dad had given me only 2% of the shares.
 	Andrew: I'm not going to lie, I expected more.
-	Andrew: But I didn't kill that man. => FirstBornSon_interrogation2
+	Andrew: But I didn't kill the man. => FirstBornSon_interrogation2
 
 - Did you hear or see anything suspicious?
-	Andrew: Not really, I think.
+	Andrew: Not really, I don't think so.
 	Andrew: Somewhere at night I went to the bathroom and Saw Samantha coming upstairs.
 	#DONE: hint - Andrew claims to see Samantha going upstairs at night
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha")
@@ -106,13 +106,13 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 
 - How are you feeling?
 	Andrew: I have no idea.
-	Andrew: It's too much for my nerves. I know you cannot be prepared for an unusual situation like this one, but it never crossed my mind that such tragedy may happen.
+	Andrew: It's too much for my nerves. I know no one is prepared for such an unusual situation, but it never crossed my mind that such a tragedy could ever happen.
 	Andrew: I'm more worried about my wife and mom than myself. 
 	Andrew: They're both so sensitive. => FirstBornSon_interrogation2
 
 - Alright, thanks for answering my questions.
 	Andrew: Please tell me you believe me!
-	You: I cannot promise you anything now, Andrew. => END
+	You: I cannot promise you anything right now, Andrew. => END
 do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
 => END
 
@@ -124,7 +124,7 @@ You: Jessica, you found the body, I need to talk to you.
 Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interrogation2
 
 ~ Daughter_interrogation2
-- I need to know what were you doing yesterday's night.
+- I need to know what you were doing yesterday night.
 	Jessica: I was just sitting in the living room..
 	Jessica: With my mom and brother. We spent all evening together.
 	#DONE: hint - Jessica claims she spent the evening with her Olivia and Andrew.

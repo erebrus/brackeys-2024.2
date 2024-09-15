@@ -6,8 +6,8 @@ on:
 
 env:
   GODOT_VERSION: 4.3.stable
-  EXPORT_NAME: brackeys20242
-  ITCH_GAME: brackeys-20242
+  EXPORT_NAME: stormylegacy
+  ITCH_GAME: stormy-legacy
   ITCH_USER: erebrus
 
 jobs:
