@@ -109,6 +109,8 @@ func _input(event: InputEvent) -> void:
 		_on_day_ended()
 	if Input.is_action_just_pressed("win"):
 		State.win = not State.win
+	if Input.is_action_just_pressed("advance_time"):
+		debug_advance_time()
 
 func _on_location_change(location: Types.Locations) -> void:
 	_change_scene(choose_scene.bind(location))
@@ -135,3 +137,27 @@ func _on_day_ended() -> void:
 
 func _on_tree_toggle_toggled(toggled_on: bool) -> void:
 	family_tree.toggle_tree()
+
+func get_needed_clues(day:int, time:int):
+	var count:=Types.CLUE_COUNTS[Vector2i(1,1)]
+	if day == 1:
+		if time >= 2:
+			count += Types.CLUE_COUNTS[Vector2i(1,2)]
+		if time >= 3:
+			count += Types.CLUE_COUNTS[Vector2i(1,3)]
+		return count	
+	if day>1:
+		count=Types.CLUE_COUNTS[Vector2i(1,1)]+Types.CLUE_COUNTS[Vector2i(1,2)]+Types.CLUE_COUNTS[Vector2i(1,3)]
+	if day >=2:
+		count+=Types.CLUE_COUNTS[Vector2i(2,1)]
+	if day >=3:
+		count+=Types.CLUE_COUNTS[Vector2i(3,1)]
+	if day >=4:
+		count+=Types.CLUE_COUNTS[Vector2i(4,1)]
+	return count
+	
+func debug_advance_time():
+	State.debug_clue_count = get_needed_clues(State.current_day, State.current_time)
+	State.family_tree_complete=true
+	State._check_clues_for_advancement()
+			
