@@ -9,6 +9,9 @@ var tween: Tween
 
 
 func _ready() -> void:
+	get_viewport().physics_object_picking_sort = true
+	get_viewport().physics_object_picking_first_only = true
+	
 	Events.request_location_change.connect(_on_location_change)
 	Events.day_ended.connect(_on_day_ended)
 	Events.day_changed.connect(_on_day_changed)
