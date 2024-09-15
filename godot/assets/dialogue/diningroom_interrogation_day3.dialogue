@@ -78,6 +78,10 @@ Stan: Yes of course. Someone kills us here like flies... => SonFromFirstMariageO
 ~ SonFromFirstMariageOfHeadOfFamily_repeat
 Stan: Poor Frank, he didn't deserve that... => END
 
+~ WifeOfFirstBorn_start
+You: Can we talk for a bit?
+Vanda: Um, yes. => WifeOfFirstBorn_interrogation2
+
 ~ WifeOfFirstBorn_interrogation2
 - I need to know where were you yesterday's evening and night.
 	Vanda: In the evening I was with Samantha...
