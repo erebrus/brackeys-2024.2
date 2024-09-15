@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxmvrcqgee7rj"]
+[gd_scene load_steps=8 format=3 uid="uid://dxmvrcqgee7rj"]
 
 [ext_resource type="Script" path="res://src/family_tree/popups/choose_portrait_popup/choose_portrait_popup.gd" id="1_6u0b6"]
 [ext_resource type="Texture2D" uid="uid://bnodlyagby2do" path="res://assets/gfx/ui/PopUp.png" id="1_fd1fc"]
 [ext_resource type="PackedScene" uid="uid://ctvm00qj8fk7f" path="res://src/family_tree/popups/choose_portrait_popup/portrait_select.tscn" id="2_mw0xb"]
+[ext_resource type="AudioStream" uid="uid://b63cbvv2f2pep" path="res://assets/sfx/Pickup_Portrait_1.wav" id="4_tlb4c"]
+[ext_resource type="AudioStream" uid="uid://b6ujqmgb7c7jf" path="res://assets/sfx/Pickup_Portrait_2.wav" id="5_kv7h5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_orxtj"]
 texture = ExtResource("1_fd1fc")
@@ -10,6 +12,11 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gpbat"]
+streams_count = 2
+stream_0/stream = ExtResource("4_tlb4c")
+stream_1/stream = ExtResource("5_kv7h5")
 
 [node name="ChoosePortraitPopup" type="PanelContainer"]
 anchors_preset = 8
@@ -41,3 +48,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 2
+
+[node name="sfx_pickup_portrait" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_gpbat")
+bus = &"Sound"

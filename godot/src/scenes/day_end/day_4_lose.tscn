@@ -39,5 +39,6 @@ stream = ExtResource("5_e8ua2")
 
 [node name="death_sfx" type="AudioStreamPlayer" parent="." index="5"]
 stream = ExtResource("5_1urrt")
+bus = &"Sound"
 
 [connection signal="on_murder" from="." to="." method="_on_on_murder"]
