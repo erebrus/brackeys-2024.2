@@ -75,10 +75,14 @@ layout_mode = 1
 
 [node name="CluesPopup" parent="." instance=ExtResource("4_7rarm")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
-offset_left = -119.0
-offset_top = -92.0
+anchors_preset = 9
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+offset_right = 390.0
+grow_horizontal = 1
+grow_vertical = 2
 
 [node name="sfx_open" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_qy5yo")
