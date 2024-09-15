@@ -1,6 +1,6 @@
 #1st hour
 ~ family_head_start
-Tom: Ah there you are! Angela told us you'd come together!
+Tom: Ah there you are! Angela told us you'd be coming together!
 You: Hello sir, nice to meet you.
 Tom: Where are my manners! Just call me Tom! And you must be Taylor, right?
 #DONE: hint - head of the family is named Tom
@@ -13,16 +13,16 @@ Tom: Angela says you have some dangerous job, huh? => family_head_continue
 - I mean, you could say that. I'm a police detective.
 	Tom: Sounds quite dangerous to me!
 	You: Heh... Anyway, it was nice talking to you. I should go meet others.
-	Tom: Well, enjoy the stay at the mansion! Hope you and Stan will become friends! I really wish they'd like my son more...
+	Tom: Well, enjoy the stay at the mansion! I Hope you and Stan will become friends! I really wish they'd talk to my son more...
 	#DONE: hint - Tom mentiones Stan as his son
 	do State.characters[Types.Characters.FamilyHead].find_name_clue("tom_stan")
 	You: Thanks, Tom. 
 	
 - It's not that dangerous, she's making it sound like I risk my life everyday.
-	Tom: I knew she was exaggerating. She always does it.
+	Tom: I knew she was exaggerating. She always does.
 	You: I don't think it's that serious, she just -
-	Tom: Nah, she's always been like that! Making things look more serious than they should be! 
-	Tom: Well, I won't keep you here any longer! Go meet the rest! I hope you'll get alone with Stan.
+	Tom: Nah, she's always been like that! Making things look more serious than they actually are! 
+	Tom: Well, I won't keep you here any longer! Go meet the rest! I hope you get along with Stan.
 	Tom: My son could use some company.
 	#TODO: hint - Tom mentiones Stan as his son
 	do State.characters[Types.Characters.FamilyHead].find_name_clue("tom_stan")
@@ -31,8 +31,8 @@ do State.characters[Types.Characters.FamilyHead].set_dialogue("family_head_repea
 => END
 
 ~ family_head_repeat
-Tom: Have you meet all family yet?
-Tom: My grandson is hidden somewhere with his little machine.
+Tom: Have you met the whole family yet?
+Tom: My grandson is hiding somewhere with his little machine.
 #do State.characters[Types.Characters.Grandson].set_location(Types.Locations.Garden)
 
 => END
@@ -40,13 +40,13 @@ Tom: My grandson is hidden somewhere with his little machine.
 #1st hour
 ~ family_head_wife_start
 #TODO: mark her as ???
-Olivia: Hello, are you my sister's newest partner, right? She always changes them so quickly...
+Olivia: Hello, are you my sister's newest partner, right? She seems to change them so quickly...
 #DONE: hint - Angela has a sister
 do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela_has_sister")
 #TODO or do we want the clue on her sister? or both
 ~ family_head_wife_continue1
 -  Nice to meet you too. I guess, yes. I'm Taylor.
-	Olivia: Hmm... I wonder for how long you'll stay.
+	Olivia: Hmm... I wonder how long you'll last.
 	You: Excuse me? => family_head_wife_continue2
 
 - We've been together for over a year now. I'm Taylor.
@@ -54,8 +54,8 @@ do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("angela
 	Olivia: You must be special. => family_head_wife_continue2
 
 ~ family_head_wife_continue2
-Olivia: Anyway. Well, not to be mean, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
-You: Understandable, sorry to bother.
+Olivia: Anyway. Well, not to be rude, but I have lots of preparations before tonight's dinner and I want to relax before it all starts.
+You: Understandable, sorry to bother you.
 Olivia: See you later, I guess.
 You: Yeah, see you.
 #do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("family_head_wife_repeat")
@@ -71,7 +71,7 @@ do State.characters[Types.Characters.FamilyHeadsWife].set_location(Types.Locatio
 #TODO: mark her as ???
 Jessica: Such captivating color... It'll go perfectly with...
 Jessica: Oh, hi.
-You: Hey, sorry if I disturb you, I just wanted to introduce myself, I'm Taylor.
+You: Hey, sorry if I disturbed you, I just wanted to introduce myself, I'm Taylor.
 Jessica: Oh, no, no, no! Don't worry! You have... unusual features. => daughter_continue
 
 ~ daughter_continue
@@ -84,7 +84,7 @@ Jessica: Oh, no, no, no! Don't worry! You have... unusual features. => daughter_
 do State.characters[Types.Characters.Daughter].set_location(Types.Locations.None)
 => END
 
-- It's kind of rude, you know?
+- That's kind of rude, you know?
 	Jessica: Oh no! No, no, no, no!
 	Jessica: You're blessed! Not everyone is so intriguing to look at! 
 		#DONE: hint - the woman appears to be enamored by unusual things
@@ -105,11 +105,11 @@ Jason: Damn it... => grandson_continue
 - Hey, need some help with that?
 	Jason: I can't beat this level, I've been trying all day.
 	You: Here, let me try.
-	You: Oh yea, I can see the challenge...
+	You: Oh yea, I see where the challenge is...
 	You: Just a little bit more and...
 	You: Yeah, done. Here's your phone.
 	Jason: What?! Damn, you're awesome. 
-	Jason: Better than my dad, he didn't even want to try to help me...
+	Jason: Better than my dad, he barely tryed to help me...
 	#DONE hint - the teenage boy has a father
 	do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
 	You: Oh, sorry to hear that. => grandson_continue2
@@ -126,7 +126,7 @@ Jason: Damn it... => grandson_continue
 #DONE hint - the teenage boy has a father
 #do State.characters[Types.Characters.Grandson].find_portrait_clue("jason_has_father")
 #You: Oh, sorry to hear that.
-Jason: You're new, by the way. You're not grandpa's another son, huh?
+Jason: You're new, by the way. You're not another one of grandpa's sons are you?
 #DONE: hint - Tom was married before and had a son
 do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day1_previous_marriage")
 You: Umm... no. I'm Angela's partner.

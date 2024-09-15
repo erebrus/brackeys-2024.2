@@ -4,7 +4,7 @@ You: Olivia, I know it’s difficult for you, but I need to ask a few questions.
 Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 
 ~ FamilyHeadsWife_interrogation1
-- What were you doing yesterday after the dinner?
+- What were you doing yesterday after dinner?
 	#DONE: hint - Olivia went to bed with Tom after dinner.
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_bed")
 	Olivia: I went to bed with Tom, I was sleeping the whole night… I think he woke up to grab some water, he does that sometimes… =>  FamilyHeadsWife_interrogation1
@@ -12,32 +12,32 @@ Olivia: [#crying] I… Yes… Go ahead… => FamilyHeadsWife_interrogation1
 
 - Did Tom have any enemies?
 	Olivia: N-no, I don’t think so…
-	Olivia: He was investing in all those businesses, but I don’t think he made any enemies on the way.
+	Olivia: He was investing in all those businesses, but I don’t think he made any enemies along the way.
 	#DONE: hint - Tom was investing in some unknown businesses
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_unknown")
 	#DONE: hint - Olivia didn't support those businesses
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day2_business")
 	You: What businesses? 
-	Olivia: I don’t even know! He was wasting money on them…  =>  FamilyHeadsWife_interrogation1
+	Olivia: I don’t even know! He was blowing money on them…  =>  FamilyHeadsWife_interrogation1
 	
 
-- I have to ask this question, did you guys argue recently?
-	Olivia: We… actually did.
+- I have to ask this question, have you guys argued recently?
+	Olivia: We… did actually.
 	Olivia: He told me that he invested a big sum to import some spices…
 	Olivia: I got very upset and we had a fight. But nothing happened!
 	#DONE: hint - Tom invested big money recently and Olivia got upset, they had a fight
 	do State.characters[Types.Characters.FamilyHead].find_portrait_clue("tom_day2_investing_fight")
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("tom_day2_investing_fight")
 	
-	Olivia: Even though he’s very… he was very irresponsible with money, I loved this man. =>  FamilyHeadsWife_interrogation1
+	Olivia: Even though he’s very… he was very irresponsible with money, I loved him. =>  FamilyHeadsWife_interrogation1
 
 - How was your life with Tom?
 	Olivia: We spent so much time together. It was fantastic.
-	Olivia: I know that not everyone was happy with our relationship, like my sister. But I love this man.
-	Olivia: I don't regret spending 50 days with him, it was all worht it, even though he could be a difficult person, the love never faded away. =>  FamilyHeadsWife_interrogation1
+	Olivia: I know that not everyone was happy with our relationship, like my sister. But I loved him.
+	Olivia: I don't regret spending 50 years with him, it was all worth it, even though he could be a difficult person, our love never faded away. =>  FamilyHeadsWife_interrogation1
 
 - Thank you for your cooperation.
-	Olivia: Yeah… Please find whoever did that. 
+	Olivia: Yeah… Please find whoever did this. 
 	do State.characters[Types.Characters.FamilyHeadsWife].set_dialogue("FamilyHeadsWife_repeat")
 	=> END
 
@@ -50,7 +50,7 @@ You: Can we talk for a moment?
 Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 
 ~ FirstBornSon_interrogation1
-- What were you doing yesterday after the dinner?
+- What were you doing yesterday after dinner?
 	#DONE: hint - Andrew went to bed after the dinner. 
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_bed")
 	Andrew: Just went to bed, same as he did. My wife can confirm that. => FirstBornSon_interrogation1
@@ -68,23 +68,23 @@ Andrew: [#reluctant] Ugh, yes. I guess we can. => FirstBornSon_interrogation1
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day2_investing")
 	You: What were you investing in? 
 	
-	Andrew: The same stuff as my father did. We were both importing some spices. => FirstBornSon_interrogation1
+	Andrew: The same stuff my father did. We were both importing spices. => FirstBornSon_interrogation1
 
-- Can you tell me how Tom was as your dad? 
+- Can you tell me how Tom was as a father? 
 	Andrew: He was the best, really...
 	Andrew: My parents were always very happy together. And that happiness was transferred to us too.
 	Andrew: My sister would probably say the same, he was a great dad. => FirstBornSon_interrogation1
 
 - Thank you for answering, if I have any other questions, I'll get back to you.
-	Andrew: No problem, Taylor. I hope I can help. 
+	Andrew: No problem, Taylor. I hope I helped. 
 	do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_repeat")
 	=> END
 
 ~ FirstBornSon_repeat
-Andrew: I didn't expect to loose my father like this... => END
+Andrew: I didn't expect to lose my father like this... => END
 
 ~ Daughter_start
-You: Hey Jessica, I'm sorry to interrupt, but I need to talk with you.
+You: Hey Jessica, I'm sorry to interrupt, but I need to speak with you.
 #TODO tag
 Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... => Daughter_interrogation1
 
@@ -104,7 +104,7 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 	Jessica: It was alright, I guess...
 	Jessica: He wasn't very supportive of my art career, though. He refused to help me a few days ago.
 	You: Help with what?
-	Jessica: I wanted to open my own art gallery, but of course this type of establishment needs lots of money to start running.
+	Jessica: I wanted to open my own art gallery, but of course that type of establishment needs lots of money to start running.
 	Jessica: I asked my dad to help, but he refused.
 	#DONE: hint - Jessica wanted some financial help from her dad, but he refused her. 
 	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day2_refused_help")
@@ -124,7 +124,7 @@ Jessica: [#sobbing] Y-yes, I understand... My father... I can't believe it... =>
 	Jessica: I got used to that, but of course I still loved him deeply. => Daughter_interrogation1
 
 - Thank you for your time, I'll leave you now.
-	Jessica: Thank you, I hope you'll find out who did it.
+	Jessica: Thank you, I hope you find out who did this.
 	Jessica: My poor father... 
 	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
 	=> END
