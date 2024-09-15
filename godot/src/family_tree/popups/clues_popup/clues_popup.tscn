@@ -1,16 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm3dpmhd4h6d6"]
+[gd_scene load_steps=6 format=3 uid="uid://cm3dpmhd4h6d6"]
 
 [ext_resource type="Theme" uid="uid://bk41ojufkf5px" path="res://src/family_tree/theme.tres" id="1_eas6b"]
 [ext_resource type="Script" path="res://src/family_tree/popups/clues_popup/clues_popup.gd" id="2_nxwka"]
+[ext_resource type="Texture2D" uid="uid://dxfobyrso1sdf" path="res://assets/gfx/ui/NotesPanel.png" id="3_kwe76"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lr2rp"]
+content_margin_left = 55.0
+content_margin_top = 25.0
+content_margin_right = 35.0
+content_margin_bottom = 40.0
+texture = ExtResource("3_kwe76")
+texture_margin_left = 100.0
+texture_margin_top = 279.0
+texture_margin_right = 200.0
+texture_margin_bottom = 183.0
+axis_stretch_vertical = 2
+
+[sub_resource type="Theme" id="Theme_fd287"]
+default_font_size = 19
+Label/colors/font_color = Color(0.00784314, 0.117647, 0.352941, 1)
 
 [node name="CluesPopup" type="MarginContainer"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
+anchors_preset = 9
 anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_right = 390.0
+grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("1_eas6b")
 theme_override_constants/margin_left = 20
@@ -29,9 +43,10 @@ size_flags_vertical = 3
 mouse_filter = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(400, 547)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_lr2rp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
@@ -39,8 +54,21 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"HeaderMedium"
+theme_override_colors/font_color = Color(0.00784314, 0.117647, 0.352941, 1)
 text = "Notes"
 
-[node name="CluesContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = -3
+
+[node name="CluesContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_fd287")

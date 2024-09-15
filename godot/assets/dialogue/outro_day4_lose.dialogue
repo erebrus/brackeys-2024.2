@@ -2,7 +2,7 @@
 #if the player solves the crime incorrectly.
 The next morning there's another body.
 It's you.
-You were getting close to solving the mystery, but made a mistake pointing out the killer.
+You were getting so close to solving the mystery, but made a mistake pointing out the killer.
 	So now you're dead.
 We're joking. This is just a game. Try again.
 do Globals.do_lose()

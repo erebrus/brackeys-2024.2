@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://tew5nggvlbv0"]
+[gd_scene load_steps=9 format=3 uid="uid://tew5nggvlbv0"]
 
 [ext_resource type="Texture2D" uid="uid://cbi00346vpvae" path="res://assets/gfx/scenes/TitleScene.jpg" id="1_txarl"]
 [ext_resource type="Script" path="res://src/start_screen/start_screen.gd" id="1_yk0mb"]
 [ext_resource type="FontFile" uid="uid://b462n8vtp5alq" path="res://assets/fonts/Portal Kids.otf" id="3_me0g3"]
 [ext_resource type="AudioStream" uid="uid://cbwun1cq8hper" path="res://assets/sfx/UI_General_1.wav" id="4_3dm81"]
+[ext_resource type="Texture2D" uid="uid://kwbvp4pmvd8v" path="res://assets/gfx/ui/soundOff.png" id="5_dl4gn"]
+[ext_resource type="Texture2D" uid="uid://0ituci0htpi1" path="res://assets/gfx/ui/soundOn.png" id="6_6cr4t"]
+[ext_resource type="Texture2D" uid="uid://c80uqsgd0rks4" path="res://assets/gfx/ui/musicOFf.png" id="7_mp5rk"]
+[ext_resource type="Texture2D" uid="uid://bb6s774o0g31o" path="res://assets/gfx/ui/musicOn.png" id="8_deviy"]
 
 [node name="StartScreen" type="TextureRect"]
 anchors_preset = 15
@@ -18,9 +22,9 @@ script = ExtResource("1_yk0mb")
 custom_minimum_size = Vector2(440, 235)
 layout_mode = 0
 offset_left = 1440.0
-offset_top = 542.0
+offset_top = 560.0
 offset_right = 1880.0
-offset_bottom = 777.0
+offset_bottom = 795.0
 
 [node name="Label" type="Label" parent="StartButton"]
 layout_mode = 1
@@ -33,36 +37,37 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_me0g3")
-theme_override_font_sizes/font_size = 128
-text = "Start"
+theme_override_font_sizes/font_size = 96
+text = "START"
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="SoundButton" type="TextureButton" parent="."]
-visible = false
-custom_minimum_size = Vector2(265, 205)
-layout_mode = 0
-offset_left = 1488.0
-offset_top = 552.0
-offset_right = 1753.0
-offset_bottom = 752.0
-toggle_mode = true
-button_pressed = true
-
-[node name="MusicButton" type="TextureButton" parent="."]
-visible = false
-custom_minimum_size = Vector2(265, 205)
-layout_mode = 0
-offset_left = 1488.0
-offset_top = 800.0
-offset_right = 1753.0
-offset_bottom = 1005.0
-toggle_mode = true
-button_pressed = true
-
 [node name="sfx_button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3dm81")
+bus = &"Sound"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1567.0
+offset_top = 759.0
+offset_right = 1749.0
+offset_bottom = 839.0
+theme_override_constants/separation = 20
+
+[node name="SoundButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("5_dl4gn")
+texture_pressed = ExtResource("6_6cr4t")
+
+[node name="MusicButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("7_mp5rk")
+texture_pressed = ExtResource("8_deviy")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="toggled" from="SoundButton" to="." method="_on_sound_button_toggled"]
-[connection signal="toggled" from="MusicButton" to="." method="_on_music_button_toggled"]
+[connection signal="toggled" from="HBoxContainer/SoundButton" to="." method="_on_sound_button_toggled"]
+[connection signal="toggled" from="HBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]

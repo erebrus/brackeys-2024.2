@@ -44,14 +44,15 @@ Olivia: Go on... => FamilyHeadsWife_interrogation2
 	#DONE: hint - Olivia claims to be in the living room with Andrew and Jessica
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_alibi")
 	Olivia: Later, I went to bed early, but I was tossing around, couldn't fall asleep.
-	Olivia: Around 2:00 am I went downstairs to the kitchen to grab some water. I met Samantha there. => FamilyHeadsWife_interrogation2
+	Olivia: Around 2:00 am I went downstairs to the kitchen to grab some water. I met Samantha there.
 	#DONE: hint - Olivia claims she went to the kitchen at night and found Samantha there
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_samantha")
 	You: Did you talk to her?
 	Olivia: I um... I didn't, she was busy talking to Henry.
-	Olivia: She does that, she's mumbling something under her breath, talking to her husband.
 	#DONE: hint - Olivia claims that Samantha was "talking" to her husband
 	do State.characters[Types.Characters.FamilyHeadsWife].find_portrait_clue("olivia_day3_husband")
+	Olivia: She does that, she's mumbling something under her breath, talking to her husband. => FamilyHeadsWife_interrogation2
+	
 
 - Did you hear anyone arguing or had an argument with someone?
 	Olivia: No, I did not.
@@ -97,10 +98,11 @@ Andrew: I swear it wasn't me! => FirstBornSon_interrogation2
 	#DONE: hint - Andrew claims to see Samantha going upstairs at night
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha")
-	Andrew: She was in her zone, but she said she went to drink some water. => FirstBornSon_interrogation2
 	#DONE: hint - Samantha was in her zone while coming upstairs
 	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("andrew_day3_samantha_zone")
 	do State.characters[Types.Characters.WidowAfterSecondSon].find_portrait_clue("andrew_day3_samantha_zone")
+	Andrew: She was in her zone, but she said she went to drink some water. => FirstBornSon_interrogation2
+	
 
 - How are you feeling?
 	Andrew: I have no idea.
@@ -116,5 +118,41 @@ do State.characters[Types.Characters.FirstBornSon].set_dialogue("FirstBornSon_re
 
 ~ FirstBornSon_repeat
 Andrew: I swear it wasn't me! I swear! => END
+
+~ Daughter_start
+You: Jessica, you found the body, I need to talk to you.
+Jessica: [#trembling] First dad... then uncle Frank... why... => Daughter_interrogation2
+
+~ Daughter_interrogation2
+- I need to know what were you doing yesterday's night.
+	Jessica: I was just sitting in the living room..
+	Jessica: With my mom and brother. We spent all evening together.
+	#DONE: hint - Jessica claims she spent the evening with her Olivia and Andrew.
+	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day3_evening")
+	#DONE: hint - Jessica claims she went to bed after, and that Jason saw her.
+	do State.characters[Types.Characters.Daughter].find_portrait_clue("jessica_day3_jason")
+	Jessica: Then I went to bed, Jason saw me going to my room. He was waiting at the batroom door. => Daughter_interrogation2
+	
+
+- Did you argue with anyone yesterday?
+	Jessica: N-no! I did hear some arguments though.
+	You: Tell me more about it.
+	Jessica: I heard Andrew being upset... He was screaming and shouting about 2% of shares he got after dad's murder.
+	Jessica: Apparently everyone knew about the 2%, but not him. He hoped for more.
+	#DONE: hint - Andrew argued with Frank about the 2% shares he got from Tom's businesses.
+	do State.characters[Types.Characters.FriendOfTheFamily].find_portrait_clue("frank_day3_argue_andrew")
+	do State.characters[Types.Characters.FirstBornSon].find_portrait_clue("frank_day3_argue_andrew")
+	You: Who was he arguing with?
+	Jessica: Uncle Frank. => Daughter_interrogation2
+	
+
+- Thank you for your answers.
+	Jessica: I hope it wasn't Andrew... We experienced enough tragedy already...
+	do State.characters[Types.Characters.Daughter].set_dialogue("Daughter_repeat")
+	=> END
+
+~ Daughter_repeat
+Jessica: My mom is devastated...
+Jessica: And so am I. => END
 
 => END

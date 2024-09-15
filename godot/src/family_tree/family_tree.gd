@@ -3,8 +3,8 @@ class_name FamilyTree extends Control
 
 var portraits: Array[TreePortrait]
 
-@onready var choose_portrait_popup: Control = %ChoosePortraitPopup
-@onready var choose_name_popup: Control = %ChooseNamePopup
+@onready var choose_portrait_popup: PopupPanel = %ChoosePortraitPopup
+@onready var choose_name_popup: PopupPanel = %ChooseNamePopup
 @onready var clues_popup: Control = %CluesPopup
 
 
@@ -27,6 +27,11 @@ func _input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("toggle_tree"):
 		toggle_tree()
+	
+	if event.is_action_pressed("scroll_down"):
+		clues_popup.scroll(20)
+	if event.is_action_pressed("scroll_up"):
+		clues_popup.scroll(-20)
 		
 func toggle_tree():
 		_close_popups()
@@ -68,9 +73,9 @@ func _check_fully_discovered() -> void:
 	
 
 func _close_popups() -> void:
-	if choose_name_popup.visible:
+	if choose_name_popup.is_open:
 		choose_name_popup.close()
-	if choose_portrait_popup.visible:
+	if choose_portrait_popup.is_open:
 		choose_portrait_popup.close()
 	if clues_popup.visible:
 		clues_popup.close()
@@ -81,7 +86,7 @@ func _on_portrait_clicked(portrait: TreePortrait) -> void:
 		return
 	
 	_close_popups()
-	choose_portrait_popup.show()
+	choose_portrait_popup.open()
 	var character = await choose_portrait_popup.selected
 	if character != null:
 		portrait.set_portrait(character)
@@ -94,7 +99,7 @@ func _on_name_clicked(portrait: TreePortrait) -> void:
 		return
 	
 	_close_popups()
-	choose_name_popup.show()
+	choose_name_popup.open()
 	var character = await choose_name_popup.selected
 	if character != null:
 		portrait.set_name_label(character)
